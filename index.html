@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily — 데일리 AI 인더스트리 다이제스트</title>
+<meta name="description" content="Physical AI · AI · Robotics · Cybersecurity · Chips — 하루 한 번, 한 곳에서.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f6f4;
+    --ink: #1a1a1a;
+    --ink-2: #4a4a4a;
+    --ink-3: #8a8a8a;
+    --line: #e5e3e0;
+    --accent: #7f0019; /* MUJI signature dark red */
+    --maxw: 1080px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; background: none; border: none; cursor: pointer; }
+  .mono { font-family: "Roboto Mono", monospace; }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,.96);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    max-width: var(--maxw); margin: 0 auto;
+    padding: 14px 20px 0;
+  }
+  .header-top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding-bottom: 12px;
+  }
+  .brand {
+    font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .brand .dot { width: 8px; height: 8px; background: var(--accent); display: inline-block; }
+  .today {
+    font-size: .78rem; color: var(--ink-3); letter-spacing: .04em;
+  }
+  /* section nav */
+  .section-nav {
+    display: flex; gap: 24px; overflow-x: auto; scrollbar-width: none;
+  }
+  .section-nav::-webkit-scrollbar { display: none; }
+  .section-nav a {
+    padding: 8px 0 10px; font-size: .85rem; font-weight: 500;
+    color: var(--ink-3); white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color .2s;
+  }
+  .section-nav a:hover { color: var(--ink); }
+  .section-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    max-width: var(--maxw); margin: 0 auto;
+    padding: 44px 20px 8px;
+  }
+  .hero h1 {
+    font-size: clamp(1.7rem, 5.5vw, 2.6rem);
+    font-weight: 700; letter-spacing: -0.03em; line-height: 1.25;
+  }
+  .hero p {
+    margin-top: 10px; color: var(--ink-2); font-size: .95rem; max-width: 560px;
+    font-weight: 300;
+  }
+  .hero .date-line {
+    margin-top: 22px; display: flex; align-items: center; gap: 12px;
+    font-size: .78rem; letter-spacing: .12em; color: var(--ink-3);
+  }
+  .hero .date-line::after {
+    content: ""; flex: 1; height: 1px; background: var(--line);
+  }
+
+  /* ---------- Topic filter chips ---------- */
+  .filters {
+    max-width: var(--maxw); margin: 0 auto;
+    padding: 20px 20px 4px;
+    display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
+  }
+  .filters::-webkit-scrollbar { display: none; }
+  .chip {
+    padding: 7px 16px; min-height: 36px;
+    border: 1px solid var(--line); border-radius: 999px;
+    font-size: .8rem; font-weight: 500; color: var(--ink-2);
+    white-space: nowrap; transition: all .2s;
+  }
+  .chip:hover { border-color: var(--ink-3); }
+  .chip.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .chip:focus-visible, .section-nav a:focus-visible, .card:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 2px;
+  }
+
+  /* ---------- Sections ---------- */
+  main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px 80px; }
+  section { padding-top: 48px; scroll-margin-top: 96px; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+  .sec-no { font-size: .75rem; color: var(--accent); letter-spacing: .1em; font-weight: 500; }
+  .sec-head h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; }
+  .sec-desc { font-size: .85rem; color: var(--ink-3); font-weight: 300; margin-bottom: 22px; }
+
+  .grid { display: grid; grid-template-columns: 1fr; }
+
+  /* ---------- News card ---------- */
+  .card {
+    border-top: 1px solid var(--line);
+    padding: 22px 0 24px;
+    display: block;
+    transition: background .2s;
+    cursor: pointer;
+  }
+  .card:hover { background: var(--bg-soft); }
+  .card-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: .72rem; letter-spacing: .06em; color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .card-meta .src { font-weight: 500; color: var(--ink-2); }
+  .tag {
+    color: var(--accent); font-weight: 500;
+  }
+  .card h3 {
+    font-size: 1.02rem; font-weight: 500; line-height: 1.5; letter-spacing: -0.01em;
+  }
+  .card .summary {
+    margin-top: 8px; font-size: .88rem; color: var(--ink-2); font-weight: 300;
+    line-height: 1.7;
+  }
+  .card .go {
+    margin-top: 10px; display: inline-flex; align-items: center; gap: 6px;
+    font-size: .78rem; color: var(--ink-3); transition: color .2s;
+  }
+  .card:hover .go { color: var(--accent); }
+  .go svg { width: 12px; height: 12px; }
+
+  /* ---------- X post card ---------- */
+  .xcard {
+    border: 1px solid var(--line);
+    padding: 20px; margin-top: 14px;
+    transition: border-color .2s, background .2s;
+    display: block; cursor: pointer;
+  }
+  .xcard:hover { border-color: var(--ink-3); background: var(--bg-soft); }
+  .xhead { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--bg-soft); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: .8rem; color: var(--accent);
+    flex-shrink: 0;
+  }
+  .xname { font-size: .88rem; font-weight: 500; line-height: 1.3; }
+  .xhandle { font-size: .74rem; color: var(--ink-3); }
+  .xhead .xicon { margin-left: auto; color: var(--ink-3); }
+  .xicon svg { width: 15px; height: 15px; }
+  .xquote {
+    font-size: .93rem; line-height: 1.7; color: var(--ink);
+  }
+  .xctx {
+    margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line);
+    font-size: .8rem; color: var(--ink-3); font-weight: 300;
+  }
+
+  /* ---------- Company card ---------- */
+  .ccard {
+    border-top: 1px solid var(--line);
+    padding: 20px 0 22px; display: block; cursor: pointer;
+    transition: background .2s;
+  }
+  .ccard:hover { background: var(--bg-soft); }
+  .chead { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .clogo {
+    width: 34px; height: 34px; flex-shrink: 0;
+    background: var(--ink); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: .72rem; letter-spacing: .02em;
+  }
+  .cname { font-size: .9rem; font-weight: 500; }
+  .ctype { font-size: .72rem; color: var(--ink-3); letter-spacing: .05em; }
+  .ccard h3 { font-size: .98rem; font-weight: 500; line-height: 1.55; }
+  .ccard .summary { margin-top: 6px; font-size: .87rem; color: var(--ink-2); font-weight: 300; }
+
+  .empty {
+    border-top: 1px solid var(--line);
+    padding: 36px 0; text-align: center;
+    color: var(--ink-3); font-size: .85rem; font-weight: 300;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 20px 48px;
+  }
+  .footer-inner {
+    max-width: var(--maxw); margin: 0 auto;
+    display: flex; flex-direction: column; gap: 8px;
+    font-size: .76rem; color: var(--ink-3); font-weight: 300;
+  }
+  .footer-inner .dot { width: 6px; height: 6px; background: var(--accent); display: inline-block; margin-right: 6px; }
+
+  /* ---------- Back to top ---------- */
+  #toTop {
+    position: fixed; right: 18px; bottom: 18px; z-index: 40;
+    width: 44px; height: 44px; border: 1px solid var(--line);
+    background: rgba(255,255,255,.95); color: var(--ink-2);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity .25s, border-color .2s;
+  }
+  #toTop.show { opacity: 1; pointer-events: auto; }
+  #toTop:hover { border-color: var(--ink); color: var(--ink); }
+  #toTop svg { width: 16px; height: 16px; }
+
+  /* ---------- Desktop ---------- */
+  @media (min-width: 768px) {
+    body { font-size: 17px; }
+    .hero { padding-top: 64px; }
+    .grid.news, .grid.company { grid-template-columns: 1fr 1fr; column-gap: 48px; }
+    .grid.social {
+      grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .xcard { margin-top: 0; }
+    .card, .ccard { padding-right: 8px; }
+  }
+  @media (min-width: 1100px) {
+    .grid.social { grid-template-columns: 1fr 1fr 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="brand"><span class="dot" aria-hidden="true"></span>AI Daily</div>
+      <div class="today mono" id="todayLabel"></div>
+    </div>
+    <nav class="section-nav" aria-label="섹션 이동">
+      <a href="#news" class="active">뉴스 브리핑</a>
+      <a href="#social">보이스 (X)</a>
+      <a href="#company">기업 발표 (LinkedIn)</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>자고 일어난 사이,<br>실리콘밸리에서 생긴 일.</h1>
+  <p>Physical AI · AI · Robotics · Cybersecurity · GPU/NPU/Chips — 매일 아침 한국 시간 기준으로 밤사이 업데이트를 한곳에 정리합니다.</p>
+  <div class="date-line mono" id="editionLabel">EDITION</div>
+</div>
+
+<div class="filters" id="filters" role="group" aria-label="토픽 필터">
+  <button class="chip on" data-topic="all">전체</button>
+  <button class="chip" data-topic="physical-ai">Physical AI</button>
+  <button class="chip" data-topic="ai">AI</button>
+  <button class="chip" data-topic="robotics">Robotics</button>
+  <button class="chip" data-topic="security">Cybersecurity</button>
+  <button class="chip" data-topic="chips">GPU · NPU · Chips</button>
+</div>
+
+<main>
+  <section id="news">
+    <div class="sec-head"><span class="sec-no mono">01</span><h2>뉴스 브리핑</h2></div>
+    <p class="sec-desc">신뢰도 높은 업계 매체가 발행한 주요 아티클 요약</p>
+    <div class="grid news" id="newsGrid"></div>
+  </section>
+
+  <section id="social">
+    <div class="sec-head"><span class="sec-no mono">02</span><h2>보이스</h2></div>
+    <p class="sec-desc">업계 주요 인물들의 X(구 트위터) 발언 중 주목할 것들</p>
+    <div class="grid social" id="socialGrid"></div>
+  </section>
+
+  <section id="company">
+    <div class="sec-head"><span class="sec-no mono">03</span><h2>기업 발표</h2></div>
+    <p class="sec-desc">스타트업·빅테크의 LinkedIn 및 공식 채널 발표 중 중요한 변화</p>
+    <div class="grid company" id="companyGrid"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div><span class="dot" aria-hidden="true"></span>AI Daily — 하루 한 번, 한 곳에서.</div>
+    <div>요약은 원문 이해를 돕기 위한 것으로, 정확한 내용은 각 원문 링크를 확인하세요.</div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="맨 위로">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+/* =========================================================
+   DATA — 매일 이 블록만 교체하면 페이지가 업데이트됩니다.
+   topics: physical-ai | ai | robotics | security | chips
+   ========================================================= */
+const EDITION = {
+  date: "2026-09-01",
+  news: [
+    {
+      source: "CNBC",
+      topics: ["ai"],
+      title: "구글 딥마인드 새 수장에 코라이 카부크추오글루 — 피차이 직속 보고 체계로",
+      summary: "딥마인드의 새 총괄로 Koray Kavukcuoglu가 선임되어 순다르 피차이 CEO에게 직접 보고한다. Gemini 모델 개발, 프론티어 리서치, Gemini 앱·개발자 조직을 모두 총괄하며, 2026년 초 이후 프론티어 모델을 내지 못한 구글의 추격전을 이끈다.",
+      url: "https://www.cnbc.com/2026/08/12/google-deepmind-koray-kavukcuoglu.html"
+    },
+    {
+      source: "AI Weekly",
+      topics: ["ai", "security"],
+      title: "Anthropic, 인포스틸러 멀웨어로 탈취된 Claude 세션 일괄 로그아웃 조치",
+      summary: "사용자 PC의 인포스틸러 멀웨어가 활성 Claude 로그인 세션을 탈취해 사용 한도를 무단 소진하는 사례가 확인됐다. Anthropic은 영향받은 계정을 강제 로그아웃하고 저장된 결제수단 삭제 및 무단 결제 환불을 진행 중이다. '사용하지 않았는데 한도가 채워졌다 줄어드는 현상'이 피해 신호다.",
+      url: "https://aiweekly.co/ai-news-today/anthropic-news"
+    },
+    {
+      source: "AI Weekly",
+      topics: ["ai", "chips"],
+      title: "OpenAI, 강화학습 워크로드용으로 Mac 수만 대 매입",
+      summary: "OpenAI가 RL 워크로드 실행을 위해 수만 대의 Mac을 사들였고, Anthropic은 AWS를 통해 Mac 용량을 임대 중이다. 애플의 유니파이드 메모리 실리콘이 의도치 않게 AI 하드웨어 자원으로 부상하는 흐름이다.",
+      url: "https://aiweekly.co/ai-news-today"
+    },
+    {
+      source: "GrabaRobot",
+      topics: ["physical-ai", "robotics"],
+      title: "휴머노이드 상업 배치 원년 — Optimus·Figure·Atlas 공장 투입 현황",
+      summary: "테슬라 Optimus는 자사 공장에, Figure는 BMW 스파르탄버그 공장 파일럿을 완료했으며, 보스턴다이내믹스 전동 Atlas는 현대차 공장에서 가동 중이다. 휴머노이드가 데모를 넘어 실제 워크포스로 진입하는 단계다.",
+      url: "https://www.grabarobot.com/blog/humanoid-robot-workforce-deployment-2026/"
+    },
+    {
+      source: "Meta Intelligence",
+      topics: ["physical-ai", "chips"],
+      title: "테슬라 Optimus V3, AI5 칩 탑재하고 프리몬트에서 양산 시동",
+      summary: "22자유도 핸드와 AI5 칩을 탑재한 Optimus V3가 2026년 여름 프리몬트 공장에서 생산을 시작하는 목표다. 4월 테이프아웃된 AI5는 AI4 대비 연산 약 8배, 메모리 9배, 대역폭 5배. 소비자 판매는 빨라야 2027년 말, 현실적으로는 2028–29년이 컨센서스다.",
+      url: "https://www.meta-intelligence.tech/en/insight-physical-ai"
+    },
+    {
+      source: "Technology.org",
+      topics: ["robotics"],
+      title: "베이징 세계 휴머노이드 로봇 게임 — 로봇이 볼트 100m 기록 경신",
+      summary: "8월 22–23일 베이징에서 열린 제2회 세계 휴머노이드 로봇 게임에서 로봇이 우사인 볼트의 100m 세계기록을 넘어섰다. 중국 AgiBot은 누적 출하 1만 5천 대를 돌파하며 물량에서 서구 업체들을 압도하는 중이다.",
+      url: "https://www.technology.org/2026/07/18/humanoid-robots-in-2026-what-is-actually-deployed/"
+    },
+    {
+      source: "Tom's Hardware",
+      topics: ["chips"],
+      title: "엔비디아 RTX Spark 슈퍼칩 — 노트북을 '에이전틱 AI OS'로",
+      summary: "20코어 Grace CPU와 Blackwell RTX GPU를 NVLink-C2C로 연결해 최대 1페타플롭 AI 연산과 128GB 유니파이드 메모리를 얇은 노트북에 넣는 플랫폼. 젠슨 황은 마이크로소프트와 함께 'PC를 재발명하겠다'고 선언했다.",
+      url: "https://www.tomshardware.com/laptops/nvidia-unveils-rtx-spark-superchip-at-computex-2026-new-platform-promises-to-turn-windows-into-an-agentic-ai-os-with-arm-cpu-blackwell-gpu-and-128gb-unified-memory"
+    },
+    {
+      source: "Yahoo Finance",
+      topics: ["chips"],
+      title: "AMD Helios 랙 공개 — MI455X 72기로 엔비디아 NVL72에 정면 도전",
+      summary: "리사 수가 '세계 최고의 AI 랙'이라 부른 Helios는 엔비디아 NVL72의 Rubin GPU 72기에 맞서 MI455X 72기를 탑재한다. PC용으로는 최대 60 TOPS NPU를 갖춘 Ryzen AI 400 시리즈도 함께 발표됐다.",
+      url: "https://finance.yahoo.com/news/amd-reveals-new-ai-pc-chips-details-next-gen-data-center-chips-at-ces-2026-041117636.html"
+    },
+    {
+      source: "eSecurity Planet",
+      topics: ["security", "ai"],
+      title: "Aurora 랜섬웨어, AI 코딩 어시스턴트로 네트워크 침투",
+      summary: "Aurora 랜섬웨어 그룹이 AI 코딩 어시스턴트를 침투 도구로 활용해 10개 조직을 공격한 정황이 8월 31일 포착됐다. 같은 주 AI 음성 에이전트를 빌려 애플 지원팀을 사칭, 기기 패스코드와 2FA 코드를 요구하는 피싱-as-a-service 플랫폼도 공개됐다.",
+      url: "https://www.esecurityplanet.com/weekly-roundup/ai-security-failures-active-exploits-and-breaches-define-the-week-in-august-2026/"
+    },
+    {
+      source: "Boston Institute of Analytics",
+      topics: ["security"],
+      title: "주간 보안: 영국 공항 870만 명 유출, 엔터프라이즈 취약점 실공격 잇따라",
+      summary: "영국 공항 침해로 약 870만 고객 정보가 유출됐고, ShinyHunters 연계 Hasbro·McKesson 침해도 확인됐다. cPanel, Citrix NetScaler, Zimbra 등 엔터프라이즈 도구의 취약점이 실제 공격에 활발히 악용되고 있다.",
+      url: "https://bostoninstituteofanalytics.org/blog/cybersecurity-this-week-22-28-august-2026-ai-attacks-data-breaches-zero-days-new-threats/"
+    }
+  ],
+  social: [
+    {
+      name: "Sam Altman",
+      handle: "@sama",
+      initials: "SA",
+      topics: ["ai"],
+      quote: "we are in the singularity",
+      context: "7월 팟캐스트 발언 이후 X에서 재점화된 '특이점 진입' 논쟁. AGI 타임라인 담론의 기준점이 되고 있다.",
+      url: "https://x.com/sama"
+    },
+    {
+      name: "Demis Hassabis",
+      handle: "@demishassabis",
+      initials: "DH",
+      topics: ["ai"],
+      quote: "when we look back on this time, i think we will realize that we were standing in the foothills of the singularity",
+      context: "알트만·머스크보다 신중한 톤. 하사비스의 AI 규제 프레임워크 제안은 알트만과 머스크 양쪽의 공개 지지를 받은 드문 사례가 됐다.",
+      url: "https://x.com/demishassabis"
+    },
+    {
+      name: "Sam Altman",
+      handle: "@sama",
+      initials: "SA",
+      topics: ["ai"],
+      quote: "this is a thoughtful proposal from demis:",
+      context: "하사비스의 AI 규제 제안에 대한 공개 지지. 경쟁사 수장 제안에 대한 이례적 호평으로 업계 규제 컨센서스 신호로 읽힌다.",
+      url: "https://x.com/sama/status/2077042528906527225"
+    },
+    {
+      name: "Jensen Huang",
+      handle: "@nvidia",
+      initials: "JH",
+      topics: ["ai", "chips"],
+      quote: "we've achieved AGI",
+      context: "특이점 논쟁에 가장 공격적인 입장. GPU 수요 내러티브와 맞물려 시장에서 회자되는 중.",
+      url: "https://x.com/nvidia"
+    },
+    {
+      name: "Elon Musk",
+      handle: "@elonmusk",
+      initials: "EM",
+      topics: ["ai"],
+      quote: "we have entered the singularity, just the very early stages of it",
+      context: "애플의 OpenAI 소송 이후 알트만과의 설전 재개. OpenAI 관련 소송 1심 패소 후 항소 의사를 밝힌 상태다.",
+      url: "https://x.com/elonmusk"
+    }
+  ],
+  company: [
+    {
+      company: "Figure AI",
+      logo: "F",
+      type: "스타트업 · 휴머노이드",
+      topics: ["physical-ai", "robotics"],
+      title: "BotQ 공장에서 1,000번째 Figure 03 생산 — 시간당 1대 페이스",
+      summary: "BMW 스파르탄버그 공장 11개월 파일럿 완료에 이어, 자체 생산시설 BotQ에서 1,000번째 Figure 03을 출고했다. 휴머노이드 양산 체제가 실체화되고 있다는 신호.",
+      url: "https://www.grabarobot.com/blog/humanoid-robot-workforce-deployment-2026/"
+    },
+    {
+      company: "Boston Dynamics",
+      logo: "BD",
+      type: "현대차그룹 · 로보틱스",
+      topics: ["robotics", "physical-ai"],
+      title: "전동 Atlas, 현대차 공장 실전 투입 가동 중",
+      summary: "전동화된 Atlas가 현대차 생산 라인에 실제 배치되어 가동되고 있다. 파일럿을 넘어 모기업 제조 현장을 레퍼런스로 삼는 전략.",
+      url: "https://www.grabarobot.com/blog/humanoid-robot-workforce-deployment-2026/"
+    },
+    {
+      company: "AMD",
+      logo: "AMD",
+      type: "빅테크 · 반도체",
+      topics: ["chips"],
+      title: "Helios AI 랙 & Ryzen AI 400 시리즈 발표",
+      summary: "MI455X 72기 구성의 Helios 랙으로 엔비디아 NVL 시스템과 정면 승부. PC용 Ryzen AI 400은 12코어 CPU, Radeon 800M GPU, 60 TOPS NPU 구성이다.",
+      url: "https://finance.yahoo.com/news/amd-reveals-new-ai-pc-chips-details-next-gen-data-center-chips-at-ces-2026-041117636.html"
+    },
+    {
+      company: "NVIDIA",
+      logo: "NV",
+      type: "빅테크 · 반도체",
+      topics: ["chips", "ai"],
+      title: "RTX Spark 슈퍼칩으로 'AI 스택 전 계층' 장악 시도",
+      summary: "데이터센터에 이어 PC까지 — Grace CPU + Blackwell GPU 통합 칩으로 젠슨 황의 풀스택 전략이 클라이언트 디바이스로 확장됐다. 마이크로소프트와의 협업으로 Windows를 에이전틱 AI OS로 만들겠다는 구상.",
+      url: "https://www.cnbc.com/2026/06/02/nvidias-new-pc-chips-are-ceos-bid-to-own-every-part-of-ai-stack.html"
+    },
+    {
+      company: "AgiBot",
+      logo: "AG",
+      type: "중국 · 휴머노이드",
+      topics: ["physical-ai", "robotics"],
+      title: "누적 출하 15,000대 돌파 — 물량으로 앞서가는 중국",
+      summary: "AgiBot이 휴머노이드 누적 15,000대를 돌파하며 출하량 기준 글로벌 선두를 굳혔다. 서구 업체들이 파일럿 단계일 때 중국은 규모의 경제로 진입 중이다.",
+      url: "https://www.singularitymoments.com/ai-robotics-guide-2026/"
+    }
+  ]
+};
+
+/* ========================================================= */
+const TOPIC_LABEL = {
+  "physical-ai": "PHYSICAL AI",
+  "ai": "AI",
+  "robotics": "ROBOTICS",
+  "security": "SECURITY",
+  "chips": "CHIPS"
+};
+
+const arrowSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>';
+const xSvg = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>';
+
+function tagsHtml(topics) {
+  return topics.map(t => '<span class="tag">' + TOPIC_LABEL[t] + '</span>').join('<span aria-hidden="true">·</span>');
+}
+
+function render(filter) {
+  const show = item => filter === "all" || item.topics.includes(filter);
+
+  const newsGrid = document.getElementById("newsGrid");
+  const news = EDITION.news.filter(show);
+  newsGrid.innerHTML = news.map(n => `
+    <a class="card" href="${n.url}" target="_blank" rel="noopener noreferrer">
+      <div class="card-meta"><span class="src">${n.source}</span><span aria-hidden="true">·</span>${tagsHtml(n.topics)}</div>
+      <h3>${n.title}</h3>
+      <p class="summary">${n.summary}</p>
+      <span class="go">원문 보기 ${arrowSvg}</span>
+    </a>`).join("") || '<div class="empty">이 토픽의 뉴스가 오늘은 없습니다.</div>';
+
+  const socialGrid = document.getElementById("socialGrid");
+  const social = EDITION.social.filter(show);
+  socialGrid.innerHTML = social.map(s => `
+    <a class="xcard" href="${s.url}" target="_blank" rel="noopener noreferrer">
+      <div class="xhead">
+        <span class="avatar" aria-hidden="true">${s.initials}</span>
+        <span>
+          <span class="xname">${s.name}</span><br>
+          <span class="xhandle mono">${s.handle}</span>
+        </span>
+        <span class="xicon">${xSvg}</span>
+      </div>
+      <p class="xquote">“${s.quote}”</p>
+      <p class="xctx">${s.context}</p>
+    </a>`).join("") || '<div class="empty">이 토픽의 포스트가 오늘은 없습니다.</div>';
+
+  const companyGrid = document.getElementById("companyGrid");
+  const company = EDITION.company.filter(show);
+  companyGrid.innerHTML = company.map(c => `
+    <a class="ccard" href="${c.url}" target="_blank" rel="noopener noreferrer">
+      <div class="chead">
+        <span class="clogo" aria-hidden="true">${c.logo}</span>
+        <span>
+          <span class="cname">${c.company}</span><br>
+          <span class="ctype">${c.type}</span>
+        </span>
+      </div>
+      <h3>${c.title}</h3>
+      <p class="summary">${c.summary}</p>
+      <span class="go">발표 보기 ${arrowSvg}</span>
+    </a>`).join("") || '<div class="empty">이 토픽의 발표가 오늘은 없습니다.</div>';
+}
+
+/* filter chips */
+document.getElementById("filters").addEventListener("click", e => {
+  const chip = e.target.closest(".chip");
+  if (!chip) return;
+  document.querySelectorAll(".chip").forEach(c => c.classList.remove("on"));
+  chip.classList.add("on");
+  render(chip.dataset.topic);
+});
+
+/* date labels */
+(function () {
+  const d = new Date(EDITION.date + "T00:00:00+09:00");
+  const days = ["SUN","MON","TUE","WED","THU","FRI","SAT"];
+  const label = EDITION.date.replaceAll("-", ".") + " " + days[d.getDay()];
+  document.getElementById("todayLabel").textContent = label;
+  document.getElementById("editionLabel").textContent = "EDITION " + label + " KST";
+})();
+
+/* section nav active state */
+const navLinks = document.querySelectorAll(".section-nav a");
+const sections = [...document.querySelectorAll("main section")];
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) {
+      navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
+    }
+  });
+}, { rootMargin: "-30% 0px -60% 0px" });
+sections.forEach(s => io.observe(s));
+
+/* back to top */
+const toTop = document.getElementById("toTop");
+window.addEventListener("scroll", () => {
+  toTop.classList.toggle("show", window.scrollY > 600);
+}, { passive: true });
+toTop.addEventListener("click", () => window.scrollTo({ top: 0 }));
+
+render("all");
+</script>
+</body>
+</html>

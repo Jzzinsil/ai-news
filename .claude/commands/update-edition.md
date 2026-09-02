@@ -10,7 +10,7 @@ description: 오늘자 AI 뉴스를 리서치·요약해 index.html의 EDITION�
 
 ## 절차
 
-1. **오늘 날짜 확정** — 세션 컨텍스트의 `currentDate`(KST 기준)를 사용한다. `date: "YYYY-MM-DD"`.
+1. **오늘 날짜 확정** — `TZ=Asia/Seoul date +%Y-%m-%d` 명령으로 구한다(세션 컨텍스트 날짜는 UTC일 수 있으므로 신뢰하지 않는다). `date: "YYYY-MM-DD"`.
 
 2. **리서치** — WebSearch/WebFetch로 **최근 24~48시간** 내 AI 관련 소식을 폭넓게 수집한다. 5개 토픽을 고루 커버:
    - `physical-ai` — 피지컬 AI, 휴머노이드·로봇 실배치, 임바디드 AI
@@ -39,7 +39,7 @@ description: 오늘자 AI 뉴스를 리서치·요약해 index.html의 EDITION�
 
 4-1. **learn[] (오늘의 학습) 규칙** — 사용자는 로보틱스/피지컬 AI 스타트업 rlwrld로 이직 예정인 비로보틱스 출신(테슬라→AI SW). 매일 이 분야 핵심 개념을 2개씩 익혀 X/LinkedIn 엔지니어 대상 콘텐츠를 만들 수 있게 하는 섹션이다.
    - 레포 루트의 **`LEARNING.md`** 커리큘럼에서 `status`가 `todo`인 항목을 **위에서부터 2개** 골라 작성하고, 그 두 항목의 status를 `done`으로 바꿔 **LEARNING.md도 함께 커밋**한다.
-   - `term`: 용어(예: "VLA"), `full`: 풀네임/원어(예: "Vision-Language-Action"), `category`: LEARNING.md의 분류(핵심개념/시뮬레이터·툴/하드웨어/학습기법/벤치마크/학회·생태계/플레이어).
+   - `term`: 용어(예: "VLA"), `full`: 풀네임/원어(예: "Vision-Language-Action"), `category`: **LEARNING.md 해당 행의 분류 값을 그대로 쓰고 뒤에 진행 카운터를 붙인다** — 형식 `"<분류> · <항목번호>/<전체수>"` (예: `"핵심개념 · 3/58"` — 전체수는 LEARNING.md 항목 수).
    - `summary`: 4~6문장. 소프트웨어 엔지니어 출신이 바로 이해할 수 있게 비유·대비(예: "LLM의 ~에 해당") 활용. LEARNING.md의 정의를 기반으로 하되 최신 맥락(그날 뉴스와 연결되면 금상첨화)을 보강.
    - `angle`: X/LinkedIn 콘텐츠로 쓸 때의 훅 1~2문장(예: 반직관적 사실, 숫자, 논쟁 지점).
    - `url`: 해당 개념의 대표 1차 자료(공식 문서/논문/프로젝트 페이지). 실존 URL만.
@@ -50,7 +50,7 @@ description: 오늘자 AI 뉴스를 리서치·요약해 index.html의 EDITION�
 
 6. **배포** — 사용자가 승인하면:
    ```
-   git add index.html
+   git add index.html LEARNING.md
    git commit -m "AI Daily — <YYYY-MM-DD> edition"
    git push
    ```
@@ -64,7 +64,11 @@ description: 오늘자 AI 뉴스를 리서치·요약해 index.html의 EDITION�
 ## 자동 루틴(무인) 모드
 클라우드 예약 루틴이 사람 없이 실행할 때는 위 절차를 그대로 따르되 **5번 '검토 제시'를 건너뛰고**, 4번 EDITION 교체 → node 검증 통과 후 곧바로 6번 커밋·push를 수행한다.
 - 오늘 날짜: `TZ=Asia/Seoul date +%Y-%m-%d`
-- 검증(교체 후 필수): node로 EDITION 객체가 정상 파싱되는지, topics가 5종 이내인지, 모든 항목에 http(s) URL이 있는지 확인. 실패하면 **커밋하지 말고** 무엇이 틀렸는지 출력한다.
-- 커밋 메시지: `AI Daily — <오늘 KST 날짜> edition`, 이후 `origin main`으로 push (→ Vercel 자동 배포). learn을 진행했으면 `LEARNING.md`도 같은 커밋에 포함.
+- 검증(교체 후 필수):
+  - node로 EDITION 객체가 정상 파싱되는지, topics가 5종 이내인지, 모든 항목에 http(s) URL이 있는지 확인.
+  - **URL 실접근 검증**: 새로 넣은 URL 전부를 `curl -s -o /dev/null -w '%{http_code}' -L --max-time 12`로 확인해 2xx/3xx가 아닌 항목은 제외하거나 교체한다 (x.com은 403이어도 허용).
+  - 어느 검증이든 실패하면 **커밋하지 말고** 무엇이 틀렸는지 출력한다.
+- 커밋: `git add index.html LEARNING.md` → 메시지 `AI Daily — <오늘 KST 날짜> edition` → `git push origin main` (→ Vercel 자동 배포).
+- **push 확인·재시도**: push가 non-fast-forward로 거부되면 `git pull --rebase origin main` 후 1회 재시도. 이후 `git ls-remote origin refs/heads/main`의 SHA가 로컬 `git rev-parse HEAD`와 일치해야 성공이다. 불일치하거나 인증 오류면 `PUSH-FAILED:`로 시작하는 줄과 전체 에러를 출력하고 중단한다.
 - 소셜은 매일 전부 그날 뉴스에 대한 실제 발언으로 교체(어제 재탕 금지).
 - learn[]도 매일 2개 새로 진행(4-1 규칙): LEARNING.md에서 todo 상위 2개 → 작성 → status를 done으로 갱신.

@@ -2,8 +2,8 @@
 
 **운영 규칙:** 하루 2개씩, **`status`가 `todo`인 항목을 표 위에서부터 순서대로** 소화한다(순서가 우선 — 건너뛰지 않는다). 커버한 항목은 status를 `done`으로 바꾼다. 각 항목은 "X/LinkedIn 콘텐츠 1편의 씨앗"이 되도록 콘텐츠 앵글을 함께 담았다.
 
-**채널 싱크:** 이 커리큘럼의 원천인 두 유튜브 채널(@sudoremove, @engiuniverse)에 신규 영상이 올라오면 자막을 받아 커리큘럼 항목으로 추가한다. 자막 추출(yt-dlp)은 로컬에서만 가능하므로 **로컬에서 /update-edition을 실행할 때 주기적으로**(주 1회 권장) 수행한다 — 클라우드 루틴은 이 단계를 건너뛴다.
-- 마지막 싱크: 2026-09-02 (sudoremove 신규 3편 중 관련 1편, engiuniverse 신규 1편 반영 — Phase 6 참조)
+**채널 싱크 (자동화됨):** 이 커리큘럼의 원천인 두 유튜브 채널(@sudoremove, @engiuniverse)은 **매일 06:35 KST에 로컬 launchd 잡**(`channel-sync/sync.sh`)이 자동 확인한다 — 신규 영상 감지 → 자막(cc) 추출 → headless Claude가 증류해 이 파일의 Phase 6에 추가(무관하면 아래 미반영 블록에 기록) → 커밋·push. 자막 추출(yt-dlp)은 클라우드에서 불가능하므로 클라우드 루틴은 이 단계를 건너뛴다. 로그: `channel-sync/sync.log`. Mac이 꺼져 있던 날은 건너뛴다(다음 실행에서 따라잡음).
+- 마지막 싱크: 2026-09-02 (sudoremove 신규분 중 관련 1편, engiuniverse 신규 1편 반영 — Phase 6 참조)
 
 ## 백로그 (우선순위 순)
 

@@ -65,10 +65,23 @@ description: 오늘자 AI 뉴스를 리서치·요약해 index.html의 EDITION�
 클라우드 예약 루틴이 사람 없이 실행할 때는 위 절차를 그대로 따르되 **5번 '검토 제시'를 건너뛰고**, 4번 EDITION 교체 → node 검증 통과 후 곧바로 6번 커밋·push를 수행한다.
 - 오늘 날짜: `TZ=Asia/Seoul date +%Y-%m-%d`
 - 검증(교체 후 필수):
-  - node로 EDITION 객체가 정상 파싱되는지, topics가 5종 이내인지, 모든 항목에 http(s) URL이 있는지 확인.
-  - **URL 실접근 검증**: 새로 넣은 URL 전부를 `curl -s -o /dev/null -w '%{http_code}' -L --max-time 12`로 확인해 2xx/3xx가 아닌 항목은 제외하거나 교체한다 (x.com은 403이어도 허용).
+  - node 파싱 검증은 아래 스니펫을 그대로 사용한다 (실패 시 커밋 금지):
+    ```js
+    // node -e '<이 코드>'
+    const s=require("fs").readFileSync("index.html","utf8");
+    [...s.matchAll(/<script>([\s\S]*?)<\/script>/g)].forEach(m=>new Function(m[1]));
+    const a=s.indexOf("const EDITION = {"),b=s.indexOf("const TOPIC_LABEL");
+    const E=new Function(s.slice(a,b).replace("const EDITION = ","return ")+"\nreturn EDITION;")();
+    const ok=new Set(["physical-ai","ai","robotics","security","chips"]);
+    for(const k of ["news","social","company","learn"]) for(const it of E[k]){
+      if(!it.topics.every(t=>ok.has(t))) throw "bad topic in "+k;
+      if(!/^https?:\/\//.test(it.url)) throw "bad url in "+k;
+    }
+    console.log("OK",E.date,E.news.length,E.social.length,E.company.length,E.learn.length);
+    ```
+  - **URL 실접근 검증**: 새로 넣은 URL 전부를 `curl -s -o /dev/null -w '%{http_code}' -L --max-time 12`로 확인. 2xx/3xx가 아니면: news/social/company는 항목 제외 또는 교체(단, x.com과 주요 언론사의 봇차단 403은 원문을 WebFetch로 이미 읽었다면 유지 허용), **learn은 제외 불가 — URL만 다른 1차 자료로 교체**한다(매일 2개 불변식 유지).
   - 어느 검증이든 실패하면 **커밋하지 말고** 무엇이 틀렸는지 출력한다.
 - 커밋: `git add index.html LEARNING.md` → 메시지 `AI Daily — <오늘 KST 날짜> edition` → `git push origin main` (→ Vercel 자동 배포).
-- **push 확인·재시도**: push가 non-fast-forward로 거부되면 `git pull --rebase origin main` 후 1회 재시도. 이후 `git ls-remote origin refs/heads/main`의 SHA가 로컬 `git rev-parse HEAD`와 일치해야 성공이다. 불일치하거나 인증 오류면 `PUSH-FAILED:`로 시작하는 줄과 전체 에러를 출력하고 중단한다.
+- **push 확인·재시도**: push가 non-fast-forward로 거부되면 `git pull --rebase origin main` 후 1회 재시도. rebase 충돌이 나면 `git rebase --abort` 후 `PUSH-FAILED:`로 중단한다. push 후 `git ls-remote origin refs/heads/main`의 SHA가 로컬 `git rev-parse HEAD`와 일치해야 성공이다. 불일치하거나 인증 오류면 `PUSH-FAILED:`로 시작하는 줄과 전체 에러를 출력하고 중단한다.
 - 소셜은 매일 전부 그날 뉴스에 대한 실제 발언으로 교체(어제 재탕 금지).
 - learn[]도 매일 2개 새로 진행(4-1 규칙): LEARNING.md에서 todo 상위 2개 → 작성 → status를 done으로 갱신.

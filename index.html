@@ -196,6 +196,32 @@
   .ccard h3 { font-size: .98rem; font-weight: 500; line-height: 1.55; }
   .ccard .summary { margin-top: 6px; font-size: .87rem; color: var(--ink-2); font-weight: 300; }
 
+  /* ---------- Learn card ---------- */
+  .lcard {
+    border-top: 1px solid var(--line);
+    padding: 22px 0 24px;
+    display: block;
+    transition: background .2s;
+  }
+  .lcard:hover { background: var(--bg-soft); }
+  .lcat {
+    font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); font-weight: 500;
+  }
+  .lterm { margin-top: 8px; font-size: 1.05rem; font-weight: 500; line-height: 1.5; }
+  .lterm .lfull { font-size: .8rem; color: var(--ink-3); font-weight: 300; margin-left: 8px; }
+  .lcard .summary { margin-top: 8px; font-size: .87rem; line-height: 1.75; color: var(--ink-2); font-weight: 300; }
+  .langle {
+    margin-top: 14px; padding: 10px 14px;
+    border-left: 2px solid var(--accent);
+    background: var(--bg-soft);
+    font-size: .8rem; line-height: 1.7; color: var(--ink-2); font-weight: 300;
+  }
+  .langle b { font-weight: 500; color: var(--ink); }
+  .lcard .go { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; font-size: .78rem; color: var(--ink-3); }
+  .lcard .go svg { width: 13px; height: 13px; }
+  .lcard:hover .go { color: var(--accent); }
+
   .empty {
     border-top: 1px solid var(--line);
     padding: 36px 0; text-align: center;
@@ -230,7 +256,7 @@
   @media (min-width: 768px) {
     body { font-size: 17px; }
     .hero { padding-top: 64px; }
-    .grid.news, .grid.company { grid-template-columns: 1fr 1fr; column-gap: 48px; }
+    .grid.news, .grid.company, .grid.learn { grid-template-columns: 1fr 1fr; column-gap: 48px; }
     .grid.social {
       grid-template-columns: 1fr 1fr; gap: 16px;
     }
@@ -259,6 +285,7 @@
       <a href="#news" class="active">뉴스 브리핑</a>
       <a href="#social">보이스 (X)</a>
       <a href="#company">기업 발표 (LinkedIn)</a>
+      <a href="#learn">오늘의 학습</a>
     </nav>
   </div>
 </header>
@@ -294,6 +321,12 @@
     <div class="sec-head"><span class="sec-no mono">03</span><h2>기업 발표</h2></div>
     <p class="sec-desc">스타트업·빅테크의 LinkedIn 및 공식 채널 발표 중 중요한 변화</p>
     <div class="grid company" id="companyGrid"></div>
+  </section>
+
+  <section id="learn">
+    <div class="sec-head"><span class="sec-no mono">04</span><h2>오늘의 학습</h2></div>
+    <p class="sec-desc">하루 두 개 — 피지컬 AI·로보틱스 엔지니어링의 핵심 개념을 순서대로 익힙니다</p>
+    <div class="grid learn" id="learnGrid"></div>
   </section>
 </main>
 
@@ -496,6 +529,26 @@ const EDITION = {
       summary: "AI 데이터센터 GPU Crescent Island를 2026년 말 내놓겠다고 밝히며 엔비디아·AMD 양강 구도에 도전장을 냈다. HPC·AI 인프라 시장의 3파전을 예고한다.",
       url: "https://www.barchart.com/story/news/2266627/intel-sets-sights-on-nvidia-and-amd-with-upcoming-ai-data-center-chip-launch-by-year-end"
     }
+  ],
+  learn: [
+    {
+      term: "Physical AI",
+      full: "피지컬 AI",
+      category: "핵심개념 · 1/56",
+      topics: ["physical-ai"],
+      summary: "현실 세계를 보고·이해하고·몸으로 행동하는 AI. 챗봇이 텍스트라는 디지털 세계 안에서만 살았다면, 피지컬 AI는 마찰·무게·관성 같은 물리 법칙을 이해하고 로봇의 팔다리로 실제 세계에 개입한다. 소프트웨어 관점의 결정적 차이는 '실행 취소가 없다'는 것 — 코드는 롤백하면 되지만 컵을 떨어뜨리면 되돌릴 수 없어서, 불확실한 현실에서의 안전한 행동이 핵심 문제가 된다. 오늘 뉴스의 월드랩스 Atlas 같은 월드모델·공간지능 경쟁도 결국 이 물리 세계 이해를 선점하려는 싸움이다.",
+      angle: "젠슨 황의 \"Physical AI has arrived\" 선언과 함께 '디지털 AI와 뭐가 다른가'를 대비시키는 것이 첫 콘텐츠로 최적. 테슬라 출신이라면 자율주행이 곧 최초의 대규모 피지컬 AI였다는 앵글이 강력하다.",
+      url: "https://www.nvidia.com/en-us/glossary/generative-physical-ai/"
+    },
+    {
+      term: "VLA",
+      full: "Vision-Language-Action",
+      category: "핵심개념 · 2/56",
+      topics: ["physical-ai", "robotics"],
+      summary: "카메라 영상과 언어 지시를 받아 로봇 동작을 직접 출력하는 모델 — 'LLM에 눈과 손을 붙인 것'. 인식→계획→제어를 사람이 단계별로 짜던 전통 로보틱스 파이프라인을, 입력에서 출력까지 신경망 하나가 통째로 학습하는 방식으로 대체한다. 2023년 구글 딥마인드의 RT-2가 '인터넷으로 학습한 VLM에 로봇 데이터를 얹으면 처음 보는 물체·지시도 일반화된다'는 걸 보여주며 패러다임을 열었다. rlwrld의 RLDX-1, Physical Intelligence의 π0, 엔비디아 GR00T가 모두 이 계열이다.",
+      angle: "\"로봇에게 '피곤한 사람에게 음료수를 건네줘'라고 말하면 에너지드링크를 집는다\" — RT-2의 실제 데모가 VLA의 일반화를 설명하는 최고의 훅. 회사 제품(RLDX-1)을 설명하는 언어이기도 하다.",
+      url: "https://robotics-transformer2.github.io/"
+    }
   ]
 };
 
@@ -559,6 +612,17 @@ function render(filter) {
       <p class="summary">${c.summary}</p>
       <span class="go">발표 보기 ${arrowSvg}</span>
     </a>`).join("") || '<div class="empty">이 토픽의 발표가 오늘은 없습니다.</div>';
+
+  const learnGrid = document.getElementById("learnGrid");
+  const learn = (EDITION.learn || []).filter(show);
+  learnGrid.innerHTML = learn.map(l => `
+    <a class="lcard" href="${l.url}" target="_blank" rel="noopener noreferrer">
+      <div class="lcat mono">${l.category}</div>
+      <h3 class="lterm">${l.term}${l.full ? `<span class="lfull">${l.full}</span>` : ""}</h3>
+      <p class="summary">${l.summary}</p>
+      <div class="langle"><b>콘텐츠 앵글</b> — ${l.angle}</div>
+      <span class="go">더 알아보기 ${arrowSvg}</span>
+    </a>`).join("") || '<div class="empty">이 토픽의 학습 항목이 오늘은 없습니다.</div>';
 }
 
 /* filter chips */

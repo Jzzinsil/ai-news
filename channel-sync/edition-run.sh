@@ -12,7 +12,8 @@ echo "=== $(date '+%F %T') edition start ==="
 
 TODAY=$(TZ=Asia/Seoul date +%Y-%m-%d)
 git fetch origin
-if git log origin/main --oneline -20 | grep -q "AI Daily — $TODAY edition"; then
+# grep -q는 조기 종료로 git log에 SIGPIPE를 일으켜 pipefail 아래서 매치가 거짓이 된다 — 반드시 끝까지 읽게 한다
+if git log origin/main --format=%s -20 | grep "AI Daily — $TODAY edition" >/dev/null; then
   echo "edition already published for $TODAY — skip"
   exit 0
 fi

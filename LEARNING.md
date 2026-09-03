@@ -3,7 +3,7 @@
 **운영 규칙:** 하루 2개씩, **`status`가 `todo`인 항목을 표 위에서부터 순서대로** 소화한다(순서가 우선 — 건너뛰지 않는다). 커버한 항목은 status를 `done`으로 바꾼다. 각 항목은 "X/LinkedIn 콘텐츠 1편의 씨앗"이 되도록 콘텐츠 앵글을 함께 담았다.
 
 **채널 싱크 (자동화됨):** 이 커리큘럼의 원천인 두 유튜브 채널(@sudoremove, @engiuniverse)은 **매일 06:35 KST에 로컬 launchd 잡**(`channel-sync/sync.sh`)이 자동 확인한다 — 신규 영상 감지 → 자막(cc) 추출 → headless Claude가 증류해 이 파일의 Phase 6에 추가(무관하면 아래 미반영 블록에 기록) → 커밋·push. 자막 추출(yt-dlp)은 클라우드에서 불가능하므로 클라우드 루틴은 이 단계를 건너뛴다. 로그: `channel-sync/sync.log`. Mac이 꺼져 있던 날은 건너뛴다(다음 실행에서 따라잡음).
-- 마지막 싱크: 2026-09-03 (sudoremove 신규 1편 반영 — Phase 6 #59, #57 보강)
+- 마지막 싱크: 2026-09-04 (sudoremove 신규 1편 반영 — Phase 6 #60)
 
 ## 백로그 (우선순위 순)
 
@@ -88,13 +88,14 @@
 | 55 | 1X NEO & Redwood | 플레이어·모델 | 유일한 소비자 판매 휴머노이드($20K/월 $499). Redwood AI + 물리 기반 월드모델로 정책 평가 | "가정용은 진짜 오나" 논쟁 + 실패 롤아웃에서도 학습한다는 기술 포인트 | todo |
 | 56 | Genie 3 / World Labs | 플레이어·모델 | DeepMind Genie 3(실시간 24fps 상호작용 세계)·World Labs Marble→Atlas(공간지능) | 월드모델 지형도 완성. 페이페이 리 "공간지능이 다음 프론티어" | todo |
 
-### Phase 6 — 채널 신규분 (57~) · 싱크 2026-09-03
+### Phase 6 — 채널 신규분 (57~) · 싱크 2026-09-04
 
 | # | 용어/주제 | 분류 | 한 줄 정의 | 왜 중요한가(콘텐츠 앵글) | status |
 |---|---|---|---|---|---|
 | 57 | Physical Prompting / In-context 로봇 학습 (Generalist GEN-1.5) | 학습기법 | 구글 딥마인드 로보틱스 출신이 창업한 Generalist의 GEN-1.5 — 3~12초 인간 시연 영상을 컨텍스트에 넣으면 파인튜닝 없이 원샷으로 따라함. 블로그 제목이 GPT-3 논문 오마주 "Foundation Models are One-shot Learners" (sudoremove) | "로봇의 GPT-3 모먼트" 서사. 평균 성공률 59%로 초기지만 태스크 조합·도구 즉흥 대체(바나나 빗자루) 창발 시연. 99% 스크래치 학습·30초 메모리·100Hz 액션, 밸류 30억 달러 협상설(콘텐츠화 전 원문 확인 권장). Skild S1도 ICL+스케일링 로 주장(학습 데이터 100K~500K시간) — "포스트 트레이닝만으론 BERT, ICL이 돼야 GPT" 서사의 두 번째 사례 (sudoremove) | todo |
 | 58 | RoboTTT / 로봇 롱컨텍스트 (Test-Time Training) | 핵심개념 | NVIDIA·스탠퍼드가 GR00T N1.7에 TTT 레이어(추론 중 그래디언트로 갱신되는 패스트 웨이트)를 넣어 기존 대비 ~1,000배인 8,000 타임스텝 컨텍스트를 지연 증가 없이 처리 (engiuniverse) | "로봇에게 1,000배 긴 기억을 주면?" — 조립 과제 79% vs 기존 42%, 8K까지 성능 무포화 → '컨텍스트 길이가 로봇의 새 스케일링 축'. #36 메모리 문제의 최신 해법이라 세트로 콘텐츠화. LLM 롱컨텍스트 경쟁의 로봇판 | todo |
 | 59 | 에고센트릭 데이터 수집 경쟁 (Figure Index · MicroAGI Shift · OpenGraph Labs) | 데이터전략 | Figure AI가 Helix 학습용 크라우드소싱 앱 'Figure Index'를 5/1 출시 — WAU 4.4만, 다운로드 26만(108개국), 영상 1,600만 개, 하루 업로드 노동량 4.9년치, 보상 $15M 지급·향후 $1B 투입 계획. 독일 MicroAGI의 'Shift'는 뉴욕 무료 청소(청소부에 에고 카메라, 회당 ~$33)+유저 모드 시급 $20(공식 억셉률 72%, 심사 축: 양손 노출·카메라 각도·의미 있는 태스크)으로 올해 20M시간 목표($5M 지출, $55M 계획). 한국 OpenGraph Labs는 택타일 장갑+에고 카메라를 낀 인력이 무료로 일해주며 수집 (sudoremove) | "내 데이터는 내가 모은다" — Figure는 인도·중국 데이터 벤더(시급 $3~6)를 써보고 자체 수집으로 전환, 올해 이미 15.8M시간. GEN-1.5·Skild S1의 ICL 발현 데이터량(100K~500K시간)에 GPT-3식 60배를 곱한 ~30M시간(~$432M) 추정이 영상의 핵심 갠또 — 크라우드소싱 앱이 그 승부처라는 서사. #37 데이터 5전략·#39 에고센트릭 스케일링과 세트 콘텐츠 | todo |
+| 60 | NVIDIA×Hugging Face 인수설과 로봇 오픈소스 생태계 | 생태계 | NVIDIA가 Hugging Face를 ~$13B에 인수하기로 합의했다는 보도(공식 발표 없음, 미확정)를 로봇 생태계 관점에서 분석 — HF는 Pollen Robotics 인수·LeRobot으로 이미 로봇 축을 확보했고, NVIDIA Isaac·GR00T 시리즈는 LeRobot 데이터셋 포맷과 긴밀히 통합돼 있어 "로봇 쪽에서 가장 시너지 큰 조합"이라는 평가 (sudoremove) | "오픈소스 성지의 주인이 바뀌면?" — MS의 GitHub 인수(기업들 프라이빗 레포 이탈) vs Meta의 Scale AI 인수(중립성 상실로 고객 전원 이탈) 선례 비교 프레임. Pollen발 $400 저가 로봇 'Microduck'(자막 표기)이 출시 24시간에 ~$2.6M 판매 — "로코모션까지 배울 수 있는 저가 실물 플랫폼이 거의 없다"는 공백을 HF 정신으로 메운 사례. HF ARR ~$150M(연환산 ~$200M 추정), NVIDIA는 ~2주 수익이면 인수가 회수라는 계산, LeRobot 팀은 수익을 안 내고 Pollen이 판매 담당이라는 내부 구조 증언까지 콘텐츠 소재. #20 LeRobot·#17 NVIDIA 3-컴퓨터 전략과 세트 | todo |
 
 > 미반영(주제 무관): sudoremove "Claude/GPT/Grok/Kimi Tier List", "Stripe의 OpenRouter 인수" — 피지컬 AI 커리큘럼 범위 밖.
 

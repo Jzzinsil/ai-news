@@ -32,6 +32,12 @@ if [ "$REPO" != "$EXPECTED" ]; then
   echo "심링크 생성: $EXPECTED -> $REPO"
 fi
 
+echo "== launchd 실행 파일 설치 (~/Library — TCC 비보호 경로) =="
+# launchd는 TCC 때문에 ~/Documents를 읽지 못한다. 실행 진입점을 ~/Library에 둔다.
+mkdir -p "$HOME/Library/ainews-sync" "$HOME/Library/Logs"
+cp "$REPO/channel-sync/launchd-run.sh" "$HOME/Library/ainews-sync/run.sh"
+chmod +x "$HOME/Library/ainews-sync/run.sh"
+
 echo "== launchd 등록 =="
 cp "$PLIST_SRC" "$PLIST_DST"
 launchctl bootout "gui/$(id -u)/com.jzzinsil.ainews-channelsync" 2>/dev/null || true

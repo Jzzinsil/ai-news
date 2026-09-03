@@ -7,10 +7,12 @@
   <array>
     <string>/bin/zsh</string>
     <string>-lc</string>
-    <string>"$HOME/Documents/developments/ai-news/channel-sync/sync.sh"</string>
+    <string>"$HOME/Library/ainews-sync/run.sh"</string>
   </array>
   <key>StartCalendarInterval</key>
   <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>35</integer></dict>
   <key>RunAtLoad</key><false/>
+  <key>StandardOutPath</key><string>/Users/jinsillee/Library/Logs/ainews-channelsync.log</string>
+  <key>StandardErrorPath</key><string>/Users/jinsillee/Library/Logs/ainews-channelsync.log</string>
 </dict>
 </plist>

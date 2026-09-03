@@ -3,11 +3,12 @@
 # 신규 영상 감지 → 자막(cc) 추출 → headless Claude로 증류 → LEARNING.md 갱신 → push
 set -uo pipefail
 
-REPO="$HOME/Documents/developments/ai-news"
+# launchd(TCC로 ~/Documents 접근 불가)에서는 launchd-run.sh가 미러 클론 경로를 AINEWS_REPO로 넘긴다
+REPO="${AINEWS_REPO:-$HOME/Documents/developments/ai-news}"
 YTDLP="/opt/homebrew/bin/yt-dlp"
 CLAUDE="/opt/homebrew/bin/claude"
 KNOWN="$REPO/channel-sync/known_ids.txt"
-LOG="$REPO/channel-sync/sync.log"
+LOG="${AINEWS_LOG:-$REPO/channel-sync/sync.log}"
 CHANNELS=(
   "https://www.youtube.com/@sudoremove/videos"
   "https://www.youtube.com/@engiuniverse/videos"
@@ -75,7 +76,7 @@ if git diff --cached --quiet; then
   exit 0
 fi
 TITLES=$(cut -d'|' -f2 "$TMP/new.txt" | head -3 | tr '\n' ';')
-git commit -m "channel-sync: ${TITLES}" -m "Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+git commit -m "channel-sync: ${TITLES}" -m "Co-Authored-By: Claude <noreply@anthropic.com>"
 git pull --rebase origin main || { git rebase --abort 2>/dev/null; echo "PUSH-FAILED: rebase conflict"; exit 1; }
 git push origin main || { echo "PUSH-FAILED: push error"; exit 1; }
 echo "pushed $(git rev-parse --short HEAD)"

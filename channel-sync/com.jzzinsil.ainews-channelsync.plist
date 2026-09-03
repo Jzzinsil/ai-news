@@ -11,7 +11,8 @@
   </array>
   <key>StartCalendarInterval</key>
   <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>35</integer></dict>
-  <key>RunAtLoad</key><false/>
+  <!-- 로그인 시에도 1회 실행: 06:35에 Mac이 꺼져 있던 날을 커버 (스크립트가 멱등이라 중복 실행 무해) -->
+  <key>RunAtLoad</key><true/>
   <key>StandardOutPath</key><string>/Users/jinsillee/Library/Logs/ainews-channelsync.log</string>
   <key>StandardErrorPath</key><string>/Users/jinsillee/Library/Logs/ainews-channelsync.log</string>
 </dict>

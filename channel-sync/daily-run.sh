@@ -7,7 +7,13 @@ LOG="${AINEWS_LOG:-$REPO/channel-sync/sync.log}"
 exec >>"$LOG" 2>&1
 
 /bin/zsh "$REPO/channel-sync/sync.sh"
-echo "daily-run: sync exit=$?"
+SYNC_EXIT=$?
+echo "daily-run: sync exit=$SYNC_EXIT"
 
 /bin/zsh "$REPO/channel-sync/edition-run.sh"
-echo "daily-run: edition exit=$?"
+EDITION_EXIT=$?
+echo "daily-run: edition exit=$EDITION_EXIT"
+
+# launchd의 last exit code가 실제 성패를 반영하도록 실패를 전파한다
+[ "$SYNC_EXIT" -eq 0 ] && [ "$EDITION_EXIT" -eq 0 ] || exit 1
+exit 0

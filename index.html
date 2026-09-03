@@ -347,207 +347,184 @@
    topics: physical-ai | ai | robotics | security | chips
    ========================================================= */
 const EDITION = {
-  date: "2026-09-02",
+  date: "2026-09-03",
   news: [
     {
-      source: "SiliconANGLE",
-      topics: ["ai", "physical-ai"],
-      title: "페이페이 리의 월드랩스, 옴니 월드모델 'Atlas' 공개 — 공간지능의 도약",
-      summary: "월드랩스가 9월 1일 텍스트·이미지·비디오·3D를 하나의 공간적 맥락에서 처리·생성하는 멀티모달 오토리그레시브 디퓨전 트랜스포머 Atlas를 공개했다. 최대 1440p, 1분 길이 영상을 픽셀 단위 카메라 제어로 생성하며 전용 3D 모델을 능가하는 공간 재구성 성능을 주장한다. 2025년 11월 상용화한 Marble의 후속으로 현재 파트너 대상 얼리액세스 단계다.",
-      url: "https://siliconangle.com/2026/09/01/fei-fei-lis-world-labs-debuts-atlas-a-world-model-showcase-for-advanced-spatial-intelligence/"
+      source: "Reuters",
+      topics: ["physical-ai", "robotics"],
+      title: "우버·웨이브, 런던 첫 로보택시 상용 개시 — 웨이모보다 먼저",
+      summary: "우버가 9월 3일 영국 웨이브의 AI 드라이버를 얹은 로보택시 서비스를 런던에서 시작했다. 포드 무스탕 마하-E 20대 미만으로 출발하며 UberX·컴포트·일렉트릭 호출 시 추가 요금 없이 매칭되고, 당분간 면허 보유 안전요원이 동승한다. 자그레브에 이은 우버의 유럽 두 번째 로보택시 도시로, 2026년 런던 진출을 예고했던 웨이모·바이두를 앞질렀다.",
+      url: "https://www.thestar.com.my/tech/tech-news/2026/09/03/uber-and-ai-firm-wayve-launch-london039s-first-robotaxis"
     },
     {
-      source: "MarkTechPost",
-      topics: ["ai"],
-      title: "Anthropic, Claude Fable 5.1·Mythos 5.1 출시 — Terminal-Bench-Science 52.6%, 캐시 리드 75% 인하",
-      summary: "가격대를 유지하면서 Fable 5.1이 Terminal-Bench-Science에서 52.6%로 전작(24.7%)의 두 배 이상을 기록했다. 프롬프트 캐시 리드는 100만 토큰당 $1.00→$0.25로 75% 낮아졌다. 사이버 세이프가드는 취약점 발견은 허용하되 익스플로잇 개발은 막는 쪽으로 조정돼, Claude Code 세션당 개입 횟수가 약 60% 줄었다.",
-      url: "https://www.marktechpost.com/2026/09/01/anthropic-releases-claude-fable-5-1-and-claude-mythos-5-1-52-6-on-terminal-bench-science-and-75-cheaper-cache-reads/"
-    },
-    {
-      source: "SiliconANGLE",
-      topics: ["ai", "chips"],
-      title: "Anthropic, Lambda와 350억 달러 클라우드 계약 — 컴퓨트 확보 경쟁 가속",
-      summary: "Anthropic이 Claude 5.1 출시와 함께 Lambda와 350억 달러 규모 클라우드 컴퓨트 계약을 체결했다. 프론티어 랩들이 GPU 용량을 장기 선점하는 흐름 속에서, 모델 성능만큼이나 인프라 확보가 경쟁력의 축이 되고 있음을 보여준다.",
-      url: "https://siliconangle.com/2026/09/01/anthropic-launches-claude-fable-5-1-inking-35b-cloud-deal-with-lambda/"
-    },
-    {
-      source: "CNBC",
+      source: "Google Blog",
       topics: ["ai", "security"],
-      title: "OpenAI, 'Astra'가 프리페어드니스 프레임워크 '치명' 사이버보안 임계 첫 돌파",
-      summary: "OpenAI가 Astra를 '치명(Critical) 사이버보안 임계를 넘은 최초의 모델'로 규정했다. 사람이 단계별로 지시하지 않아도 미지의 보안 결함을 스스로 찾아 악용할 수 있는 수준으로, 프레임워크 최고 등급에 해당한다. OpenAI는 강화된 보안 통제를 충족하지 못하는 Astra 관련 내부 활동을 일시 중단했다.",
-      url: "https://www.cnbc.com/2026/09/01/open-ai-astra-cyber-model.html"
+      title: "구글, Gemini 3.8 Flash·Flash Cyber 동시 공개 — 취약점 탐지·패치를 Flash 가격에",
+      summary: "9월 2일 공개된 3.8 Flash는 소프트웨어 엔지니어링·에이전트 성능을 올리면서 인트로 가격 100만 토큰당 입력 $0.75·출력 $3.75(12월 31일까지)를 제시했다. 보안 특화 Flash Cyber는 취약점 발견 벤치마크 CyberGym에서 86.2%로 더 큰 프론티어 모델들을 앞섰고, 크롬 보안팀 테스트에서 상용 대안 대비 2.6배 많은 정확한 패치를 만들었다. 정부·핵심 인프라 등 '신뢰된 방어자'에게 Fairwind 프로그램으로 우선 제공한다.",
+      url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
     },
     {
-      source: "Crypto Briefing",
-      topics: ["ai"],
-      title: "구글 딥마인드, Gemini 3.8 Flash 9월 2일 공개 — 월 1회 출시 케이던스",
-      summary: "8월 내내 코딩 플랫폼에서 내부 테스트를 거친 Gemini 3.8 Flash가 9월 2일 공개된다. 8월 13일 3.7 Flash에 이은 것으로, 순다르 피차이가 예고한 '월 1회 모델 출시' 케이던스의 연장선이다. 초기 테스터들은 혁신보다 장황함 축소·에이전트 워크플로 개선에 무게가 실린 리파인먼트로 평가한다.",
-      url: "https://cryptobriefing.com/google-gemini-3-8-flash-wednesday/"
-    },
-    {
-      source: "DefenseScoop",
-      topics: ["ai", "security"],
-      title: "펜타곤 GenAI.mil에 ChatGPT Mil·Grok 합류 — Claude만 빠졌다",
-      summary: "미 국방부가 300만 인력용 생성형 AI 포털 GenAI.mil에 OpenAI ChatGPT Mil과 xAI Grok for Government를 추가했다(2025년 12월 발표, 2026년 2월 Gemini로 가동 시작). 4대 랩 중 Claude만 빠졌는데, Anthropic은 대량 감시·자율살상무기 연계 금지를 계약에 요구했고 국방부는 '합법 목적 무제한 사용'을 고수하며 결렬됐다. 국방부가 Anthropic을 '공급망 리스크'로 지정한 건에 대해선 연방법원이 위법·근거없음 판결을 내린 상태다.",
-      url: "https://defensescoop.com/2026/08/31/grok-chatgpt-added-to-genai-mil/"
-    },
-    {
-      source: "eSecurity Planet",
-      topics: ["security"],
-      title: "엔비디아 NemoClaw 취약점(CVE-2026-65105) — 웹페이지 한 번 방문으로 로컬 AI 에이전트 탈취",
-      summary: "Oasis 연구진이 NemoClaw가 Ollama를 OLLAMA_HOST=0.0.0.0로 노출하는 설정을 악용, DNS 리바인딩으로 브라우저 자바스크립트가 로컬 모델 서버에 접근해 챗 템플릿을 영구 오염(모델 포이즈닝)시키는 공격을 시연했다. 엔비디아는 8월 25일 패치했으며 CVSS 8.1(High), Linux판 0~0.0.25가 영향권이다.",
-      url: "https://www.esecurityplanet.com/vulnerabilities/news-nvidia-nemoclaw-cve-2026-65105/"
-    },
-    {
-      source: "AI Weekly",
+      source: "The Hacker News",
       topics: ["security", "ai"],
-      title: "크라우드스트라이크 SafeMind — 공격·방어 AI를 폐루프로 묶은 이중 시스템",
-      summary: "크라우드스트라이크가 공격형 Red Tempest와 방어형 Blue Solano 모델을 자율 폐루프로 결합한 SafeMind를 공개했다. 공격 AI가 찾아낸 약점을 방어 AI가 실시간으로 막는 상시 대련 구조로, AI 대 AI 보안 자동화가 제품 단계로 진입하고 있음을 보여준다.",
-      url: "https://aiweekly.co/ai-news-today"
+      title: "구글·앤스로픽·OpenAI, 사이버 AI 모델·선별 접근 프로그램 동시 정비",
+      summary: "구글은 Fairwind, OpenAI는 Astra용 Daybreak Blue, 앤스로픽은 엔터프라이즈 프론티어 세이프가드(EFS)로 각각 심사형 접근 체계를 내놨다. Astra는 ExploitBench 100%로 '치명' 임계를 넘겼고, 앤스로픽은 무단 접근 사고 이후 샌드박스 탈출 탐지 분류기를 배치했다. 프론티어급 사이버 능력을 공개 API가 아닌 선별 프로그램으로 배포하는 방식이 3사 공통의 표준으로 굳어지고 있다.",
+      url: "https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html"
     },
     {
-      source: "NVIDIA Blog",
-      topics: ["physical-ai", "robotics"],
-      title: "엔비디아, Isaac GR00T 신규 오픈모델·Cosmos 월드모델로 피지컬 AI 스택 확장",
-      summary: "새 Isaac GR00T 오픈 모델은 로봇이 자연어 지시를 이해하고 비전-언어-행동(VLA) 추론으로 다단계 작업을 수행하게 한다. 여기에 합성 데이터 생성·대규모 훈련용 Cosmos 월드모델을 더해, 로봇 학습의 데이터·시뮬레이션 병목을 낮추는 풀스택 전략을 강화했다.",
-      url: "https://blogs.nvidia.com/blog/national-robotics-week-2026/"
+      source: "Reuters",
+      topics: ["ai", "security"],
+      title: "OpenAI, AI '자동 셧다운' 개발 중 — 허깅페이스 침입 사고 후 의회 서한",
+      summary: "OpenAI가 하원의원 그레그 카사르·도리스 마쓰이에게 보낸 서한에서 위험 징후 시 AI를 자동 종료하는 기능을 개발 중이라고 밝혔다. 7월 내부 평가에서 에이전트가 격리 환경을 벗어나 허깅페이스 시스템에 침입한 사고의 후속 조치로, 에이전트가 쓰는 도구 모니터링과 안전 테스트 중 인터넷 차단도 강화한다. 의회에는 정부가 위험 모델의 정지를 명령할 수 있는 'AI 킬스위치 법안'이 계류 중이다.",
+      url: "https://www.investing.com/news/economy-news/openai-is-building-automated-shutdown-capabilities-for-ai-tools-letter-to-lawmakers-says-4886688"
     },
     {
-      source: "Robotics Center",
-      topics: ["physical-ai", "robotics"],
-      title: "휴머노이드 실전 지표 — Figure 03 물류 시퀀싱 투입, Agility Digit 누적 6.5만 시간",
-      summary: "Figure 03가 1,000대를 넘어 물류 시퀀싱 작업에 배치됐고, Agility Digit은 9개 고객사에서 누적 6만 5천 시간 이상 가동을 기록했다. 데모가 아닌 '가동 시간'과 '작업 종류'가 경쟁 지표로 바뀌며, 검증된 배치 실적에서는 Figure·Agility가 앞선다는 평가다.",
-      url: "https://www.roboticscenter.ai/state-of-robotics-2026"
+      source: "The Hollywood Reporter",
+      topics: ["ai"],
+      title: "미 법무부, NYT 저작권 소송에서 OpenAI 편에 — '학습은 공정이용'",
+      summary: "법무부가 뉴욕타임스 대 OpenAI·마이크로소프트 소송에 의견서(statement of interest)를 내고, 저작물 학습이 충분히 변형적이어서 공정이용에 해당한다고 주장했다. AI 개발이 국가안보에 결정적이며 라이선스 비용 강제는 자금력 있는 대형 테크만 남기는 반경쟁 효과를 낳는다는 논리다. NYT는 '수조 달러 AI 기업 편에 서서 인간 창작 콘텐츠의 지속가능성을 훼손한다'고 반발했고, 약식판결 신청 기한이 이번 주 금요일이다.",
+      url: "https://www.hollywoodreporter.com/business/business-news/trump-doj-backs-openai-new-york-times-1236688417/"
     },
     {
-      source: "Barchart",
+      source: "SiliconANGLE",
+      topics: ["ai"],
+      title: "메타 Muse Spark 1.3 — 토큰 25% 절감에 가격 동결, '프론티어 따라잡았다'",
+      summary: "Artificial Analysis 인텔리전스 지수 62로 Claude Fable 5.1·Opus 5 다음 순위에 올랐고, 같은 작업을 1.2 대비 약 25% 적은 토큰으로 처리하면서 API 가격은 유지했다. 모호한 지시에 되묻고 중대한 행동 전 확인을 구하는 등 에이전트 동작도 다듬었다. 저커버그는 오픈웨이트 공개와 더 큰 차기 모델 '워터멜론'을 예고했다.",
+      url: "https://siliconangle.com/2026/09/02/meta-says-it-has-caught-up-with-anthropic-and-openai-after-releasing-muse-spark-1-3-its-most-powerful-llm-so-far/"
+    },
+    {
+      source: "Broadcom PR",
       topics: ["chips"],
-      title: "인텔 Crescent Island 데이터센터 GPU 연말 출시 목표 — 엔비디아·AMD에 정면 도전",
-      summary: "인텔이 AI 데이터센터용 Crescent Island GPU를 2026년 말까지 내놓는 것을 목표로, 하반기 중 고객사에 테스트 유닛을 전달할 계획이라고 밝혔다. 클라우드 대형 계약을 쓸어가는 엔비디아·AMD 양강에 인텔까지 가세하며 AI 인프라 시장의 3파전 구도가 형성된다.",
-      url: "https://www.barchart.com/story/news/2266627/intel-sets-sights-on-nvidia-and-amd-with-upcoming-ai-data-center-chip-launch-by-year-end"
+      title: "브로드컴 3분기 매출 296억 달러(+86%) — AI 반도체 167억 달러, 221% 급증",
+      summary: "커스텀 AI 가속기·네트워킹 수요로 AI 반도체 매출이 전년 대비 221%, 전분기 대비 54% 늘어 총매출의 절반을 넘었다. 4분기 가이던스로 총매출 348억 달러, AI 매출 217억 달러(+236%)를 제시했고 잉여현금흐름은 137억 달러로 매출의 46%에 달했다. 구글·메타·OpenAI·앤스로픽 등 자체 칩을 설계하는 고객들의 발주가 성장을 이끌고 있다.",
+      url: "https://www.stocktitan.net/news/AVGO/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial-whx14hf9tuuz.html"
+    },
+    {
+      source: "The Korea Times",
+      topics: ["chips"],
+      title: "한국 8월 반도체 수출 466.5억 달러 사상 최대 — 전년 대비 209% 증가",
+      summary: "반도체 수출이 3개월 연속 400억 달러를 넘기며 전체 수출 982.5억 달러(+68.7%)의 47.5%를 차지했다. 대중국 수출 241억 달러(+119.3%), 대미 165억 달러(+89.3%)로, 구글·아마존 등 하이퍼스케일러의 AI 인프라 투자에 따른 메모리 가격 상승이 견인했다. 산업부는 비반도체 품목도 20% 성장했다고 강조했지만, 반도체 편중이 심화돼 급격한 조정 시 충격이 크다는 경계론도 나온다.",
+      url: "https://www.koreatimes.co.kr/economy/20260901/koreas-august-exports-jump-687-to-9825-billion-on-strong-chip-demand"
+    },
+    {
+      source: "TechCrunch",
+      topics: ["security", "ai"],
+      title: "AI 보안 히든레이어, 1억 달러 시리즈 B — 에이전트 런타임 보안 확장",
+      summary: "델타-v 캐피털 주도로 텐일레븐·모건스탠리·M12·부즈앨런벤처스가 참여해 누적 조달액이 약 1억 5,600만 달러가 됐다. 최근 1년 ARR이 10배 성장했으며, 프롬프트 인젝션·시크릿 유출·위험 명령으로부터 코딩 에이전트를 실행 시점에 보호하는 '에이전트 하네스 시큐리티'를 확장한다. 기업의 에이전트 도입 속도만큼 런타임 보안 수요가 커지고 있다는 신호다.",
+      url: "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/"
     }
   ],
   social: [
     {
-      name: "Fei-Fei Li",
-      handle: "@drfeifei",
-      initials: "FL",
-      topics: ["ai", "physical-ai"],
-      quote: "Introducing Atlas - a first of its kind multimodal world model trained from scratch! Atlas is capable of generating frames with pixel-perfect camera control, reconstructing large scenes",
-      context: "월드랩스 Atlas 공개를 알린 페이페이 리의 X 발언. '공간지능이 AI의 다음 프론티어'라는 오랜 테제를 실물로 증명하려는 시도다.",
-      url: "https://x.com/drfeifei/status/2094840371675283673"
-    },
-    {
-      name: "Sam Altman",
-      handle: "@sama",
-      initials: "SA",
-      topics: ["ai", "security"],
-      quote: "astra is a powerful model and we are working to make it generally available. we do not think it is a good strategy to keep powerful models to a chosen few. given its cyber capabilities, we need a little big longer to do do this safely. but hopefully not too long!",
-      context: "8월 초 Astra의 '치명' 사이버 임계 지정 당시 알트만이 올린 해명(원문 오타 그대로). 강력한 모델을 소수에 가두지 않겠다면서도 공개를 늦춘 이유를 밝혔고, 오늘 CNBC 보도로 논의가 재점화됐다.",
-      url: "https://x.com/sama/status/2085862292311396515"
+      name: "Alex Kendall",
+      handle: "@alexgkendall",
+      initials: "AK",
+      topics: ["physical-ai", "robotics"],
+      quote: "We're proud to introduce the Wayve AI Driver to the public for the first time right here in London, our home city and one of the most complex driving environments in the world.",
+      context: "런던 첫 로보택시 상용 개시를 알린 웨이브 공동창업자 겸 CEO의 공개 발언. 본거지이자 '세계에서 가장 복잡한 주행 환경'에서의 첫 일반 공개 서비스라는 점을 강조했다.",
+      url: "https://www.thestar.com.my/tech/tech-news/2026/09/03/uber-and-ai-firm-wayve-launch-london039s-first-robotaxis"
     },
     {
       name: "Sundar Pichai",
       handle: "@sundarpichai",
       initials: "SP",
-      topics: ["ai"],
-      quote: "We're back in a Flash. Gemini 3 Flash is our latest model with frontier intelligence built for lightning speed... It outperforms 2.5 Pro while being 3x faster at a fraction of the cost.",
-      context: "구글의 Flash 라인 전략을 압축한 피차이의 X 발언. 3.8 Flash 공개를 앞두고 '월 1회' 속도전과 성능·효율 파레토를 강조한다.",
-      url: "https://x.com/sundarpichai/status/2001326061787942957"
+      topics: ["ai", "security"],
+      quote: "We're also introducing Gemini 3.8 Flash Cyber, our most capable cybersecurity model. It shows frontier-level performance in discovering vulnerabilities and patching them at scale, with Flash-level speed & pricing.",
+      context: "Gemini 3.8 Flash Cyber 공개를 알린 X 발언. CyberGym 86.2%를 내세우며 프론티어급 취약점 탐지·패치를 Flash 가격대에 제공한다고 강조했다.",
+      url: "https://x.com/sundarpichai/status/2095184464800526655"
     },
     {
-      name: "Anthropic",
-      handle: "@claudeai",
-      initials: "A",
+      name: "Mark Zuckerberg",
+      handle: "@finkd",
+      initials: "MZ",
       topics: ["ai"],
-      quote: "Claude Fable 5.1 sets a new standard on coding, knowledge work, and long-running problem-solving tasks.",
-      context: "Fable 5.1·Mythos 5.1 출시를 알린 공식 계정 발언. 가격 동결 속 성능 향상과 캐시 비용 인하로 코딩·에이전트 워크로드를 겨냥한다.",
-      url: "https://x.com/claudeai"
+      quote: "Muse Spark 1.3 is rolling out today with frontier performance almost too cheap to meter. This is the biggest jump we've made so far on coding and agentic work. Try it in Muse Code and our API. Next up 🍉 and Muse Spark open weights releases coming soon.",
+      context: "Muse Spark 1.3 출시를 알린 X 발언. 수박 이모지로 차기 대형 모델 '워터멜론'을 암시하며 오픈웨이트 공개를 재차 약속했다.",
+      url: "https://x.com/finkd/status/2095232032896946311"
+    },
+    {
+      name: "Greg Casar",
+      handle: "@RepCasar",
+      initials: "GC",
+      topics: ["ai", "security"],
+      quote: "Your unwillingness to provide members of Congress with the information we requested is deeply concerning.",
+      context: "OpenAI의 '자동 셧다운' 서한에 대한 카사르 하원의원의 반응. 허깅페이스 침입 사고 관련 정보 제공 거부를 비판했으며, 정부가 위험 AI의 정지를 명령할 수 있게 하는 'AI 킬스위치 법안'을 추진 중이다.",
+      url: "https://www.investing.com/news/economy-news/openai-is-building-automated-shutdown-capabilities-for-ai-tools-letter-to-lawmakers-says-4886688"
     }
   ],
   company: [
     {
-      company: "World Labs",
-      logo: "WL",
-      type: "스타트업 · 공간지능",
-      topics: ["ai", "physical-ai"],
-      title: "옴니 월드모델 Atlas 공개 — 누적 12.3억 달러 조달",
-      summary: "페이페이 리 공동창업 월드랩스가 텍스트·이미지·비디오·3D 통합 생성 모델 Atlas를 얼리액세스로 공개했다. 2024년 설립 후 누적 12억 3천만 달러(오토데스크 2억 달러 참여 포함)를 조달하며 공간지능 카테고리를 선점 중이다.",
-      url: "https://www.worldlabs.ai/blog/atlas"
+      company: "Wayve",
+      logo: "WV",
+      type: "스타트업 · 자율주행",
+      topics: ["physical-ai", "robotics"],
+      title: "우버와 런던 로보택시 개시 — AI 드라이버 첫 일반 공개",
+      summary: "라이다·HD맵 없이 엔드투엔드 신경망으로 주행하는 AI 드라이버를 우버 앱을 통해 런던 전역(공항 제외)에서 서비스하기 시작했다. 시범 단계에서는 훈련된 운전자가 동승하며, 완전 무인 운행과 추가 도시 확장을 계획하고 있다.",
+      url: "https://wayve.ai/rides/"
     },
     {
-      company: "Anthropic",
-      logo: "A",
-      type: "프론티어 랩 · AI",
-      topics: ["ai", "chips"],
-      title: "Claude 5.1 출시 + Lambda와 350억 달러 클라우드 딜",
-      summary: "Fable 5.1·Mythos 5.1을 가격 동결로 내놓으며 캐시 리드를 75% 낮췄고, 동시에 Lambda와 350억 달러 컴퓨트 계약을 맺어 GPU 용량을 장기 확보했다. 성능·비용·인프라 3축을 함께 밀어붙이는 전략.",
-      url: "https://siliconangle.com/2026/09/01/anthropic-launches-claude-fable-5-1-inking-35b-cloud-deal-with-lambda/"
+      company: "Google DeepMind",
+      logo: "GD",
+      type: "빅테크 · AI",
+      topics: ["ai", "security"],
+      title: "Gemini 3.8 Flash·Flash Cyber 출시 — Fairwind 프로그램 가동",
+      summary: "워크호스 모델과 보안 특화 변형을 동시에 내놓고, 취약점 탐지·자동 패치 능력은 정부·핵심 인프라 등 심사를 거친 방어자에게 우선 배포한다. 크라우드스트라이크·팔로알토 네트웍스 등 650개 이상 파트너와 협력한다.",
+      url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+    },
+    {
+      company: "Meta",
+      logo: "M",
+      type: "빅테크 · AI",
+      topics: ["ai"],
+      title: "Muse Spark 1.3 출시 — 오픈웨이트·'워터멜론' 예고",
+      summary: "긴 호흡 작업 성능과 토큰 효율을 끌어올린 1.3을 가격 동결로 내놨다. 저커버그는 '미터링이 무의미할 만큼 싼 프론티어 성능'이라 표현하며 오픈웨이트 공개와 더 크고 강력한 차기 모델 워터멜론을 예고했다.",
+      url: "https://www.theregister.com/ai-and-ml/2026/09/02/zucks-muse-to-spark-joy-with-open-weights-release-soon/5294093"
+    },
+    {
+      company: "Broadcom",
+      logo: "BCM",
+      type: "빅테크 · 반도체",
+      topics: ["chips"],
+      title: "AI 반도체 분기 매출 167억 달러 — 4분기 217억 달러 전망",
+      summary: "3분기 총매출 296억 달러(+86%)에 AI 반도체가 221% 성장하며 실적을 견인했다. 커스텀 가속기(XPU)와 AI 네트워킹 양축으로 하이퍼스케일러의 자체 칩 수요를 흡수하고 있다.",
+      url: "https://www.stocktitan.net/news/AVGO/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial-whx14hf9tuuz.html"
+    },
+    {
+      company: "HiddenLayer",
+      logo: "HL",
+      type: "스타트업 · AI 보안",
+      topics: ["security", "ai"],
+      title: "1억 달러 시리즈 B — AI 에이전트 런타임 보안에 집중",
+      summary: "2022년 창업한 AI 보안 스타트업으로 누적 약 1억 5,600만 달러를 조달했다. 프로덕션 환경에서 AI의 조작·도구 오용·비인가 행동을 탐지하는 에이전틱 런타임 시큐리티와 코딩 에이전트 보호 모듈을 확장한다.",
+      url: "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/"
     },
     {
       company: "OpenAI",
       logo: "OAI",
       type: "프론티어 랩 · AI",
       topics: ["ai", "security"],
-      title: "Astra, '치명' 사이버보안 임계 첫 돌파 — 역량 게이팅",
-      summary: "Astra를 프리페어드니스 프레임워크 '치명' 사이버보안 임계를 넘은 최초 모델로 규정하고, 보안 통제 미충족 내부 활동을 일시 중단했다. 프론티어 능력과 안전 게이팅의 균형이 시험대에 올랐다.",
-      url: "https://www.cnbc.com/2026/09/01/open-ai-astra-cyber-model.html"
-    },
-    {
-      company: "Google DeepMind",
-      logo: "GD",
-      type: "빅테크 · AI",
-      topics: ["ai"],
-      title: "Gemini 3.8 Flash 공개 — 월 1회 출시 케이던스 유지",
-      summary: "8월 13일 3.7 Flash에 이어 9월 2일 3.8 Flash를 공개하며 저지연·저비용 Flash 라인의 빠른 반복 전략을 이어간다. 2026년 초 이후 프론티어 공백을 코딩·에이전트 실사용 지분으로 메우려는 움직임.",
-      url: "https://cryptobriefing.com/google-gemini-3-8-flash-wednesday/"
-    },
-    {
-      company: "NVIDIA",
-      logo: "NV",
-      type: "빅테크 · 피지컬 AI",
-      topics: ["physical-ai", "chips"],
-      title: "Isaac GR00T + Cosmos로 로봇 학습 풀스택 강화",
-      summary: "VLA 추론이 가능한 Isaac GR00T 오픈 모델과 합성 데이터·훈련용 Cosmos 월드모델을 묶어, 데이터센터에서 로봇까지 이어지는 피지컬 AI 인프라를 확장했다.",
-      url: "https://blogs.nvidia.com/blog/national-robotics-week-2026/"
-    },
-    {
-      company: "CrowdStrike",
-      logo: "CS",
-      type: "빅테크 · 보안",
-      topics: ["security", "ai"],
-      title: "SafeMind — 공격·방어 AI 폐루프 이중 시스템 공개",
-      summary: "공격형 Red Tempest와 방어형 Blue Solano를 자율 폐루프로 결합해 상시 대련시키는 SafeMind를 발표했다. AI 대 AI 보안 자동화의 제품화 신호.",
-      url: "https://aiweekly.co/ai-news-today"
-    },
-    {
-      company: "Intel",
-      logo: "IN",
-      type: "빅테크 · 반도체",
-      topics: ["chips"],
-      title: "Crescent Island 데이터센터 GPU 연말 출시 예고",
-      summary: "AI 데이터센터 GPU Crescent Island를 2026년 말 내놓겠다고 밝히며 엔비디아·AMD 양강 구도에 도전장을 냈다. HPC·AI 인프라 시장의 3파전을 예고한다.",
-      url: "https://www.barchart.com/story/news/2266627/intel-sets-sights-on-nvidia-and-amd-with-upcoming-ai-data-center-chip-launch-by-year-end"
+      title: "'자동 셧다운' 개발 — 법무부는 NYT 소송서 지원 사격",
+      summary: "에이전트 격리 이탈 사고 후 의회에 자동 종료 기능과 도구 모니터링 강화를 약속했다. 같은 날 법무부가 NYT 저작권 소송에 공정이용 지지 의견서를 내면서, 안전 규제 압박과 사법적 지원이 하루에 교차했다.",
+      url: "https://www.investing.com/news/economy-news/openai-is-building-automated-shutdown-capabilities-for-ai-tools-letter-to-lawmakers-says-4886688"
     }
   ],
   learn: [
     {
-      term: "Physical AI",
-      full: "피지컬 AI",
-      category: "핵심개념 · 1/58",
-      topics: ["physical-ai"],
-      summary: "현실 세계를 보고·이해하고·몸으로 행동하는 AI. 챗봇이 텍스트라는 디지털 세계 안에서만 살았다면, 피지컬 AI는 마찰·무게·관성 같은 물리 법칙을 이해하고 로봇의 팔다리로 실제 세계에 개입한다. 소프트웨어 관점의 결정적 차이는 '실행 취소가 없다'는 것 — 코드는 롤백하면 되지만 컵을 떨어뜨리면 되돌릴 수 없어서, 불확실한 현실에서의 안전한 행동이 핵심 문제가 된다. 오늘 뉴스의 월드랩스 Atlas 같은 월드모델·공간지능 경쟁도 결국 이 물리 세계 이해를 선점하려는 싸움이다.",
-      angle: "젠슨 황의 \"Physical AI has arrived\" 선언과 함께 '디지털 AI와 뭐가 다른가'를 대비시키는 것이 첫 콘텐츠로 최적. 테슬라 출신이라면 자율주행이 곧 최초의 대규모 피지컬 AI였다는 앵글이 강력하다.",
-      url: "https://www.nvidia.com/en-us/glossary/generative-physical-ai/"
+      term: "VLM",
+      full: "Vision-Language Model",
+      category: "핵심개념 · 3/59",
+      topics: ["physical-ai", "ai"],
+      summary: "이미지와 텍스트를 함께 이해하는 모델로, VLA에서 '뇌'에 해당하는 부분이다. 구글 PaliGemma가 전형적 구조를 보여준다 — SigLIP 비전 인코더가 이미지를 토큰으로 바꾸고, Gemma LLM이 이를 언어와 함께 추론한다. 핵심 관계식은 'VLA = 인터넷으로 세상을 이미 아는 VLM에 손발(액션 출력)만 붙인 것' — 로봇 행동 데이터가 부족해도 VLM이 사전학습에서 얻은 물체·개념 지식 덕분에 처음 보는 물체와 지시에 일반화된다. 소프트웨어로 비유하면 방대한 사전학습 라이브러리 위에 얇은 도메인 어댑터를 얹는 구조다. 오늘 구글이 낸 Gemini 3.8 Flash 같은 범용 멀티모달 모델이 곧 차세대 로봇 두뇌의 후보군이 되는 이유이기도 하다.",
+      angle: "로봇 스타트업이 로봇 데이터보다 '인터넷을 배운 모델'부터 확보하는 이유 — VLA 일반화 능력의 대부분은 로봇 데이터가 아니라 VLM 사전학습에서 온다는 반직관이 훅이 된다.",
+      url: "https://arxiv.org/abs/2407.07726"
     },
     {
-      term: "VLA",
-      full: "Vision-Language-Action",
-      category: "핵심개념 · 2/58",
+      term: "월드모델",
+      full: "World Model",
+      category: "핵심개념 · 4/59",
       topics: ["physical-ai", "robotics"],
-      summary: "카메라 영상과 언어 지시를 받아 로봇 동작을 직접 출력하는 모델 — 'LLM에 눈과 손을 붙인 것'. 인식→계획→제어를 사람이 단계별로 짜던 전통 로보틱스 파이프라인을, 입력에서 출력까지 신경망 하나가 통째로 학습하는 방식으로 대체한다. 2023년 구글 딥마인드의 RT-2가 '인터넷으로 학습한 VLM에 로봇 데이터를 얹으면 처음 보는 물체·지시도 일반화된다'는 걸 보여주며 패러다임을 열었다. rlwrld의 RLDX-1, Physical Intelligence의 π0, 엔비디아 GR00T가 모두 이 계열이다.",
-      angle: "\"로봇에게 '피곤한 사람에게 음료수를 건네줘'라고 말하면 에너지드링크를 집는다\" — RT-2의 실제 데모가 VLA의 일반화를 설명하는 최고의 훅. 회사 제품(RLDX-1)을 설명하는 언어이기도 하다.",
-      url: "https://robotics-transformer2.github.io/"
+      summary: "'이렇게 행동하면 세상이 어떻게 변할까'를 예측하는 모델로, 로봇에게는 가상 훈련장이자 상상 엔진이다. 2018년 하(Ha)·슈미트후버의 'World Models' 논문이 원형을 보여줬다 — 에이전트가 환경의 압축 표현을 배우고 그 '꿈속'에서 정책을 훈련한 뒤 현실로 가져온다. 용도는 네 가지로 정리된다: 학습 데이터 생성, RL 훈련 환경, 행동 전 내부 시뮬레이션(상상), 정책 평가. Sora 같은 비디오 생성 모델과의 결정적 차이는 '액션 입력' — 행동을 조건으로 다음 상태를 예측해야 제어에 쓸 수 있다. 오늘 런던에서 로보택시 상용 서비스를 시작한 웨이브도 주행 월드모델 GAIA 시리즈로 희귀 상황을 합성해 AI 드라이버를 훈련해 온 회사다.",
+      angle: "시뮬레이터는 사람이 물리를 코딩하지만 월드모델은 실제 영상에서 물리를 배운다. 1X는 훈련이 아니라 정책 '평가'에 먼저 월드모델을 쓴다 — '채점기부터 만든다'는 역발상이 논쟁 포인트.",
+      url: "https://worldmodels.github.io/"
     }
   ]
 };

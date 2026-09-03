@@ -15,7 +15,7 @@ description: 오늘 아침 자동화(채널 싱크 + 뉴스 루틴 + 배포)가 
    - 학습 카드의 진행 카운터(`N/전체`)가 어제보다 +2 전진했는지
 
 3. **git 커밋 도착** — `git fetch origin && git log origin/main --oneline -5` 로:
-   - `AI Daily — <오늘> edition` 커밋 존재 여부 (클라우드 루틴)
+   - `AI Daily — <오늘> edition` 커밋 존재 여부 (로컬 launchd의 edition-run.sh가 주 경로; 클라우드 루틴은 GitHub 앱 write 권한이 있어야 push 가능한 보조 경로)
    - `channel-sync:` 커밋 존재 여부 (있으면 신규 영상이 있었던 것 — 없어도 정상일 수 있음)
 
 4. **채널 싱크 로그** — `tail -30 ~/Library/Logs/ainews-channelsync.log`:

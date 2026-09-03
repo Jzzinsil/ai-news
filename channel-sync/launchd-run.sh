@@ -17,4 +17,4 @@ cd "$MIRROR"
 git fetch origin
 git reset --hard origin/main
 
-AINEWS_REPO="$MIRROR" exec /bin/zsh "$MIRROR/channel-sync/sync.sh"
+AINEWS_REPO="$MIRROR" exec /bin/zsh "$MIRROR/channel-sync/daily-run.sh"

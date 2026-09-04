@@ -27,10 +27,26 @@ PROMPT="AI Daily 무인 에디션 갱신. 이 레포의 .claude/commands/update-
 5. git add index.html LEARNING.md → 커밋 메시지 'AI Daily — $TODAY edition' → git push origin main. non-fast-forward면 git pull --rebase 후 1회 재시도. push 후 git ls-remote origin refs/heads/main 의 SHA가 git rev-parse HEAD와 일치하는지 확인하고, 불일치하면 'PUSH-FAILED:'로 시작하는 줄과 전체 에러를 출력하라.
 index.html의 EDITION 외 영역과 LEARNING.md 외 파일은 절대 수정하지 마라. 소셜 발언은 전부 오늘자 실제 발언으로, URL은 실존 원문만."
 
-"$CLAUDE" -p "$PROMPT" --allowedTools "WebSearch,WebFetch,Read,Edit,Bash" --max-turns 100 || {
-  echo "EDITION-FAILED: claude run error"
+# 일시적 API/네트워크 오류(예: connection closed mid-response)로 한 번 죽으면 아침 갱신이 통째로 빠지므로 재시도한다
+RUN_OK=0
+for ATTEMPT in 1 2 3; do
+  if "$CLAUDE" -p "$PROMPT" --allowedTools "WebSearch,WebFetch,Read,Edit,Bash" --max-turns 100; then
+    RUN_OK=1
+    break
+  fi
+  echo "EDITION-RETRY: claude run error (attempt $ATTEMPT/3)"
+  # 직전 시도가 push까지 마친 뒤 죽었을 수 있다 — origin에 오늘자 커밋이 보이면 성공으로 간주
+  git fetch origin
+  if git log origin/main --format=%s -5 | grep "AI Daily — $TODAY edition" >/dev/null; then
+    RUN_OK=1
+    break
+  fi
+  [ "$ATTEMPT" -lt 3 ] && sleep 60
+done
+if [ "$RUN_OK" -ne 1 ]; then
+  echo "EDITION-FAILED: claude run error after 3 attempts"
   exit 1
-}
+fi
 
 LOCAL=$(git rev-parse HEAD)
 REMOTE=$(git ls-remote origin refs/heads/main | cut -f1)

@@ -28,7 +28,7 @@ description: 오늘 아침 자동화(채널 싱크 + 뉴스 루틴 + 배포)가 
 
 ## 실패 시 원인별 안내
 
-- **사이트가 어제 날짜** + `AI Daily` 커밋 없음 → 클라우드 루틴 실패. https://claude.ai/code/routines 의 "AI Daily — 아침 에디션 갱신" 실행 로그에서 `PUSH-FAILED:` 확인. 루틴에는 레포 전용 deploy key 폴백(push 방법 5b/5c)이 심어져 있으므로 인증 실패 시 GitHub 레포 Settings → Deploy keys에 `ainews-cloud-routine-deploy` 키가 살아있는지(write 권한) 확인. 삭제됐다면 새 키를 만들어 루틴 프롬프트를 갱신한다.
+- **사이트가 어제 날짜** + `AI Daily` 커밋 없음 → 로컬(06:35, 재시도 3회)·클라우드(07:30 KST 폴백, 스킵 가드 내장) 둘 다 실패한 것. 로컬은 위 4번 로그로, 클라우드는 https://claude.ai/code/routines 의 "AI Daily — 아침 에디션 갱신" 실행 로그에서 `PUSH-FAILED:` 확인. 클라우드 push는 SSH가 막혀 있어 deploy key 폴백이 불가능하고(2026-09-04 검증), **Claude GitHub 앱의 Jzzinsil/ai-news write 권한이 유일한 경로**다 — github.com/settings/installations → Claude → 권한/레포 접근 확인. 권한 오류 시 루틴이 PushNotification을 보내도록 되어 있다.
 - **커밋은 있는데 사이트가 그대로** → Vercel 배포 문제. `vercel ls` 로 최근 배포 상태 확인.
 - **learn이 어제와 동일한데 뉴스는 갱신됨** → 루틴이 LEARNING.md 커밋을 누락했는지 `git show origin/main --stat` 확인.
 - **싱크 로그에 `PUSH-FAILED`** → 로컬 git 인증 확인(`git -C . ls-remote origin`).

@@ -23,8 +23,8 @@
 | 10 | RLDX-1 (RLWRLD) | 플레이어·모델 | rlwrld의 "Dexterity-First" 로봇 파운데이션 모델. 81억 파라미터, 가중치·학습코드·체크포인트 전면 공개 | **입사할 회사의 대표 제품.** π0.5·GR00T 대비 정밀조작 ~2배 주장, 접촉 과제 성공률 90% 근접. 개방성이 업계 최고 수준 | done |
 | 11 | Dexterity / 로봇 손 문제 | 하드웨어 | 걷기는 RL로 풀렸지만 사람 손 수준 정교한 조작은 미해결 최대 난제. 손이 로봇 본체보다 비쌈 | rlwrld가 'Dexterity-First'인 이유. 3지 vs 5지 논쟁(BD는 신뢰성 때문에 3~4지)이 좋은 논쟁형 콘텐츠 | done |
 | 12 | ALLEX (WIRobotics) | 하드웨어 | rlwrld의 AI 파트너인 WIRobotics(전 삼성 출신 창업)의 텐던 구동 5지 핸드. RLDX-1 검증 플랫폼 | 회사 파트너십 지도의 핵심. 주의: sudoremove 자막의 "리얼월드·ALEX"는 RLWRLD·ALLEX의 오인 | done |
-| 13 | Robot Foundation Model | 핵심개념 | 방대한 데이터로 사전학습해 여러 로봇·작업에 두루 쓰는 범용 '뇌'. 로봇 데이터 부족이 병목 | π0, GR00T, RLDX-1을 하나의 카테고리로 묶는 상위 개념 | todo |
-| 14 | WAM (World Action Model) | 핵심개념 | 사람 영상에서 행동을 배우는 '월드 액션 모델'(Dyna가 대표, ~170년 분량 1인칭 영상 주장) | 약어 주의 콘텐츠로 좋음 — 로봇팔 Barrett WAM과 혼동 금지. 자료 기준 이 업계의 WAM은 World Action Model | todo |
+| 13 | Robot Foundation Model | 핵심개념 | 방대한 데이터로 사전학습해 여러 로봇·작업에 두루 쓰는 범용 '뇌'. 로봇 데이터 부족이 병목 | π0, GR00T, RLDX-1을 하나의 카테고리로 묶는 상위 개념 | done |
+| 14 | WAM (World Action Model) | 핵심개념 | 사람 영상에서 행동을 배우는 '월드 액션 모델'(Dyna가 대표, ~170년 분량 1인칭 영상 주장) | 약어 주의 콘텐츠로 좋음 — 로봇팔 Barrett WAM과 혼동 금지. 자료 기준 이 업계의 WAM은 World Action Model | done |
 
 ### Phase 2 — 툴·시뮬레이터·인프라 (15~24)
 

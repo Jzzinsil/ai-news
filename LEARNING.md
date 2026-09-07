@@ -30,8 +30,8 @@
 
 | # | 용어/주제 | 분류 | 한 줄 정의 | 왜 중요한가(콘텐츠 앵글) | status |
 |---|---|---|---|---|---|
-| 15 | MuJoCo | 시뮬레이터 | 접촉·다관절 물리에 강한 로봇 물리 시뮬레이터. DeepMind가 인수해 오픈소스화. RL 연구 표준 (보충) | "왜 로봇 연구자는 게임엔진이 아니라 MuJoCo를 쓰나"가 입문 콘텐츠로 좋음 | todo |
-| 16 | Isaac Sim / Isaac Lab | 시뮬레이터 | NVIDIA Omniverse 기반 로봇 시뮬레이션·학습 프레임워크. 걷기·RL에 강하나 유체·변형체·촉각은 어려움 | NVIDIA 생태계 이해의 관문. Robotis 'AI Worker'도 GR00T N1.5+Isaac 조합 | todo |
+| 15 | MuJoCo | 시뮬레이터 | 접촉·다관절 물리에 강한 로봇 물리 시뮬레이터. DeepMind가 인수해 오픈소스화. RL 연구 표준 (보충) | "왜 로봇 연구자는 게임엔진이 아니라 MuJoCo를 쓰나"가 입문 콘텐츠로 좋음 | done |
+| 16 | Isaac Sim / Isaac Lab | 시뮬레이터 | NVIDIA Omniverse 기반 로봇 시뮬레이션·학습 프레임워크. 걷기·RL에 강하나 유체·변형체·촉각은 어려움 | NVIDIA 생태계 이해의 관문. Robotis 'AI Worker'도 GR00T N1.5+Isaac 조합 | done |
 | 17 | NVIDIA 3-컴퓨터 전략 | 핵심개념 | 학습(DGX) → 시뮬레이션(Omniverse·Cosmos) → 로봇 위 추론(Jetson Thor)으로 밸류체인 전체 장악 | CUDA가 GPU에서 했던 일을 로봇에서 반복하려는 전략. 산업 구조 콘텐츠의 단골 프레임 | todo |
 | 18 | NVIDIA Cosmos | 플레이어·모델 | 로봇 학습용 물리 인지 합성 데이터를 생성하는 월드 파운데이션 모델 플랫폼 | "시뮬레이터로 못 만드는 상황까지 월드모델로 커버" — 데이터 병목의 NVIDIA식 해법 | todo |
 | 19 | Jetson Thor | 하드웨어 | Blackwell 기반 로봇용 엣지 추론 칩. 2,070 FP4 TFLOPS·128GB, 개발킷 $3,499 | "느린 뇌+빠른 반사를 한 칩에서" — 칩 스펙을 로봇 아키텍처와 연결하면 차별화 콘텐츠 | todo |

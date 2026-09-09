@@ -34,8 +34,8 @@
 | 16 | Isaac Sim / Isaac Lab | 시뮬레이터 | NVIDIA Omniverse 기반 로봇 시뮬레이션·학습 프레임워크. 걷기·RL에 강하나 유체·변형체·촉각은 어려움 | NVIDIA 생태계 이해의 관문. Robotis 'AI Worker'도 GR00T N1.5+Isaac 조합 | done |
 | 17 | NVIDIA 3-컴퓨터 전략 | 핵심개념 | 학습(DGX) → 시뮬레이션(Omniverse·Cosmos) → 로봇 위 추론(Jetson Thor)으로 밸류체인 전체 장악 | CUDA가 GPU에서 했던 일을 로봇에서 반복하려는 전략. 산업 구조 콘텐츠의 단골 프레임 | done |
 | 18 | NVIDIA Cosmos | 플레이어·모델 | 로봇 학습용 물리 인지 합성 데이터를 생성하는 월드 파운데이션 모델 플랫폼 | "시뮬레이터로 못 만드는 상황까지 월드모델로 커버" — 데이터 병목의 NVIDIA식 해법 | done |
-| 19 | Jetson Thor | 하드웨어 | Blackwell 기반 로봇용 엣지 추론 칩. 2,070 FP4 TFLOPS·128GB, 개발킷 $3,499 | "느린 뇌+빠른 반사를 한 칩에서" — 칩 스펙을 로봇 아키텍처와 연결하면 차별화 콘텐츠 | todo |
-| 20 | LeRobot (HuggingFace) | 툴 | "로보틱스의 Transformers"를 노리는 오픈소스 라이브러리 + 데이터 포맷 표준 | 해커톤 32시간에 5만 에피소드 — 커뮤니티형 데이터 수집의 대표 사례 | todo |
+| 19 | Jetson Thor | 하드웨어 | Blackwell 기반 로봇용 엣지 추론 칩. 2,070 FP4 TFLOPS·128GB, 개발킷 $3,499 | "느린 뇌+빠른 반사를 한 칩에서" — 칩 스펙을 로봇 아키텍처와 연결하면 차별화 콘텐츠 | done |
+| 20 | LeRobot (HuggingFace) | 툴 | "로보틱스의 Transformers"를 노리는 오픈소스 라이브러리 + 데이터 포맷 표준 | 해커톤 32시간에 5만 에피소드 — 커뮤니티형 데이터 수집의 대표 사례 | done |
 | 21 | SO-ARM / SO-101 | 하드웨어 | ~10만원대 3D 프린팅 오픈소스 로봇팔. LeRobot 표준 기체 | "이틀이면 조립→텔레옵→ACT 학습→구동" — 직접 해보고 후기 콘텐츠를 만들면 최고의 신호 | todo |
 | 22 | Isaac GR00T (N1/N1.5) | 플레이어·모델 | NVIDIA의 오픈 휴머노이드 파운데이션 모델("세계 첫"). GR00T-Dreams로 합성 데이터까지 | 오픈 모델 계보(GR00T vs OpenVLA vs RLDX-1) 비교 콘텐츠 소재. 주의: "GR00T N2"는 미확인 | todo |
 | 23 | URDF / 디지털 트윈 | 툴 | 로봇 형상·물리를 기술하는 표준 포맷과 현실 복제 시뮬 환경. Gen2Sim은 LLM으로 URDF·리워드 자동 생성 | "시뮬 환경 자체를 AI가 만든다"는 메타 트렌드 | todo |

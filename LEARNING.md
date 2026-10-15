@@ -77,8 +77,8 @@
 
 | # | 용어/주제 | 분류 | 한 줄 정의 | 왜 중요한가(콘텐츠 앵글) | status |
 |---|---|---|---|---|---|
-| 47 | CoRL | 학회 | Conference on Robot Learning — 로봇 학습 전문 최상위 학회. Diffusion Policy 등 핵심 논문의 무대 | 로봇 AI 논문의 1차 출처. sudoremove도 CORL 참관기 제작 | todo |
-| 48 | ICRA / IROS | 학회 | IEEE 양대 로보틱스 학회(봄/가을). 하드웨어·제어까지 포괄하는 최대 규모 | 삼성리서치 세탁기 호스 VLA(IROS) 같은 국내 사례와 엮기 좋음 | todo |
+| 47 | CoRL | 학회 | Conference on Robot Learning — 로봇 학습 전문 최상위 학회. Diffusion Policy 등 핵심 논문의 무대 | 로봇 AI 논문의 1차 출처. sudoremove도 CORL 참관기 제작 | done |
+| 48 | ICRA / IROS | 학회 | IEEE 양대 로보틱스 학회(봄/가을). 하드웨어·제어까지 포괄하는 최대 규모 | 삼성리서치 세탁기 호스 VLA(IROS) 같은 국내 사례와 엮기 좋음 | done |
 | 49 | ICML / NeurIPS | 학회 | ML 최상위 양대 학회. 로봇 논문도 급증 — rlwrld는 ICML 2026 부대행사 'Robotics Night'로 연구자 167명 유치 | **회사가 실제로 뛰는 무대.** 학회 사이드이벤트가 스타트업 마케팅 정석이라는 앵글 | todo |
 | 50 | RSS / Humanoids | 학회 | Robotics: Science and Systems(소수정예)와 IEEE Humanoids(서울 개최 이력) + Humanoids Summit | rlwrld가 Humanoids Summit Tokyo 세션 풀영상 공개 — 회사 콘텐츠 전략의 실례 | todo |
 | 51 | GTC / CES 읽는 법 | 커뮤니티 | 학회는 아니지만 산업 발표의 양대 무대. 젠슨 키노트가 그해 로봇 담론을 규정 | "CES 2025 'ChatGPT moment for robotics'" 같은 발언 아카이브로 흐름 읽기 | todo |

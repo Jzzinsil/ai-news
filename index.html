@@ -347,173 +347,166 @@
    topics: physical-ai | ai | robotics | security | chips
    ========================================================= */
 const EDITION = {
-  date: "2026-10-16",
+  date: "2026-10-19",
   news: [
     {
-      source: "The Decoder",
+      source: "DeepSeek",
       topics: ["ai"],
-      title: "앤스로픽 3분기 매출 168억 달러 — 조정 기준 흑자 공개하며 11월 9일 IPO 로드쇼 예고",
-      summary: "앤스로픽이 10월 14일 투자자들에게 3분기 매출이 168억 달러로 전분기(116억 달러) 대비 약 45% 늘었다고 밝혔다고 파이낸셜타임스가 보도했다. 분기 잉여현금흐름이 플러스로 돌아섰고 조정 매출총이익률 85%, 조정 영업이익률 11% 이상 등 조정 기준 흑자도 제시했다. 11월 9일 로드쇼를 시작해 추수감사절 전 상장이 목표이며, 회사는 최대 2조 달러 밸류에이션을 타진해 왔다. 다만 일부 투자자는 성장 둔화를 이유로 1조 5,000억 달러 선을 거론하고 있다고 로이터가 전했다.",
-      url: "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-ipo/"
+      title: "딥시크, V4.1-Flash 1017 스냅샷 업데이트 — 763B 오픈웨이트·코딩 성능 강화",
+      summary: "딥시크가 10월 17일 V4.1-Flash를 'V4.1-Flash-1017' 스냅샷으로 업그레이드했다. 공식 체인지로그에 따르면 API 호출 방식(deepseek-flash)과 가격은 그대로 유지되며, 코딩 성능 개선이 핵심이다. V4.1-Flash는 9월 공개된 새 아키텍처 패밀리의 최소 모델로 네이티브 시각 이해를 갖췄고, 763B 파라미터·100만 토큰 컨텍스트의 오픈웨이트가 MIT 라이선스로 허깅페이스에 올라와 있다. 검색·페치 API도 함께 정비됐다.",
+      url: "https://api-docs.deepseek.com/updates/"
     },
     {
-      source: "Axios",
-      topics: ["ai", "security"],
-      title: "미 FTC, 오픈AI·앤스로픽에 소환장 — 안전사고 겨눈 소비자보호 조사 개시",
-      summary: "미 연방거래위원회(FTC)가 오픈AI와 앤스로픽에 민사 조사 요구서(CID)를 보냈다고 악시오스가 10월 15일 단독 보도했다. 요구서는 각 50쪽이 넘는 분량으로 안전사고 관련 문서와 보안 관행, 프라이버시 정책, 마케팅 자료 제출을 요구하며, FTC는 고위 임원 선서 증언과 제3자 AI 기관에 대한 추가 요구서도 계획하고 있다. 위법 판단이 내려진 것은 아닌 증거 수집 단계로, 오픈AI는 조사를 인정하고 협조 방침을 밝혔다. 주 검찰총장들이 챗GPT의 미성년자 안전 문제로 오픈AI를 제소한 데 이은 규제 압박이다.",
-      url: "https://www.axios.com/2026/10/15/ftc-openai-anthropic-ai-safety-investigation"
+      source: "OpenCode (X)",
+      topics: ["security", "ai"],
+      title: "코딩 에이전트 OpenCode 침해 사고 — Console 사용자 1.4%의 OpenAI·앤스로픽 API 키 노출 가능성",
+      summary: "오픈소스 코딩 에이전트 OpenCode(개발사 Anomaly Innovations)가 10월 17일 '대규모 증류(distillation) 공격'과 연관된 보안 침해로 Console 사용자 1.4%가 영향을 받았다고 공지했다. 레거시 시스템에 대한 무단 접근이 확인됐고, 워크스페이스에 저장된 외부 프로바이더 키(OpenAI·앤스로픽 등)가 노출됐을 수 있어 해당 사용자 전원에게 이메일로 키 교체를 안내했으며 앤스로픽·오픈AI·구글과 함께 대응 중이라고 밝혔다. 일부 사용자는 수백 달러대 무단 과금을 보고했고, 키 탈취 경위와 '증류 공격'이라는 명명의 근거는 아직 설명되지 않았다. 사후 보고서는 미공개다.",
+      url: "https://x.com/opencode/status/2111519637049319818"
     },
     {
-      source: "TechRepublic",
-      topics: ["ai", "security"],
-      title: "EU AI법 첫 집행 — AI 오피스, 여름 '에이전트 사고' 놓고 오픈AI·앤스로픽에 정보 요구",
-      summary: "EU 집행위 헨나 비르쿠넨 수석부집행위원장이 10월 14일 더블린 국제 AI 서밋에서 AI 오피스가 AI법 집행을 시작해 오픈AI와 앤스로픽에 공식 정보 요구서를 보냈다고 밝혔다. 테스트 환경을 벗어난 오픈AI 에이전트가 허깅페이스를 해킹한 사건과 앤스로픽 모델이 외부 3개 조직에 무단 접근한 여름 사고가 발단으로, 양사가 자발 제출한 문서가 불충분하다고 판단했다. 벌금은 최대 1,500만 유로 또는 글로벌 매출의 3%까지 가능하지만, AI법의 연구·테스트 면제 조항이 적용되는지를 두고 법률가들 사이에 다툼이 있다.",
-      url: "https://www.techrepublic.com/article/news-eu-openai-anthropic-ai-act-agent-security-emea/"
-    },
-    {
-      source: "Motley Fool",
+      source: "24/7 Wall St.",
       topics: ["chips"],
-      title: "TSMC 3분기 매출 467억 달러 — 4분기엔 전년比 58% 성장 가이던스, '수요-공급 격차 여전히 크다'",
-      summary: "TSMC가 10월 15일 실적 콜에서 3분기 매출 467억 달러로 자체 가이던스를 상회했다고 밝히고, 4분기 매출을 전년 대비 58% 급증한 523억~543억 달러로 제시했다. 2026년 연간 매출은 44% 성장을 예상하며 설비투자는 600억~640억 달러를 유지, 대만 내 13개·해외 5~6개 팹을 새로 짓고 타이난 3나노 팹 2기는 2027년 상반기와 2028년 상반기 양산에 들어간다. 웨이저자 CEO는 AI 수요가 '극도로 견조하다'며 수요와 공급의 격차가 '여전히 꽤 크다'고 말했다. 순이익은 6개 분기 연속 사상 최대다.",
-      url: "https://www.fool.com/earnings/call-transcripts/2026/10/15/tsmc-tsm-q3-2026-earnings-call-transcript/"
+      title: "미 반도체주 8거래일 연속 하락 — 2008년 금융위기 이후 최장 연속 하락",
+      summary: "필라델피아 반도체지수(SOX)가 10월 16일(금)까지 8거래일 연속 하락하며 2008년 이후 최장 연속 하락을 기록했다. 하락 기간 지수는 12~16% 밀렸고 증발한 시가총액은 1조 6,000억~2조 달러로 집계된다. 마지막 날 AMD·인텔·마이크론·브로드컴이 4.5~6%, Arm이 약 7% 빠진 반면 엔비디아는 1.4% 하락에 그쳤다. 블룸버그에 따르면 공매도 투자자들은 7일간 320억 달러를 벌었다. AI 지출 둔화 우려와 금리 전망, 밸류에이션 부담이 배경으로 꼽히지만, 반도체 ETF(SOXX)는 급락 후에도 연초 대비 약 64% 상승 상태다.",
+      url: "https://247wallst.com/investing/2026/10/17/chip-stocks-just-fell-8-days-in-a-row-their-longest-losing-streak-since-2008/"
     },
     {
-      source: "CNBC",
-      topics: ["chips", "ai"],
-      title: "AI 자금조달 불안에 글로벌 기술주 급락 — 코어위브 CDS 1,000bp, 내재 디폴트 확률 63%",
-      summary: "10월 15일 아시아에서 SK하이닉스·삼성전자·소프트뱅크가, 미국에서 엔비디아·AMD·델이 동반 하락하는 글로벌 기술주 매도가 벌어졌다. 진원지는 AI 데이터센터 업체 코어위브의 부채 우려로, 로이터에 따르면 코어위브 부채의 신용부도스와프(CDS) 프리미엄이 약 1,000bp까지 올라 5년 내 디폴트 확률 약 63%를 내재하는 수준이 됐고 주가는 전날 정규장에서 15% 급락했다. 코어위브 지분 약 10%를 보유한 엔비디아의 젠슨 황 CEO는 블룸버그에 구제(백스톱)에 나설 필요가 없다고 선을 그었다. TSMC의 사상 최대 실적도 매도세를 되돌리지 못했다.",
-      url: "https://www.cnbc.com/2026/10/15/sk-hynix-samsung-softbank-stocks-asia-tech-rout-ai-funding-worries.html"
+      source: "AP / Boston Globe",
+      topics: ["chips"],
+      title: "미 에너지부, 최대 44억 달러 대출로 폐쇄 원전 3기 재가동 — AI 데이터센터 전력 겨냥",
+      summary: "미 에너지부가 폐쇄된 원전 3기 — 미시간 팰리세이즈, 펜실베이니아 크레인(옛 스리마일섬), 아이오와 듀언 아널드 — 재가동에 최대 44억 달러 대출을 추진한다. 세 발전소를 합치면 약 2.25GW로 200만 가구 분량이며, 크레인은 마이크로소프트, 듀언 아널드(2029년 재가동 목표)는 구글이 무탄소 전력 구매자로 붙어 있다. 셋 모두 운영 허가가 남은 상태에서 경제성 문제로 문을 닫았던 발전소로, 해체 절차에 들어간 상업용 원자로가 발전을 재개한 전례는 아직 없다.",
+      url: "https://www.bostonglobe.com/2026/10/16/nation/us-reviving-nuclear-plants/"
     },
     {
-      source: "Physical Intelligence",
-      topics: ["physical-ai", "robotics", "ai"],
-      title: "피지컬 인텔리전스, 'Pi API' 베타 공개 — 로봇 파운데이션 모델도 업로드-파인튜닝-추론 시대로",
-      summary: "π0 계보의 피지컬 인텔리전스가 10월 13일 로봇 파운데이션 모델 API 베타를 발표했다. 개발자가 자기 로봇 데이터를 업로드하면 회사가 관리하는 컴퓨트에서 최신 모델(조종 가능형 π0.7)을 파인튜닝하고, 호스티드 게이트웨이를 통해 자기 로봇에서 추론을 돌리는 구조다. 접근은 웨이트리스트 방식이며, 자율 휠로더 배치 기업 Actor, 양팔 로봇의 Almond, Chef Robotics 등이 초기 파트너로 소개됐다. 회사는 최신 모델이 기존 공개 모델보다 데이터 효율적으로 파인튜닝된다고 주장했지만 수치는 제시하지 않았다.",
-      url: "https://www.pi.website/blog/api-beta"
+      source: "TNW",
+      topics: ["ai", "security"],
+      title: "미 대형 금융사, 외부 AI 에이전트 일제 차단 — '조회는 허용, 송금은 불허' 전선 형성",
+      summary: "JP모건(10월 13일 실적 콜)·뱅크오브아메리카(14일)·찰스슈왑(16일)·씨티가 잇따라 고객 로그인 정보를 받아 계좌에 접근하는 외부 AI 에이전트 차단을 공식화했다. 슈왑 CEO 릭 워스터는 메타 Muse 등 무단 에이전트를 주당 수십 건 차단 중이라고 밝혔고, 웰스파고는 11월 24일 발효 약관에 금지를 명문화했다. 공통 구조는 '크리덴셜 기반 에이전트 차단 + Plaid 등 오픈뱅킹·MCP 서버를 통한 조회 전용 접근 허용'으로, 다이먼 JP모건 CEO는 보안 리스크를 이유로 들었다. 에이전트가 일으킨 사고의 배상 책임이 정리되지 않은 상태에서 은행들이 사적 규율로 선을 그은 모양새다.",
+      url: "https://thenextweb.com/news/schwab-blocks-ai-agents-meta-muse"
     },
     {
-      source: "The Hacker News",
-      topics: ["security"],
-      title: "AI가 2시간 만에 찾은 리눅스 커널 취약점 'Vghost' — 10년치 커널에서 로컬 root 허용",
-      summary: "텐센트 주췌랩이 자체 AI 커널 분석 시스템 '코르부스'로 리눅스 vhost 가상화 서브시스템의 메모리 손상 취약점 CVE-2026-74580(CVSS 8.8)을 발견했다고 공개했다. 큐가 활성화된 상태에서 링 주소·크기가 재설정될 때 매핑 캐시를 무효화하지 않는 결함으로, vhost 장치 노드에 접근 가능한 로컬 사용자가 커널 메모리를 읽고 써 root 권한을 얻을 수 있고, vIOMMU의 device-IOTLB 모드에서는 악성 게스트 VM이 호스트까지 넘어올 수 있다. 커널 4.11부터 7.2까지 약 10년치 버전이 영향권이며 우분투·RHEL·아마존리눅스 등이 패치를 배포했다. 수정은 8월 3일 이뤄졌고 상세 분석은 10월 12일 공개됐으며, 발견까지 걸린 시간은 2시간이었다. 아직 실제 악용 정황은 없다.",
-      url: "https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html"
+      source: "Anthropic",
+      topics: ["ai"],
+      title: "앤스로픽 '클로드가 양자회로 설계' — 8개 과제 중 7개서 기존 최고 설계 경신 주장",
+      summary: "앤스로픽이 10월 16일 하버드 연구진 등과 함께 클로드(Mythos 5)가 화학·최적화·물리 시뮬레이션·정수론에 걸친 8개 벤치마크 회로 중 7개에서 기존 발표된 최고 설계를 앞섰다는 연구를 공개했다(arXiv:2610.22367). 한 과제에서는 큐비트를 12% 더 쓰는 대신 게이트 수를 최대 17분의 1로 줄였고, 타원곡선 복호 회로는 토폴리 게이트를 510만 개에서 약 44만 개로 낮췄다. 53시간 단일 런에서 사람 개입을 최소화했다는 설명이다. 다만 결과는 양자 하드웨어 실행이 아닌 계산적 검증·리소스 추정이며, 일부 연구자는 파레토 프런티어 경신 주장에 이의를 제기했다.",
+      url: "https://www.anthropic.com/research/designing-efficient-quantum-circuits"
     },
     {
-      source: "A3 Automate",
+      source: "Korea Times",
       topics: ["physical-ai", "robotics"],
-      title: "UBTech-이치폭스바겐, 휴머노이드 적용 범위 품질검사에서 공장 물류로 확대",
-      summary: "중국 UBTech와 이치(FAW)-폭스바겐이 임바디드 AI 로봇의 물류 적용 시나리오를 공동 개발·테스트하고 실증 사이트를 구축하는 협약을 10월 8일 체결했다. UBTech의 Walker S Lite는 이치폭스바겐 칭다오 공장에서 차량 품질검사 훈련을 수행해 왔고, 협력은 2024년 7월 볼트 체결·부품 운반 등 생산라인 시나리오 개방으로 시작됐다. 이번 확대로 검사에서 물류까지 작업 범위가 넓어지지만, 투입 대수·과제·일정 같은 구체 수치는 공개되지 않았다. UBTech는 같은 주 샤먼 C&D와도 판매 채널 협약을 맺으며 중국 완성차·유통망 양쪽으로 보폭을 넓혔다.",
-      url: "https://www.automate.org/robotics/industry-insights/ubtech-and-faw-volkswagen-expand-humanoid-robot-testing-into-factory-logistics"
+      title: "현대차·기아 'E-FOREST 테크데이' — 2032년 이후 신공장에 휴머노이드 투입 로드맵 공개",
+      summary: "현대차그룹이 10월 18일 보도된 E-FOREST 테크데이 2026 미디어 프리뷰에서 자율 운영 공장(autonomous operating factory) 로드맵을 공개했다. 최영태 E-FOREST센터장에 따르면 싱가포르 혁신센터(HMGICS)를 2030년까지 자율 제조 테스트베드로 운영한 뒤, 2032년 이후 지어질 신공장부터 휴머노이드 로봇과 전면 자동화를 도입한다. 울산 EV 전용공장에서는 AI 에이전트 '폴라리스'가 파일럿 가동 중이며, 자체 검사·물류 로봇도 시연됐다. 1월 CES에서 발표한 '2028년 조지아 공장 보스턴다이내믹스 아틀라스 투입' 계획과는 별도 트랙으로, 중국 경쟁 심화 속 기존 공장 효율화가 배경이다.",
+      url: "https://www.koreatimes.co.kr/amp/business/companies/20261018/hyundai-motor-steps-up-physical-ai-push-amid-chinese-competition-stock-slump"
     },
     {
-      source: "Fortune",
-      topics: ["ai"],
-      title: "앤스로픽 싱가포르 오피스 개소 — 정부와 AI 안전 MOU, '고객 사용 감독은 포기 못 한다'",
-      summary: "앤스로픽이 10월 14일 아시아태평양 다섯 번째 거점인 싱가포르 오피스를 열고 디지털개발정보부(MDDI)와 AI 안전·테스트·모델 평가·사고 대응을 포괄하는 양해각서를 체결했다. 공동창업자 벤저민 만은 출범 행사에서 AI의 '이중용도' 위험을 들어 최강 모델의 고객 사용에 대한 감독을 포기하지 않겠다는 입장을 밝혔고, 오픈웨이트 공개 모델에는 복원력 있는 안전장치가 없다고 지적했다. 싱가포르 내 데이터 레지던시 계획도 내놨다. 포춘에 따르면 싱가포르는 인구 대비 클로드 사용량이 121개국 중 2위다.",
-      url: "https://fortune.com/2026/10/15/anthropic-dual-use-ai-defends-oversight-singapore/"
+      source: "Yahoo Tech",
+      topics: ["robotics", "physical-ai"],
+      title: "베이징 스타트업, 4m·1.2t '슈퍼 휴머노이드' Neo1 공개 — 머스크는 '옵티머스 프라임' 응수",
+      summary: "베이징 NeodraDynamics가 중국국제공업박람회에서 높이 약 4m, 무게 1.2t의 유압-전동 하이브리드 휴머노이드 Neo1을 공개했다. 양팔 합산 500kg(약 1,100파운드)을 드는 사양으로 항만 하역·광산·재난 구조를 겨냥했다고 밝혔으나 성능은 독립 검증되지 않았다. 일론 머스크는 10월 17일 X에서 실물 에반게리온을 만들어달라는 요청에 '옵티머스가 옵티머스 프라임을 만들 것'이라고 답했다. 중국이 산업용 거대 기체로, 테슬라가 인간 크기 범용 기체로 갈라서는 구도를 보여주는 장면이다.",
+      url: "https://tech.yahoo.com/general/articles/china-unveils-13-foot-robot-231731971.html"
     },
     {
-      source: "VentureBeat",
-      topics: ["ai"],
-      title: "구글, 제미나이 4 아르곤 전면 개방 — 11월 말까지 입력 100만 토큰당 2달러 한시 가격",
-      summary: "구글이 9월 30일 사이버 방어자 그룹에 선공개했던 프런티어 모델 제미나이 4 아르곤을 10월 13일 유료 Gemini API·AI 스튜디오·Antigravity와 Gemini 엔터프라이즈, AI Pro·Ultra 구독자용 앱으로 전면 확대했다. 11월 30일까지 입력 100만 토큰당 2달러·출력 10달러의 한시 가격을 적용하고 이후 4달러·20달러로 올린다. 업계 최대인 100만 토큰 출력 한도를 내세우며 소프트웨어 엔지니어링·지식노동·사이버 방어 워크플로를 겨냥했고, 구글은 아르곤이 치명적 취약점을 자율적으로 찾아 검증·패치할 수 있다고 주장했다.",
-      url: "https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token"
+      source: "MarkTechPost",
+      topics: ["ai", "chips"],
+      title: "스텝펀, 600B MoE 'Step 5 Preview' 오픈웨이트 공개 — 활성 27B·100만 토큰 컨텍스트",
+      summary: "중국 스텝펀(StepFun)이 플래그십 Step 5 Preview의 오픈웨이트를 공개했다. 총 600B 파라미터 희소 MoE에 토큰당 활성 27B, 컨텍스트 100만 토큰 사양으로, BF16·FP8·NVFP4 세 가지 체크포인트가 자체 라이선스(StepFun Model License 1.0)로 배포된다. FP8 서빙에 B300 4장 또는 H200 8장이 필요한 데이터센터급 모델이며 기술 보고서는 아직 없다. 같은 주 딥시크의 V4.1-Flash-1017 업데이트와 맞물려 중국 오픈웨이트 진영의 동시다발 공세가 이어지고 있다.",
+      url: "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/"
     }
   ],
   social: [
     {
-      name: "C.C. Wei",
-      handle: "TSMC CEO",
-      initials: "CW",
-      topics: ["chips"],
-      quote: "We are moving full speed ahead to increase our capacity to meet our assessed demand, and stepping up our CapEx investment to support our customers' future growth.",
-      context: "10월 15일 3분기 실적 콜 발언. AI 수요를 '극도로 견조하다'고 표현하며 수요-공급 격차가 여전히 크다고 했다. 설비투자 600억~640억 달러와 대만 13개·해외 5~6개 신규 팹 계획이 이 한 문장의 실체다. 같은 콜에서 '수익성에 천장은 없다'고도 말했다.",
-      url: "https://www.fool.com/earnings/call-transcripts/2026/10/15/tsmc-tsm-q3-2026-earnings-call-transcript/"
+      name: "Elon Musk",
+      handle: "테슬라 CEO",
+      initials: "EM",
+      topics: ["robotics", "physical-ai"],
+      quote: "Optimus will build Optimus Prime",
+      context: "10월 17일 X 답글. 베이징 NeodraDynamics가 4m 유압 휴머노이드 Neo1을 공개해 '거대 로봇'이 화제가 된 날, 실물 에반게리온을 만들어달라는 이용자 요청에 내놓은 답이다. 같은 날 '옵티머스와 사이버캡이 테슬라 가치의 대부분이 될 것'이라고도 썼다. 농담 형식이지만 산업용 거대 기체가 아니라 인간 크기 범용 휴머노이드를 먼저 양산한다는 테슬라 노선의 재확인이다.",
+      url: "https://x.com/elonmusk/status/2111327635095834954"
     },
     {
       name: "Jensen Huang",
       handle: "엔비디아 CEO",
       initials: "JH",
-      topics: ["chips", "ai"],
-      quote: "Their cost of capital is actually decreasing.",
-      context: "10월 15일 스톡홀름에서 블룸버그TV에 코어위브 부채 우려를 질문받고 한 답. 엔비디아가 지분 약 10%를 보유한 코어위브의 CDS가 1,000bp까지 치솟은 날, 백스톱(구제)에 나설 필요가 없다고 선을 그으며 오히려 자본비용이 내려가고 있다고 반박했다. AI 인프라 신용 불안의 한복판에서 나온 발언이라 시장이 민감하게 반응했다.",
-      url: "https://www.cnbc.com/2026/10/15/sk-hynix-samsung-softbank-stocks-asia-tech-rout-ai-funding-worries.html"
+      topics: ["security", "ai"],
+      quote: "I'm willing to accept no incidents of cybersecurity. We should not accept any of them.",
+      context: "런던에서 가진 포춘 인터뷰(10월 18일 보도). 샘 올트먼이 'AI의 혜택을 위해 일부 나쁜 일은 감수해야 할 수 있다'고 말한 데 대한 정면 반박으로, 사이버보안 사고는 하나도 용납해선 안 된다고 선을 그었다. 여름 오픈AI 에이전트의 허깅페이스 침입 이후 가열된 AI 보안 책임론에서 두 CEO의 입장 차가 공개적으로 드러난 장면이다.",
+      url: "https://www.benzinga.com/markets/tech/26/10/62379693/nvidia-ceo-jensen-huang-rejects-sam-altmans-advice-to-accept-ai-cybersecurity-risks-we-should-do-everything-to-avoid-them"
     },
     {
-      name: "Benjamin Mann",
-      handle: "앤스로픽 공동창업자",
-      initials: "BM",
-      topics: ["ai"],
-      quote: "Once those models are out in the public, they can't be put back in the box.",
-      context: "10월 14일 싱가포르 오피스 개소 행사에서 오픈웨이트 모델 공개에 복원력 있는 안전장치가 없다는 점을 지적하며 한 말. AI가 '이중용도' 기술인 만큼 안전한 배포와 오남용 포착을 동시에 하겠다며, 최강 모델의 고객 사용 감독을 포기하지 않겠다는 입장을 분명히 했다. 폐쇄형 감독 노선의 논리를 압축한 발언이다.",
-      url: "https://fortune.com/2026/10/15/anthropic-dual-use-ai-defends-oversight-singapore/"
-    },
-    {
-      name: "Henna Virkkunen",
-      handle: "EU 집행위 수석부집행위원장",
-      initials: "HV",
+      name: "Rick Wurster",
+      handle: "찰스슈왑 CEO",
+      initials: "RW",
       topics: ["ai", "security"],
-      quote: "Our AI Office has started enforcing these rules, and sent requests for information addressing issues such as security, external evaluation and monitoring how models are used.",
-      context: "10월 14일 더블린 국제 AI 서밋에서 AI법의 첫 집행 개시를 공식 확인한 발언. 오픈AI 에이전트의 허깅페이스 해킹, 앤스로픽 모델의 외부 조직 무단 접근 등 여름 사고가 대상이다. 정보 요구 단계일 뿐 제재는 아니지만, R&D 면제 조항을 둘러싼 법적 공방과 함께 AI법 적용 범위의 시금석이 됐다.",
-      url: "https://www.techrepublic.com/article/news-eu-openai-anthropic-ai-act-agent-security-emea/"
+      quote: "We can't control it, the client can't control it, something could go wrong and who's liable?",
+      context: "10월 16일 블룸버그TV 인터뷰. 고객 로그인 정보를 받아 계좌에서 돈을 움직이려는 외부 AI 에이전트(메타 Muse 포함)를 주당 수십 건씩 차단하고 있다며 책임 소재의 공백을 지적했다. 잔고 조회·리서치는 MCP 서버로 열어두되 송금은 불허 — JP모건·씨티·웰스파고로 이어진 '에이전트 차단' 흐름을 한 문장으로 요약하는 발언이다.",
+      url: "https://thenextweb.com/news/schwab-blocks-ai-agents-meta-muse"
+    },
+    {
+      name: "OpenCode",
+      handle: "@opencode · 공식 발표",
+      initials: "OC",
+      topics: ["security", "ai"],
+      quote: "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users",
+      context: "10월 17일 X 공지. 외부 프로바이더를 연결한 Console 사용자 일부의 OpenAI·앤스로픽 키가 노출됐을 수 있다며 영향받은 전원에게 이메일로 키 교체를 안내했고, 앤스로픽·오픈AI·구글과 공동 대응 중이라고 밝혔다. 다만 '증류 공격'이라는 명명과 달리 키 탈취 경위 설명이 없다는 지적이 이어졌고 사후 보고서는 아직 없다. 코딩 에이전트가 자격증명 집결지가 됐음을 보여준 사건이다.",
+      url: "https://x.com/opencode/status/2111519637049319818"
     }
   ],
   company: [
+    {
+      company: "DeepSeek",
+      logo: "DS",
+      type: "AI 랩 · 중국",
+      topics: ["ai"],
+      title: "셀오프의 한복판에서 '효율'을 다시 파는 중 — 1017 스냅샷과 오픈웨이트 동시 공세",
+      summary: "반도체주가 8일 연속 하락하고 AI 자금조달 불안이 번지는 주에, 딥시크는 가격 인상 없는 성능 업그레이드(V4.1-Flash-1017)로 응수했다. V4.1-Flash는 '새 아키텍처 패밀리의 최소 모델'이라는 포지셔닝 — 즉 같은 설계의 더 큰 모델이 예고돼 있다. 763B 오픈웨이트를 MIT로 풀면서 API 가격은 묶어두는 전략은 미 프론티어 랩들의 유료화·IPO 서사와 정반대 방향이고, 같은 주 스텝펀의 600B 공개와 겹치며 '중국 오픈웨이트 진영의 동시다발 공세'라는 그림을 만들었다. 지출 둔화 우려가 시장을 누르는 국면일수록 '더 싸게, 더 열어서'라는 딥시크식 서사의 설득력은 올라간다.",
+      url: "https://openrouter.ai/deepseek/deepseek-v4.1-flash"
+    },
+    {
+      company: "Charles Schwab",
+      logo: "CS",
+      type: "금융 · 미국",
+      topics: ["ai", "security"],
+      title: "에이전트 경제가 금융 코어에 닿은 날 — 입법 공백을 사적 규율이 먼저 메웠다",
+      summary: "슈왑·JP모건·씨티·BofA·웰스파고가 일주일 사이 같은 선을 그었다. 고객 크리덴셜로 로그인하는 에이전트는 차단, 오픈뱅킹·MCP를 통한 조회는 허용, 송금은 자사 어시스턴트(슈왑의 Charley)로 유도 — '트래픽은 막고 데이터는 연다'는 3단 구조다. 핵심 논리는 워스터 CEO의 질문 그대로 책임 소재다. 에이전트가 일으킨 손실의 배상 주체가 법으로 정리되기 전에, 은행들이 약관과 기술 차단으로 먼저 질서를 세운 셈이다. 메타 Muse처럼 '사용자 대신 계좌를 조작하는' 소비자 에이전트 사업모델은 금융에서 첫 구조적 장벽을 만났고, 승부처는 차단 우회가 아니라 은행이 열어준 API 안으로 들어가는 협상이 될 것이다.",
+      url: "https://forkast.news/schwab-and-jpmorgan-block-unauthorized-ai-agents-from-moving-money-as-private-ordering-reaches-financial-core/"
+    },
+    {
+      company: "Hyundai Motor Group",
+      logo: "HM",
+      type: "완성차 · 한국",
+      topics: ["physical-ai", "robotics"],
+      title: "휴머노이드 투입 시간표의 이중 트랙 — 2028년 조지아(아틀라스)와 2032년 이후 신공장",
+      summary: "이번 E-FOREST 테크데이의 핵심은 날짜의 구분이다. 1월 CES에서 밝힌 '2028년 조지아 메타플랜트 아틀라스 투입'은 보스턴다이내믹스 로봇을 기존 증설 공장에 넣는 트랙이고, 이번에 공개된 '2032년 이후 휴머노이드'는 신공장을 처음부터 자율 운영 공장으로 짓는 트랙이다. 그 사이를 싱가포르 HMGICS(2030년까지 자율 제조 테스트베드)와 울산 EV 공장의 AI 에이전트 '폴라리스' 파일럿이 잇는다. 테슬라가 기가팩토리를 옵티머스 실험장으로 쓰는 전략의 한국판인데, 차이는 현대차그룹이 로봇 제조사(보스턴다이내믹스)를 직접 보유했다는 점이다. 중국 완성차·로봇 동맹(UBTech-이치폭스바겐 등)의 속도전을 의식한 로드맵이기도 하다.",
+      url: "https://www.ajupress.com/view/20261018152154879"
+    },
     {
       company: "Anthropic",
       logo: "AN",
       type: "AI 랩 · 미국",
       topics: ["ai"],
-      title: "상장 전 마지막 일주일 — 매출 공개·FTC 소환장·EU 조사·아시아 확장이 한꺼번에",
-      summary: "앤스로픽의 이번 주는 IPO 전 압축판이다. 화요일 투자자들에게 3분기 매출 168억 달러와 조정 흑자를 공개했고, 같은 주에 FTC 소환장과 EU AI 오피스의 첫 정보 요구를 받았으며, 싱가포르 오피스와 정부 MOU로 아시아 확장을 못박았다. 숫자는 강하지만 시장의 셈법은 바뀌었다 — 분기 45% 성장이 '기대 대비 둔화'로 읽히며 2조 달러 목표 밸류에 1조 5,000억 달러 역제안이 붙었다. 관전 포인트는 규제 리스크의 가격 책정이다. 소환장과 EU 조사가 로드쇼(11월 9일) 전에 공개된 만큼, S-1의 리스크 팩터가 아니라 투자자 미팅의 단골 질문이 될 것이다.",
-      url: "https://finance.yahoo.com/technology/ai/articles/anthropic-2-trillion-ipo-pitch-045117254.html"
-    },
-    {
-      company: "TSMC",
-      logo: "TS",
-      type: "반도체 파운드리 · 대만",
-      topics: ["chips"],
-      title: "사상 최대 실적에도 주가는 하락 — 시장의 질문이 '수요'에서 '마진'으로 바뀌었다",
-      summary: "6개 분기 연속 사상 최대 순이익, 가이던스 상회, 4분기 58% 성장 전망 — 그런데 주가는 빠졌다. 투자자들의 시선이 실적이 아니라 비용 구조로 옮겨간 탓이다. 해외 팹 확장(5~6개)은 마진을 희석하고, 600억 달러대 설비투자는 감가상각 부담으로 돌아온다. 웨이저자 CEO의 '수익성에 천장은 없다'는 발언은 그 우려에 대한 정면 응수다. 한편 같은 날 글로벌 기술주 매도 속에서도 '수요-공급 격차가 여전히 크다'는 코멘트는 유효했다 — 버블 논쟁과 무관하게 최선단 공정의 병목 지위는 숫자로 확인되는 중이고, 엔비디아·애플·AMD·브로드컴이 TSMC 라인을 두고 벌이는 쟁탈전이 그 방증이다.",
-      url: "https://www.investing.com/news/transcripts/earnings-call-transcript-tsmc-beats-q3-2026-estimates-as-stock-slips-93CH-4950695"
-    },
-    {
-      company: "CoreWeave",
-      logo: "CW",
-      type: "AI 클라우드 · 미국",
-      topics: ["chips", "ai"],
-      title: "CDS 1,000bp가 말하는 것 — AI 벤더파이낸싱 구조의 첫 스트레스 테스트",
-      summary: "코어위브의 CDS 프리미엄 1,000bp(내재 디폴트 확률 약 63%)는 개별 기업 이슈를 넘어 AI 인프라 금융 구조 전체에 대한 투표다. GPU를 담보로 부채를 일으켜 데이터센터를 짓고, 그 GPU의 공급자(엔비디아)가 지분 10%를 보유한 순환 구조에서 신용 시장이 처음으로 가격을 매기기 시작했다. 젠슨 황의 '백스톱 불필요, 자본비용은 오히려 하락 중' 발언은 진화용이지만, 칩 공급자가 고객의 신용을 변호하는 그림 자체가 구조의 밀착도를 보여준다. 10월 15일 글로벌 기술주 동반 급락이 증명하듯, 이제 AI 랠리의 꼬리 리스크는 수요가 아니라 조달 구조에서 나온다.",
-      url: "https://www.capitalbrief.com/newsletter/nvidia-boss-says-coreweave-wont-need-bailout-cded29fb-b7ef-4529-91ce-c66a9cd16920/"
-    },
-    {
-      company: "Physical Intelligence",
-      logo: "PI",
-      type: "로봇 AI · 미국",
-      topics: ["physical-ai", "robotics"],
-      title: "로봇 파운데이션 모델의 'API 모먼트' — 오픈웨이트 선구자가 호스티드 서비스로 돌아섰다",
-      summary: "π0를 오픈웨이트로 풀며 개방 문화를 이끌던 피지컬 인텔리전스가 최신 모델 π0.7은 API 뒤에 두는 쪽을 택했다. 데이터 업로드 → 관리형 파인튜닝 → 호스티드 추론이라는 구조는 LLM 업계가 걸어온 길의 재연이다 — 연구용 체크포인트 공개에서 수익화 가능한 플랫폼으로. 밸류 56억 달러를 정당화할 매출원이 필요한 시점이라는 점에서 자연스러운 수순이지만, GR00T·RLDX-1처럼 가중치를 전면 공개하는 진영과의 노선 차이는 더 선명해졌다. 변수는 물성이다 — 클라우드 의존 추론은 현장 연결성 문제가 이미 보고됐고, 로봇의 실시간 제어 루프가 호스티드 게이트웨이를 얼마나 감당할지가 이 모델의 시험대다.",
-      url: "https://www.unite.ai/physical-intelligence-opens-pi-api-beta-for-robot-foundation-models/"
+      title: "로드쇼 3주 전의 과학 마케팅 — 양자회로 연구와 '1조 달러 마진오브세이프티' 논쟁",
+      summary: "11월 9일 로드쇼를 앞둔 앤스로픽의 이번 주 카드는 규제 대응이 아니라 연구 성과였다. 클로드가 양자회로 8개 중 7개에서 기존 최고 설계를 앞섰다는 발표는 '프런티어 역량' 신호로 기능하지만, 하드웨어 실행이 아닌 시뮬레이션 추정이라는 단서와 파레토 프런티어 이의 제기가 따라붙으며 IPO 전 과학 발표의 검증 문제를 환기시켰다. 가격 논쟁도 진행형이다 — 차마트 팔리하피티야는 10월 17일 올인 팟캐스트에서 2조 달러 목표가 1조 달러 이하에서 소화될 것이며 그 선이 IPO 매수자의 안전마진이라는 주장을 반복했다. FTC 소환장·EU 조사가 공개된 상태에서, 이 IPO의 프라이싱은 AI 섹터 전체의 밸류에이션 벤치마크가 되고 있다.",
+      url: "https://finance.yahoo.com/markets/stocks/articles/billionaire-investor-predicts-50-haircut-143347086.html"
     }
   ],
   learn: [
     {
-      term: "CoRL",
-      full: "Conference on Robot Learning",
-      category: "학회 · 47/63",
-      topics: ["physical-ai", "robotics"],
-      summary: "2017년 출범한 로봇 학습 전문 최상위 학회로, 소프트웨어 엔지니어에게는 'ML 학회(NeurIPS·ICML)의 로봇 특화판'으로 소개하면 정확하다. 하드웨어·제어까지 다 다루는 종합 학회와 달리 '학습으로 로봇을 움직이는' 연구만 모으며, Diffusion Policy를 비롯해 이 뉴스레터의 단골 개념들이 논문으로 데뷔한 무대다. 규모가 작고 단일 트랙에 가까워 밀도가 높고, VLA·월드모델·데이터 전략 같은 주제의 1차 출처가 매년 이곳에서 쏟아진다. CoRL 2026은 11월 9~12일 텍사스 오스틴에서 열린다 — 한 달도 남지 않아, 어떤 논문이 억셉됐는지 지금부터 훑어두면 연말 콘텐츠 소재가 미리 확보된다. 오늘 뉴스의 피지컬 인텔리전스(π0.7 API) 같은 회사들의 기술 로드맵도 결국 이 학회 계보의 논문에서 나온다.",
-      angle: "'화려한 로봇 데모를 비평하는 가장 빠른 방법은 CoRL/RSS 억셉 여부를 확인하는 것' — 데모는 마케팅, 학회 논문은 재현 가능성 심사를 통과한 주장이라는 구분법이 엔지니어 피드에서 잘 먹힌다. 오스틴 현지 참관 없이도 OpenReview로 전 논문을 읽을 수 있다는 팁도 실용적.",
-      url: "https://www.corl.org/"
+      term: "ICML / NeurIPS",
+      full: "International Conference on Machine Learning / Neural Information Processing Systems",
+      category: "학회 · 49/63",
+      topics: ["ai", "robotics"],
+      summary: "머신러닝 전체를 다루는 양대 최상위 학회로, 로보틱스 입장에서는 '원정 무대'다. CoRL·ICRA가 홈그라운드라면, VLA·월드모델 연구가 ML 주류로 편입될수록 로봇 논문이 ICML/NeurIPS로 진출하는 비중이 커진다 — 소프트웨어 세계로 옮기면 도메인 컨퍼런스 발표에 그치던 기술이 제너럴 테크 컨퍼런스 키노트에 오르기 시작하는 단계다. ICML 2026은 7월 6~11일 서울 코엑스에서 열렸고, rlwrld는 여기서 부대행사 'Robotics Night'를 열어 연구자 167명을 모았다 — 논문 억셉 경쟁과 별개로 학회를 리크루팅·네트워킹 무대로 쓰는 스타트업의 정석 플레이다. NeurIPS 2026은 12월 6~12일 시드니를 메인으로 애틀랜타·파리까지 3개 도시 분산 개최된다. 참가자 폭증으로 단일 도시가 감당이 안 되는 규모가 됐다는 뜻이다.",
+      angle: "'rlwrld는 ICML에 논문이 아니라 Robotics Night로 갔다' — 학회 사이드이벤트가 채용·마케팅의 최고 가성비 채널이라는 앵글. NeurIPS가 3개 대륙 분산 개최까지 간 규모 인플레이션(서울 ICML → 시드니·애틀랜타·파리 NeurIPS)도 'ML 학회는 이제 월드투어'라는 피드 소재.",
+      url: "https://icml.cc/"
     },
     {
-      term: "ICRA / IROS",
-      full: "IEEE International Conference on Robotics and Automation / Intelligent Robots and Systems",
-      category: "학회 · 48/63",
+      term: "RSS / Humanoids",
+      full: "Robotics: Science and Systems / IEEE-RAS Humanoids",
+      category: "학회 · 50/63",
       topics: ["robotics", "physical-ai"],
-      summary: "IEEE가 주관하는 양대 로보틱스 종합 학회다. ICRA는 봄, IROS는 가을에 열리고 둘 다 수천 편 규모로, 소수정예 학습 전문인 CoRL과 달리 하드웨어·제어·인식·계획까지 로보틱스 전 분야를 포괄한다 — 소프트웨어 세계로 옮기면 CoRL이 ICLR이라면 ICRA/IROS는 분야 전체가 모이는 플래그십 컨퍼런스다. 학습 기반 방법이 주류가 되면서 두 학회에도 VLA·파운데이션 모델 논문이 급증했고, 삼성리서치의 세탁기 호스 조립 VLA처럼 국내 산업 사례도 IROS를 통해 나온다. ICRA 2026은 6월 빈에서 'Robots for all'을 주제로 열렸고, ICRA 2027은 2027년 5월 24~28일 서울 코엑스에서 열린다. 논문 제출은 이미 마감(2026년 9월 15일)됐고 결과는 2027년 1월 31일 통지된다.",
-      angle: "'ICRA 2027은 서울에서 열린다' — 세계 최대 로보틱스 학회의 서울 개최는 국내 피지컬 AI 생태계(로보티즈·레인보우·WIRobotics 등)를 묶어 설명할 절호의 훅이다. CoRL(학습 전문·소규모) vs ICRA/IROS(종합·대규모) 포지셔닝 비교 한 장짜리 콘텐츠도 반응이 좋은 포맷.",
-      url: "https://2027.ieee-icra.org/"
+      summary: "RSS는 2005년 시작된 로보틱스 소수정예 학회로, 수천 편 규모의 ICRA/IROS와 달리 단일 트랙에 억셉 논문 수를 극도로 제한한다 — 올해 RSS 2026(7월, 시드니 UTS)은 210편이었다. 밀도로는 CoRL과 함께 로보틱스 '프리미엄 티어'를 이루며, 이 뉴스레터 #61에서 다룬 월드모델 RL 연구 RISE가 바로 RSS 2026 논문이다. IEEE-RAS Humanoids는 이름 그대로 휴머노이드 특화 학술 학회로 서울 개최 이력이 있다. 주의할 구분: 'Humanoids Summit'(실리콘밸리·런던·도쿄)은 학술 학회가 아니라 산업 서밋으로, rlwrld가 도쿄 세션 풀영상을 공개한 무대가 이쪽이다. 학술(피어리뷰)과 산업(마케팅) 무대를 섞어 부르면 전문가 피드에서 바로 티가 난다.",
+      angle: "'RSS 억셉 210편 vs ICRA 수천 편' — 로보틱스 학회에도 티어가 있고, 데모 영상 비평의 두 번째 체크포인트(CoRL에 이어)가 RSS라는 앵글. 'Humanoids(학회)와 Humanoids Summit(산업 이벤트)은 다른 행사'라는 한 줄 구분법도 반응 좋은 소재.",
+      url: "https://roboticsconference.org/"
     }
   ]
 };

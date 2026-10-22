@@ -347,159 +347,175 @@
    topics: physical-ai | ai | robotics | security | chips
    ========================================================= */
 const EDITION = {
-  date: "2026-10-22",
+  date: "2026-10-23",
   news: [
     {
-      source: "The Record",
-      topics: ["security"],
-      title: "PHP 20년 묵은 치명 취약점 2건 'php2shell' — 각국 정부 사이트 선제 오프라인 뒤 긴급 패치",
-      summary: "PHP 프로젝트가 10월 21일(GMT 13:45경) 비인증 원격코드실행이 가능한 치명 취약점 2건(CVE-2026-109618·109619, 심각도 9.2)을 고친 8.5.12·8.4.27·8.3.36·8.2.35를 배포했다. 지난 20년간 배포된 사실상 모든 PHP 버전이 영향권으로, 네덜란드 정부 포털 Overheid.nl과 캐나다 연방 사이트 등이 패치 전 선제적으로 서비스를 내렸고 유럽·호주·일본·영국 보안 당국이 즉시 패치 또는 오프라인 전환을 권고했다. Censys 집계로는 관측 호스트 260만 중 150만이 수정판이 없는 구버전을 구동 중이고, 팔로알토 Unit 42는 노출 인스턴스를 2,260만으로 추정하며 개념증명 코드를 이미 확인했다. 클라우드플레어와 watchTowr는 공격 시도가 시작됐다고 보고했다.",
-      url: "https://therecord.media/php-script-vulnerabilities-warnings"
-    },
-    {
-      source: "Forbes",
-      topics: ["security", "ai"],
-      title: "이번 PHP 취약점은 AI가 찾았다 — 오픈AI 'Patch the Planet' 연합의 2개월 비밀 대응",
-      summary: "php2shell은 사람이 아니라 AI 모델이 발견했다. 보안 스타트업 Calif가 8월 1일 GPT-5.6 Sol로 초기 형태를 찾았고, 오픈AI 내부 팀이 9월 더 완전한 변종을, Wiz도 독립적으로 두 건 모두를 발견했다. 오픈AI는 'Patch the Planet' 이니셔티브로 메인테이너·연구자·보안사 연합을 꾸려 2개월간 비공개로 수정을 조율했으며, 수정에 PHP 엔진의 대규모 변경이 필요했다고 밝혔다. 웹사이트의 약 70%가 PHP로 돌아가는 만큼 '최근 기억에 남는 가장 영향력 큰 보안 이슈 중 하나'라는 평가이고, 패치 공개 후에는 AI로 손쉽게 역공학이 가능해 패치 경쟁이 시작됐다.",
-      url: "https://www.forbes.com/sites/thomasbrewster/2026/10/21/openai-ai-found-one-of-the-biggest-web-weaknesses-ever/"
-    },
-    {
-      source: "Anthropic",
-      topics: ["ai"],
-      title: "앤스로픽, 선제적 에이전트 '클로드 듀엣' 리서치 프리뷰 — 美 Pro·Max 대기자 명단 오픈",
-      summary: "앤스로픽이 10월 21일 클로드가 먼저 움직이는 독립 앱 '클로드 듀엣(Claude Duet)' 리서치 프리뷰를 공개했다. 오푸스 5.5 기반으로 매일 아침 연결 앱 전반을 요약 브리핑하고, 몇 시간 간격으로 계정을 모니터링해 필요할 때만 알리며, 자체 VM과 브라우저에서 백그라운드 작업을 수행한다. Gmail·슬랙·스트라이프·쇼피파이 등 6,000개 이상 커넥터를 지원하되 메시지 발송·결제·서명·삭제 전에는 반드시 승인을 받고, 증권 거래·계좌 간 이체는 승인해도 불가다. iOS·안드로이드·웹 별도 앱으로, 미국 Pro·Max 가입자 대기자 명단부터 시작한다.",
-      url: "https://claude.com/resources/articles/claude-duet"
-    },
-    {
-      source: "NVIDIA",
-      topics: ["chips", "ai"],
-      title: "젠슨 황 GTC 베를린 키노트 — 컨테이너형 AI팩토리 'DSX POD'로 구축 6개월→14일",
-      summary: "엔비디아가 10월 21일 GTC 베를린 키노트에서 베라 루빈 AI팩토리를 모듈형 컨테이너에 사전 조립·검증해 배송하는 레퍼런스 디자인 'DSX POD'를 공개했다. 부지 유틸리티가 준비된 경우 현장 구축이 6개월에서 14일로 줄어든다는 설명이다. AI 에이전트를 샌드박스에 가두는 오픈소스 런타임 'OpenShell'과 기업 데이터 연결용 Agent Knowledge Foundation도 발표했고, 볼보는 하이페리온 자율주행 플랫폼 채택을 밝혔다. 황은 유럽 기술 생태계에 100억 달러 가까운 투자를 언급하며 AI를 '소프트웨어 트렌드가 아니라 제조업이자 새 산업혁명'으로 규정했다.",
-      url: "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/"
-    },
-    {
-      source: "StorageNewsletter",
+      source: "Tesla (SEC 8-K)",
       topics: ["physical-ai", "robotics"],
-      title: "엔비디아 레퍼런스 휴머노이드 'Agile ONE SN' 공개 — 뮌헨 Agile Robots 제작, 2027년 초 출시",
-      summary: "엔비디아가 GTC 베를린에서 Isaac 플랫폼 확장과 함께 레퍼런스 휴머노이드 'Agile ONE SN'을 발표했다. 뮌헨 Agile Robots가 만든 키 1.4m·무게 40kg·31자유도 기체로, 팔당 가반하중 3kg에 각 20자유도의 5지 핸드, 카메라·라이다·IMU 멀티모달 센싱을 갖추고 Jetson Thor(FP4 2,070 TFLOPS·128GB)로 구동된다. Isaac Capture(데이터 수집)→GR00T(모델)→Isaac Lab 3.0(시뮬 학습)→Isaac OS(런타임)의 풀스택 구성으로 연구자의 셋업 시간을 줄이는 게 목표이며, 2027년 초 출시 예정이다. 앞서 공개된 유니트리 H2 기반 학술용 레퍼런스(약 1.8m·68kg)와는 별도 트랙이다.",
-      url: "https://www.storagenewsletter.com/2026/10/21/nvidia-gtc-berlin-2026-nvidia-advances-isaac-platform-for-general-purpose-robotics-with-new-reference-humanoid-frameworks-simulation-pipelines-and-data/"
+      title: "테슬라, 프리몬트에서 옵티머스 생산 개시 — '첫 양산 품질 기체', 순이익은 43% 감소",
+      summary: "테슬라가 10월 21일(현지) 3분기 실적 발표와 함께 프리몬트 공장에서 휴머노이드 옵티머스의 초기 생산을 시작했다고 밝혔다. 모델 S·X 라인을 해체한 자리에 들어선 라인으로, 주주서한은 '이 라인에서 나오는 기체가 우리가 제조한 첫 생산 품질(production-quality) 로봇'이라고 적었다. 머스크는 콜에서 램프가 '매우 새로운 제품이라 상당히 울퉁불퉁할 것'이며 주당 2만 대 속도까지 최소 1년이 걸린다고 했고, 외부 고객 인도는 내년 말경으로 예상했다. 3분기 순이익은 7.87억 달러로 전년 대비 43% 줄었고 매출은 280.4억 달러로 제자리, 차량 인도는 486,532대로 약 2% 감소했다.",
+      url: "https://www.sec.gov/Archives/edgar/data/0001318605/000162828026049213/exhibit991.htm"
     },
     {
-      source: "StorageNewsletter",
+      source: "OpenAI",
+      topics: ["ai"],
+      title: "오픈AI 모델, 구글 클라우드 모델가든 입점 — 3대 클라우드 전부 확보, 구글은 GPT·클로드·제미나이 유일 보유",
+      summary: "오픈AI와 구글 클라우드가 10월 21일 GPT-6 Astra·GPT-6.1 Sol·GPT-6 Luna와 코덱스 에이전틱 워크플로를 구글 클라우드 모델가든에 올린다고 발표했다. 일부 엔터프라이즈 고객 대상 프라이빗 프리뷰로 시작해 수주 내 정식 출시되며, 이후 Antigravity와 Gemini for business 연동이 따른다. 결제는 구글 클라우드 마켓플레이스로 단일화되고 기존 클라우드 지출 약정에서 차감된다. 이로써 오픈AI 모델은 MS·AWS에 이어 3대 하이퍼스케일러 전부에 올라갔고, 구글은 GPT·클로드·제미나이 3대 프런티어 모델을 모두 제공하는 유일한 클라우드가 됐다.",
+      url: "https://openai.com/index/openai-models-google-cloud/"
+    },
+    {
+      source: "TechTimes",
       topics: ["chips"],
-      title: "'AI-defined fab' — 엔비디아, 어플라이드·KLA·램리서치·지멘스·시놉시스와 반도체 제조 AI 확장",
-      summary: "엔비디아가 GTC 베를린에서 반도체 설계·제조·검사 전반에 AI를 넣는 'AI-defined fab' 구상을 발표했다. 원자·분자 상호작용을 시뮬레이션하는 AI 에이전트용 CUDA-X 라이브러리 'cuPotential'을 새로 공개했고(얼리액세스 테스트에서 추가 2~3배 가속), 램리서치는 NanoVDB 라이브러리로 공정 시뮬레이션을 30배 가속했으며 KLA는 NPP를 웨이퍼 검사에 쓴다. 어플라이드 머티어리얼즈·케이던스·KLA·램리서치·지멘스·시놉시스 등이 참여하며, 5월 타이베이에서 발표한 TSMC와의 리소그래피·공정 시뮬레이션·팹 운영 최적화 협력의 연장선이다.",
-      url: "https://www.storagenewsletter.com/2026/10/21/nvidia-gtc-berlin-2026-nvidia-and-semiconductor-leaders-advance-ai-across-chip-design-and-manufacturing-for-ai-defined-fabs/"
+      title: "엔비디아, 공급망 6사와 증설 합의 — KYEC에 11억 달러 선지급, 기판 2.5배·광학엔진 15배",
+      summary: "엔비디아가 10월 21일 암코·이비덴·KYEC·삼성전기·SPIL·유니마이크론 6개 파트너와 기판·첨단 패키징·테스트·공동패키지 광학(CPO) 증설 계획을 발표했다. 대만 KYEC에는 미국 테스트 공장 신설 대금 11억 달러를 선지급하며 2027년 4월 양산이 목표다. 기판은 3년간 2.5배(이비덴 오노 공장은 3배, 2028년 1분기 램프), 암코와는 2028년 말까지 한국 인터포저 생산을 300% 이상 확대하고, SPIL 광학엔진은 2027년 중반 15배 후 2028년 말까지 추가 2배를 잡았다. AI 칩 병목이 웨이퍼에서 패키징·테스트로 옮겨간 국면에서 선불로 하류 캐파를 선점하는 움직임이다.",
+      url: "https://www.techtimes.com/articles/329352/20261022/nvidia-locks-ai-chip-testing-optics-capacity-six-partner-prepayment-push.htm"
     },
     {
-      source: "CyberScoop",
+      source: "TNW",
       topics: ["security", "ai"],
-      title: "MS '중국 연계 Storm-0940, AI 침투 프레임워크 ARTEX로 공격 자동화' — 2,250개 테넌트 도달",
-      summary: "마이크로소프트 위협인텔리전스가 10월 21일 중국 국가 연계 그룹 Storm-0940이 오픈소스 에이전틱 AI 침투테스트 프레임워크 ARTEX로 공격을 자동화했다고 발표했다. ConnectWise 클라우드 백업 공급망 침해를 발판으로, 이미 승인된 OAuth 앱을 악용해 2,250개 이상의 마이크로소프트 365 테넌트에 도달했고 분당 약 2,900건의 로그인 시도와 '최초 타기팅→권한 접근 3시간 미만'의 속도를 보였다. 10월 10~14일 한 작전에서는 327개 계정을 노렸다. 고객 데이터 유출 여부는 확인되지 않았으며, 크라우드스트라이크는 이달 초 한국 금융기관 공격에서도 중국에서 개발된 ARTEX 사용을 보고한 바 있다.",
-      url: "https://cyberscoop.com/microsoft-attributes-connectwise-supply-chain-attack-china-storm-0940/"
+      title: "앤스로픽 '클로드가 오픈소스 25종에서 보안 이슈 493건 발견' — OpenSSH 공격면 축소, 21년 묵은 결함도",
+      summary: "앤스로픽 프런티어 레드팀이 클로드로 C·C++·Java·PHP·파이썬 500만 줄 이상, 25개 주요 오픈소스 프로젝트의 공격면을 분석해 보안 이슈 493건을 찾았다고 공개했다. 개별 버그 사냥 대신 배포 설정이 노출하는 코드를 지도화하는 접근으로, 1만 7천여 설정 옵션 중 3,842개가 보안 관련이었고 위험 설정 조합 162건 중 94건은 보안 통제를 조용히 꺼버리는 경우였다. OpenSSH 10.4에서는 비인증 클라이언트가 도달 가능한 포스트퀀텀 서명 코드 약 4,500줄을 찾아 10.5·10.6에서 수정됐고, 설정 두 개가 충돌하는 결함 하나는 21년간 발견되지 않았던 것으로 드러났다. 로그인 장벽이 있는 11개 프로젝트 전부에서 인증 전 도달 가능한 코드가 확인됐다.",
+      url: "https://thenextweb.com/news/claude-attack-surface-reduction-493-issues-openssh"
     },
     {
-      source: "The Hacker News",
+      source: "VirusTotal",
       topics: ["security", "ai"],
-      title: "해커 1인, 자율 AI 에이전트로 1,200개 사이트 공격 — 침투 성공 1건당 비용 약 50달러",
-      summary: "한 공격자가 오픈소스 AI 에이전트 툴 'Cairn'에 목표만 주고 자율 작동시키는 방식으로 9월 25일부터 1,200개 이상 웹사이트를 공격해 디어(농기계)·샤크닌자·커민스 등 100개 이상 기업 사이트에 침투했다. 로이터가 검토한 기록 기준 전체 토큰 비용은 약 5,000달러(딥시크와 클로드 코드 조합)로, 성공 침투 1건당 약 50달러꼴이다. 노르웨이 NorForge 연구원 스노레 파게를란이 인터넷에 노출된 Cairn 인스턴스를 스캔하다 발견했고, 실제 데이터 유출 규모는 확인되지 않았다. Cairn 개발자는 '해킹용으로 설계한 툴이 아니다'라고 밝혔다.",
-      url: "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html"
+      title: "바이러스토탈 '리뷰어 눈을 피하는 악성 AI 에이전트 스킬 90종' — 빈 줄 수백 개·HTML 주석·투명 유니코드",
+      summary: "바이러스토탈이 AI 에이전트 스킬 35,878개를 분석해 6,637개(18.5%)를 악성으로 분류하고, 그중 90개는 사람 리뷰어가 보는 내용과 에이전트가 실제 읽는 지시가 다르도록 페이로드를 숨겼다고 밝혔다. 수백 줄의 빈 줄 뒤에 지시를 배치하거나, 깃허브·마켓플레이스·IDE 미리보기에 표시되지 않는 HTML 주석에 넣거나(28건), 보이지 않는 유니코드 문자를 쓰는 식이다. 악성 스킬의 62%는 공격 전체가 자연어 지시만으로 구성돼 악성 스크립트 기반 스캐너로는 잡기 어렵고, 긴 파일을 잘라 읽는 스캐너는 숨긴 지시에 도달하지 못할 수 있다고 지적했다. 설치 전 원문 파일 전체 검토와 신뢰 버전 고정을 권고했다.",
+      url: "https://blog.virustotal.com/2026/10/how-some-malicious-ai-skills-hide.html"
+    },
+    {
+      source: "Interesting Engineering",
+      topics: ["robotics", "physical-ai"],
+      title: "유니트리, '보디가드 휴머노이드' H2-X 공개 — 4m 낙하·차량 들어올리기, 자율성 여부는 미공개",
+      summary: "유니트리가 10월 21일 H2 기반 'H2-X Kung Fu Legend Guardian' 영상을 공개했다. 폐차장에서 차량 패널을 찌그러뜨리는 타격, 4m 플랫폼에서 낙하 후 구르기, 흉기 든 침입자 제압, 깔린 인형을 꺼내기 위해 차량 앞부분을 들어올리는 구조 시나리오가 담겼고, 회사는 영상이 실제 속도이며 배속 편집이 아니라고 밝혔다. 대기 기준 최대 약 8시간 구동(기존 H2 약 3시간)을 내세웠지만 시연이 자율·원격조종·사전 프로그래밍 중 무엇이었는지는 밝히지 않았고, 차량 들어올리기는 화면 밖 지지 정황이 지적됐다. 상세 스펙은 미공개이며 대량 소비자 판매 계획은 없다고 했다.",
+      url: "https://interestingengineering.com/ai-robotics/unitree-showcases-h2-x-humanoid-robot"
+    },
+    {
+      source: "The Robot Report",
+      topics: ["robotics", "physical-ai"],
+      title: "농기계 AGCO, 애질리티 Digit을 캔자스 공장에 — 2027년 파일럿, 토요타·GXO·셰플러에 이어",
+      summary: "농기계 제조사 AGCO가 애질리티 로보틱스와 상업 계약을 맺고 2027년 캔자스 헤스턴 공장에서 휴머노이드 Digit 파일럿을 시작한다고 10월 20일 발표했다. 1,100여 명이 13개 생산라인에서 일하는 기존 공장에 투입돼 부품 분류·적재와 토트 보관 배치를 맡으며, 투입 대수와 계약 규모는 비공개다. 토요타·GXO·셰플러에 이은 Digit 고객사 추가로, 애질리티는 처칠캐피털 XI와의 합병을 통해 4분기 상장을 앞두고 있다.",
+      url: "https://www.therobotreport.com/agco-to-deploy-agility-digit-humanoid-in-kansas-factory/"
+    },
+    {
+      source: "PBS NewsHour",
+      topics: ["security"],
+      title: "php2shell 패치 경쟁 이틀째 — FBI·NSA·ENISA 경고, 위키미디어·정부 사이트 선제 오프라인",
+      summary: "전 세계 웹사이트의 약 70%가 쓰는 PHP의 치명 취약점 php2shell 공개 이틀째, 패치 경쟁이 이어지고 있다. FBI는 원격코드실행 악용 가능성을 경고했고 NSA와 유럽 ENISA도 즉시 조치를 권고했으며, 각국 정부·기업 사이트와 위키미디어 일부 서비스가 패치 전 선제적으로 오프라인 전환됐다. 취약점은 보안사 Calif가 8월 오픈AI의 지원을 받은 감사에서 GPT-5.6 Sol로 처음 찾았고 오픈AI 내부 팀과 Wiz가 뒤이어 확인했다. 패치가 공개된 만큼 역공학을 통한 공격 코드 확산이 빨라져, 미패치 서버의 교체·업데이트가 당면 과제로 남았다.",
+      url: "https://www.pbs.org/newshour/nation/ai-discovered-a-software-vulnerability-that-could-impact-70-of-websites-worldwide-the-rush-is-on-to-patch-it"
+    },
+    {
+      source: "The Intercept",
+      topics: ["ai"],
+      title: "딥마인드 연구자, 펜타곤·님버스 계약에 항의 사직 — 군사 AI 둘러싼 인력 이탈 이어져",
+      summary: "구글 딥마인드 연구엔지니어 소피아 리구오리가 회사의 군사 관련 계약에 항의하며 사직했다고 디 인터셉트가 10월 21일 보도했다. 전력망 라우팅 연구를 하던 그는 이스라엘군에 클라우드·AI를 공급하는 프로젝트 님버스와 올해 4월 체결된 펜타곤 기밀 AI 계약을 알게 된 뒤 군사기술을 돕는 회사에 더는 있을 수 없다고 판단했다고 밝혔다. 구글은 '공공부문 계약에 일관된 검토 절차와 수용 가능 사용 정책, AI 원칙을 적용한다'고 답했다. 같은 계약을 두고 복수의 딥마인드 직원이 이미 사직했거나 퇴사를 준비 중이라는 보도가 이어지고 있다.",
+      url: "https://theintercept.com/2026/10/21/google-deepmind-resign-ai-military-gaza/"
     }
   ],
   social: [
     {
-      name: "Greg Brockman",
-      handle: "오픈AI 사장",
-      initials: "GB",
-      topics: ["security", "ai"],
-      quote: "Over the past two months, we have been leading a coalition to mitigate one of the most severe bugs in open source software found in recent memory, php2shell, found as part of our Patch the Planet initiative.",
-      context: "10월 21일 X 포스트. PHP 긴급 패치가 공개된 당일, 취약점의 이름(php2shell)과 발견 경위를 처음 공식화한 발언이다. AI가 14년 묵은 버그를 찾아냈고 오픈AI가 2개월간 비공개 연합을 이끌었다는 서사로, 여름 허깅페이스 침입 사건 이후 'AI는 보안 위협'이라는 프레임을 'AI는 방패'로 뒤집으려는 포지셔닝이 뚜렷하다.",
-      url: "https://x.com/gdb/status/2112921529650688312"
-    },
-    {
-      name: "Jensen Huang",
-      handle: "엔비디아 CEO",
-      initials: "JH",
-      topics: ["chips", "ai"],
-      quote: "This is what NVIDIA builds today, and this is the foundation by which we can enable Europe to be part of the AI ecosystem, the AI economy.",
-      context: "10월 21일 GTC 베를린 키노트. AI팩토리 풀스택(DSX POD)을 소개하며 유럽의 'AI 경제' 참여를 엔비디아 인프라 위에서 가능케 하겠다고 선언했다. 지난 한 주 프랑스·영국·스웨덴을 돌며 14개 스타트업 투자를 발표했다고 밝혔고, 유럽 생태계에 100억 달러 가까운 투입을 언급했다. AI를 '제조업'으로 규정하는 프레임이 키노트 전체를 관통했다.",
-      url: "https://www.investing.com/news/transcripts/nvidia-at-gtc-berlin-2026-keynote-europes-ai-buildout-93CH-4962500"
-    },
-    {
-      name: "Claude",
-      handle: "@claudeai · 공식 발표",
-      initials: "CL",
+      name: "OpenAI",
+      handle: "@OpenAI · 공식 발표",
+      initials: "OA",
       topics: ["ai"],
-      quote: "Claude Duet is an early research preview, available through a waitlist on Pro and Max plans in the US. It can still misjudge what's urgent, and we'll keep tuning it based on what early users tell us.",
-      context: "10월 21일 X 공지. 클로드 듀엣 공개와 함께 '긴급도를 잘못 판단할 수 있다'는 한계를 발표문에 먼저 명시한 점이 눈에 띈다. 같은 날 은행권의 외부 에이전트 차단 흐름이 이어지는 가운데, 결제·서명·삭제 전 승인 필수와 증권 거래 금지 같은 가드레일을 전면에 내세워 '선제적 에이전트'의 신뢰 문제를 정면 돌파하려는 메시지다.",
-      url: "https://x.com/claudeai/status/2112984669943968099"
+      quote: "OpenAI models are coming to Google Cloud. We're bringing our frontier models and Codex agentic workflows to Google Cloud's Model Garden, so enterprises can use our technology where they already build.",
+      context: "10월 21일 X 공지. MS 독점 공급에서 출발한 오픈AI가 AWS에 이어 경쟁사 구글의 클라우드에까지 모델을 올리며 멀티클라우드 전환을 사실상 마무리했다. 컴퓨트 조달과 엔터프라이즈 유통을 분리하는 전략으로, '고객이 이미 빌드하는 곳에서'라는 표현이 유통 우선 기조를 요약한다. 전날까지 php2shell 발견 서사를 주도하던 회사가 하루 만에 구글과 손잡는 그림도 올해 '경쟁과 협력 동시 진행' 기류의 전형이다.",
+      url: "https://x.com/OpenAI/status/2112988118471295323"
     },
     {
-      name: "Microsoft Threat Intelligence",
-      handle: "@MsftSecIntel · 공식 계정",
-      initials: "MS",
-      topics: ["security"],
-      quote: "The China state-aligned threat actor Storm-0940 used the agentic AI penetration testing framework ARTEX to automate attacks targeting hundreds of organizations globally across a broad range of industries.",
-      context: "10월 21일 X 공지. 국가 배후 그룹이 에이전틱 AI 프레임워크로 공급망 공격을 자동화했다는 공식 귀속 발표다. 같은 날 AI가 PHP 취약점을 찾아 방어에 기여했다는 오픈AI 발표와 겹치며, 'AI가 공격과 방어 양쪽의 속도를 동시에 끌어올린다'는 올해 보안 담론을 하루 안에 압축해 보여줬다.",
-      url: "https://x.com/MsftSecIntel/status/2112975078266716390"
+      name: "Elon Musk",
+      handle: "테슬라 CEO",
+      initials: "EM",
+      topics: ["physical-ai", "robotics"],
+      quote: "We've started what I'd call early production on our high-volume line in Fremont.",
+      context: "10월 21일 3분기 실적 콜. 옵티머스 양산 라인 가동을 처음 공식화한 발언으로, 램프는 '매우 새로운 제품이라 상당히 울퉁불퉁할 것'이고 주당 2만 대까지 최소 1년이 걸린다고 덧붙였다. 차세대 추론 칩 AI5를 내년 4월부터 옵티머스에 넣겠다는 일정도 공개했다. 순이익 43% 감소 발표와 같은 자리에서 나온 발언이라, 자동차 실적 악화를 로봇 서사로 상쇄하려는 구도가 뚜렷하다.",
+      url: "https://driveteslacanada.ca/news/tesla-optimus-production-fremont-20000-week/"
+    },
+    {
+      name: "Unitree Robotics",
+      handle: "@UnitreeRobotics · 공식 계정",
+      initials: "UR",
+      topics: ["robotics", "physical-ai"],
+      quote: "Powerful performance to serve and guard you, with a maximum endurance of approximately 8 hours. Please use the robot safely and in a friendly manner.",
+      context: "10월 21일 H2-X 공개 X 포스트. '당신을 지키는 가디언'이라는 B2C 서사와 함께 '안전하고 친근하게 사용하라'는 당부를 발표문에 같이 넣었다 — 차량을 파손하는 격투 데모를 내보내면서 안전 문구로 균형을 잡는 구성이다. 8월 상장 후 주가가 고점 대비 크게 빠진 상황에서 나온 화제성 마케팅으로, 자율성 여부와 상세 스펙은 밝히지 않았다.",
+      url: "https://www.techrepublic.com/article/news-unitree-h2-x-humanoid-robot-security-rescue-china-apac/"
+    },
+    {
+      name: "Michael Gerstenhaber",
+      handle: "구글 클라우드 Gemini 제품 VP",
+      initials: "MG",
+      topics: ["ai"],
+      quote: "Today, we are expanding that foundation by launching OpenAI models in Google Cloud's model garden.",
+      context: "10월 21일 구글 클라우드 공식 블로그. '선택권·거버넌스·가격성능'이라는 플랫폼 정체성 위에 오픈AI 모델을 얹는다는 선언으로, 구글은 이로써 GPT·클로드·제미나이를 모두 파는 유일한 하이퍼스케일러가 됐다. 자사 모델 우위를 내세우는 대신 모델 중립 유통망을 장악하는 쪽을 택한 것으로, 고객 지출 약정을 타사 모델 구매에도 쓰게 한 과금 설계가 실질적인 잠금 장치다.",
+      url: "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers"
     }
   ],
   company: [
     {
+      company: "Tesla",
+      logo: "TS",
+      type: "자동차 · 로보틱스",
+      topics: ["physical-ai", "robotics"],
+      title: "모델 S·X 라인 해체 46일 만에 로봇 라인 — '자동차 회사'의 중심축이 옵티머스로",
+      summary: "프리몬트의 모델 S·X 라인을 46일 만에 걷어내고 그 자리에 옵티머스 라인을 세웠다는 사실 자체가 이번 분기의 메시지다. 차량 인도는 2% 줄고 순이익은 43% 빠졌지만, 실적 콜의 무게중심은 '라인당 100만 대 설계의 대부분이 프리몬트에 도착했다'는 로봇 쪽에 있었다. 머스크는 AI5 칩을 내년 4월부터 옵티머스에 통합하고 외부 인도는 내년 말로 제시했는데, 주당 2만 대까지 최소 1년이라는 단서가 붙는다. 자율주행(사이버캡 연내 인도 추진)과 휴머노이드 양쪽에 같은 칩·같은 공장 자원을 태우는 구조라, 자동차 실적이 흔들릴수록 '피지컬 AI 회사' 서사의 비중은 더 커질 수밖에 없다.",
+      url: "https://finance.yahoo.com/technology/articles/tesla-tears-down-model-x-221918335.html"
+    },
+    {
+      company: "Google",
+      logo: "GO",
+      type: "빅테크 · 클라우드",
+      topics: ["ai"],
+      title: "'3대 모델 전부 파는 가게'의 계산 — 모델 경쟁 대신 유통을 장악한다",
+      summary: "오픈AI 모델 입점으로 구글 클라우드는 GPT·클로드·제미나이를 모두 제공하는 유일한 하이퍼스케일러가 됐다. 겉보기엔 자사 제미나이의 경쟁자를 들인 것이지만, 과금 구조를 보면 계산이 다르다 — 어떤 모델을 쓰든 구글 클라우드 약정에서 차감되고 인보이스는 하나로 합쳐지며, 수주 내 Antigravity와 Gemini for business에도 오픈AI 모델이 들어온다. 모델 선택권을 미끼로 워크로드와 지출 약정을 자사 인프라에 묶는 전략으로, MS가 오픈AI 독점으로 가져갔던 프리미엄을 '중립 플랫폼' 포지션으로 되치기하는 셈이다. 남는 질문은 자사 TPU·제미나이 우선 정책과의 긴장을 어디까지 관리하느냐다.",
+      url: "https://9to5google.com/2026/10/21/openai-gpt-models-google-antigravity-cloud"
+    },
+    {
       company: "NVIDIA",
       logo: "NV",
       type: "빅테크 · 반도체",
-      topics: ["chips", "physical-ai"],
-      title: "베를린에서 보여준 '레퍼런스 디자인 제국' — AI팩토리·휴머노이드·팹까지 같은 공식",
-      summary: "이번 GTC 베를린의 발표들은 전부 같은 구조다. 엔비디아가 레퍼런스 디자인을 만들고 파트너가 제조한다 — AI팩토리는 DSX POD(파트너가 컨테이너로 조립), 휴머노이드는 Agile ONE SN(Agile Robots 제작), 반도체 제조는 'AI-defined fab'(어플라이드·KLA·램리서치가 CUDA-X 채택). CUDA가 GPU에서 했던 '표준 장악'을 물리 세계 전반에서 반복하는 3-컴퓨터 전략의 유럽 버전이다. 유럽에 100억 달러 가까운 투자를 약속하며 '소비만 하지 말고 AI 경제에 참여하라'는 메시지를 던졌는데, 그 참여의 통로가 모두 엔비디아 스택이라는 점이 이 회사의 플레이북이다.",
-      url: "https://blogs.nvidia.com/gtc-berlin-2026-news/"
+      topics: ["chips"],
+      title: "선불 11억 달러가 말하는 것 — 병목은 이제 패키징·테스트, 캐파 선점이 새 해자",
+      summary: "이번 6사 합의의 핵심은 증설 숫자보다 '엔비디아가 현금을 먼저 꽂는다'는 구조다. KYEC 미국 테스트 공장에 11억 달러를 선지급하고, 기판 2.5배·인터포저 300%·광학엔진 15배의 마일스톤을 2027~28년에 깔았다. 뒤집어 읽으면 그때까지 테스트·패키징 완료된 칩 공급은 계속 빡빡하다는 자인이기도 하다. GPU 설계가 아니라 하류 공정 캐파가 희소자원이 된 국면에서, 선불 계약으로 경쟁사(AMD·자체 칩 진영)가 쓸 캐파까지 미리 잠그는 효과가 있다. 베라 루빈 세대의 CPO 전환(광학엔진 15배→30배)이 이 지도의 다음 병목 후보다.",
+      url: "https://www.techtimes.com/articles/329359/20261022/nvidia-commits-11-billion-chip-testing-targets-15x-optics-capacity-vera-rubin.htm"
     },
     {
-      company: "Anthropic",
-      logo: "AN",
-      type: "AI 랩 · 미국",
-      topics: ["ai"],
-      title: "클로드 듀엣의 승부수는 기능이 아니라 가드레일 — 은행이 에이전트를 차단하는 주의 역발상",
-      summary: "메타 Muse와 오픈AI Dots가 먼저 연 '선제적 에이전트' 시장에 앤스로픽이 클로드 듀엣으로 합류했다. 차별점은 기능 목록이 아니라 제약 목록이다 — 발송·결제·서명·삭제 전 승인 필수, 증권 거래·계좌 간 이체는 승인해도 불가, 크리덴셜은 에이전트가 직접 보지 못하는 구조. 지난주 JP모건·슈왑이 '책임 소재 불명'을 이유로 외부 에이전트를 차단한 바로 그 지점을 제품 설계로 선제 대응한 모양새다. 결제는 스트라이프 Link 가상카드·Shop Pay 등 은행이 허용한 레일 안에서만 움직인다. 11월 로드쇼를 앞두고 '엔터프라이즈 신뢰'를 소비자 제품에서도 입증하려는 수로 읽힌다.",
-      url: "https://www.engadget.com/2293646/claude-duet-is-anthropics-answer-to-meta-muse-and-openai-dots/"
-    },
-    {
-      company: "OpenAI",
-      logo: "OA",
-      type: "AI 랩 · 미국",
-      topics: ["security", "ai"],
-      title: "'Patch the Planet'이라는 브랜드 — 취약점 발견을 안보 자산으로 전환하는 중",
-      summary: "php2shell 공개는 기술 성과인 동시에 정교한 포지셔닝이다. 오픈AI는 발견(GPT-5.6 Sol)·조율(2개월 연합 주도)·공개(브록먼 사장 직접 발표)를 하나의 이니셔티브 브랜드로 묶었다. 여름 자사 에이전트의 허깅페이스 침입으로 'AI 보안 책임론'의 표적이 됐던 회사가, 이제 '인터넷을 지키는 AI'의 대표 사례를 쥐게 된 것이다. 같은 날 마이크로소프트가 중국 연계 그룹의 AI 자동화 공격을 공개하며 대비 구도는 더 선명해졌다. 다만 패치 공개 후 AI 역공학으로 공격도 쉬워진다는 지적처럼, 같은 능력이 방패와 창을 동시에 벼린다는 긴장은 이 서사의 그림자로 남는다.",
-      url: "https://x.com/OpenAI/status/2112907856018309586"
-    },
-    {
-      company: "Agile Robots",
-      logo: "AR",
-      type: "로보틱스 · 독일",
+      company: "Unitree",
+      logo: "UT",
+      type: "로보틱스 · 중국",
       topics: ["robotics", "physical-ai"],
-      title: "엔비디아 레퍼런스 휴머노이드로 선정 — 유럽 로보틱스의 'Unitree 자리'를 가져갔다",
-      summary: "뮌헨 기반 Agile Robots(독일항공우주센터 DLR 로보틱스 연구소 스핀오프)가 GTC 베를린에서 엔비디아 Isaac 플랫폼의 레퍼런스 휴머노이드 제작사로 호명됐다. 5월 타이베이에서 유니트리가 가져간 역할의 유럽판으로, 1.4m·40kg 소형 기체 Agile ONE SN에 Isaac Capture부터 Isaac OS까지 엔비디아 풀스택과 Halos 안전 스택을 통합해 2027년 초 내놓는다. 연구용 표준 기체가 되면 그 위에서 만들어지는 데이터·툴체인이 모두 자사 플랫폼에 쌓인다는 점에서, 중국(유니트리)·미국(테슬라·Figure) 사이에서 존재감이 옅던 유럽 휴머노이드 진영이 처음으로 확실한 교두보를 얻은 셈이다.",
-      url: "https://finance.yahoo.com/technology/article/nvidia-debuts-platform-for-keeping-ai-agents-from-going-rogue-and-humanoid-robot-design-at-gtc-berlin-113000342.html"
+      title: "주가 급락 속 '보디가드' 마케팅 — 상장사가 된 유니트리의 화제성 공식은 유효한가",
+      summary: "H2-X 영상은 유니트리 특유의 바이럴 공식(격투·곡예 데모)을 '가디언'이라는 용도 서사로 포장한 첫 사례다. 타이밍이 공교롭다 — 8월 상장 후 주가가 고점 대비 55% 빠졌고, 그 여파로 중국 당국이 휴머노이드 IPO 러시에 제동을 걸었다는 보도까지 나온 상황이다. 영상은 '실제 속도'라고 못박았지만 자율성 여부·상세 스펙·출시 계획은 모두 미공개이고, 대량 소비자 판매는 하지 않겠다고 했다. 데모 화제성으로 브랜드를 쌓고 실제 매출은 쿼드러페드·연구용 기체에서 내는 기존 구조가 상장사 공시 체제에서도 통할지가 관전 포인트다.",
+      url: "https://www.techradar.com/ai-platforms-assistants/unitree-reveals-its-h2-x-bodyguard-robot-a-kung-fu-humanoid-with-an-8-hour-battery-life-and-some-serious-martial-arts-skills"
+    },
+    {
+      company: "Agility Robotics",
+      logo: "AG",
+      type: "로보틱스 · 미국",
+      topics: ["robotics", "physical-ai"],
+      title: "상장 직전에 고객사 하나 더 — 물류를 넘어 제조로 넓히는 Digit의 레퍼런스 전략",
+      summary: "AGCO 계약은 금액·대수 비공개의 2027년 파일럿이지만, 시점이 모든 걸 말한다 — 애질리티는 처칠캐피털 XI와의 SPAC 합병으로 4분기 상장을 앞두고 있다. 토요타·GXO·셰플러에 이어 농기계 제조사까지 고객 명단에 올리면서 '물류 전용'이라는 꼬리표를 떼고 제조 현장 범용성을 입증하려는 수다. 휴머노이드 업계에서 상장 서사의 근거가 기술 데모가 아니라 유료 고객 레퍼런스 목록으로 옮겨가고 있다는 신호이기도 하다. 다만 파일럿 규모·기간이 비공개인 만큼, 실제 반복 매출로 이어지는지는 상장 후 공시에서 확인해야 한다.",
+      url: "https://www.investing.com/news/company-news/agco-to-pilot-humanoid-robots-at-kansas-facility-in-2027-93CH-4959977"
     }
   ],
   learn: [
     {
-      term: "GTC / CES 읽는 법",
-      full: "NVIDIA GPU Technology Conference / Consumer Electronics Show",
-      category: "커뮤니티 · 51/63",
-      topics: ["physical-ai", "chips"],
-      summary: "GTC는 엔비디아의 개발자 컨퍼런스(새너제이 본대회 외에 워싱턴·타이베이·베를린 등 지역판을 연중 개최), CES는 1월 라스베이거스 가전쇼다. CoRL·RSS 같은 학회가 피어리뷰 논문을 내는 무대라면, 이 둘은 산업 로드맵을 발표하는 무대 — 소프트웨어 세계의 WWDC·re:Invent에 해당한다. 젠슨 황 키노트가 그해 로봇 담론을 규정해 왔는데(CES 2025 'ChatGPT moment for robotics', GTC의 3-컴퓨터 전략·Jetson Thor), 엔지니어가 봐야 할 것은 데모가 아니라 '레퍼런스 디자인'과 '파트너 명단'이다. 레퍼런스로 지정된 기체(타이베이의 유니트리 H2, 오늘 베를린의 Agile ONE SN)는 그 생태계의 표준 데이터·툴체인이 쌓이는 자리이기 때문이다. 또 하나의 체크포인트는 시제 — 키노트 발표는 대부분 미래형이므로 출시 시점(Agile ONE SN은 2027년 초)을 항상 확인해야 한다.",
-      angle: "'학회는 논문을, GTC는 로드맵을 발표한다 — 키노트에서 볼 것은 데모가 아니라 레퍼런스 디자인과 파트너 명단.' 마침 오늘 새벽 GTC 베를린 키노트(DSX POD·Agile ONE SN)가 있어서, 이 프레임으로 당일 발표를 해부하는 콘텐츠를 바로 만들 수 있다.",
-      url: "https://www.nvidia.com/en-eu/gtc/"
+      term: "Gemini Robotics 2 (3종)",
+      full: "Gemini Robotics 2 · ER 2 · On-Device 2",
+      category: "플레이어·모델 · 53/63",
+      topics: ["physical-ai", "robotics"],
+      summary: "딥마인드가 2026년 7월 30일 공개한 로봇 모델 3종 세트. 본체인 Gemini Robotics 2는 시각+언어를 받아 동작을 출력하는 VLA로, 상반신 탁상 작업에 묶여 있던 전작과 달리 걷기·웅크리기·숙이기까지 포함한 전신(whole-body) 제어를 처음 지원한다. ER 2는 멀티스텝 계획·사람과의 소통·다중 로봇 협업을 맡는 '상위 두뇌'로, VLA를 도구(tool)로 선언해 호출한다 — LLM 에이전트가 함수를 호출하듯 추론 모델이 동작 모델을 부르는 구조다. On-Device 2는 로봇 하드웨어에서 로컬로 도는 경량판으로, 클라우드 모델과 엣지 배포판의 관계에 해당한다. 자체 기체 없이 Apptronik Apollo 2 등 파트너 로봇으로 시연하는 '뇌는 뿌리고 몸은 빌린다' 전략이며, ER 2는 Google AI Studio로 열려 있지만 VLA·온디바이스는 얼리액세스 파트너 전용이다. 에이전트 안전 벤치마크 ASIMOV-Agentic도 함께 내놨다.",
+      angle: "'로봇계의 모델-에이전트 분업' — ER 2가 계획하고 VLA를 툴로 호출한다. LLM 에이전트의 함수 호출 패턴이 로봇 제어에 그대로 이식됐다는 프레임, 그리고 하드웨어 없이 남의 몸(Apollo 2)으로 증명하는 구글의 플랫폼 전략이 엔지니어 피드용 훅.",
+      url: "https://www.therobotreport.com/google-deepmind-says-gemini-robotics-2-enables-full-body-control/"
     },
     {
-      term: "π0 → π0.7 계보",
-      full: "Physical Intelligence pi-zero family",
-      category: "플레이어·모델 · 52/63",
+      term: "Figure Helix & BotQ",
+      full: "Figure AI Helix VLA + BotQ manufacturing",
+      category: "플레이어·모델 · 54/63",
       topics: ["physical-ai", "robotics"],
-      summary: "Physical Intelligence(세르게이 레빈·첼시 핀 등이 창업, 밸류에이션 56억 달러 — 110억 달러설은 미확정)의 VLA 계보는 로봇 파운데이션 모델의 'GPT 버전 넘버링'에 해당한다. π0(2024.10)는 플로매칭으로 연속 동작을 생성하는 VLA의 원형이자 오픈웨이트(openpi) 문화의 선구자, π0.5(2025)는 학습한 적 없는 가정집에서 작동하는 개방형 일반화, π0.7(2026.4, arXiv 2604.15483)은 '조종 가능한(steerable) 제너럴리스트'다. π0.7의 핵심은 두 가지 — 셔츠 접기 데이터가 없는 새 로봇으로 셔츠를 개는 창발적 조합 일반화, 그리고 '무엇을'뿐 아니라 '어떻게'까지 지시하는 프롬프트(언어 코칭 + 비주얼 서브골 이미지, 테스트타임에 경량 월드모델이 이미지를 생성)다. 에스프레소 머신을 RL 파인튜닝 특화 모델 수준으로 즉시 다룬다는 주장도 담겼다. LLM으로 치면 베이스 모델(π0)에서 instruction-following과 창발 능력(π0.7)으로 가는 궤적이며, rlwrld RLDX-1이 정밀조작 성능을 비교하는 직접 벤치마크 상대이기도 하다.",
-      angle: "'셔츠 접기 데이터가 없는 로봇이 셔츠를 갠다 — π0.7의 창발 일반화.' 로봇 파운데이션 모델도 LLM처럼 버전 소수점이 능력 세대를 가르기 시작했다는 프레임과, 프롬프트가 텍스트를 넘어 '서브골 이미지'로 확장된다는 포인트가 엔지니어 피드용 훅.",
-      url: "https://www.pi.website/blog/pi07"
+      summary: "Figure의 자체 VLA인 Helix(2025년 2월 공개)는 카메라 영상+언어 지시로 휴머노이드 상반신을 실시간 제어하는 모델로, 느린 VLM 판단과 빠른 동작 생성을 나누는 System 2/1 분층의 대표 구현이다. BotQ(2025년 3월 발표)는 1세대 라인 기준 연 1.2만 대 규모의 자체 휴머노이드 공장으로, Helix를 실행하는 Figure 로봇이 부품 운반 등 자기 생산 공정 일부에 투입되는 '로봇이 로봇을 만드는' 루프를 돌린다. 모델(소프트웨어)과 양산(제조)을 수직통합한 것이 밸류에이션 390억 달러의 근거이며, 2026년 4월 업데이트 기준 Figure 03 누적 350대 이상 인도, 라인 속도는 120일 만에 하루 1대에서 시간당 1대로 올라왔다. 마침 이번 주 테슬라가 프리몬트에서 옵티머스 생산을 시작하면서, '모델+공장 수직통합' 경쟁 구도가 Figure 대 테슬라로 선명해졌다.",
+      angle: "'하루 1대에서 시간당 1대까지 120일' — 휴머노이드의 진짜 병목이 모델이 아니라 양산 램프라는 걸 보여주는 숫자. 테슬라 옵티머스 생산 개시(10/21)와 붙여 Figure vs 테슬라 수직통합 비교 콘텐츠로 바로 쓸 수 있고, 8~12시간 무편집 라이브로 신뢰를 쌓는 Figure의 커뮤니케이션 문법도 곁들일 훅.",
+      url: "https://www.figure.ai/news/botq"
     }
   ]
 };

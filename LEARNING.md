@@ -83,8 +83,8 @@
 | 50 | RSS / Humanoids | 학회 | Robotics: Science and Systems(소수정예)와 IEEE Humanoids(서울 개최 이력) + Humanoids Summit | rlwrld가 Humanoids Summit Tokyo 세션 풀영상 공개 — 회사 콘텐츠 전략의 실례 | done |
 | 51 | GTC / CES 읽는 법 | 커뮤니티 | 학회는 아니지만 산업 발표의 양대 무대. 젠슨 키노트가 그해 로봇 담론을 규정 | "CES 2025 'ChatGPT moment for robotics'" 같은 발언 아카이브로 흐름 읽기 | done |
 | 52 | π0 → π0.7 계보 | 플레이어·모델 | Physical Intelligence(레빈·핀 창업)의 VLA 계보. π0.5 개방형 일반화 → π0.7 창발 능력. 밸류 $5.6B(110억설은 미확정) | RLDX-1의 직접 비교 대상. 오픈웨이트(openpi) 문화의 선구자 | done |
-| 53 | Gemini Robotics 2 (3종) | 플레이어·모델 | VLA(전신 제어)+ER 2(상위 두뇌)+On-Device 2. 하드웨어 없이 남의 로봇(Apptronik·BD)으로 증명 | "뇌는 뿌리고 몸은 빌린다" 전략 — 파트너 동시 발화 마케팅까지 세트로 | todo |
-| 54 | Figure Helix & BotQ | 플레이어·모델 | 자체 VLA Helix(02)로 상반신 실시간 제어 + 자체 공장 BotQ 시간당 1대 양산. 밸류 $39B | "8~12시간 무편집 라이브 = 신뢰 장치" — 엔지니어 대상 콘텐츠 문법의 교과서 | todo |
+| 53 | Gemini Robotics 2 (3종) | 플레이어·모델 | VLA(전신 제어)+ER 2(상위 두뇌)+On-Device 2. 하드웨어 없이 남의 로봇(Apptronik·BD)으로 증명 | "뇌는 뿌리고 몸은 빌린다" 전략 — 파트너 동시 발화 마케팅까지 세트로 | done |
+| 54 | Figure Helix & BotQ | 플레이어·모델 | 자체 VLA Helix(02)로 상반신 실시간 제어 + 자체 공장 BotQ 시간당 1대 양산. 밸류 $39B | "8~12시간 무편집 라이브 = 신뢰 장치" — 엔지니어 대상 콘텐츠 문법의 교과서 | done |
 | 55 | 1X NEO & Redwood | 플레이어·모델 | 유일한 소비자 판매 휴머노이드($20K/월 $499). Redwood AI + 물리 기반 월드모델로 정책 평가 | "가정용은 진짜 오나" 논쟁 + 실패 롤아웃에서도 학습한다는 기술 포인트 | todo |
 | 56 | Genie 3 / World Labs | 플레이어·모델 | DeepMind Genie 3(실시간 24fps 상호작용 세계)·World Labs Marble→Atlas(공간지능) | 월드모델 지형도 완성. 페이페이 리 "공간지능이 다음 프론티어" | todo |
 

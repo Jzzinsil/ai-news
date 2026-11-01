@@ -347,159 +347,166 @@
    topics: physical-ai | ai | robotics | security | chips
    ========================================================= */
 const EDITION = {
-  date: "2026-10-30",
+  date: "2026-11-02",
   news: [
     {
-      source: "Google",
-      topics: ["ai", "security"],
-      title: "구글, 아르곤 2주 만에 Gemini 4 Carbon 공개 — AA 인덱스 1위 탈환, '사이버 방어자 우선' 롤아웃",
-      summary: "구글이 10월 28일 차기 프런티어 모델 Gemini 4 Carbon을 공개했다. Argon 출시 2주 만의 후속으로, Artificial Analysis 인텔리전스 인덱스 v5.0에서 59점을 받아 클로드 Opus 5.5(58)·GPT-6 Astra(57)를 제치고 1위에 올랐고, 자체 벤치마크 17개 중 15개 최고치를 주장했다. 보안 수치로 SEC-bench Pro 88.2%(취약점 발견)·ExploitGym 54.8%(익스플로잇)·CWE-bench 71.0%(패치)를 내세우며 일반 공개 대신 'Fairwind 프로그램'으로 사이버 방어 조직에 먼저 제공한다 — Gemini 앱·API 일정은 미정이고, 코딩 에이전트 인덱스에선 클로드 코드+Opus 5.5에 3점 뒤진 2위다.",
-      url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
-    },
-    {
-      source: "CNBC",
-      topics: ["ai", "chips"],
-      title: "마이크로소프트, Azure 48% 성장에 분기 매출 첫 공개 — 캐펙스 전망은 하향, 'GPU 공급 지연' 언급",
-      summary: "마이크로소프트가 10월 28일(현지시간) FY27 1분기 실적을 발표했다. 매출 923억 달러(+19%), Azure는 48% 성장에 분기 매출 331.7억 달러를 처음 공개했고 시간외 주가는 약 4% 올랐다. 캐펙스는 452억 달러로 자체 전망(500억 달러 이상)을 밑돌았고 2026년 전망을 약 1,700억 달러로 내렸다 — 에이미 후드 CFO는 서드파티 GPU 공급사 지연으로 일부 캐파 확보가 2027년 상반기로 밀렸다고 설명했다. OpenAI 투자 관련 약 2억 달러 손실도 반영됐다.",
-      url: "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html"
-    },
-    {
-      source: "Yahoo Finance",
+      source: "SCMP",
       topics: ["ai"],
-      title: "알파벳 3분기 — 클라우드 103% 급증·제미나이 10억 사용자, 주가는 FCF 적자에 급락",
-      summary: "알파벳이 10월 28일(현지시간) 3분기 매출 1,276억 달러(+25%)를 발표했다. 클라우드 매출이 AI 수요로 103% 급증했고 제미나이 앱은 사용자 10억 명으로 회사 역사상 가장 빠르게 성장한 제품이 됐으며, 자사 모델 API는 분당 토큰 약 320억 개(전분기 대비 +40%)를 처리 중이다. 캐펙스는 514억 달러로 연간 가이던스(1,950억~2,050억 달러)를 유지하며 2027년 '대폭 증가'를 예고했다 — 그러나 2개 분기 연속 잉여현금흐름 적자(-91억 달러)에 다음날 주가는 급락했다(24/7 월스트리트 집계 -11%).",
-      url: "https://finance.yahoo.com/markets/stocks/articles/alphabet-inc-goog-q3-2026-050953011.html"
+      title: "애플, 중국 애플 인텔리전스에 알리바바 Qwen 탑재 공식화 — 12월 iOS 27.3 배포, 새 Siri AI는 제외",
+      summary: "애플이 10월 31일 중국 뉴스룸을 통해 알리바바 Qwen이 중국판 애플 인텔리전스의 Siri·작문 도구·비주얼 인텔리전스를 구동한다고 공식 발표했다. 11월 4일 iOS 27.3 개발자 베타로 테스트를 시작해 12월 정식 배포되며, 중국 인터넷정보판공실(CAC)은 7월에 이미 애플 AI 서비스를 승인 목록에 올렸다. 알리바바도 11월 1일 소셜 미디어로 제휴를 확인했다 — 단 WWDC 2026에서 공개한 차세대 Siri AI는 이번 중국 출시에서 빠졌고, 애플의 프라이버시 아키텍처인 프라이빗 클라우드 컴퓨트가 중국 처리 경로에 어떻게 적용되는지는 공개되지 않았다.",
+      url: "https://scmp.com/tech/big-tech/article/3372831/apple-intelligence-roll-out-iphones-china-december-alibaba-backing"
     },
     {
-      source: "TrendForce",
-      topics: ["chips"],
-      title: "SK하이닉스 3분기 영업이익률 80% — 'DRAM·HBM 2029년까지 사실상 완판', 장기계약 고객 14곳",
-      summary: "SK하이닉스가 10월 28일 분기 매출 104.6조 원·영업이익 83.3조 원(영업이익률 80%)의 사상 최대 실적을 발표했다. HBM4가 3분기 본격 양산·출하에 들어가 4분기에 HBM3E를 추월할 전망이고, 회사는 DRAM·HBM이 2029년까지 사실상 완판 상태이며 장기계약(LTA) 고객 14곳이 2027~28년 계획 캐파의 절반 이상을 선점했다고 밝혔다. 공급 부족은 2030년까지 이어질 것으로 봤고, FY2026까지 배당·자사주 포함 약 100조 원 규모 주주환원 계획도 내놨다.",
-      url: "https://www.trendforce.com/news/2026/10/28/news-sk-hynix-3q26-opm-hits-record-80-says-dram-hbm-effectively-sold-out-to-2029-14-lta-customers-signed/"
+      source: "MarkTechPost",
+      topics: ["ai"],
+      title: "딥시크, 상시 가동 코딩 에이전트 'dsh-superagent' MIT 라이선스로 공개 — 팀 채팅을 듣고 먼저 움직인다",
+      summary: "딥시크가 10월 31일 라우터-워커 구조의 코딩 에이전트 프로토타입 'dsh-superagent'를 MIT 라이선스로 깃허브에 공개했다. 사람이 프롬프트를 치는 대신 에이전트가 깃허브 저장소 1곳과 (선택 시) 바이트댄스 협업툴 페이슈 채팅을 상시 관찰하다가 스스로 이슈를 분석하고 해결안을 제시하는 사전 행동형 설계다. 딥시크는 '연구 프로토타입이며 공식 제품이 아니다'라고 선을 그었고, 자체 테스트에서 단일 세션보다 토큰 소비가 늘어난다는 점도 공개했다 — 블룸버그는 이 공개를 앤스로픽 클로드 코드를 겨냥한 행보로 해석했다.",
+      url: "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/"
     },
     {
-      source: "The Hacker News",
+      source: "BleepingComputer",
       topics: ["security", "ai"],
-      title: "php2shell 첫 확인 피해 — 서버 25대 루팅·미 정부 연계망 침투, 클로드 코드·중국 LLM 조합 흔적",
-      summary: "보안업체 드림이 10월 28일 공개한 보고서에 따르면, 중국 연계로 추정되는 행위자가 php2shell에 리눅스 권한상승 결함 'Fragnesia'(CVE-2026-46300)를 엮어 10월 24일까지 미국·일본·대만·한국의 서버 25대를 루팅했고, 미 정부 연계 네트워크의 시스템 2대도 포함됐다. 침해 서버에는 클로드 코드가 설치돼 있었고 딥시크·Kimi를 쓰도록 구성된 공격 플랫폼 'aiscan'이 발견됐다 — 드림은 AI가 익스플로잇을 직접 작성했다는 직접 증거는 없지만 스크립트 약 40종의 일관성이 AI 보조 개발을 시사한다며, 완전 자율 공격은 아니라고 선을 그었다. 표적은 중국판 쇼단 격인 FOFA로 노출 방화벽 약 1.9만 대를 훑어 240대로 추려졌다.",
-      url: "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html"
+      title: "체이널리시스 '공격적 에이전틱 기법'에 내부망 침해 — 고객 이름·이메일 유출, AI 자율 공격 여부는 미확인",
+      summary: "블록체인 분석업체 체이널리시스가 외부 행위자가 '공격적 에이전틱 기법(offensive agentic techniques)'으로 내부 시스템·도구에 접근했다고 고객들에게 공지했다(10월 31일 보도). 유출 범위는 고객 이름·이메일·사용자 ID·조직 내 역할 라벨이며, 인증 자격증명·세션 토큰·수사 콘텐츠 접근 흔적은 없다고 밝혔다. 침해는 10월 초 발생했고 최근 바이낸스 대규모 탈취와는 무관하다고 했다 — 다만 피해 고객 수, 악용된 취약점, AI 에이전트가 실제로 어떤 역할을 했는지는 공개하지 않아 'AI가 자율 수행한 침해'로 단정하긴 이르다는 지적이 나온다.",
+      url: "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/"
     },
     {
-      source: "Cyber Kendra",
+      source: "Forever Security",
       topics: ["security", "ai"],
-      title: "앤스로픽 레드팀 '미공개 클로드가 5개 플랫폼에서 익스플로잇 체인 구축' — 크롬 신고로 CVE 62건",
-      summary: "앤스로픽 프런티어 레드팀이 10월 27일 미공개 내부 리서치 모델이 크롬·사파리·안드로이드·윈도우·리눅스에서 취약점을 찾아 작동하는 개념증명 익스플로잇 체인 5개를 만들었다고 공개했다. 크롬 체인은 V8 샌드박스 탈출을 포함한 버그 4개를 엮어 페이지 로드만으로 맥에서 계산기를 띄웠고(Chrome 156에서 수정), 리눅스는 제로클릭 루트 체인(CVE-2026-98432, CVSS 9.8)이다. 구글이 앤스로픽 신고에 CVE 62건을 부여했다고 밝혔다 — 전부 실험실 테스트로 실제 악용 보고는 없으며, 모델명·인간 개입 정도·컴퓨트 비용이 비공개라는 한계도 지적된다.",
-      url: "https://www.cyberkendra.com/2026/10/anthropic-claude-exploit-chains-chrome-safari-linux.html"
+      title: "'EMBRACE' — 커서·코파일럿·코덱스·VS Code·클로드 데스크톱 내장 브라우저에서 결함, 일부는 미패치",
+      summary: "보안업체 포에버 시큐리티가 10월 29일 데스크톱 AI 코딩 도구 5종(커서, 깃허브 코파일럿, 오픈AI 코덱스, VS Code, 클로드 데스크톱)의 내장 브라우저를 공략한 연구 'EMBRACE'를 공개했다. 공통 원인은 내장 브라우저가 일반 브라우저보다 큰 권한(호스트 파일·명령 접근)으로 돌아간다는 것 — 커서에선 악성 페이지가 에이전트 명령 입력부에 숨은 지시를 주입해 코드 실행(9월 10일 제보, 10월 1일 패치)에 성공했고, 코파일럿 주소창 스푸핑은 10월 13일 수정됐다. 로컬 HTML을 통한 파일 탈취 계열 2건은 공개 시점 기준 미패치로 남았다고 밝혔다 — 'AI 도구의 내장 브라우저를 별도 공격면으로 취급하라'는 게 결론이다.",
+      url: "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers/"
     },
     {
-      source: "Data Center Knowledge",
+      source: "TechCrunch",
+      topics: ["ai", "chips"],
+      title: "아마존 3분기 — AWS 39% 성장에 수주 잔고 5,780억 달러, EPS 미스에 주가는 시간외 7% 하락",
+      summary: "아마존이 10월 29일(현지시간) 3분기 매출 2,019억 달러를 발표했다. AWS는 약 5년 만에 최고 속도인 39% 성장(매출 약 460억 달러)을 기록했고 계약 기반 수주 잔고는 전년의 2배가 넘는 5,780억 달러에 달했지만, EPS 1.89달러가 기대치를 밑돌며 주가는 시간외 7% 넘게 밀렸다. 3분기 캐펙스만 759억 달러, 연간 약 2,200억 달러 전망을 유지했고 잉여현금흐름은 적자로 돌아섰다 — 재시 CEO는 'AWS가 2027·2028년 각각 40% 이상 성장할 수 있고 5~10년 내 연매출 1조 달러 사업이 된다'며 2027년에는 '의미 있게 더 쓸 것'이라고 밝혔다.",
+      url: "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/"
+    },
+    {
+      source: "Wccftech",
       topics: ["chips"],
-      title: "오라클 클라우드에 구글 TPU 들어간다 — 2027년부터 8세대 TPU 제공, 구글 밖 첫 하이퍼스케일러",
-      summary: "오라클이 10월 27일 라스베이거스 'AI 월드'에서 구글 8세대 TPU(훈련용 8t·추론용 8i)를 2027년부터 OCI에서 제공한다고 발표했다. 구글 외부 하이퍼스케일 클라우드가 TPU를 판매하는 첫 사례로, 오라클이 자체 데이터센터에서 전력·냉각·네트워킹을 맡고 수년에 걸쳐 용량을 늘린다. 가격·리전·초기 물량은 미공개다 — 같은 행사에서 세레브라스의 2027년 OCI 도입도 발표돼, 엔비디아 외 실리콘의 유통 채널 다변화가 뚜렷해졌다.",
-      url: "https://datacenterknowledge.com/data-center-chips/oracle-cloud-to-offer-google-tpus-and-new-ai-chips"
+      title: "엔비디아, 베라 루빈 공개 스펙 조용히 하향 — HBM4 22→19.2 TB/s, NVL8 시스템은 대역폭 26% 감소",
+      summary: "엔비디아가 제품 페이지에서 베라 루빈 GPU의 HBM4 대역폭을 22 TB/s에서 19.2 TB/s로(약 13%), NVLink 6을 3.6 TB/s에서 3 TB/s로 내린 사실이 뒤늦게 확인됐다. NVL72 랙 합산 대역폭은 1,580→1,400 TB/s로 줄었고 HGX NVL8 시스템은 26% 감소 폭이 가장 크며, 네트워킹 대역폭은 오히려 올랐다. 엔비디아는 10월 29일 '이전 수치는 예비 목표였고 새 수치가 시스템이 지속 가능한 값'이라고 해명했다 — 업계에선 HBM4 스펙 문턱을 낮춰 통과 가능한 메모리 물량을 늘리려는 양산 유연성 조치라는 해석이 나오고, 하향 이유와 공급사 영향은 공식 확인되지 않았다.",
+      url: "https://wccftech.com/nvidia-quietly-lowers-vera-rubin-hbm4-bandwidth-by-up-to-26-nvlink-speeds-also-reduced/"
     },
     {
-      source: "The AI Insider",
+      source: "SCMP",
+      topics: ["ai", "chips"],
+      title: "머스크 '네오클라우드 200곳 이상 구피급 떼죽음' vs 황 '수요는 차트 밖' — AI 인프라 신용 논쟁 격화",
+      summary: "일론 머스크가 X에서 'AI 데이터센터 외 매출이 없는 200곳 이상의 네오클라우드에 대출기관이 손을 뗐다'며 '구피급 떼죽음과 통폐합(guppy-level death and consolidation)'을 예고한 반면, 젠슨 황은 GTC 베를린과 CNBC 인터뷰에서 수요가 '차트 밖(off the charts)'이며 문제는 수요가 아니라 운전자본이라고 반박했다 — 상반된 전망을 둘러싼 분석이 10월 말 집중적으로 쏟아졌다. 코어위브 채권 수익률은 약 15%로 부실 채권 수준까지 올랐고 10월 들어 네오클라우드 주가는 일제히 약세다. 분석가들은 둘 다 맞을 수 있다고 본다 — 수요가 강해도 신용이 조이면 머스크가 말한 통폐합이 온다는 것이다.",
+      url: "https://www.scmp.com/tech/big-tech/article/3372447/elon-musk-jensen-huang-have-opposing-outlooks-ai-neoclouds-who-likely-correct"
+    },
+    {
+      source: "서울경제",
       topics: ["robotics", "physical-ai"],
-      title: "중국 로카에, 휴머노이드용 힘제어 로봇팔 누적 1만 대 출하 — 산업 파트너 80곳 이상",
-      summary: "중국 로카에(Rokae)가 10월 29일 휴머노이드용 힘제어(force-controlled) 로봇팔의 누적 출하 1만 대 돌파를 발표했다. 80곳 이상의 산업 파트너가 이 하드웨어를 생산 공정에 통합했다고 밝혔다. 힘제어 팔은 조립·연마·검사 같은 접촉 작업의 핵심 부품으로, 이틀 전 보도된 보스턴다이내믹스의 '올 코리안' 아틀라스 공급망과 나란히 놓으면 미·중·한 모두에서 휴머노이드 경쟁이 완제품 아래 부품·구동계 공급망 선점으로 내려가는 흐름이 보인다 — 다만 수치는 전부 회사 자체 발표로 외부 검증은 없다.",
-      url: "https://theaiinsider.tech/2026/10/29/chinas-rokae-robotics-announces-delivery-of-its-10000th-humanoid-force-controlled-arm/"
+      title: "HD현대로보틱스, 팔란티어 뉴욕 행사서 '피지컬 AI' 성과 발표 — 로봇 문제해결 21.5일→7.9일",
+      summary: "HD현대로보틱스 안성환 CTO가 뉴욕에서 열린 팔란티어 '소버린티 부트캠프'(10월 27일 개막, 250여 기관 450여 명 참석)에서 기조연설을 하고 산업용 로봇 피지컬 AI 협력 성과를 공개했다(11월 1일 보도). 숙련 엔지니어가 로봇 동작을 직접 보며 설정을 반복 조정하던 방식 대신, AI 에이전트가 로봇 프로그램을 분석해 개선안을 제시하면 엔지니어가 현장에 맞게 보완하는 구조로 바꿨고, 8월 도입 후 문제 해결 기간이 평균 21.5일에서 7.9일로 약 63% 줄었다고 밝혔다. 로봇 프로그래밍 비용 50% 이상 절감을 기대하며 — 2021년 시작된 양사 협력은 경영진 운영위원회 정례화로 확대된다. 수치는 회사 발표 기준이다.",
+      url: "https://m.sedaily.com/article/20108651"
+    },
+    {
+      source: "OODA Loop",
+      topics: ["physical-ai", "robotics"],
+      title: "피지컬 인텔리전스, 200억 달러 밸류 협상 보도 — 매출 제로에 반년 만에 기업가치 2배",
+      summary: "블룸버그가 로봇 파운데이션 모델 스타트업 피지컬 인텔리전스(π 시리즈 개발사)가 약 200억 달러 밸류에이션에 10억 달러 이상 조달을 위한 초기 협상 중이라고 보도했다. 기존 투자자인 어베니어와 럭스 캐피털이 리드를 협의 중이며, 올해 초 약 115억 달러였던 기업가치가 반년 만에 2배 가까이 뛰는 셈이다 — 아직 매출은 없다. 10월 13일 외부 개발자가 로봇 데이터를 올려 파운데이션 모델을 파인튜닝하고 호스티드 추론까지 쓰는 'Pi API' 베타를 연 직후의 협상으로, 회사는 보도를 확인하지 않았고 조건은 유동적이다.",
+      url: "https://oodaloop.com/briefs/technology/robotics-ai-startup-physical-intelligence-in-talks-for-massive-20-billion-valuation/"
     }
   ],
   social: [
     {
-      name: "Sundar Pichai",
-      handle: "구글 CEO · @sundarpichai",
-      initials: "SP",
+      name: "Wu Yongming (우융밍)",
+      handle: "알리바바그룹 CEO",
+      initials: "WY",
       topics: ["ai"],
-      quote: "I did say we'd be releasing our models periodically...introducing Gemini 4 Carbon, our next frontier model. Following Argon's release just two weeks ago, Carbon shows the pace at which we're pushing the frontier",
-      context: "10월 28일 Carbon 공개 포스트. 9월 말 Argon 공개 때 예고한 '주기적 출시'의 이행을 강조하며 2주 캐던스 자체를 성과로 내세웠다. 같은 날 알파벳 3분기 실적 발표가 겹쳤는데, 모델은 리더보드 1위를 탈환했지만 다음날 주가는 잉여현금흐름 적자에 급락했다 — 벤치마크 승리와 시장의 캐펙스 심판이 24시간 안에 엇갈린 하루였다.",
-      url: "https://x.com/sundarpichai/status/2115489219804352921"
+      quote: "Qwen will be deeply woven into a range of experiences across the Apple ecosystem.",
+      context: "11월 1일 알리바바가 소셜 미디어로 애플 제휴를 공식 확인하며 내놓은 CEO 발언(신화통신 보도). 애플 생태계라는 표현으로 Siri를 넘어선 침투를 예고했다 — 7월 CAC 승인, 10월 31일 애플 발표, 11월 1일 알리바바 확인으로 이어진 수순이다. 중국 프런티어 랩의 모델이 아이폰이라는 세계 최대 단일 디바이스 플랫폼의 기본 AI가 되는 첫 사례로, 국내 경쟁사(바이두 등)를 제치고 Qwen이 선택됐다는 점이 알리바바의 셀링포인트다.",
+      url: "https://english.news.cn/20261101/773fa2ac33a34a5ca3484d7e5920d094/c.html"
     },
     {
-      name: "Demis Hassabis",
-      handle: "구글 딥마인드 CEO · @demishassabis",
-      initials: "DH",
-      topics: ["ai", "security"],
-      quote: "⚡Iterating at lightning speed! Gemini 4 Carbon is SOTA across key benchmarks and combines frontier capabilities with deep safety & security research.",
-      context: "10월 28일 Carbon 공개 포스트. '안전·보안 연구와의 결합'을 전면에 세워, 일반 공개 대신 사이버 방어 조직에 먼저 제공하는 이례적 롤아웃(Fairwind 프로그램)의 근거 서사를 깔았다. 취약점 발견 88.2%(SEC-bench Pro) 같은 이중용도 능력을 '방어자 우선'으로 감싼 포지셔닝인데, 벤치마크 수치가 전부 구글 자체 공개라는 점은 변수로 남는다.",
-      url: "https://x.com/demishassabis/status/2115489550256746502"
-    },
-    {
-      name: "Satya Nadella",
-      handle: "마이크로소프트 CEO · @satyanadella",
-      initials: "SN",
+      name: "Kai",
+      handle: "개발자 · @hqmank",
+      initials: "KA",
       topics: ["ai"],
-      quote: "Just wrapped our earnings call. It was a fast start to our fiscal year. Microsoft Cloud revenue surpassed $63B, with growth accelerating to 30% YoY. Lots of innovation as we build the new tech stack for the agentic wave.",
-      context: "10월 28일 FY27 1분기 실적 발표 직후 포스트. 스레드에서 Foundry 매출 3배, 멀티모델 고객 5배 성장을 함께 들었다. 같은 날 캐펙스 전망을 내리면서 '소수 대형 고객에 AI 캐파를 빌려주는 건 비즈니스가 아니다'라는 발언(24/7 월스트리트 보도)도 내놨다 — 지출 경쟁 대신 수요를 고르는 선별 전략 선언으로, 캐펙스를 유지한 알파벳과 대비되며 시장은 +4%로 화답했다.",
-      url: "https://x.com/satyanadella/status/2115577764300693644"
+      quote: "DeepSeek's new Super-agent prototype might be a glimpse of how the next generation of coding agents will work. One of the biggest headaches with Claude Code and Codex today is managing sessions.",
+      context: "11월 1일 딥시크 dsh-superagent 공개에 대한 개발자 반응. 모델 성능이 아니라 '세션 관리'가 현세대 코딩 에이전트의 진짜 병목이라는 지적으로, 라우터가 상시 가동하며 워커 세션들을 대신 관리해 주는 딥시크의 설계가 그 문제를 겨냥했다고 봤다. 반면 '팀 채팅에 끼어드는 에이전트는 머지되기 전에 뮤트될 것'이라는 회의론도 같은 날 X에서 맞섰다 — 상시 관찰형 에이전트의 UX 논쟁이 시작된 셈이다.",
+      url: "https://x.com/hqmank/status/2116802002244006101"
     },
     {
-      name: "Hacker News 커뮤니티",
-      handle: "news.ycombinator.com",
-      initials: "HN",
-      topics: ["ai", "security"],
-      quote: "Again, no access to open source developers. The AI companies want bugs for dramatic public relations!",
-      context: "Carbon의 '사이버 방어자 우선' 접근을 둘러싼 10월 28일 HN 스레드의 대표적 반응. 구글은 '초기 방어자 피드백으로 가드레일을 다듬은 뒤 확대한다'고 설명하지만, 오픈소스 개발자 배제와 폐쇄적 접근에 대한 회의론, 그리고 같은 능력이 공격자에게 넘어갈 때의 이중용도 우려가 맞섰다. 앤스로픽 레드팀의 5개 플랫폼 익스플로잇 체인 공개와 같은 주에 나온 논쟁이라 더 날이 섰다.",
-      url: "https://news.ycombinator.com/item?id=50276792"
+      name: "AGTP",
+      handle: "AI 에이전트 분석 계정 · @AGTPinsights",
+      initials: "AG",
+      topics: ["ai"],
+      quote: "DeepSeek just open-sourced dsh-superagent-prototype, an agent that works your GitHub repos. Here's what you need to know. It comes from the team behind DeepSeek Harness, the company's agent tool. It watches one GitHub repo, and optionally Feishu chats.",
+      context: "11월 1일 dsh-superagent 구조 해설 스레드. 이번 공개가 단발이 아니라 MIT 라이선스로 함께 풀린 실행 환경 'DeepSeek Harness' 위에 올라간 생태계 전략임을 짚었다 — 깃허브 저장소 1곳 한정, 허용 목록 기반 트리거 등 프로토타입의 실제 제약도 정리했다. X에선 딥시크 내부 에이전트 운용 규모에 대한 미확인 주장들도 함께 돌았는데, 딥시크 공식 발표가 아닌 추측이라는 점은 구분할 필요가 있다.",
+      url: "https://x.com/AGTPinsights/status/2116631973519372495"
+    },
+    {
+      name: "The Hacker News",
+      handle: "보안 미디어 · @TheHackersNews",
+      initials: "TH",
+      topics: ["security", "ai"],
+      quote: "🚨 Blockchain analysis firm Chainalysis confirms a data breach involving offensive agentic techniques. An attacker gained access to internal systems and tools, exposing customer names, email addresses, user IDs, and organization roles.",
+      context: "10월 31일 체이널리시스 침해 공개 직후 보안 커뮤니티 확산의 기점이 된 포스트. 리플라이에선 '에이전틱 기법'이라는 회사 측 표현 자체가 쟁점이 됐다 — 인증된 호출자를 무조건 신뢰하는 내부 도구는 머신 속도로 악용될 수 있다는 지적이 나온 반면, 회사가 기법의 실체를 정의하지 않아 'AI 자율 공격' 서사는 검증 불가라는 신중론도 맞섰다. 수사기관이 쓰는 분석 플랫폼이 당했다는 상징성이 논쟁을 키웠다.",
+      url: "https://x.com/TheHackersNews/status/2116501537140961586"
     }
   ],
   company: [
     {
-      company: "Google DeepMind",
-      logo: "GD",
-      type: "AI 랩 · 미국",
-      topics: ["ai", "security"],
-      title: "2주 캐던스와 '보안 우선' 롤아웃 — Carbon이 파는 건 점수가 아니라 속도",
-      summary: "Argon(9/30 발표, 10/13 유료 개방) 후 2주 만의 Carbon은 프런티어 경쟁이 연 단위 빅뱅에서 주 단위 캐던스로 바뀌었음을 보여준다. AA 인덱스 v5.0 59점으로 Opus 5.5(58)·GPT-6 Astra(57)를 1~2점 차로 제쳤지만, 코딩 에이전트 인덱스에선 클로드 코드에 3점 뒤진 2위 — '구글이 역사적으로 약했던 영역'이라는 AA의 평가가 남는다. 가장 이례적인 건 롤아웃이다: 일반 공개 대신 사이버 방어 조직 우선(Fairwind), 미 정부 사전 배포 테스트 자발 참여. 앤스로픽 레드팀의 5개 플랫폼 익스플로잇 체인 공개(10/27)와 같은 주에 나오며, 프런티어 랩들이 보안 능력을 리스크가 아니라 셀링포인트로 뒤집는 흐름이 뚜렷해졌다. 반면 보도된 환각률 상승(AA 팩추얼리티 기준 Argon 4%→Carbon 11%)은 속도의 비용일 수 있다 — 2주마다 모델이 나오는 시대의 품질 관리가 다음 시험대다.",
-      url: "https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/"
-    },
-    {
-      company: "Alphabet",
-      logo: "GO",
-      type: "빅테크 · 미국",
+      company: "Alibaba",
+      logo: "AL",
+      type: "빅테크 · 중국",
       topics: ["ai"],
-      title: "10억 사용자로도 못 막은 급락 — 시장이 묻는 건 성장이 아니라 현금",
-      summary: "매출 +25%, 클라우드 +103%, 제미나이 10억 사용자, API 토큰 분당 320억 개 — 성장 지표는 흠잡을 데 없는데 주가는 급락했다(24/7 월스트리트 집계 -11%). 이유는 한 줄이다: 2개 분기 연속 잉여현금흐름 적자(-91억 달러)에, 캐펙스 가이던스 유지(1,950억~2,050억 달러)와 '2027년 대폭 증가' 예고가 겹쳤다. 같은 날 캐펙스를 하향한 마이크로소프트가 4% 오른 것과 정확히 대비된다 — 시장이 'AI 지출은 무조건 선'이라는 서사에서 '지출 대비 현금 창출' 심사로 넘어갔다는 신호다. CNBC는 구글·MS가 나란히 캐펙스 전망 상향을 미뤘다고 짚었고, 하이퍼스케일러 합산 지출은 내년 1조 달러를 넘길 전망이다. Carbon의 리더보드 1위 탈환과 주가 급락이 같은 24시간에 일어났다는 것 — 모델 순위표와 손익계산서가 따로 노는 시대의 표본이다.",
-      url: "https://www.cnbc.com/2026/10/29/microsoft-google-ai-capex-estimates.html"
+      title: "아이폰에 들어간 Qwen — 애플이 내준 것과 지킨 것",
+      summary: "이번 발표의 구도는 분업이다: 애플은 중국 매출(직전 공개 분기 그레이터차이나 188억 달러)을 지키기 위해 현지 클라우드 모델이 필요했고, 알리바바는 Qwen을 세계 최대 프리미엄 디바이스 생태계의 기본 AI로 만들었다. 애플이 내준 것은 Siri·작문 도구·비주얼 인텔리전스의 두뇌이고, 지킨 것은 차세대 Siri AI다 — WWDC 2026의 간판 기능은 중국 출시에서 명시적으로 빠졌다. 남는 질문은 프라이버시다: 애플의 프라이빗 클라우드 컴퓨트가 중국 경로에선 역할이 없고, 요청이 어디서 처리되고 얼마나 보관되는지 애플이 밝히지 않았다는 지적이 나온다. 11월 4일 베타, 12월 iOS 27.3 — 미·중 규제 양쪽을 통과한 흔치 않은 AI 딜이 실제 품질로 평가받는 건 지금부터다.",
+      url: "https://www.theapplepost.com/2026/10/31/73758/apple-confirms-qwen-support-in-china-as-ios-27-3-beta-arrives-november-4/"
     },
     {
-      company: "Microsoft",
-      logo: "MS",
+      company: "DeepSeek",
+      logo: "DS",
+      type: "AI 랩 · 중국",
+      topics: ["ai"],
+      title: "앤스로픽 IPO 몇 주 전의 오픈소스 견제구 — 팔려는 건 모델이 아니라 '작업 방식'",
+      summary: "dsh-superagent의 핵심은 성능 주장이 아니라 설계 철학이다: 사람이 에이전트를 호출하는 게 아니라, 라우터가 저장소와 팀 채팅을 상시 관찰하다 워커를 깨우는 '사전 행동형' 구조이고, 과금 단위도 사실상 토큰이 아니라 팀의 주의(attention)라는 프레임을 내세운다. MIT 라이선스로 실행 환경(DeepSeek Harness)까지 풀어 클로드 코드가 장악한 코딩 에이전트 워크플로를 표준 계층에서 흔들겠다는 수로, 앤스로픽 상장을 몇 주 앞둔 타이밍이라는 해석이 나온다. 다만 실체는 냉정하게 볼 것 — 딥시크 스스로 '연구 프로토타입, 내부 사용 버전과 다름'이라 명시했고, 깃허브 저장소 1곳 한정에 토큰 소비는 단일 세션보다 늘며, 공개 직후 해커뉴스 반응은 미미했다(9포인트·댓글 0). V3 모멘트의 재현이 될지는 코드가 아니라 채택이 말해줄 것이다.",
+      url: "https://stocktwits.com/news-articles/markets/equity/deepseek-autonomous-coding-agent-anthropic-ipo-claude-code/cNGekVdR9cy"
+    },
+    {
+      company: "Amazon",
+      logo: "AM",
       type: "빅테크 · 클라우드",
       topics: ["ai", "chips"],
-      title: "'아무에게나 팔지 않는다' — 캐펙스 하향과 나델라의 선별 선언",
-      summary: "Azure 48% 성장에 분기 매출(331.7억 달러)을 처음 공개해 투명성을 높이면서, 캐펙스는 전망치를 밑돈 452억 달러·연간 약 1,700억 달러로 내렸다. 후드 CFO가 밝힌 하향 사유가 흥미롭다: 서드파티 GPU 공급사의 지연으로 일부 캐파 확보가 2027년 상반기로 밀렸다 — 네오클라우드 의존의 리스크가 하이퍼스케일러 실적에 숫자로 잡힌 첫 장면이다. 나델라의 '소수 대형 고객에 캐파를 빌려주는 건 비즈니스가 아니다' 발언은 특정 랩 전용 캐파에 차입까지 동원하는 경쟁사들과 정반대 노선 선언으로 읽힌다. 지난 분기 데이터센터 24곳 신설에 Foundry 매출 3배 — 지출을 줄이는 게 아니라 아무 수요에나 쓰지 않겠다는 배분의 문제라는 게 MS의 서사고, 시장은 알파벳과 달리 +4%로 화답했다. 이번 실적 시즌의 교훈은 금액이 아니라 지출의 질이다.",
-      url: "https://247wallst.com/investing/2026/10/29/satya-nadella-says-renting-ai-capacity-to-a-few-big-customers-is-not-a-business/"
+      title: "3사 3색 실적 시즌의 완결 — 아마존은 '백로그'로 정면 돌파를 골랐다",
+      summary: "같은 주에 마이크로소프트는 캐펙스를 하향하며 '선별'을(주가 +4%), 알파벳은 지출 유지에 FCF 적자로 급락을(-11%), 아마존은 세 번째 답을 내놨다: 잉여현금흐름 적자와 EPS 미스를 감수하고 5,780억 달러 수주 잔고(전년의 2배 이상)를 증거로 '지출은 이미 팔린 물건의 납품'이라고 주장하는 것이다. AWS 39% 성장은 약 5년 만의 최고치로 재가속을 입증했고, 재시의 '2027·28년 40%+ 성장, 5~10년 내 연매출 1조 달러' 발언은 성장률 가이던스로는 이례적으로 공격적이다. 그래도 시간외 -7%는 시장의 심사 기준이 바뀌었음을 재확인시킨다 — 성장 지표가 아니라 지출 대비 현금이다. 캐펙스 연 2,200억 달러에 '2027년엔 의미 있게 더'까지 예고한 아마존은, 이번 사이클에서 가장 큰 금액을 가장 덜 미안해하며 쓰는 하이퍼스케일러가 됐다.",
+      url: "https://www.aboutamazon.com/news/company-news/aws-growth-ai-demand-q3-2026-earnings"
     },
     {
-      company: "SK hynix",
-      logo: "SK",
-      type: "반도체 · 메모리",
+      company: "NVIDIA",
+      logo: "NV",
+      type: "반도체 · AI 인프라",
       topics: ["chips"],
-      title: "영업이익률 80%의 메모리 — 'AI 병목' 지위가 손익계산서로 증명되다",
-      summary: "매출 104.6조 원에 영업이익 83.3조 원, 영업이익률 80% — 파운드리도 GPU도 아닌 메모리가 반도체 역사에서 보기 어려운 마진을 찍었다. HBM4 양산 개시 분기에 'DRAM·HBM 2029년까지 완판, LTA 14곳이 27~28년 캐파 절반 선점'이라는 수주 잔고는 가격 결정권이 누구에게 있는지 보여준다. TSMC의 CoWoS 인상 검토 보도(10/27)와 묶으면 AI 원가 구조의 상류(메모리·패키징)가 동시에 값을 올리는 구도다 — 오픈AI Terra의 토큰 반값 인하 같은 하류 가격 전쟁과 정확히 반대 방향의 압력이다. 머스크가 '로봇 메모리 수요가 지구상 모든 것을 넘어설 것'(10/26)이라 말한 대로 피지컬 AI가 다음 수요층으로 거론되는 가운데 공급 부족 전망은 2030년까지다. 완판된 공급사가 투자처를 고르는 시장 — 병목의 경제학이 메모리에서 완성됐다.",
-      url: "https://www.investing.com/news/transcripts/earnings-call-transcript-sk-hynix-posts-record-q3-2026-results-shares-jump-after-hours-93CH-4977343"
+      title: "스펙을 내리고 물량을 얻는다 — 완판 시장의 역설적 선택",
+      summary: "베라 루빈 스펙 하향(HBM4 22→19.2 TB/s)은 성능 후퇴가 아니라 공급 전략으로 읽는 게 업계 중론이다: HBM4 대역폭 문턱을 낮추면 스펙을 통과하는 메모리 물량이 늘고, SK하이닉스가 '2029년까지 완판'을 선언한 극단적 공급자 우위 시장에서 양산 속도가 최우선이 된다. 보도자료 없이 제품 페이지만 고친 방식, '예비 목표였다'는 사후 해명은 깔끔하지 않지만, 7월 아키텍처 문서가 여전히 22 TB/s를 적어둔 것까지 포함해 스펙이 마케팅과 조달 사이에서 움직이는 변수가 됐음을 보여준다. 같은 주 머스크-황 네오클라우드 논쟁은 동전의 뒷면이다 — 칩은 완판인데 그 칩을 사서 빌려주는 회사들의 신용은 흔들린다. 공급망의 상류(메모리·패키징)는 값을 올리고 하류(네오클라우드)는 자금난이라는 비대칭이 이번 사이클의 리스크 지도다.",
+      url: "https://hwbusters.com/news/nvidia-quietly-lowers-vera-rubin-hbm4-bandwidth-and-the-hgx-nvl8-loses-a-quarter-of-it/"
     }
   ],
   learn: [
     {
-      term: "에고센트릭 데이터 수집 경쟁",
-      full: "Figure Index · MicroAGI Shift · OpenGraph Labs",
-      category: "데이터전략 · 59/63",
+      term: "VLA → WAM 진화",
+      full: "월드모델의 학습·추론 침투 (RISE · τ0-WM · MVA)",
+      category: "핵심개념 · 61/63",
       topics: ["physical-ai", "robotics"],
-      summary: "Figure가 Helix 학습용 1인칭(에고센트릭) 영상을 크라우드소싱하는 유료 앱 'Index'를 운영한다 — 5월부터 스텔스로 돌리다 8월 25일 공개했고, 승인된 크리에이터가 녹화 장비로 집·일터의 일상 작업을 찍으면 분당 과금으로 보상받는 구조다. 스텔스 4개월 만에 108개국 다운로드 26.4만, 주간 활성 4.4만 명, 영상 1,600만 개를 모았고 보상 1,500만 달러를 지급했다(향후 10억 달러 투입 계획). LLM 시대의 데이터 라벨링 산업(스케일AI)이 로봇에선 '사람의 하루를 사는' 에고센트릭 수집으로 재현되는 셈 — 독일 MicroAGI의 'Shift'는 무료 청소 서비스와 시급 20달러 유저 모드로 올해 2,000만 시간을 노리고, 한국 OpenGraph Labs는 택타일 장갑+에고 카메라를 낀 인력이 무료로 일해주며 수집하는 변형이다. Figure는 시급 3~6달러짜리 인도·중국 데이터 벤더를 써본 뒤 자체 수집으로 전환했고, Index로 사전학습한 Helix 2.5가 미학습 가정 30곳에서 과제 성공률 56%(Index 미사용 정책은 9%)를 기록했다고 주장한다. 단 다양성·성능 수치는 전부 회사 자체 보고이고, 수집 영상의 상업적 판매·마케팅 활용까지 열어둔 프라이버시 약관이 논쟁점이다.",
-      angle: "'로봇 회사가 데이터 회사가 되는 순간' — 로봇 ICL 발현에 필요한 데이터량을 GPT-3식으로 환산하면 ~3,000만 시간(~4.3억 달러)이라는 추정이 있고, 그 승부처가 '누가 사람의 하루를 더 싸게, 더 다양하게 사나'로 내려왔다. 시급 3달러 벤더 대신 분당 과금 앱을 만든 Figure의 전환, 그리고 '무료 청소로 데이터를 받는' MicroAGI의 역발상이 엔지니어 피드용 훅.",
-      url: "https://play.google.com/store/apps/details?id=ai.figure.index&hl=en_US"
+      summary: "현세대 VLA는 '관측 → 즉시 행동'이다 — LLM으로 치면 생각 없이 다음 토큰을 바로 뱉는 그리디 디코딩에 가깝다. 새 흐름은 행동이 만들 미래를 먼저 상상·평가한 뒤 행동을 고르는 구조로, 월드모델이 로봇 스택에 세 단계로 침투 중이다. ① 학습 공간: RISE(RSS 2026)는 미래 관측을 예측하는 다이내믹스 모델과 상상된 결과를 채점하는 진행도 밸류 모델로 나뉜 '컴포지셔널 월드모델' 안에서 시행착오 RL을 돌린다 — 실로봇 RL의 안전·리셋 비용 없이 정책을 개선해 π0.5 대비 실물 3개 과제 성공률을 35/30/35%에서 85/85/95%로 끌어올렸고, 실행 시엔 VLA만 쓴다. ② 추론 단계: τ0-WM은 행동 후보가 만들 미래들을 추론 중에 생성·비교해 저품질 행동을 수정한다(평균 43%→60%). ③ 액션 표현: MVA는 액션을 좌표 대신 픽셀 공간의 로봇 마스크로 표현해 같은 비디오 모델이 마스킹만 바꿔 포워드·인버스 겸용이 된다 — 미학습 양팔 로봇 제로샷 일반화까지 보였다. '더 많은 미래를 상상할수록 성능이 오른다'는 테스트타임 스케일링이 로봇 제어에 도착한 셈이다.",
+      angle: "LLM이 Chain-of-Thought로 '생각하고 답하기'를 배웠듯, 로봇은 월드모델로 '상상하고 움직이기'를 배우는 중 — 단 셋 다 연구 단계이고 MVA의 플래닝 실험은 실물이 아닌 시뮬레이션이라는 게 반전 포인트. AMD가 월드랩스를 82억 달러에 인수하고 PI가 200억 달러 밸류 협상 중인 지금, 월드모델은 '예측 도구'에서 로봇 스택의 중심 설계로 승격되고 있다.",
+      url: "https://arxiv.org/abs/2602.11075"
     },
     {
-      term: "NVIDIA×Hugging Face",
-      full: "엔비디아의 허깅페이스 인수와 로봇 오픈소스 생태계",
-      category: "생태계 · 60/63",
-      topics: ["robotics", "physical-ai"],
-      summary: "커리큘럼 등재 시점엔 '인수설(미확정)'이었지만 이후 공식화됐다 — 엔비디아는 9월 3일 허깅페이스를 약 129억 달러(현금 약 119억+직원 리텐션 주식 최대 10억)에 인수한다고 발표했고, 2027년 상반기 클로징 목표에 브랜드·개방성 유지, 엔비디아 하드웨어 비강제를 약속했다. 로봇 관점의 핵심은 LeRobot이다: 허깅페이스가 'Transformers의 로봇판'으로 키운 오픈소스 라이브러리이자 사실상의 데이터 포맷 표준으로, 엔비디아 Isaac GR00T 1.7과 Isaac Teleop이 이미 통합돼 있고, Pollen Robotics 인수로 약 400달러짜리 저가 실물 로봇(Microduck — 출시 24시간에 약 260만 달러 판매)까지 확보한 상태였다. 학습(DGX)→시뮬(Omniverse·Cosmos)→온보드 추론(Jetson Thor)의 3-컴퓨터 전략(#17)에 오픈소스 유통 계층이 더해진 셈이다. 선례는 둘로 갈린다: MS의 GitHub(중립 유지로 생태계 보존)과 메타의 Scale AI(중립성 상실로 고객 이탈) — 어느 쪽을 따르는지가 로봇 오픈소스 생태계의 관전 포인트다. 엔비디아 발표문에 '로보틱스'라는 단어가 한 번도 안 나온다는 점이 역설적으로 분석가들의 로봇 시너지 해석을 키웠다.",
-      angle: "'오픈소스 성지의 주인이 바뀌면?' — 인수가 129억 달러는 엔비디아의 약 2주 치 이익이라는 계산, MS-GitHub vs 메타-Scale AI의 갈림길 프레임, 그리고 '발표문에 robotics가 0번 등장한 로봇 딜'이라는 역설이 훅. LeRobot 데이터 포맷이 사실상 표준인 상황에서 중립성 문제는 모든 로봇 스타트업의 이해관계가 걸린 논쟁거리다.",
-      url: "https://www.therobotreport.com/nvidia-to-acquire-hugging-face-and-keep-ai-develpment-platform-open/"
+      term: "Waymo vs Tesla",
+      full: "자율주행 센서 철학 논쟁과 Driving VLA",
+      category: "핵심개념 · 62/63",
+      topics: ["physical-ai", "ai"],
+      summary: "자율주행은 피지컬 AI가 겪을 논쟁을 10년 먼저 치른 선행 실험이다. 웨이모는 라이다+레이더+카메라+HD맵을 '다 때려박는' 멀티모달 철학으로 무인(라이더 온리) 운행 2억 마일 이상을 쌓았고, 부상 사고율이 인간 벤치마크 대비 80%대 낮다고 주장한다(IIHS 독립 분석은 약 68% 낮음 — 숫자는 기준에 따라 달라진다). 테슬라는 카메라 비전만 남기고 데이터로 승부하는 반대 극단으로, FSD 누적 마일은 수십억 단위지만 사람 감독 하 주행이라 웨이모의 무인 마일과는 단위가 다른 지표다. 기술사적 핵심은 E2E 전환이다 — FSD는 30만 줄 C++ 제어 코드를 신경망으로 걷어냈고(카파시의 'Software 1.0→2.0' 서사), 최근엔 자율주행에도 VLA가 들어와 웨이모는 제미나이 기반 리즈닝을, 엔비디아 알파마요는 Cosmos 백본으로 카메라 입력에서 상황 판단·궤적을 출력한다. 이 구도는 로봇의 '센서 추가(촉각·힘) vs 비전+데이터' 논쟁과 정확히 겹치고, 테슬라의 AI5 칩이 사이버캡과 옵티머스에 함께 들어가며 두 산업은 물리적으로도 합류 중이다.",
+      angle: "'센서를 더 달 것인가, 데이터로 센서를 걷어낼 것인가' — 자율주행이 10년 치른 논쟁의 성적표를 휴머노이드 업계가 그대로 물려받는다. 웨이모의 2억+ 무인 마일 vs 테슬라의 감독 하 수십억 마일, 어느 쪽도 상대 지표로는 이기지 못한다는 게 콘텐츠로 쓰기 좋은 비대칭.",
+      url: "https://waymo.com/research/comparison-of-waymo-rider-only-crash-data-to-human/"
     }
   ]
 };

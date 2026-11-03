@@ -105,8 +105,8 @@
 | # | 용어/주제 | 분류 | 한 줄 정의 | 왜 중요한가(콘텐츠 앵글) | status |
 |---|---|---|---|---|---|
 | 64 | Open X-Embodiment / RT-X (크로스 임보디먼트 학습) | 핵심개념 | 구글 딥마인드+전 세계 21개 기관이 60개 데이터셋을 공통 포맷으로 합친 22종 로봇·100만+ 실궤적·500+ 스킬의 공개 코퍼스. RT-1-X가 원본 전용 모델 대비 평균 +50%, RT-2-X는 창발 스킬 ~3배 | "내 로봇팔 데이터가 남의 휴머노이드를 돕는다"는 크로스 임보디먼트 포지티브 트랜스퍼의 첫 대규모 증거. π0·GR00T·OpenVLA 사전학습 믹스의 공통 재료 — #5 데이터 병목·#13 파운데이션 모델·#20 LeRobot과 세트 | done |
-| 65 | FAST 액션 토크나이저 | 학습기법 | Physical Intelligence의 주파수 공간(DCT) 기반 액션 토크나이즈. 고주파 연속 액션을 압축 토큰으로 바꿔 디퓨전·플로매칭 없이 자기회귀 VLA(π0-FAST)로 학습 — 학습 속도 ~5배 주장 | "액션을 JPEG 압축하듯 토큰화한다"는 비유가 먹히는 소재. #27 플로매칭의 '디퓨전 vs 자기회귀' 구도 재점화 — 액션이 토큰이 되면 LLM 학습 인프라를 그대로 쓴다는 함의 | todo |
-| 66 | 촉각 파운데이션 모델 (Sparsh · Digit 360) | 하드웨어 | 메타 FAIR의 비전 기반 촉각 표현 사전학습 모델(Sparsh, 라벨 없는 촉각 이미지 46만+ 장 자기지도 학습)과 사람 손끝 수준 촉각 센서 Digit 360 | #35 촉각 센싱 부재의 해법 축. "비전·언어 다음 모달리티 전쟁은 촉각" — 정밀조작(Dexterity-First) 기업에 직결되는 스택이라는 앵글 | todo |
+| 65 | FAST 액션 토크나이저 | 학습기법 | Physical Intelligence의 주파수 공간(DCT) 기반 액션 토크나이즈. 고주파 연속 액션을 압축 토큰으로 바꿔 디퓨전·플로매칭 없이 자기회귀 VLA(π0-FAST)로 학습 — 학습 속도 ~5배 주장 | "액션을 JPEG 압축하듯 토큰화한다"는 비유가 먹히는 소재. #27 플로매칭의 '디퓨전 vs 자기회귀' 구도 재점화 — 액션이 토큰이 되면 LLM 학습 인프라를 그대로 쓴다는 함의 | done |
+| 66 | 촉각 파운데이션 모델 (Sparsh · Digit 360) | 하드웨어 | 메타 FAIR의 비전 기반 촉각 표현 사전학습 모델(Sparsh, 라벨 없는 촉각 이미지 46만+ 장 자기지도 학습)과 사람 손끝 수준 촉각 센서 Digit 360 | #35 촉각 센싱 부재의 해법 축. "비전·언어 다음 모달리티 전쟁은 촉각" — 정밀조작(Dexterity-First) 기업에 직결되는 스택이라는 앵글 | done |
 
 > 미반영(주제 무관): sudoremove "Claude/GPT/Grok/Kimi Tier List", "Stripe의 OpenRouter 인수", "Ranking Big Tech by Their Contribution to AGI", "지난 10년 최고의 IT 제품 티어리스트(에어팟·비전프로·챗지피티·클로드코드)", "Reflecting on AGI in Honor of the GPT-4o Astra Launch", "Society After the AI Boom: How Will Jobs and Safety Change?", "YC Startups: What Has Changed in the AI Era?", "Why Anthropic and OpenAI Say We Should Slow Down AI Development" — 피지컬 AI 커리큘럼 범위 밖(일반 제품 티어리스트·AGI 노동 회고·AI 경제 시나리오/오남용·안전 보고서·YC 창업 통계/AI 네이티브 조직론·RSI/AI 안전 가속-감속 논쟁).
 

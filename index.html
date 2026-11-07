@@ -347,191 +347,200 @@
    topics: physical-ai | ai | robotics | security | chips
    ========================================================= */
 const EDITION = {
-  date: "2026-11-07",
+  date: "2026-11-08",
   news: [
     {
-      source: "CNBC",
-      topics: ["ai", "chips"],
-      title: "나스닥 5.5% 급락, 19개월 만의 최악 — 엔비디아 하루 시총 4,500억 달러 증발",
-      summary: "11월 5일 나스닥이 5.5% 떨어지며 2025년 4월 이후 가장 큰 낙폭을 기록했다. 엔비디아·퀄컴이 각각 9% 넘게 빠졌고 AMD·마이크론·어플라이드머티어리얼즈는 두 자릿수 하락했다. 민주당의 중간선거 압승으로 데이터센터 건설이 둔화될 것이라는 우려에 퀄컴의 부진한 분기 가이던스, 금리 상승 속 AI 기업 부채 부담 우려가 겹쳤다.",
-      url: "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
+      source: "Check Point Research",
+      topics: ["security", "ai"],
+      title: "AI 해킹 에이전트 'ARTEX'로 2주간 애플 서명 인증서 300여 건 탈취 — 비용은 최대 1,500달러",
+      summary: "체크포인트가 11월 5일 공개한 보고서에 따르면 한 공격자가 중국산 오픈소스 AI 침투 테스트 플랫폼 ARTEX로 10월 14~29일 iOS 서명 업체 10곳을 공격해 인증서·비밀번호 300건 이상을 확보했고 그중 3건이 유효했다. 토큰 360억 개를 썼고 추정 비용은 700~1,500달러였다. 별도 캠페인에서는 게임 '왕자영요' 계정 정보 19만 건 이상을 빼냈으며, 보고서는 '초기 목표 설정 외에는 대부분 완전 자율로 진행됐다'고 밝혔다.",
+      url: "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/"
     },
     {
       source: "TechCrunch",
+      topics: ["security"],
+      title: "비밀번호 없이 인터넷에 열린 ARTEX 배포본 800개 넘게 발견",
+      summary: "센시스가 비밀번호 없이 웹에서 접근 가능한 ARTEX 배포본을 800개 넘게 찾아냈다. 마이크로소프트는 ARTEX를 정찰부터 데이터 유출까지 사람 개입 없이 수행하는 AI 에이전트 시스템으로 규정했으며, 10월 ConnectWise 공격과 9월 한국 금융권 공격에도 쓰였다. 개발자는 유료 고객 전용 비공개 전환을 선언했지만 코드 사본 수십 개가 여전히 공유 사이트에 남아 있다.",
+      url: "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/"
+    },
+    {
+      source: "Crypto Briefing",
       topics: ["security", "ai"],
-      title: "OpenAI, 공격형 보안 모델 'GPT-6 Cyber' 공개 — 리눅스 커널 이슈 948건 발굴",
-      summary: "11월 5일 공개된 GPT-6 Cyber는 사이버보안 프로그램 Daybreak의 최상위 등급인 Daybreak Red(공격형 취약점 연구자 대상)에만 제공된다. OpenAI는 이 모델로 리눅스 커널에서 잠재 이슈 948건을 찾아 패치를 준비했고 파이어폭스에서 신규 취약점 81건을 발견했다고 밝혔다. 리눅스 탐색 비용은 120만 달러였으며, 핵심 인프라 방어자를 위한 10억 달러 지원 프로그램도 함께 발표했다.",
-      url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough"
+      title: "구글 딥마인드 AI 에이전트, 구형 1024비트 RSA에서 약점 2개 발견",
+      summary: "딥마인드는 11월 6일, 사람의 지시를 받는 AI 모델이 1024비트 RSA에서 디지털 서명 위조를 가능하게 하는 결함과, 연관된 모듈러스를 한꺼번에 소인수분해하는 비용을 낮추는 새 알고리즘을 찾았다고 발표했다. 연구는 딥마인드의 Dj Dvijotham·Abhradeep Thakurta가 암호학자 나디아 헤닝거·에마뉘엘 토메와 함께 이끌었다. 딥마인드는 2048비트 이상 키를 쓰는 현행 RSA는 이 위협에 안전하다고 강조했다.",
+      url: "https://cryptobriefing.com/google-deepmind-ai-rsa-1024-bit-weaknesses/"
     },
     {
-      source: "Investing.com",
-      topics: ["chips"],
-      title: "TSMC, 엔비디아 요청으로 3D DRAM 생산 검토 — 메모리 시장 진출 신호",
-      summary: "디인포메이션에 따르면 TSMC가 최대 고객 엔비디아의 요청으로 수직 적층형 3D DRAM 생산 계획 수립에 착수했다. 마이크론 지역 운영을 이끌었던 쉬궈친 부사장(첨단 패키징 담당)이 검토를 주도하며, 전용 팹 신설과 기존 공장 인수·개조를 함께 따지고 있다. 생산 일정은 미정이다. 보도 후 TSMC ADR은 장 초반 7.7% 올랐다.",
-      url: "https://in.investing.com/news/stock-market-news/tsmc-rises-on-report-of-potential-push-into-advanced-memory-for-nvidia-5687659"
-    },
-    {
-      source: "The Robot Report",
-      topics: ["physical-ai", "robotics"],
-      title: "어질리티 로보틱스, 휴머노이드 기업 최초 미국 상장 — 폭락장에서 2% 상승 마감",
-      summary: "Digit 제조사 어질리티가 SPAC Churchill Capital Corp XI와 합병해 11월 5일 나스닥(AGLT)에 데뷔했다. 시초가 11.26달러로 출발해 장중 8.40~12.15달러를 오간 끝에 11.49달러로 마감했다. 비용 차감 전 약 4억 6,500만 달러를 조달했고, Digit 5에 대해 3억 달러 이상의 다년 확정 주문을 확보해 2027년 얼리액세스 납품을 시작한다.",
-      url: "https://www.therobotreport.com/how-did-agility-robotics-perform-on-its-first-day-on-the-stock-market/"
-    },
-    {
-      source: "Venable",
+      source: "24/7 Wall St.",
       topics: ["chips", "ai"],
-      title: "미 중간선거 데이터센터 주민투표 41건, 거의 전부 '반대' 쪽으로",
-      summary: "11월 3일 선거에서 10개 주 41개 지역이 데이터센터 관련 주민투표를 치렀고 결과는 거의 만장일치로 개발 제한 쪽이었다. 오하이오 그랜빌·허버드·어배나는 관내 데이터센터를 전면 금지했고, 위스콘신 제인스빌은 80억 달러·800MW 캠퍼스를 포함해 4억 5천만 달러 이상 사업에 주민 투표를 의무화했다. 캔자스·오하이오 일부는 25MW 상한, 메인주 3곳은 모라토리엄을 택했다.",
-      url: "https://www.venable.com/insights/publications/2026/11/voters-approve-data-center-restrictions"
+      title: "마이크로칩 '범용 칩까지 AI가 공장 독점' — 리드타임 4~8주에서 최장 32주로",
+      summary: "마이크로칩의 스티브 산기 CEO는 AI 기업들이 생산 능력을 휩쓸면서 4~8주였던 표준 제품 리드타임이 6~32주로 늘었고, 생산을 내재화하거나 다른 공급처로 옮기는 데 약 6개월이 걸린다고 밝혔다. 주가는 11월 5일 13.9%, 6일 10% 빠져 이틀 새 22.6% 하락했다. 12월 분기 매출 가이던스는 15억 7,300만~16억 3,800만 달러다.",
+      url: "https://247wallst.com/investing/2026/11/07/the-chip-shortage-is-back-and-microchip-says-ai-customers-are-crowding-everyone-out/"
     },
     {
-      source: "SecurityWeek",
-      topics: ["security", "ai"],
-      title: "바이낸스 63억 달러 탈취, 가짜 코딩 과제와 내부 AI 툴이 통로",
-      summary: "11월 3일 공개된 바이낸스 1차 사고 보고서에 따르면 공격은 수개월에 걸쳐 월렛 엔지니어 3명의 PC를 장악하는 방식으로 진행됐다. 9월 가짜 채용 면접에서 받은 코딩 과제로 악성코드가 심겼고, 10월 20일 공격자는 감염 PC와 내부 AI 툴을 이용해 다른 엔지니어 2명의 시스템을 장악했다. AI 툴이 어떻게 쓰였는지는 밝히지 않았다. 약 28억 5천만 달러가 동결·회수됐고 FBI는 북한 TraderTraitor를 배후로 지목했다.",
-      url: "https://www.securityweek.com/rigged-coding-assignment-abused-ai-tool-opened-path-to-6-billion-binance-heist/"
+      source: "TechCrunch",
+      topics: ["chips", "ai"],
+      title: "크루소, 표류하던 와이오밍 10GW 데이터센터 사업을 구글에 매각 — 구글 170억 달러 투입",
+      summary: "크루소가 2025년 발표한 와이오밍 남동부 데이터센터 사업을 구글에 넘긴다고 11월 6일 확인했다. 매각가는 공개하지 않았고, 구글은 캠퍼스 개발에 170억 달러를 투자한다. 원래 계획은 블랙스톤 계열 탤그래스와 함께 최대 10GW 규모로 짓는 것이었으며, 구글은 크루소 주도의 공사비·일정을 우려해 앞서 고객 계약도 맺지 않았던 것으로 전해졌다.",
+      url: "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/"
     },
     {
-      source: "Robotics 24/7",
+      source: "Al Jazeera",
+      topics: ["chips", "ai"],
+      title: "암스테르담 MS 데이터센터 공사장 점거 — 150~200명 연행, 유럽 15개국 동시 시위",
+      summary: "11월 6일 활동가 수백 명이 암스테르담 슬로테르데이크의 마이크로소프트 데이터센터 공사 현장을 점거했고, 일부는 크레인에 올라 조명탄을 터뜨렸다. 네덜란드 경찰은 150~200명을 연행했다. '더러운 데이터센터 멈춰라' 이틀 캠페인의 일부로 15개국에서 시위가 열렸고, 마이크로소프트는 불법·위험 행위는 용납하지 않는다고 밝혔다.",
+      url: "https://www.aljazeera.com/news/2026/11/6/protesters-break-into-microsoft-data-centre-site-in-amsterdam"
+    },
+    {
+      source: "TechCrunch",
+      topics: ["ai"],
+      title: "OpenAI, 1조 2,500억 달러 가치로 110억 달러 확보 — 목표 300억 달러엔 못 미쳐",
+      summary: "블룸버그에 따르면 OpenAI가 1조 2,500억 달러 기업가치로 약 110억 달러를 확보했고, 라운드는 몇 주 안에 마감돼 총 200억 달러 안팎이 될 전망이다. 9월 보도된 목표치(1조 4천억 달러 가치에 300억 달러)에는 크게 못 미친다. 같은 날 앤트로픽 IPO 잠재 매수자들이 거론하는 기업가치가 한 달 전 약 2조 달러에서 최저 1조 1천억 달러까지 내려갔다는 보도도 나왔다.",
+      url: "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+    },
+    {
+      source: "Ai2",
+      topics: ["physical-ai", "robotics"],
+      title: "Ai2, 오픈 로봇 시뮬레이터 'ToyBlocks' 공개 — 시뮬에서만 학습한 정책이 실물에서 81.1%",
+      summary: "Ai2가 로봇팔과 테이블 위 블록으로 구성된 오픈 시뮬레이션 프레임워크 ToyBlocks를 11월 6일 공개했다. 텔레옵 없이 시연을 자동 생성하며(GPU 1장에서 실시간 대비 최대 24배), 약 1,600시간·1억 4,400만 프레임 분량의 장기 과제 시연 85,336개를 함께 풀었다. ManiFlow 단일 스킬 정책은 시뮬 80.0%, 실물(Franka FR3) 제로샷 81.1%를 기록했고, 월드모델이 만든 롤아웃 100개를 추가하자 처음 보는 영역의 성공률이 19%에서 78%로 올랐다.",
+      url: "https://allenai.org/blog/toyblocks"
+    },
+    {
+      source: "The AI Insider",
+      topics: ["physical-ai", "robotics"],
+      title: "스위스 Embodied AI, 작업자 시연으로 한 달 만에 공정을 익히는 바퀴형 휴머노이드 'Air' 공개",
+      summary: "EPFL 출신이 창업한 스위스 스타트업 Embodied AI가 11월 6일 뮌헨 Humanoid Europe 2026에서 개발 9개월 만에 Air를 공개했다. 작업자가 먼저 원격 조종해 동작을 기록하면 AI가 이를 학습해 자율 수행하며, 과제에 따라 자율 전환까지 보통 한 달이 걸린다. 텐던 구동 팔은 접촉 시 밀리도록 설계됐고, 한 대형 전자업체의 케이블 처리 평가에서 목표치 90%를 넘는 신뢰도 98%를 기록했다. CE 인증은 2027년 목표다.",
+      url: "https://theaiinsider.tech/2026/11/06/switzerlands-embodied-ai-unveils-humanoid-robot-designed-to-learn-factory-tasks-from-workers/"
+    },
+    {
+      source: "DroneXL",
       topics: ["robotics"],
-      title: "보스턴다이내믹스 Stretch 2세대 — 시간당 1,000박스 하역, 내부 배선 81% 제거",
-      summary: "트레일러 하역 로봇 Stretch의 2세대가 1세대의 10만 시간 넘는 운영 데이터를 바탕으로 재설계됐다. 멀티픽 기능으로 최대 시간당 1,000박스를 처리하며(1세대는 통상 600~800박스), 내부 배선을 81% 걷어내 스워브 드라이브 교체 시간을 하루에서 약 1시간으로 줄였다. 배터리는 2교대를 버티고 고속 충전기로 75분 만에 90%까지 충전한다.",
-      url: "https://www.robotics247.com/article/boston-dynamics-launches-stretch-gen-2-autonomous-mobile-trailer-unloading-robot"
-    },
-    {
-      source: "Seoul Economic Daily",
-      topics: ["physical-ai", "robotics"],
-      title: "국내 첫 'AI 휴머노이드 데이터 팩토리' 대전서 가동 — 휴머노이드 12대로 텔레옵 데이터 생산",
-      summary: "한국기계연구원(KIMM)이 ETRI와 함께 본원에 구축한 데이터 팩토리가 11월 3일 문을 열었다. 원격 조종되는 휴머노이드 12대가 작업하며 동작과 센서 값을 학습 데이터로 기록하고, 2027년 말부터 기업·대학·연구소에 단계적으로 개방한다. 중국은 4월 말 기준 휴머노이드 데이터 수집·훈련 센터를 최소 90곳 운영·계획 중이다.",
-      url: "https://en.sedaily.com/technology/2026/11/03/korea-opens-first-data-factory-to-train-humanoid-robots"
-    },
-    {
-      source: "Electrek",
-      topics: ["physical-ai", "robotics"],
-      title: "샤오미 휴머노이드, 전기차 공장서 8시간 풀 교대 근무 — 핵심 수치는 미공개",
-      summary: "샤오미가 휴머노이드가 센터콘솔 사이드 커버 분류 공정에서 8시간 근무를 채우는 영상을 공개했다. 이상 상황을 스스로 감지·수정하고 라인 제어 시스템과 협업했다고 주장했지만, 처리 수량·성공률·사람 개입 빈도·전원 공급 방식은 밝히지 않았다. 앞서 3월 나사 체결 공정 성공률 90.2%, 7월 98%를 공개한 바 있다.",
-      url: "https://electrek.co/2026/11/04/xiaomi-humanoid-robot-8-hour-shift-ev-factory"
-    },
-    {
-      source: "MIT Technology Review",
-      topics: ["physical-ai", "robotics"],
-      title: "샌프란시스코 집 청소하는 휴머노이드 — 실체는 원격 조종 + 데이터 수집",
-      summary: "스타트업 Tau Robotics가 키 약 137cm 휴머노이드로 가정 청소 서비스를 운영 중이다. 대부분의 작업은 사람이 머리·손목 카메라로 보며 원격 조종하고, 침대 정리·빨래 개기는 사람 동작을 그대로 따라 하게 하며, 매 청소가 차기 자율 모델의 학습 데이터가 된다. 진공·걸레질만 자율로 가능하며 지금까지 수행한 청소는 수백 건 수준이다. 요금은 로봇 2대 주간 청소 60달러다.",
-      url: "https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future"
+      title: "액손, 스카이디오에 12억 달러 투입해 지분 37%로 — 미·캐나다 공공안전 드론 독점 유통",
+      summary: "보디캠 업체 액손이 스카이디오 지분을 약 15%에서 37%로 늘린다. 투자 전 기업가치는 52억 달러이며, 신주 대금은 1차분 2억 5,490만 달러뿐이고 나머지는 기존 주주 지분 매입이다. 액손은 미국·캐나다 공공안전 기관 대상 독점 유통권을 얻었다. 다만 3분기 매출 9억 900만 달러가 예상치에 못 미치면서 액손 주가는 약 18% 떨어졌다.",
+      url: "https://dronexl.co/2026/11/06/axon-skydio-1-2-billion-exclusive-police-distributor/"
     }
   ],
   social: [
     {
-      name: "Cristiano Amon",
-      handle: "Qualcomm CEO · 실적 발표",
-      initials: "CA",
-      topics: ["chips"],
-      quote: "We don't have a demand issue; it's a supply issue.",
-      context: "퀄컴 주가가 9% 넘게 빠진 날 CEO가 부진한 가이던스를 해명한 발언. 수요가 아니라 글로벌 메모리 부족이 실적을 누르고 있다는 주장으로, 같은 날 TSMC의 3D DRAM 검토 보도와 맞물려 메모리가 AI 인프라의 병목이 됐음을 보여준다.",
-      url: "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
+      name: "Steve Sanghi",
+      handle: "Microchip CEO · 실적 발표",
+      initials: "SS",
+      topics: ["chips", "ai"],
+      quote: "came in and took over the whole factory. They pushed everybody out.",
+      context: "AI 기업들이 마이크로칩 공장의 생산 능력을 통째로 가져갔다는 CEO의 표현. 산기는 'AI 수요가 다소 둔화되는 편이 오히려 긍정적'이라고도 말했다. 전날 퀄컴이 메모리 부족을 탓한 데 이어 범용 MCU·아날로그 칩까지 리드타임이 최장 32주로 늘어나, AI 수요가 반도체 공급망 전체를 압박하는 상황을 보여준다.",
+      url: "https://247wallst.com/investing/2026/11/07/the-chip-shortage-is-back-and-microchip-says-ai-customers-are-crowding-everyone-out/"
     },
     {
-      name: "Dina Powell McCormick",
-      handle: "Meta President",
-      initials: "DM",
-      topics: ["ai", "chips"],
-      quote: "going to be harder",
-      context: "중간선거 이후 데이터센터 건설 전망을 묻는 질문에 메타 사장이 내놓은 짧은 답. 같은 선거에서 지역 주민투표 41건이 대부분 데이터센터 제한 쪽으로 결론 나면서, 하이퍼스케일러가 직접 인허가 리스크를 인정한 셈이다.",
-      url: "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
+      name: "John Langford",
+      handle: "前 Microsoft Research AI Frontiers 리더 · hunch.net",
+      initials: "JL",
+      topics: ["ai"],
+      quote: "As far as I can tell we did good work and were non-consensually reorged away.",
+      context: "AutoGen·Fara를 만든 약 50명 규모 MSR AI Frontiers가 9월 Microsoft AI로 흡수된 뒤 '끝났다'고 선언하며 회사를 떠난 강화학습 대가의 블로그 글. 스케일링 중심의 새 리더십이 연구 조직과 맞지 않았다고 설명했다. 빅테크가 기초 연구를 제품·스케일 조직에 흡수하는 흐름을 보여준다.",
+      url: "https://hunch.net/?p=13764006"
     },
     {
-      name: "Eric Wallace",
-      handle: "OpenAI 연구원",
-      initials: "EW",
-      topics: ["security", "ai"],
-      quote: "we are now allocating a significant amount of our frontier compute towards discovering and patching vulnerabilities",
-      context: "GPT-6 Cyber 공개와 함께 OpenAI 연구원이 밝힌 방침. 오픈소스 코드의 취약점 발굴·패치에 프론티어 컴퓨트를 무상으로 상당량 투입하고 있다는 설명으로, 리눅스 커널 탐색에만 120만 달러가 들었다.",
-      url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough"
+      name: "Brett Ryan",
+      handle: "Deutsche Bank 이코노미스트",
+      initials: "BR",
+      topics: ["chips", "ai"],
+      quote: "This is like a good excuse to kill some projects here that were already looking shaky",
+      context: "중간선거 이후 데이터센터 규제가 오히려 AI 버블이 지나치게 커지는 것을 막을 수 있다는 블룸버그 인터뷰 발언. 골드만삭스는 미국 계획 데이터센터 용량의 약 45%가 건설 제한을 공약한 민주당 당선 주지사 지역에 있고, 텍사스 한 곳이 25%라고 추정했다.",
+      url: "https://fourweekmba.com/ai-deutsche-bank-data-center-limits-could-cap-an-ai-bubble/"
     },
     {
-      name: "Max Justicz",
-      handle: "Charge Robotics CTO",
-      initials: "MJ",
-      topics: ["security", "ai"],
-      quote: "some extremely crazy bugs to be found and exploited over the next few months",
-      context: "GPT 5.6 Sol로 약 2시간 만에 우분투 서버 장악이 가능한 취약점(CVE-2026-109518)을 찾아 데비안에 제보한 보안 연구자의 전망. 동시에 방어자용 Daybreak Blue가 최근 '너프'됐다고 비판하며, 접근을 제한하는 OpenAI 방식이 방어자에게 불리할 수 있다는 논쟁을 키웠다.",
-      url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough"
+      name: "Francesco Stella",
+      handle: "Embodied AI CEO",
+      initials: "FS",
+      topics: ["physical-ai", "robotics"],
+      quote: "incorrect actions have immediate and irreversible physical consequences",
+      context: "Air 공개 자리에서 디지털 AI와 로봇 AI의 차이를 설명한 발언. 그래서 Air는 사람 시연 → 자율 전환까지 약 한 달을 두고, 낯선 상황에는 운영자가 개입하는 구조를 택했다. 피지컬 AI에서 실패 비용이 왜 '재시도'로 끝나지 않는지를 짚는다.",
+      url: "https://theaiinsider.tech/2026/11/06/switzerlands-embodied-ai-unveils-humanoid-robot-designed-to-learn-factory-tasks-from-workers/"
     },
     {
-      name: "Brian Donnelly",
-      handle: "Boston Dynamics 물류로봇 GM",
-      initials: "BD",
+      name: "Alex de Vigan",
+      handle: "Physicl 창업자·CEO",
+      initials: "AV",
+      topics: ["physical-ai"],
+      quote: "The space is very young and very blurry sometimes.",
+      context: "로봇 학습용 합성 데이터 툴 시장을 두고 한 말. 영상 데이터는 기대에 못 미치고 텔레옵 데이터는 비싸서 물리적으로 정확한 시뮬 데이터 수요가 커지고 있지만, 데이터·툴 공급사가 난립해 경계가 흐릿하다는 진단이다.",
+      url: "https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/"
+    },
+    {
+      name: "Josh Isner",
+      handle: "Axon President",
+      initials: "JI",
       topics: ["robotics"],
-      quote: "every hour a robot sits idle is an hour of work that piles up on the dock",
-      context: "Stretch 2세대 출시에 맞춘 보스턴다이내믹스 물류로봇 총괄의 발언. 처리 속도보다 가동률(정비 시간 단축·2교대 배터리)을 재설계의 핵심으로 내세웠다 — 데모가 아니라 현장 운영에서 로봇의 가치가 갈린다는 메시지다.",
-      url: "https://www.robotics247.com/article/boston-dynamics-launches-stretch-gen-2-autonomous-mobile-trailer-unloading-robot"
+      quote: "Whenever Skydio is in a deal, they generally don't lose it.",
+      context: "스카이디오 공공안전 드론 독점 유통권을 확보한 이유를 설명한 발언. 스카이디오는 공공안전 고객 1,500곳 이상, 이번 회계연도 예상 수주 약 10억 달러를 내세운다. 경찰 드론(DFR) 시장이 보디캠·테이저 생태계에 묶이는 구도다.",
+      url: "https://dronexl.co/2026/11/06/axon-skydio-1-2-billion-exclusive-police-distributor/"
     }
   ],
   company: [
     {
-      company: "Agility Robotics",
-      logo: "AG",
-      type: "스타트업 · 휴머노이드",
+      company: "Serve Robotics",
+      logo: "SV",
+      type: "로보틱스 · 배송",
       topics: ["physical-ai", "robotics"],
-      title: "'첫 순수 이족 휴머노이드 상장사' — 25억 달러 밸류로 나스닥 입성",
-      summary: "SPAC 상환율이 약 61.5%에 달해 조달액이 6월 전망 6억 2천만 달러에서 4억 6,500만 달러로 줄었지만 나스닥이 5.5% 빠진 날 상승 마감했다. 휴머노이드 기업 가치를 공개시장이 처음 매일 가격 매기게 됐다.",
-      url: "https://www.therobotreport.com/how-did-agility-robotics-perform-on-its-first-day-on-the-stock-market/"
+      title: "배송 로봇 회사가 '로봇용 AWS'로 — 플릿 인프라를 외부에 개방",
+      summary: "11월 5일 기기 연결(Serve Link), 플릿 데이터 정제(Data Curator), 실도로 데이터 카탈로그로 구성된 Physical AI Services를 출시했다. 로봇 2,000대 이상을 40여 개 도시·병원 27곳에 배치하며 쌓은 인프라를 판매하는 것으로, 건설 중장비 자율화 기업 베드록 로보틱스가 첫 고객이다. 다만 보도도 지적했듯 인도·병원에서 쌓은 경험이 다른 기계와 과제에 얼마나 통할지는 지켜봐야 한다.",
+      url: "https://www.unite.ai/serve-robotics-opens-fleet-software-and-data-to-physical-ai-companies/"
     },
     {
-      company: "OpenAI",
-      logo: "OAI",
+      company: "Physicl",
+      logo: "PH",
+      type: "스타트업 · 피지컬 AI 데이터",
+      topics: ["physical-ai"],
+      title: "3D 커머스 기술을 로봇 시뮬로 전환 — 시드 1,000만 달러",
+      summary: "3D 상품 모델 회사 nfinite를 10년간 이끈 알렉스 드 비강이 창업했고, Inovia Capital이 시드를 주도했다. 3D 환경 1만 개와 오브젝트 에셋 10만 개를 담은 Studio로 '그늘진 조리대 위 컵 인식' 같은 특정 과제용 합성 학습 데이터를 만든다. 월드모델 기업 SpAItial이 Echo-3의 품질을 높이는 데 사용했다.",
+      url: "https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/"
+    },
+    {
+      company: "Anthropic",
+      logo: "ANT",
       type: "프론티어 랩 · AI",
-      topics: ["ai", "security"],
-      title: "Daybreak 3단 구조로 사이버 역량 게이팅 — 공격형 모델은 Red 등급에만",
-      summary: "방어자용 Daybreak Blue에는 GPT 5.6 Sol을, 공격형 연구자용 Red에는 GPT-6 Cyber를 주는 등급제로 위험 역량을 관리한다. 참여는 신분증 인증을 거치며 참가자는 '수천 명' 규모다. 향후 독립 연구자·오픈소스 메인테이너로 확대하겠다고 밝혔다.",
-      url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough"
+      topics: ["ai"],
+      title: "Project EVE — Claude가 EVE 온라인 시장 거래에서 9개 기간 모두 수익",
+      summary: "실제 주문 기록을 재생하는 시뮬레이터에서 Opus 4.7·4.8·Fable 5가 2주짜리 9개 기간 모두 수익을 냈고 평균 수익률은 각각 약 16%·22%·43%였다. 6개월 운용 수익은 Opus 4.6(원금의 약 200%)에서 Fable 5(약 600%)로 세 배가 됐다. 반면 4인 에이전트 팀 실험에서 동료 에이전트는 사보타주를 거의 잡아내지 못했다.",
+      url: "https://www.anthropic.com/research/project-eve-claude-plays-mmorpgs"
     },
     {
-      company: "TSMC",
-      logo: "TSM",
-      type: "파운드리 · 반도체",
-      topics: ["chips"],
-      title: "로직 전업 파운드리가 메모리로? 엔비디아발 3D DRAM 검토",
-      summary: "삼성·SK하이닉스·마이크론이 과점한 DRAM 시장에 수직 적층 방식으로 진입을 검토한다. 이미 SK하이닉스 차세대 HBM의 베이스 로직 다이를 맡고 있어 고객이자 경쟁자가 되는 구도이며, 수직 DRAM 특허는 있지만 양산 수율 확보가 관건이다.",
-      url: "https://in.investing.com/news/stock-market-news/tsmc-rises-on-report-of-potential-push-into-advanced-memory-for-nvidia-5687659"
+      company: "Google",
+      logo: "G",
+      type: "빅테크 · 데이터센터",
+      topics: ["chips", "ai"],
+      title: "남의 손에서 표류하던 GW급 부지를 직접 인수",
+      summary: "고객으로 들어가길 거부했던 크루소의 와이오밍 사업을 아예 사들여 170억 달러를 투입한다. 독립 개발사가 장비·전력 확보와 공사비·일정 관리에서 고전하자, 하이퍼스케일러가 부지를 직접 가져가는 사례다. 텍사스 애머릴로 인근 사업은 크루소와 계속 함께한다.",
+      url: "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/"
     },
     {
-      company: "Boston Dynamics",
-      logo: "BD",
-      type: "로보틱스 · 물류",
-      topics: ["robotics"],
-      title: "Stretch 2세대로 '가동률' 승부 — 2023년 이후 누적 2천만 박스",
-      summary: "휴머노이드 Atlas에 관심이 쏠린 사이 이미 현장에 배치된 물류 로봇을 현장 데이터 기반으로 다시 설계했다. 고객사 정비팀이 직접 손볼 수 있는 모듈 설계와 무선 소프트웨어 업데이트가 핵심이며, 최근 로힛 프라사드를 CEO로 선임한 리더십 교체기에 나온 첫 신제품이다.",
-      url: "https://www.robotics247.com/article/boston-dynamics-launches-stretch-gen-2-autonomous-mobile-trailer-unloading-robot"
-    },
-    {
-      company: "Qualcomm",
-      logo: "QC",
-      type: "빅테크 · 반도체",
-      topics: ["chips"],
-      title: "메모리 부족에 발목 잡힌 가이던스 — 하루 9% 급락",
-      summary: "이번 분기 실적 전망이 시장 기대를 밑돌며 나스닥 급락의 방아쇠 중 하나가 됐다. 경영진은 수요가 아니라 메모리 공급 부족 문제라고 선을 그었지만, AI 수요가 메모리를 빨아들이며 스마트폰·PC 칩 업체로 비용 압박이 번지는 구조가 드러났다.",
-      url: "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
+      company: "Check Point",
+      logo: "CP",
+      type: "보안 · 위협 인텔리전스",
+      topics: ["security", "ai"],
+      title: "ARTEX 패널 2,557개 추적 — '미국 모델이 막히자 중국 모델로 갈아탔다'",
+      summary: "ARTEX 패널을 호스팅했거나 호스팅 중인 시스템 2,557개(공개 접근 가능 1,608개)를 찾아냈고, 그중 10개는 데이터베이스 전체가 노출돼 공격 기록을 들여다볼 수 있었다. 공격자들은 주로 딥시크 Flash 계열을 썼다. 한 인스턴스에서는 앤트로픽 Opus 5.5의 가드레일이 공격을 막자 운영자가 중국 모델로 바꿨다 — 모델 차원의 안전장치는 다른 모델로 갈아타면 그만이라는 한계를 보여준다.",
+      url: "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/"
     }
   ],
   learn: [
     {
-      term: "DAgger",
-      full: "Dataset Aggregation (인터벤션 기반 데이터 수집)",
-      category: "학습기법 · 67/70",
+      term: "MPC & TVC",
+      full: "Model Predictive Control (모델 예측 제어) & Thrust Vector Control (추력 벡터 제어)",
+      category: "핵심개념 · 71/71",
       topics: ["physical-ai", "robotics"],
-      summary: "모방학습으로 만든 정책은 시범 궤적에서 조금만 벗어나도 본 적 없는 상태에 빠져 오류가 눈덩이처럼 커진다(분포 이탈). DAgger(Ross et al. 2011)는 정책을 실제로 굴려 보면서 그 정책이 도달한 상태에서 전문가가 '여기선 이렇게 해야 한다'고 정답을 달아 주고, 이 데이터를 누적해 다시 학습하는 반복 루프다. 소프트웨어로 치면 프로덕션에서 터진 케이스를 회귀 테스트셋에 계속 추가하는 것과 같다. 현장에서는 사람이 위험해 보일 때만 조종을 넘겨받는 HG-DAgger 같은 '개입형' 변형이 표준이 됐고, 개입 시점 자체가 가장 값진 학습 데이터가 된다. 오늘 MIT 테크리뷰가 다룬 Tau Robotics의 원격 조종 청소나 샤오미 공장 시연에서 '사람이 얼마나 자주 개입했나'가 핵심 질문인 이유가 여기에 있다.",
-      angle: "로봇 데모 영상에서 봐야 할 숫자는 성공률이 아니라 '사람 개입률'이다 — 그리고 그 개입 하나하나가 다음 모델의 학습 데이터라는 역설이 훅.",
-      url: "https://arxiv.org/abs/1011.0686"
+      summary: "MPC는 시스템의 동역학 모델로 앞으로 N단계를 예측하고, 장치 한계(최대 추력·각도·변화율) 안에서 목표 오차와 명령 변화를 합친 비용이 가장 작은 명령열을 구한 뒤 첫 명령만 실행하고 다음 주기에 다시 계산하는 제어다. 소프트웨어로 치면 매 틱마다 최적화 문제를 새로 푸는 '롤링 플래너'이고, LLM 에이전트가 계획을 세운 뒤 첫 액션만 실행하고 관측을 받아 다시 계획하는 루프와 같다. engiuniverse는 테슬라 로드스터의 공중 자세 복귀 구상을 Isaac Sim에서 재현했는데, 소형 제트엔진 12기의 노즐을 2축(±25°)으로 꺾는 추력 벡터 제어로 36개 제어 입력을 MPC(20Hz, 물리 100Hz)가 배분했다. 핵심 교훈은 제트엔진이 최대 출력에 도달하는 데 5초가 걸리는 지연을 예측 모델에 넣어 회전수를 미리 올려둬야 했다는 점으로, 액추에이터 지연을 모델이 모르면 계획이 무너진다. VLA·RL 같은 학습 정책과 달리 '모델을 알고 매번 푸는' 반대편 기둥이며, 휴머노이드 균형 제어 같은 저수준 제어에는 여전히 MPC가 널리 쓰인다.",
+      angle: "'로봇 = 학습 정책'이 대세인 피드에 '모델 기반 제어는 죽지 않았다'를 던지는 소재 — 5초 스풀업 지연 하나가 계획 전체를 무너뜨린다는 숫자가 훅. 단, 시뮬 재현일 뿐이며 테슬라 실제 설계(냉가스 추진기)와 다르다는 점은 명시해야 한다.",
+      url: "https://sites.engineering.ucsb.edu/~jbraw/mpc/"
     },
     {
-      term: "HIL-SERL",
-      full: "Human-in-the-Loop Sample-Efficient RL",
-      category: "학습기법 · 68/70",
+      term: "Real-to-Sim",
+      full: "3D Gaussian Splatting 기반 디지털 트윈",
+      category: "시뮬레이터 · 69/71",
       topics: ["physical-ai", "robotics"],
-      summary: "UC 버클리 연구팀(2024)이 시뮬레이션 없이 실물 로봇에서 직접 강화학습을 돌려 정밀 조작을 익히게 한 방법이다. 소량의 시연과 사람의 실시간 교정으로 출발점을 잡은 뒤 RL로 다듬어, 대시보드 조립·타이밍 벨트 장착 같은 과제를 1~2.5시간 학습만에 거의 100% 성공률로 끌어올렸다고 보고했다. LLM으로 치면 SFT(시연 모방) 뒤에 RLHF로 성능을 끌어올리는 것과 같은 2단계 구조이고, 모방학습이 시범자 수준에 갇히는 한계를 RL로 넘는다. 'RL은 수백만 번 시도가 필요해서 시뮬에서만 쓴다'는 통념과 달리, 좋은 초기화와 사람 개입이 있으면 실물에서도 샘플 효율이 나온다는 점을 보였다. 위의 DAgger가 사람 교정을 '모방' 데이터로 쓴다면, HIL-SERL은 같은 교정을 RL 탐색의 안전장치로 쓰는 셈이다.",
-      angle: "'로봇 RL = 시뮬 수백만 번'이라는 고정관념에 '실물 로봇 2시간'이라는 숫자를 부딪치는 반직관형 콘텐츠 — π0 이후 VLA에 RL 파인튜닝을 얹는 흐름과도 이어진다.",
-      url: "https://arxiv.org/abs/2410.21845"
+      summary: "Sim-to-Real이 '시뮬에서 배운 것을 실물로 옮기는' 방향이라면, Real-to-Sim은 스마트폰 영상 같은 실물 스캔으로 시뮬 장면을 재구성하는 역방향 흐름이다. 핵심 기술인 3D 가우시안 스플래팅은 장면을 수많은 반투명 3D 타원체로 표현해 사진에 가까운 화질을 실시간으로 렌더링하므로, 카메라 영상을 입력으로 받는 정책의 시각적 간극을 크게 줄인다. 대표 사례인 SplatSim(CMU, 2024)은 가우시안 스플랫으로 렌더링한 시뮬에서만 학습한 RGB 조작 정책을 실물 로봇에 제로샷으로 옮겨 평균 성공률 86.25%를 기록했다(실물 데이터로 학습한 정책은 97.5%). 소프트웨어로 치면 프로덕션 트래픽을 캡처해 스테이징 환경을 자동으로 만드는 것과 같아, 시뮬 장면을 사람이 손으로 모델링하던 비용이 사라진다. 오늘 시드 1,000만 달러를 받은 Physicl이나 Ai2의 ToyBlocks처럼 '물리적으로 충실한 시뮬 데이터'에 돈과 연구가 몰리는 이유다.",
+      angle: "'시뮬→실물'의 반대 방향이 왜 더 중요해졌나 — 스마트폰 영상 몇 분이 학습용 시뮬 세계가 되고, 시뮬에서만 학습해도 실물 데이터 수준의 약 90%에 도달한다는 숫자가 훅.",
+      url: "https://arxiv.org/abs/2409.10161"
     }
   ]
 };

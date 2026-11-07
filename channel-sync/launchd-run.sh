@@ -3,7 +3,7 @@
 # ~/Library/ainews-sync/ 아래 미러 클론에서 sync.sh를 실행한다 (결과는 GitHub push로 반영).
 # 설치 위치: $HOME/Library/ainews-sync/run.sh  (install.sh가 복사)
 set -euo pipefail
-export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.npm-global/bin:$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 MIRROR="$HOME/Library/ainews-sync/ai-news"
 export AINEWS_LOG="$HOME/Library/Logs/ainews-channelsync.log"

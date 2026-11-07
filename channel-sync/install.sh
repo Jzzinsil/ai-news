@@ -39,7 +39,7 @@ cp "$REPO/channel-sync/launchd-run.sh" "$HOME/Library/ainews-sync/run.sh"
 chmod +x "$HOME/Library/ainews-sync/run.sh"
 
 echo "== launchd 등록 =="
-cp "$PLIST_SRC" "$PLIST_DST"
+sed "s|__HOME__|$HOME|g" "$PLIST_SRC" > "$PLIST_DST"
 launchctl bootout "gui/$(id -u)/com.jzzinsil.ainews-channelsync" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST_DST"
 launchctl list | grep ainews-channelsync && echo "등록 완료 — 매일 06:35 KST 실행"

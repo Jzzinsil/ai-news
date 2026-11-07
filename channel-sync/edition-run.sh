@@ -4,7 +4,7 @@
 set -uo pipefail
 REPO="${AINEWS_REPO:-$HOME/Documents/developments/ai-news}"
 LOG="${AINEWS_LOG:-$REPO/channel-sync/sync.log}"
-CLAUDE="/opt/homebrew/bin/claude"
+CLAUDE="$(command -v claude || echo /opt/homebrew/bin/claude)"
 
 cd "$REPO" || exit 1
 exec >>"$LOG" 2>&1

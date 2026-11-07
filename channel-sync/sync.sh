@@ -5,8 +5,8 @@ set -uo pipefail
 
 # launchd(TCC로 ~/Documents 접근 불가)에서는 launchd-run.sh가 미러 클론 경로를 AINEWS_REPO로 넘긴다
 REPO="${AINEWS_REPO:-$HOME/Documents/developments/ai-news}"
-YTDLP="/opt/homebrew/bin/yt-dlp"
-CLAUDE="/opt/homebrew/bin/claude"
+YTDLP="$(command -v yt-dlp || echo /opt/homebrew/bin/yt-dlp)"
+CLAUDE="$(command -v claude || echo /opt/homebrew/bin/claude)"
 KNOWN="$REPO/channel-sync/known_ids.txt"
 LOG="${AINEWS_LOG:-$REPO/channel-sync/sync.log}"
 CHANNELS=(

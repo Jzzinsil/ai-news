@@ -516,22 +516,22 @@ const EDITION = {
   ],
   learn: [
     {
-      term: "E2E vs 모듈러",
-      full: "End-to-End vs Modular Pipeline",
-      category: "핵심개념 · 9/60",
+      term: "MuJoCo",
+      full: "Multi-Joint dynamics with Contact",
+      category: "시뮬레이터 · 15/60",
       topics: ["physical-ai", "robotics"],
-      summary: "모듈러 방식은 인식(perception)→계획(planning)→제어(control)를 사람이 단계별로 나눠 설계하고, 단계 사이를 사람이 정한 인터페이스(바운딩 박스·경로·좌표)로 잇는다. E2E는 카메라 픽셀 같은 원시 입력에서 행동 출력까지를 신경망 하나가 통째로 학습한다 — 소프트웨어로 치면 손으로 짠 규칙 엔진 마이크로서비스 체인을 하나의 학습된 함수로 바꾸는 것이다. 모듈러는 디버깅·검증이 쉽지만 단계마다 정보가 손실되고 규칙이 롱테일 상황을 감당하지 못하며, E2E는 데이터만 충분하면 성능이 계속 오르지만 '왜 그렇게 했는지' 설명이 어렵다. 테슬라 FSD v12가 30만 줄 넘는 C++ 계획 코드를 신경망으로 대체한 것이 자율주행의 전환점이었고, VLA가 로봇에서 같은 전환을 반복하고 있다. 오늘 Tau Robotics·KIMM 데이터 팩토리 뉴스처럼 업계가 텔레옵 데이터 확보에 사활을 거는 이유도 E2E가 '데이터가 곧 코드'인 구조이기 때문이다.",
-      angle: "'자율주행이 10년 걸려 배운 교훈을 로봇은 3년 만에 반복 중' — 모듈러에서 E2E로 넘어간 FSD의 궤적을 휴머노이드 업계에 겹쳐 보는 비교가 테슬라 출신만 쓸 수 있는 훅.",
-      url: "https://arxiv.org/abs/2306.16927"
+      summary: "에모 토도로프가 개발한 로봇용 물리 시뮬레이터로, 이름 그대로 '다관절 + 접촉' 계산에 특화돼 있다. 2021년 구글 딥마인드가 인수해 이듬해 Apache 2.0으로 오픈소스화했고, 이후 강화학습 연구의 사실상 표준 벤치마크 환경이 됐다. 게임 엔진의 물리가 '그럴듯하게 보이는 것'을 목표로 한다면 MuJoCo는 관절 토크·마찰·접촉력을 수치적으로 안정되게 푸는 데 집중한다 — 소프트웨어로 치면 UI 목업과 실제 단위 테스트 환경의 차이다. 최근에는 JAX로 다시 구현한 MJX로 GPU·TPU에서 수천 개 환경을 병렬로 돌릴 수 있게 되면서, 시뮬레이션에서 로코모션 정책을 대량으로 학습하는 흐름의 바탕이 됐다. 다만 접촉 모델도 근사일 뿐이라, 오늘의 Stretch·샤오미 사례처럼 실물 현장 데이터가 여전히 결정적이다(앞서 배운 Sim-to-Real 갭).",
+      angle: "'왜 로봇 연구자는 언리얼·유니티 대신 MuJoCo를 쓰나?' — 보기 좋은 물리와 학습에 쓸 수 있는 물리의 차이를 짚는 입문형 콘텐츠.",
+      url: "https://mujoco.org/"
     },
     {
-      term: "RLDX-1",
-      full: "RLWRLD Dexterity Foundation Model",
-      category: "플레이어·모델 · 10/60",
-      topics: ["physical-ai", "robotics"],
-      summary: "RLWRLD가 2026년 5월 6일 기술 보고서·코드·체크포인트를 함께 공개한 손 조작(dexterous manipulation) 특화 VLA다. 81억 파라미터 규모로 Multi-Stream Action Transformer 구조를 쓰며, 사전학습 체크포인트(PT)와 DROID·ALLEX·RoboCasa·LIBERO용 파인튜닝 버전이 허깅페이스에 올라 있다 — LLM으로 치면 베이스 모델과 태스크별 SFT 체크포인트를 함께 배포한 셈이다. 회사 측은 8개 공개 벤치마크에서 NVIDIA GR00T·Physical Intelligence π0를 앞섰고, WIRobotics ALLEX 휴머노이드 실물 과제에서 86.8% 성공률을 냈다고 주장한다(독립 재현 전의 자체 수치). 주의할 점은 가중치 라이선스(RLWRLD Model License v1.0)가 비상업·연구용이라 일반적 의미의 '오픈소스'와는 다르다는 것이다. 걷기·하역 같은 거친 조작이 상용화되는 동안(오늘의 Stretch 2세대) 정밀 손 조작은 여전히 미해결이라는 점이 'Dexterity-First' 포지셔닝의 근거다.",
-      angle: "'가중치 공개 = 오픈소스'인가? 로봇 파운데이션 모델들의 라이선스를 비교해 보면 개방성의 실제 수준이 드러난다 — 엔지니어 독자에게 먹히는 논쟁형 소재.",
-      url: "https://github.com/RLWRLD/RLDX-1"
+      term: "Isaac Sim / Isaac Lab",
+      full: "NVIDIA Isaac Sim & Isaac Lab",
+      category: "시뮬레이터 · 16/60",
+      topics: ["physical-ai", "robotics", "chips"],
+      summary: "Isaac Sim은 NVIDIA Omniverse 위에 만든 로봇 시뮬레이터로, PhysX 물리와 RTX 레이트레이싱 렌더링으로 카메라·라이다 같은 센서까지 사실적으로 재현한다. Isaac Lab은 그 위에서 돌아가는 로봇 학습 프레임워크로(Isaac Gym·Orbit의 후속), GPU 한 장에서 수천 개 환경을 병렬로 돌려 강화학습·모방학습 정책을 학습시킨다. 비유하자면 Isaac Sim이 런타임이고 Isaac Lab은 그 위의 학습용 SDK다. 걷기 같은 강체 로코모션 RL에는 매우 강하지만 유체·변형체(천·케이블)·촉각 시뮬레이션은 아직 어렵다 — 손 조작이 시뮬만으로 풀리지 않는 이유다. NVIDIA 입장에서는 GR00T(모델)·Jetson Thor(로봇 칩)와 함께 'GPU로 로봇을 학습시키는' 생태계의 한 축이다.",
+      angle: "NVIDIA는 로봇을 만들지 않지만 로봇 학습의 전 단계(시뮬·모델·온보드 칩)를 다 판다 — '피지컬 AI의 곡괭이 장수' 구도로 풀면 칩 이야기와 로봇 이야기를 한 편에 묶을 수 있다.",
+      url: "https://isaac-sim.github.io/IsaacLab/"
     }
   ]
 };

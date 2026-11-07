@@ -3,7 +3,7 @@
 **운영 규칙:** 하루 2개씩, **`status`가 `todo`인 항목을 표 위에서부터 순서대로** 소화한다(순서가 우선 — 건너뛰지 않는다). 커버한 항목은 status를 `done`으로 바꾼다. 각 항목은 "X/LinkedIn 콘텐츠 1편의 씨앗"이 되도록 콘텐츠 앵글을 함께 담았다.
 
 **채널 싱크 (자동화됨):** 이 커리큘럼의 원천인 두 유튜브 채널(@sudoremove, @engiuniverse)은 **매일 06:35 KST에 로컬 launchd 잡**(`channel-sync/sync.sh`)이 자동 확인한다 — 신규 영상 감지 → 자막(cc) 추출 → headless Claude가 증류해 이 파일의 Phase 6에 추가(무관하면 아래 미반영 블록에 기록) → 커밋·push. 자막 추출(yt-dlp)은 클라우드에서 불가능하므로 클라우드 루틴은 이 단계를 건너뛴다. 로그: `channel-sync/sync.log`. Mac이 꺼져 있던 날은 건너뛴다(다음 실행에서 따라잡음).
-- 마지막 싱크: 2026-09-04 (sudoremove 신규 1편 반영 — Phase 6 #60)
+- 마지막 싱크: 2026-09-06 (sudoremove 신규 1편 — 주제 무관으로 미반영 처리)
 
 ## 백로그 (우선순위 순)
 
@@ -21,17 +21,17 @@
 | 8 | Sim-to-Real 갭 | 핵심개념 | 시뮬레이션에서 배운 정책이 실물에서 성능이 떨어지는 고질적 격차 | "데모(한 번 됨)와 솔브(재현됨)는 다르다" — 화려한 데모 영상을 비평하는 안목의 근거 | done |
 | 9 | E2E vs 모듈러 | 핵심개념 | 인식→계획→제어를 사람이 단계별로 짜던 방식이 무너지고, 입력→출력을 신경망 하나가 통째 학습(E2E)으로 전환 | 테슬라 출신에게 유리한 소재 — 자율주행이 겪은 교훈이 로봇에서 반복되는 중 | done |
 | 10 | RLDX-1 (RLWRLD) | 플레이어·모델 | rlwrld의 "Dexterity-First" 로봇 파운데이션 모델. 81억 파라미터, 가중치·학습코드·체크포인트 전면 공개 | **입사할 회사의 대표 제품.** π0.5·GR00T 대비 정밀조작 ~2배 주장, 접촉 과제 성공률 90% 근접. 개방성이 업계 최고 수준 | done |
-| 11 | Dexterity / 로봇 손 문제 | 하드웨어 | 걷기는 RL로 풀렸지만 사람 손 수준 정교한 조작은 미해결 최대 난제. 손이 로봇 본체보다 비쌈 | rlwrld가 'Dexterity-First'인 이유. 3지 vs 5지 논쟁(BD는 신뢰성 때문에 3~4지)이 좋은 논쟁형 콘텐츠 | todo |
-| 12 | ALLEX (WIRobotics) | 하드웨어 | rlwrld의 AI 파트너인 WIRobotics(전 삼성 출신 창업)의 텐던 구동 5지 핸드. RLDX-1 검증 플랫폼 | 회사 파트너십 지도의 핵심. 주의: sudoremove 자막의 "리얼월드·ALEX"는 RLWRLD·ALLEX의 오인 | todo |
-| 13 | Robot Foundation Model | 핵심개념 | 방대한 데이터로 사전학습해 여러 로봇·작업에 두루 쓰는 범용 '뇌'. 로봇 데이터 부족이 병목 | π0, GR00T, RLDX-1을 하나의 카테고리로 묶는 상위 개념 | todo |
-| 14 | WAM (World Action Model) | 핵심개념 | 사람 영상에서 행동을 배우는 '월드 액션 모델'(Dyna가 대표, ~170년 분량 1인칭 영상 주장) | 약어 주의 콘텐츠로 좋음 — 로봇팔 Barrett WAM과 혼동 금지. 자료 기준 이 업계의 WAM은 World Action Model | todo |
+| 11 | Dexterity / 로봇 손 문제 | 하드웨어 | 걷기는 RL로 풀렸지만 사람 손 수준 정교한 조작은 미해결 최대 난제. 손이 로봇 본체보다 비쌈 | rlwrld가 'Dexterity-First'인 이유. 3지 vs 5지 논쟁(BD는 신뢰성 때문에 3~4지)이 좋은 논쟁형 콘텐츠 | done |
+| 12 | ALLEX (WIRobotics) | 하드웨어 | rlwrld의 AI 파트너인 WIRobotics(전 삼성 출신 창업)의 텐던 구동 5지 핸드. RLDX-1 검증 플랫폼 | 회사 파트너십 지도의 핵심. 주의: sudoremove 자막의 "리얼월드·ALEX"는 RLWRLD·ALLEX의 오인 | done |
+| 13 | Robot Foundation Model | 핵심개념 | 방대한 데이터로 사전학습해 여러 로봇·작업에 두루 쓰는 범용 '뇌'. 로봇 데이터 부족이 병목 | π0, GR00T, RLDX-1을 하나의 카테고리로 묶는 상위 개념 | done |
+| 14 | WAM (World Action Model) | 핵심개념 | 사람 영상에서 행동을 배우는 '월드 액션 모델'(Dyna가 대표, ~170년 분량 1인칭 영상 주장) | 약어 주의 콘텐츠로 좋음 — 로봇팔 Barrett WAM과 혼동 금지. 자료 기준 이 업계의 WAM은 World Action Model | done |
 
 ### Phase 2 — 툴·시뮬레이터·인프라 (15~24)
 
 | # | 용어/주제 | 분류 | 한 줄 정의 | 왜 중요한가(콘텐츠 앵글) | status |
 |---|---|---|---|---|---|
-| 15 | MuJoCo | 시뮬레이터 | 접촉·다관절 물리에 강한 로봇 물리 시뮬레이터. DeepMind가 인수해 오픈소스화. RL 연구 표준 (보충) | "왜 로봇 연구자는 게임엔진이 아니라 MuJoCo를 쓰나"가 입문 콘텐츠로 좋음 | todo |
-| 16 | Isaac Sim / Isaac Lab | 시뮬레이터 | NVIDIA Omniverse 기반 로봇 시뮬레이션·학습 프레임워크. 걷기·RL에 강하나 유체·변형체·촉각은 어려움 | NVIDIA 생태계 이해의 관문. Robotis 'AI Worker'도 GR00T N1.5+Isaac 조합 | todo |
+| 15 | MuJoCo | 시뮬레이터 | 접촉·다관절 물리에 강한 로봇 물리 시뮬레이터. DeepMind가 인수해 오픈소스화. RL 연구 표준 (보충) | "왜 로봇 연구자는 게임엔진이 아니라 MuJoCo를 쓰나"가 입문 콘텐츠로 좋음 | done |
+| 16 | Isaac Sim / Isaac Lab | 시뮬레이터 | NVIDIA Omniverse 기반 로봇 시뮬레이션·학습 프레임워크. 걷기·RL에 강하나 유체·변형체·촉각은 어려움 | NVIDIA 생태계 이해의 관문. Robotis 'AI Worker'도 GR00T N1.5+Isaac 조합 | done |
 | 17 | NVIDIA 3-컴퓨터 전략 | 핵심개념 | 학습(DGX) → 시뮬레이션(Omniverse·Cosmos) → 로봇 위 추론(Jetson Thor)으로 밸류체인 전체 장악 | CUDA가 GPU에서 했던 일을 로봇에서 반복하려는 전략. 산업 구조 콘텐츠의 단골 프레임 | todo |
 | 18 | NVIDIA Cosmos | 플레이어·모델 | 로봇 학습용 물리 인지 합성 데이터를 생성하는 월드 파운데이션 모델 플랫폼 | "시뮬레이터로 못 만드는 상황까지 월드모델로 커버" — 데이터 병목의 NVIDIA식 해법 | todo |
 | 19 | Jetson Thor | 하드웨어 | Blackwell 기반 로봇용 엣지 추론 칩. 2,070 FP4 TFLOPS·128GB, 개발킷 $3,499 | "느린 뇌+빠른 반사를 한 칩에서" — 칩 스펙을 로봇 아키텍처와 연결하면 차별화 콘텐츠 | todo |
@@ -88,7 +88,7 @@
 | 55 | 1X NEO & Redwood | 플레이어·모델 | 유일한 소비자 판매 휴머노이드($20K/월 $499). Redwood AI + 물리 기반 월드모델로 정책 평가 | "가정용은 진짜 오나" 논쟁 + 실패 롤아웃에서도 학습한다는 기술 포인트 | todo |
 | 56 | Genie 3 / World Labs | 플레이어·모델 | DeepMind Genie 3(실시간 24fps 상호작용 세계)·World Labs Marble→Atlas(공간지능) | 월드모델 지형도 완성. 페이페이 리 "공간지능이 다음 프론티어" | todo |
 
-### Phase 6 — 채널 신규분 (57~) · 싱크 2026-09-04
+### Phase 6 — 채널 신규분 (57~) · 싱크 2026-09-06
 
 | # | 용어/주제 | 분류 | 한 줄 정의 | 왜 중요한가(콘텐츠 앵글) | status |
 |---|---|---|---|---|---|
@@ -97,7 +97,7 @@
 | 59 | 에고센트릭 데이터 수집 경쟁 (Figure Index · MicroAGI Shift · OpenGraph Labs) | 데이터전략 | Figure AI가 Helix 학습용 크라우드소싱 앱 'Figure Index'를 5/1 출시 — WAU 4.4만, 다운로드 26만(108개국), 영상 1,600만 개, 하루 업로드 노동량 4.9년치, 보상 $15M 지급·향후 $1B 투입 계획. 독일 MicroAGI의 'Shift'는 뉴욕 무료 청소(청소부에 에고 카메라, 회당 ~$33)+유저 모드 시급 $20(공식 억셉률 72%, 심사 축: 양손 노출·카메라 각도·의미 있는 태스크)으로 올해 20M시간 목표($5M 지출, $55M 계획). 한국 OpenGraph Labs는 택타일 장갑+에고 카메라를 낀 인력이 무료로 일해주며 수집 (sudoremove) | "내 데이터는 내가 모은다" — Figure는 인도·중국 데이터 벤더(시급 $3~6)를 써보고 자체 수집으로 전환, 올해 이미 15.8M시간. GEN-1.5·Skild S1의 ICL 발현 데이터량(100K~500K시간)에 GPT-3식 60배를 곱한 ~30M시간(~$432M) 추정이 영상의 핵심 갠또 — 크라우드소싱 앱이 그 승부처라는 서사. #37 데이터 5전략·#39 에고센트릭 스케일링과 세트 콘텐츠 | todo |
 | 60 | NVIDIA×Hugging Face 인수설과 로봇 오픈소스 생태계 | 생태계 | NVIDIA가 Hugging Face를 ~$13B에 인수하기로 합의했다는 보도(공식 발표 없음, 미확정)를 로봇 생태계 관점에서 분석 — HF는 Pollen Robotics 인수·LeRobot으로 이미 로봇 축을 확보했고, NVIDIA Isaac·GR00T 시리즈는 LeRobot 데이터셋 포맷과 긴밀히 통합돼 있어 "로봇 쪽에서 가장 시너지 큰 조합"이라는 평가 (sudoremove) | "오픈소스 성지의 주인이 바뀌면?" — MS의 GitHub 인수(기업들 프라이빗 레포 이탈) vs Meta의 Scale AI 인수(중립성 상실로 고객 전원 이탈) 선례 비교 프레임. Pollen발 $400 저가 로봇 'Microduck'(자막 표기)이 출시 24시간에 ~$2.6M 판매 — "로코모션까지 배울 수 있는 저가 실물 플랫폼이 거의 없다"는 공백을 HF 정신으로 메운 사례. HF ARR ~$150M(연환산 ~$200M 추정), NVIDIA는 ~2주 수익이면 인수가 회수라는 계산, LeRobot 팀은 수익을 안 내고 Pollen이 판매 담당이라는 내부 구조 증언까지 콘텐츠 소재. #20 LeRobot·#17 NVIDIA 3-컴퓨터 전략과 세트 | todo |
 
-> 미반영(주제 무관): sudoremove "Claude/GPT/Grok/Kimi Tier List", "Stripe의 OpenRouter 인수" — 피지컬 AI 커리큘럼 범위 밖.
+> 미반영(주제 무관): sudoremove "Claude/GPT/Grok/Kimi Tier List", "Stripe의 OpenRouter 인수", "Ranking Big Tech by Their Contribution to AGI" — 피지컬 AI 커리큘럼 범위 밖.
 
 ## 소스 요약
 

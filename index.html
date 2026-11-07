@@ -347,193 +347,191 @@
    topics: physical-ai | ai | robotics | security | chips
    ========================================================= */
 const EDITION = {
-  date: "2026-09-04",
+  date: "2026-11-07",
   news: [
     {
-      source: "TechCrunch",
+      source: "CNBC",
       topics: ["ai", "chips"],
-      title: "엔비디아, 허깅페이스 129억 달러 인수 확정 — 오픈소스 AI 허브의 주인이 바뀐다",
-      summary: "9월 3일 양사가 최종 계약을 발표했다. 주주 지급 119억 달러에 직원 리텐션 최대 10억 달러를 더한 약 129억 3천만 달러 규모로, 지난해 12월 그로크 자산 인수(200억 달러)에 이은 엔비디아 역대 두 번째 빅딜이다. 허깅페이스는 모델 300만 개·데이터셋 50만 개·개발자 1,800만 명을 보유한 오픈소스 AI의 중심지로, 젠슨 황은 플랫폼을 열린 상태로 유지하고 엔비디아 하드웨어 사용을 강제하지 않겠다고 약속했다. 클로징은 규제 승인을 거쳐 2027년 상반기 목표다.",
-      url: "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
+      title: "나스닥 5.5% 급락, 19개월 만의 최악 — 엔비디아 하루 시총 4,500억 달러 증발",
+      summary: "11월 5일 나스닥이 5.5% 떨어지며 2025년 4월 이후 가장 큰 낙폭을 기록했다. 엔비디아·퀄컴이 각각 9% 넘게 빠졌고 AMD·마이크론·어플라이드머티어리얼즈는 두 자릿수 하락했다. 민주당의 중간선거 압승으로 데이터센터 건설이 둔화될 것이라는 우려에 퀄컴의 부진한 분기 가이던스, 금리 상승 속 AI 기업 부채 부담 우려가 겹쳤다.",
+      url: "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
     },
     {
-      source: "SecurityWeek",
-      topics: ["ai", "security"],
-      title: "OpenAI, GPT-6 Astra 출시 개시 — 사상 첫 'Critical' 사이버 등급 모델",
-      summary: "9월 3일부터 단계적 출시가 시작됐다. Astra는 OpenAI 준비태세 프레임워크에서 사이버 역량 'Critical' 판정을 받은 첫 모델로, 평가 중 브라우저 샌드박스를 탈출하고 제로데이 2건을 스스로 찾아 체이닝했으며 ExploitBench 만점을 기록했다. 사이버 특화 기능은 심사형 프로그램 참여사에 먼저 열고, ChatGPT 유료 플랜·API·AWS로 순차 확대한다. 사이버 탈옥 거부율은 전작 59% 대비 91.5%로 올렸다.",
-      url: "https://www.securityweek.com/openais-astra-becomes-first-model-to-cross-critical-cybersecurity-threshold/"
-    },
-    {
-      source: "Common Dreams",
-      topics: ["ai"],
-      title: "샌더스·카사르, '초지능 금지법' 발의 — 위반 시 징역 20년",
-      summary: "9월 3일 발표된 Ban Artificial Superintelligence Act는 인간 지능을 넘어서는 AI의 개발·배포를 영구 금지하고, 연방 규제기관이 안전 규칙을 만들 때까지 프론티어 AI 개발을 일시 중단시키는 내용이다. 위반 기업에는 법인 해산, 개인에게는 최대 징역 20년을 규정해 핵무기 관련 처벌에 준하게 했다. AI 안전 전담 내각급 기관 신설과 초지능 개발을 막는 국제 협약 추진도 담았으며, 여름의 OpenAI 에이전트 침입 사고를 발의 배경으로 들었다.",
-      url: "https://www.commondreams.org/newswire/sanders-casar-introduce-legislation-to-ban-artificial-superintelligence-and-temporarily-pause-advanced-ai-development"
-    },
-    {
-      source: "CrowdStrike PR",
+      source: "TechCrunch",
       topics: ["security", "ai"],
-      title: "크라우드스트라이크, 공격·방어 AI 쌍둥이 'SafeMind' 공개 — 엔비디아와 공동 개발",
-      summary: "Fal.Con 2026 키노트에서 공개된 SafeMind는 엔비디아 Nemotron 기반 두 모델로 구성된다. 공격 담당 Red Tempest(27B, 컨텍스트 256K~1M)가 고객 환경의 디지털 트윈을 침투 테스트하고, 탐지 엔지니어 310만 시간 분량 데이터로 학습한 방어 담당 Blue Solano가 공격 경로를 즉시 패치하는 폐쇄 루프다. 프론티어 모델 대비 태스크당 비용을 66~99% 낮추고 위협 탐지는 6배 빠르다고 주장한다.",
-      url: "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-launches-frontier-models-for-cybersecurity-with-nvidia/"
+      title: "OpenAI, 공격형 보안 모델 'GPT-6 Cyber' 공개 — 리눅스 커널 이슈 948건 발굴",
+      summary: "11월 5일 공개된 GPT-6 Cyber는 사이버보안 프로그램 Daybreak의 최상위 등급인 Daybreak Red(공격형 취약점 연구자 대상)에만 제공된다. OpenAI는 이 모델로 리눅스 커널에서 잠재 이슈 948건을 찾아 패치를 준비했고 파이어폭스에서 신규 취약점 81건을 발견했다고 밝혔다. 리눅스 탐색 비용은 120만 달러였으며, 핵심 인프라 방어자를 위한 10억 달러 지원 프로그램도 함께 발표했다.",
+      url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough"
+    },
+    {
+      source: "Investing.com",
+      topics: ["chips"],
+      title: "TSMC, 엔비디아 요청으로 3D DRAM 생산 검토 — 메모리 시장 진출 신호",
+      summary: "디인포메이션에 따르면 TSMC가 최대 고객 엔비디아의 요청으로 수직 적층형 3D DRAM 생산 계획 수립에 착수했다. 마이크론 지역 운영을 이끌었던 쉬궈친 부사장(첨단 패키징 담당)이 검토를 주도하며, 전용 팹 신설과 기존 공장 인수·개조를 함께 따지고 있다. 생산 일정은 미정이다. 보도 후 TSMC ADR은 장 초반 7.7% 올랐다.",
+      url: "https://in.investing.com/news/stock-market-news/tsmc-rises-on-report-of-potential-push-into-advanced-memory-for-nvidia-5687659"
     },
     {
       source: "The Robot Report",
       topics: ["physical-ai", "robotics"],
-      title: "자율주행 트럭 PlusAI, 8억 달러 SPAC 상장 — 세 번째 도전",
-      summary: "요크빌 어드바이저스가 후원하는 Texas Ventures Acquisition III와 합병해 기업가치 약 8억 달러로 상장한다. 최대 2억 3,600만 달러의 신규 현금에 기확약 6천만 달러를 더해 약 3억 달러를 확보하며, 2026년 계약 매출 4천만~5천만 달러를 목표로 제시했다. 조달 자금은 OEM 통합과 2027년 공장 출고형 자율주행 트럭 상용 출시에 투입한다. 앞서 두 차례 SPAC 시도가 무산된 뒤 세 번째 상장 도전이다.",
-      url: "https://www.therobotreport.com/plusai-takes-autonomous-trucking-public-via-spac-deal/"
+      title: "어질리티 로보틱스, 휴머노이드 기업 최초 미국 상장 — 폭락장에서 2% 상승 마감",
+      summary: "Digit 제조사 어질리티가 SPAC Churchill Capital Corp XI와 합병해 11월 5일 나스닥(AGLT)에 데뷔했다. 시초가 11.26달러로 출발해 장중 8.40~12.15달러를 오간 끝에 11.49달러로 마감했다. 비용 차감 전 약 4억 6,500만 달러를 조달했고, Digit 5에 대해 3억 달러 이상의 다년 확정 주문을 확보해 2027년 얼리액세스 납품을 시작한다.",
+      url: "https://www.therobotreport.com/how-did-agility-robotics-perform-on-its-first-day-on-the-stock-market/"
     },
     {
-      source: "Gizmodo",
-      topics: ["physical-ai", "robotics"],
-      title: "우버, 이번엔 노조 편에서 로보택시 견제 — 뉴저지 '인간 운전 85%' 법안 지지",
-      summary: "10년간 기사 노조와 싸워온 우버가 이제 노조와 나란히 로보택시 확산을 늦추는 규제를 밀고 있다. 뉴저지에서는 3년 시범기간 동안 전체 운행의 85% 이상에 인간 운전자를 의무화하는 법안을, 워싱턴 D.C.에서는 무인 차량 운행을 막는 법안을 지지했다. 로보택시가 확대된 샌프란시스코·LA에서 기사 가동률과 시간당 수입 하락 신호가 이미 나타나고 있다는 게 배경이다. 자사가 웨이브와 런던 로보택시를 막 시작한 것과 대비되는 이중 행보다.",
-      url: "https://gizmodo.com/uber-fearing-getting-ubered-finally-sides-with-driver-unions-2000806928"
+      source: "Venable",
+      topics: ["chips", "ai"],
+      title: "미 중간선거 데이터센터 주민투표 41건, 거의 전부 '반대' 쪽으로",
+      summary: "11월 3일 선거에서 10개 주 41개 지역이 데이터센터 관련 주민투표를 치렀고 결과는 거의 만장일치로 개발 제한 쪽이었다. 오하이오 그랜빌·허버드·어배나는 관내 데이터센터를 전면 금지했고, 위스콘신 제인스빌은 80억 달러·800MW 캠퍼스를 포함해 4억 5천만 달러 이상 사업에 주민 투표를 의무화했다. 캔자스·오하이오 일부는 25MW 상한, 메인주 3곳은 모라토리엄을 택했다.",
+      url: "https://www.venable.com/insights/publications/2026/11/voters-approve-data-center-restrictions"
     },
     {
-      source: "Yahoo Finance",
-      topics: ["chips"],
-      title: "크루소, 제인스트리트와 130억 달러 클라우드 계약 — 밸류 300억 달러로 3배",
-      summary: "AI 인프라 기업 크루소가 트레이딩 회사 제인스트리트에 5년간 GPU 클러스터와 학습·추론 인프라를 공급하는 약 130억 달러 규모 계약을 맺었다. 같은 날 아트레이데스 매니지먼트와 밸러 에쿼티가 공동 주도한 30억 달러 이상 신규 라운드도 마무리해 기업가치가 약 300억 달러로 뛰었다 — 작년 10월 시리즈 E의 3배다. 금융사가 자체 AI 인프라에 조 단위 장기 계약을 거는 첫 대형 사례로 꼽힌다.",
-      url: "https://ca.finance.yahoo.com/news/crusoe-signs-13-billion-ai-195326470.html"
-    },
-    {
-      source: "TechNode",
-      topics: ["ai"],
-      title: "알리바바 Qwen3.8-Max-0902 — 버전 업 없이 코딩 1위 탈환",
-      summary: "9월 2일 공개된 0902 스냅샷은 아키텍처(2.4T 파라미터·1M 컨텍스트)와 가격(입력 $2·출력 $6)을 그대로 두고 코딩·장기 에이전트 작업만 포스트트레이닝으로 강화했다. Code Arena WebDev에서 1,691점으로 Claude Opus 5 Max(1,687)를 3점 차로 제치고 전체 1위에 올랐고, 이전 스냅샷 대비 22점을 올렸다. 모델 문자열 qwen3.8-max-0902로 기존 가격 그대로 즉시 제공된다.",
-      url: "https://technode.com/2026/09/02/alibaba-upgrades-qwen38-max-with-new-0902-snapshot/"
-    },
-    {
-      source: "Hugging Face",
+      source: "SecurityWeek",
       topics: ["security", "ai"],
-      title: "틱톡 영상 45억 건 스크레이핑 데이터셋, 허깅페이스에 공개 — 289GB",
-      summary: "한 독립 리서처가 틱톡의 비공개 안드로이드 API를 3주간 긁어 만든 45억 개 영상 레코드 데이터셋을 허깅페이스에 올렸다. 캡션·조회수·좋아요·사운드·국가·게시 시각이 담긴 289GB 규모로, 로그인 없이 익명 기기 등록만으로 수집했으며 월 950달러가 들었다고 밝혔다. 데이터셋 카드 스스로 틱톡 약관 위반과 GDPR상 개인정보 해당 가능성을 인정하면서 식별·프로파일링 금지 조건을 내걸어, 공개 데이터 스크레이핑의 법적 경계 논쟁에 다시 불을 붙였다.",
-      url: "https://huggingface.co/datasets/kuben-developer/tiktok-videos-4b"
+      title: "바이낸스 63억 달러 탈취, 가짜 코딩 과제와 내부 AI 툴이 통로",
+      summary: "11월 3일 공개된 바이낸스 1차 사고 보고서에 따르면 공격은 수개월에 걸쳐 월렛 엔지니어 3명의 PC를 장악하는 방식으로 진행됐다. 9월 가짜 채용 면접에서 받은 코딩 과제로 악성코드가 심겼고, 10월 20일 공격자는 감염 PC와 내부 AI 툴을 이용해 다른 엔지니어 2명의 시스템을 장악했다. AI 툴이 어떻게 쓰였는지는 밝히지 않았다. 약 28억 5천만 달러가 동결·회수됐고 FBI는 북한 TraderTraitor를 배후로 지목했다.",
+      url: "https://www.securityweek.com/rigged-coding-assignment-abused-ai-tool-opened-path-to-6-billion-binance-heist/"
+    },
+    {
+      source: "Robotics 24/7",
+      topics: ["robotics"],
+      title: "보스턴다이내믹스 Stretch 2세대 — 시간당 1,000박스 하역, 내부 배선 81% 제거",
+      summary: "트레일러 하역 로봇 Stretch의 2세대가 1세대의 10만 시간 넘는 운영 데이터를 바탕으로 재설계됐다. 멀티픽 기능으로 최대 시간당 1,000박스를 처리하며(1세대는 통상 600~800박스), 내부 배선을 81% 걷어내 스워브 드라이브 교체 시간을 하루에서 약 1시간으로 줄였다. 배터리는 2교대를 버티고 고속 충전기로 75분 만에 90%까지 충전한다.",
+      url: "https://www.robotics247.com/article/boston-dynamics-launches-stretch-gen-2-autonomous-mobile-trailer-unloading-robot"
+    },
+    {
+      source: "Seoul Economic Daily",
+      topics: ["physical-ai", "robotics"],
+      title: "국내 첫 'AI 휴머노이드 데이터 팩토리' 대전서 가동 — 휴머노이드 12대로 텔레옵 데이터 생산",
+      summary: "한국기계연구원(KIMM)이 ETRI와 함께 본원에 구축한 데이터 팩토리가 11월 3일 문을 열었다. 원격 조종되는 휴머노이드 12대가 작업하며 동작과 센서 값을 학습 데이터로 기록하고, 2027년 말부터 기업·대학·연구소에 단계적으로 개방한다. 중국은 4월 말 기준 휴머노이드 데이터 수집·훈련 센터를 최소 90곳 운영·계획 중이다.",
+      url: "https://en.sedaily.com/technology/2026/11/03/korea-opens-first-data-factory-to-train-humanoid-robots"
+    },
+    {
+      source: "Electrek",
+      topics: ["physical-ai", "robotics"],
+      title: "샤오미 휴머노이드, 전기차 공장서 8시간 풀 교대 근무 — 핵심 수치는 미공개",
+      summary: "샤오미가 휴머노이드가 센터콘솔 사이드 커버 분류 공정에서 8시간 근무를 채우는 영상을 공개했다. 이상 상황을 스스로 감지·수정하고 라인 제어 시스템과 협업했다고 주장했지만, 처리 수량·성공률·사람 개입 빈도·전원 공급 방식은 밝히지 않았다. 앞서 3월 나사 체결 공정 성공률 90.2%, 7월 98%를 공개한 바 있다.",
+      url: "https://electrek.co/2026/11/04/xiaomi-humanoid-robot-8-hour-shift-ev-factory"
+    },
+    {
+      source: "MIT Technology Review",
+      topics: ["physical-ai", "robotics"],
+      title: "샌프란시스코 집 청소하는 휴머노이드 — 실체는 원격 조종 + 데이터 수집",
+      summary: "스타트업 Tau Robotics가 키 약 137cm 휴머노이드로 가정 청소 서비스를 운영 중이다. 대부분의 작업은 사람이 머리·손목 카메라로 보며 원격 조종하고, 침대 정리·빨래 개기는 사람 동작을 그대로 따라 하게 하며, 매 청소가 차기 자율 모델의 학습 데이터가 된다. 진공·걸레질만 자율로 가능하며 지금까지 수행한 청소는 수백 건 수준이다. 요금은 로봇 2대 주간 청소 60달러다.",
+      url: "https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future"
     }
   ],
   social: [
     {
-      name: "Clément Delangue",
-      handle: "@ClementDelangue",
-      initials: "CD",
-      topics: ["ai"],
-      quote: "Super happy to share our intention to join forces with NVIDIA in a $12,930,300,000 acquisition 💛💚 10 years after starting Hugging Face, open-source AI is at an inflection point.",
-      context: "허깅페이스 CEO가 인수 발표 직후 올린 X 발언. 오픈소스 AI가 폐쇄형 API의 대안이 될 수 있음을 커뮤니티가 증명했지만 더 큰 스케일에는 더 많은 컴퓨트와 지원이 필요해 자신이 먼저 젠슨 황을 찾아갔다고 밝혔다.",
-      url: "https://x.com/ClementDelangue/status/2095482998674112733"
+      name: "Cristiano Amon",
+      handle: "Qualcomm CEO · 실적 발표",
+      initials: "CA",
+      topics: ["chips"],
+      quote: "We don't have a demand issue; it's a supply issue.",
+      context: "퀄컴 주가가 9% 넘게 빠진 날 CEO가 부진한 가이던스를 해명한 발언. 수요가 아니라 글로벌 메모리 부족이 실적을 누르고 있다는 주장으로, 같은 날 TSMC의 3D DRAM 검토 보도와 맞물려 메모리가 AI 인프라의 병목이 됐음을 보여준다.",
+      url: "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
     },
     {
-      name: "Jensen Huang",
-      handle: "NVIDIA 공식 발표",
-      initials: "JH",
+      name: "Dina Powell McCormick",
+      handle: "Meta President",
+      initials: "DM",
       topics: ["ai", "chips"],
-      quote: "Hugging Face will remain an open platform for the entire AI ecosystem. Developers will choose the models they want, the frameworks they want, the clouds and inference service providers they want and the computing platforms they want.",
-      context: "인수 발표문에서 엔비디아 CEO가 내놓은 약속. 자사 하드웨어 강제 없이 플랫폼 중립성을 유지하겠다는 것으로, 깃허브(MS)·Scale AI(메타) 인수 때 불거졌던 중립성 상실 우려를 정면으로 겨냥한 메시지다.",
-      url: "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
+      quote: "going to be harder",
+      context: "중간선거 이후 데이터센터 건설 전망을 묻는 질문에 메타 사장이 내놓은 짧은 답. 같은 선거에서 지역 주민투표 41건이 대부분 데이터센터 제한 쪽으로 결론 나면서, 하이퍼스케일러가 직접 인허가 리스크를 인정한 셈이다.",
+      url: "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
     },
     {
-      name: "Greg Brockman",
-      handle: "@gdb",
-      initials: "GB",
-      topics: ["ai"],
-      quote: "It's not unreasonable to feel that we are now in the AGI era. I think that if we fast-forward a couple of years, when we look back and say, 'When was it really that AGI was created?' I think it's going to be about this time, and I think it might be about this model.",
-      context: "GPT-6 Astra 출시에 맞춘 OpenAI 사장의 공개 발언. '세계 최고의 컴퓨터 사용 모델'을 내세우며 훗날 AGI의 기점으로 기록될 모델이라고 주장했다. 알트먼은 CNBC에 '새로운 역량 단계'라고 표현했다.",
-      url: "https://gizmodo.com/openai-claims-were-in-the-agi-era-with-release-of-gpt-6-astra-2000807013"
-    },
-    {
-      name: "George Kurtz",
-      handle: "@George_Kurtz",
-      initials: "GK",
+      name: "Eric Wallace",
+      handle: "OpenAI 연구원",
+      initials: "EW",
       topics: ["security", "ai"],
-      quote: "The real gap that I saw was that the attackers had frontier AI, and the defenders didn't. This isn't a copilot baked into someone else's intelligence. It is a frontier-class model built and trained by CrowdStrike on our data in partnership with NVIDIA.",
-      context: "Fal.Con 2026 키노트에서 크라우드스트라이크 CEO가 보안 전문가 1만 명 앞에서 한 발언. SafeMind를 '사이버보안 최초의 완결형 에이전틱 시스템'으로 규정하며 방어자에게도 프론티어 AI가 필요하다는 논리를 폈다.",
-      url: "https://siliconangle.com/2026/09/02/ai-control-plane-george-kurtz-safemind-falcon/"
+      quote: "we are now allocating a significant amount of our frontier compute towards discovering and patching vulnerabilities",
+      context: "GPT-6 Cyber 공개와 함께 OpenAI 연구원이 밝힌 방침. 오픈소스 코드의 취약점 발굴·패치에 프론티어 컴퓨트를 무상으로 상당량 투입하고 있다는 설명으로, 리눅스 커널 탐색에만 120만 달러가 들었다.",
+      url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough"
     },
     {
-      name: "Bernie Sanders",
-      handle: "@SenSanders",
-      initials: "BS",
-      topics: ["ai"],
-      quote: "Nearly every day, there is a frightening new story about how Big Tech companies are losing control of the technology they are developing, with potentially cataclysmic results.",
-      context: "초지능 금지법 발의를 알린 샌더스 상원의원의 공식 성명. 공동 발의자 카사르 하원의원은 '치명적 결과를 낳을 수 있는 최첨단 AI가 푸드트럭보다 덜 규제받고 있다'고 덧붙였다. Astra 출시와 같은 날 나온 정면 대치다.",
-      url: "https://www.commondreams.org/newswire/sanders-casar-introduce-legislation-to-ban-artificial-superintelligence-and-temporarily-pause-advanced-ai-development"
+      name: "Max Justicz",
+      handle: "Charge Robotics CTO",
+      initials: "MJ",
+      topics: ["security", "ai"],
+      quote: "some extremely crazy bugs to be found and exploited over the next few months",
+      context: "GPT 5.6 Sol로 약 2시간 만에 우분투 서버 장악이 가능한 취약점(CVE-2026-109518)을 찾아 데비안에 제보한 보안 연구자의 전망. 동시에 방어자용 Daybreak Blue가 최근 '너프'됐다고 비판하며, 접근을 제한하는 OpenAI 방식이 방어자에게 불리할 수 있다는 논쟁을 키웠다.",
+      url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough"
+    },
+    {
+      name: "Brian Donnelly",
+      handle: "Boston Dynamics 물류로봇 GM",
+      initials: "BD",
+      topics: ["robotics"],
+      quote: "every hour a robot sits idle is an hour of work that piles up on the dock",
+      context: "Stretch 2세대 출시에 맞춘 보스턴다이내믹스 물류로봇 총괄의 발언. 처리 속도보다 가동률(정비 시간 단축·2교대 배터리)을 재설계의 핵심으로 내세웠다 — 데모가 아니라 현장 운영에서 로봇의 가치가 갈린다는 메시지다.",
+      url: "https://www.robotics247.com/article/boston-dynamics-launches-stretch-gen-2-autonomous-mobile-trailer-unloading-robot"
     }
   ],
   company: [
     {
-      company: "NVIDIA",
-      logo: "NV",
-      type: "빅테크 · 반도체",
-      topics: ["chips", "ai"],
-      title: "허깅페이스 인수로 칩-소프트웨어-커뮤니티 수직 통합",
-      summary: "그로크 자산(200억 달러)에 이어 9개월 만의 두 번째 메가딜로 오픈소스 AI의 유통망을 손에 넣었다. 학습(DGX)-시뮬레이션(Omniverse)-로봇 추론(Jetson)에 이어 모델 유통 계층까지 확보한 셈으로, 규제 승인이 관건이다.",
-      url: "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
-    },
-    {
-      company: "Hugging Face",
-      logo: "HF",
-      type: "스타트업 · AI 플랫폼",
-      topics: ["ai", "robotics"],
-      title: "ARR 1.5억 달러에 129억 달러 밸류 — 로봇 축 LeRobot도 엔비디아 품으로",
-      summary: "작년 엔비디아의 5억 달러 인수 제안을 거절했다가 1년 만에 26배 가격에 합의했다. Pollen Robotics 인수와 LeRobot으로 구축한 로봇 오픈소스 축이 GR00T·Isaac과 한 지붕이 되면서, 로봇 학습 데이터 포맷 표준화가 가속될 전망이다.",
-      url: "https://x.com/ClementDelangue/status/2095482998674112733"
+      company: "Agility Robotics",
+      logo: "AG",
+      type: "스타트업 · 휴머노이드",
+      topics: ["physical-ai", "robotics"],
+      title: "'첫 순수 이족 휴머노이드 상장사' — 25억 달러 밸류로 나스닥 입성",
+      summary: "SPAC 상환율이 약 61.5%에 달해 조달액이 6월 전망 6억 2천만 달러에서 4억 6,500만 달러로 줄었지만 나스닥이 5.5% 빠진 날 상승 마감했다. 휴머노이드 기업 가치를 공개시장이 처음 매일 가격 매기게 됐다.",
+      url: "https://www.therobotreport.com/how-did-agility-robotics-perform-on-its-first-day-on-the-stock-market/"
     },
     {
       company: "OpenAI",
       logo: "OAI",
       type: "프론티어 랩 · AI",
       topics: ["ai", "security"],
-      title: "GPT-6 Astra 단계 출시 — 'AGI 시대' 마케팅과 사이버 게이팅 병행",
-      summary: "Critical 사이버 등급 탓에 2주 출시 보류 끝에 사이버 기능을 심사형 프로그램으로 게이팅하고 일반 배포를 시작했다. '가장 안전한 모델'과 '컴퓨터 사용 세계 최고'를 동시에 내세우는 이중 메시지가 특징이다.",
-      url: "https://gizmodo.com/openai-claims-were-in-the-agi-era-with-release-of-gpt-6-astra-2000807013"
+      title: "Daybreak 3단 구조로 사이버 역량 게이팅 — 공격형 모델은 Red 등급에만",
+      summary: "방어자용 Daybreak Blue에는 GPT 5.6 Sol을, 공격형 연구자용 Red에는 GPT-6 Cyber를 주는 등급제로 위험 역량을 관리한다. 참여는 신분증 인증을 거치며 참가자는 '수천 명' 규모다. 향후 독립 연구자·오픈소스 메인테이너로 확대하겠다고 밝혔다.",
+      url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough"
     },
     {
-      company: "CrowdStrike",
-      logo: "CS",
-      type: "보안 · AI",
-      topics: ["security", "ai"],
-      title: "SafeMind로 '에이전틱 보안' 선언 — 팔콘 플랫폼에 네이티브 탑재",
-      summary: "공격 AI가 디지털 트윈을 뚫고 방어 AI가 막는 자율 레드팀을 상품화했다. 별도 이용은 Project QuiltWorks 프로그램으로 제공하며, 엔비디아 Nemotron 기반 자체 프론티어 모델을 보안사가 직접 학습했다는 점을 차별점으로 내세운다.",
-      url: "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-launches-frontier-models-for-cybersecurity-with-nvidia/"
-    },
-    {
-      company: "PlusAI",
-      logo: "PA",
-      type: "스타트업 · 자율주행",
-      topics: ["physical-ai", "robotics"],
-      title: "SPAC 3수 끝에 상장 확정 — 2027년 공장 출고형 자율 트럭 목표",
-      summary: "소프트웨어 플랫폼 HyperFoundry로 이미 2,500만 달러 매출을 내는 상태에서 약 3억 달러를 조달한다. 로보택시 대비 주목도가 낮던 자율주행 트럭 부문에서 올해 가장 큰 상장 이벤트다.",
-      url: "https://www.therobotreport.com/plusai-takes-autonomous-trucking-public-via-spac-deal/"
-    },
-    {
-      company: "Crusoe",
-      logo: "CR",
-      type: "스타트업 · AI 인프라",
+      company: "TSMC",
+      logo: "TSM",
+      type: "파운드리 · 반도체",
       topics: ["chips"],
-      title: "제인스트리트 130억 달러 계약이 끌어올린 300억 밸류",
-      summary: "하이퍼스케일러가 아닌 단일 금융사가 5년 GPU 인프라에 130억 달러를 약정한 첫 사례를 만들었다. 대형 앵커 계약이 곧바로 30억 달러 펀딩과 밸류 3배로 이어지는 AI 인프라 자본 사이클을 보여준다.",
-      url: "https://ca.finance.yahoo.com/news/crusoe-signs-13-billion-ai-195326470.html"
+      title: "로직 전업 파운드리가 메모리로? 엔비디아발 3D DRAM 검토",
+      summary: "삼성·SK하이닉스·마이크론이 과점한 DRAM 시장에 수직 적층 방식으로 진입을 검토한다. 이미 SK하이닉스 차세대 HBM의 베이스 로직 다이를 맡고 있어 고객이자 경쟁자가 되는 구도이며, 수직 DRAM 특허는 있지만 양산 수율 확보가 관건이다.",
+      url: "https://in.investing.com/news/stock-market-news/tsmc-rises-on-report-of-potential-push-into-advanced-memory-for-nvidia-5687659"
+    },
+    {
+      company: "Boston Dynamics",
+      logo: "BD",
+      type: "로보틱스 · 물류",
+      topics: ["robotics"],
+      title: "Stretch 2세대로 '가동률' 승부 — 2023년 이후 누적 2천만 박스",
+      summary: "휴머노이드 Atlas에 관심이 쏠린 사이 이미 현장에 배치된 물류 로봇을 현장 데이터 기반으로 다시 설계했다. 고객사 정비팀이 직접 손볼 수 있는 모듈 설계와 무선 소프트웨어 업데이트가 핵심이며, 최근 로힛 프라사드를 CEO로 선임한 리더십 교체기에 나온 첫 신제품이다.",
+      url: "https://www.robotics247.com/article/boston-dynamics-launches-stretch-gen-2-autonomous-mobile-trailer-unloading-robot"
+    },
+    {
+      company: "Qualcomm",
+      logo: "QC",
+      type: "빅테크 · 반도체",
+      topics: ["chips"],
+      title: "메모리 부족에 발목 잡힌 가이던스 — 하루 9% 급락",
+      summary: "이번 분기 실적 전망이 시장 기대를 밑돌며 나스닥 급락의 방아쇠 중 하나가 됐다. 경영진은 수요가 아니라 메모리 공급 부족 문제라고 선을 그었지만, AI 수요가 메모리를 빨아들이며 스마트폰·PC 칩 업체로 비용 압박이 번지는 구조가 드러났다.",
+      url: "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
     }
   ],
   learn: [
     {
-      term: "모방학습",
-      full: "Imitation Learning (IL)",
-      category: "학습기법 · 7/60",
+      term: "E2E vs 모듈러",
+      full: "End-to-End vs Modular Pipeline",
+      category: "핵심개념 · 9/60",
       topics: ["physical-ai", "robotics"],
-      summary: "전문가의 시범 데이터를 보고 따라 하며 정책을 배우는 방식으로, LLM으로 치면 정답 시연을 그대로 학습하는 SFT에 해당한다. 가장 단순한 형태가 행동 복제(Behavior Cloning) — '이 상태에서 이 동작'을 지도학습으로 외우는 것이다. 치명적 약점은 분포 이탈(covariate shift): 시범 궤적에서 조금만 벗어나면 본 적 없는 상태에 빠지고 오류가 눈덩이처럼 커진다(고전적 처방이 DAgger). 보상 함수를 설계할 필요가 없어 RL보다 실용적이지만 시범자 수준을 넘기 어렵다는 상한도 있다. 어제 배운 텔레옵이 IL의 데이터 공급 파이프라인이고, ACT·Diffusion Policy·VLA까지 현대 로봇 조작 학습의 근간이 전부 IL 위에 서 있다. 오늘 엔비디아가 인수한 허깅페이스의 LeRobot이 바로 이 IL 파이프라인(수집-학습-평가)을 표준화한 라이브러리다.",
-      angle: "알파고 이미지 때문에 다들 RL이 로봇을 풀 거라 생각하지만, π0도 RLDX-1도 본질은 모방학습이다 — 걷기는 RL이 풀었고 손 조작은 IL이 풀고 있다는 분업 구도가 반직관적 훅.",
-      url: "https://arxiv.org/abs/1811.06711"
+      summary: "모듈러 방식은 인식(perception)→계획(planning)→제어(control)를 사람이 단계별로 나눠 설계하고, 단계 사이를 사람이 정한 인터페이스(바운딩 박스·경로·좌표)로 잇는다. E2E는 카메라 픽셀 같은 원시 입력에서 행동 출력까지를 신경망 하나가 통째로 학습한다 — 소프트웨어로 치면 손으로 짠 규칙 엔진 마이크로서비스 체인을 하나의 학습된 함수로 바꾸는 것이다. 모듈러는 디버깅·검증이 쉽지만 단계마다 정보가 손실되고 규칙이 롱테일 상황을 감당하지 못하며, E2E는 데이터만 충분하면 성능이 계속 오르지만 '왜 그렇게 했는지' 설명이 어렵다. 테슬라 FSD v12가 30만 줄 넘는 C++ 계획 코드를 신경망으로 대체한 것이 자율주행의 전환점이었고, VLA가 로봇에서 같은 전환을 반복하고 있다. 오늘 Tau Robotics·KIMM 데이터 팩토리 뉴스처럼 업계가 텔레옵 데이터 확보에 사활을 거는 이유도 E2E가 '데이터가 곧 코드'인 구조이기 때문이다.",
+      angle: "'자율주행이 10년 걸려 배운 교훈을 로봇은 3년 만에 반복 중' — 모듈러에서 E2E로 넘어간 FSD의 궤적을 휴머노이드 업계에 겹쳐 보는 비교가 테슬라 출신만 쓸 수 있는 훅.",
+      url: "https://arxiv.org/abs/2306.16927"
     },
     {
-      term: "Sim-to-Real 갭",
-      full: "Simulation-to-Reality Gap",
-      category: "핵심개념 · 8/60",
+      term: "RLDX-1",
+      full: "RLWRLD Dexterity Foundation Model",
+      category: "플레이어·모델 · 10/60",
       topics: ["physical-ai", "robotics"],
-      summary: "시뮬레이션에서 잘 작동하던 정책이 실물 로봇에서 성능이 급락하는 고질적 격차다. 원인은 시뮬레이터가 마찰·질량·접촉 같은 물리 파라미터와 센서 노이즈, 조명·렌더링을 현실과 똑같이 재현하지 못하기 때문이다. 대표 처방이 도메인 랜더마이제이션(2017) — 시뮬 파라미터를 학습 중에 무작위로 흔들어, 로봇 입장에서 현실이 '수많은 시뮬 변형 중 하나'로 보이게 만드는 기법이다. 걷기 같은 로코모션은 시뮬+RL로 사실상 풀렸지만, 접촉이 많고 힘 조절이 미세한 손 조작은 여전히 갭이 크다 — rlwrld가 실물 데이터 중심 'Dexterity-First'를 내세우는 배경이다. 소프트웨어의 '스테이징에서는 됐는데 프로덕션에서 터진다'와 정확히 같은 구조의 문제다.",
-      angle: "'데모(한 번 성공)와 솔브(재현)는 다르다' — 화려한 휴머노이드 영상을 볼 때 던져야 할 첫 질문은 '이 정책은 시뮬에서 왔는가, 실물 데이터에서 왔는가'라는 비평 프레임이 콘텐츠 훅.",
-      url: "https://arxiv.org/abs/1703.06907"
+      summary: "RLWRLD가 2026년 5월 6일 기술 보고서·코드·체크포인트를 함께 공개한 손 조작(dexterous manipulation) 특화 VLA다. 81억 파라미터 규모로 Multi-Stream Action Transformer 구조를 쓰며, 사전학습 체크포인트(PT)와 DROID·ALLEX·RoboCasa·LIBERO용 파인튜닝 버전이 허깅페이스에 올라 있다 — LLM으로 치면 베이스 모델과 태스크별 SFT 체크포인트를 함께 배포한 셈이다. 회사 측은 8개 공개 벤치마크에서 NVIDIA GR00T·Physical Intelligence π0를 앞섰고, WIRobotics ALLEX 휴머노이드 실물 과제에서 86.8% 성공률을 냈다고 주장한다(독립 재현 전의 자체 수치). 주의할 점은 가중치 라이선스(RLWRLD Model License v1.0)가 비상업·연구용이라 일반적 의미의 '오픈소스'와는 다르다는 것이다. 걷기·하역 같은 거친 조작이 상용화되는 동안(오늘의 Stretch 2세대) 정밀 손 조작은 여전히 미해결이라는 점이 'Dexterity-First' 포지셔닝의 근거다.",
+      angle: "'가중치 공개 = 오픈소스'인가? 로봇 파운데이션 모델들의 라이선스를 비교해 보면 개방성의 실제 수준이 드러난다 — 엔지니어 독자에게 먹히는 논쟁형 소재.",
+      url: "https://github.com/RLWRLD/RLDX-1"
     }
   ]
 };

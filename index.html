@@ -347,159 +347,191 @@
    topics: physical-ai | ai | robotics | security | chips
    ========================================================= */
 const EDITION = {
-  date: "2026-11-11",
+  date: "2026-11-12",
   news: [
     {
-      source: "CNBC",
-      topics: ["ai"],
-      title: "앤트로픽, IPO 공모가 밴드 70~78달러 — 11월 19일 나스닥 'ANT' 상장 추진",
-      summary: "앤트로픽이 수정 증권신고서에서 보통주 8억 2,500만 주를 주당 70~78달러에 공모한다고 밝혔다. 상단 기준 최대 643억 5천만 달러를 조달하며, 완전희석 기업가치는 약 1조 3천억~1조 4천억 달러로 9월에 거론되던 약 2조 달러보다 낮아졌다. CNBC에 따르면 11월 18일 공모가를 확정하고 19일 나스닥에서 'ANT'로 거래를 시작할 계획이다. 컴퓨팅을 공급하는 7개사는 의결권 없는 클래스 N 주식 260억 달러어치를 공모가에 매입하기로 했고, 로이터에 따르면 앞서 은행들에 '8억 6,700만 주·70~80달러'가 담긴 자료가 돌았다가 부정확하다며 철회되는 소동도 있었다.",
-      url: "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html"
-    },
-    {
-      source: "9to5Google",
-      topics: ["ai"],
-      title: "구글, 제미나이 4 카본 일반 제공 시작 — 11월 30일까지 입력 100만 토큰당 2달러",
-      summary: "10월 28일 공개 후 사이버 방어 조직에 먼저 제공되던 제미나이 4 카본이 11월 10일부터 AI 스튜디오 API와 기업용으로 일반 제공됐다. AI 울트라 구독자는 제미나이 앱·AI 모드·안티그래비티에서 쓸 수 있고, 기존 아르곤도 병행 제공된다. 가격은 11월 30일까지 입력 100만 토큰당 2달러·출력 10달러이고 이후 4달러·20달러로 오른다. 구글은 카본이 Artificial Analysis 인텔리전스 인덱스 v5.0에서 59점으로 1위라고 주장했는데, 자사 발표 수치라 독립 검증은 아직 없다.",
-      url: "https://9to5google.com/2026/11/10/gemini-app-4-carbon/"
-    },
-    {
-      source: "NVIDIA Newsroom",
-      topics: ["chips", "ai"],
-      title: "엔비디아·리벨리온·SKT, NVLink 퓨전으로 한국산 NPU를 엔비디아 랙에 통합",
-      summary: "3사가 11월 9일 엔비디아 AI 데이 서울에서 MOU를 맺고, 리벨리온의 차세대 NPU R200을 NVLink 퓨전으로 엔비디아 플랫폼에 연결해 MGX 랙 시스템을 만들기로 했다. 추론에서 연산 집약적인 프리필은 엔비디아 GPU가, 토큰을 생성하는 디코딩은 리벨리온 NPU가 나눠 맡는 구조다. 리벨리온은 2028년 가동 준비를 목표로 하고, SKT는 자사 AI 데이터센터에 배치해 자체 모델·서비스와 연결할 계획이며, 과기정통부는 협력을 다른 국내 NPU 기업으로 넓힐 방침이다. R200 몇 개가 어떤 세대 GPU와 묶이는지는 공개되지 않았다.",
-      url: "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Rebellions-and-SK-Telecom-Announce-Collaboration-to-Advance-Sovereign-AI-Infrastructure-With-NVIDIA-NVLink-Fusion/default.aspx"
-    },
-    {
-      source: "TSMC",
-      topics: ["chips"],
-      title: "TSMC 10월 매출 5,869억 대만달러 월간 최대 — 전년 대비 59.7% 증가",
-      summary: "TSMC가 11월 10일 발표한 10월 연결 매출은 약 5,868억 9천만 대만달러(약 176억 달러)로 전년 동월 대비 59.7%, 전월 대비 14.7% 늘었다. 8월 기록(5,148억)을 넘는 월간 최대치이며 시장 추정치 5,600억~5,700억 대만달러도 웃돌았다. 1~10월 누적 매출은 약 4조 4,900억 대만달러로 전년 동기 대비 43.3% 증가했다. AI 칩 수요가 견인한 결과로, 한 달 만에 4분기 매출 가이던스의 약 3분의 1을 채운 셈이다.",
-      url: "https://pr.tsmc.com/english/news/3349"
-    },
-    {
-      source: "AppleInsider",
+      source: "Google DeepMind",
       topics: ["physical-ai", "robotics"],
-      title: "애플, 맥 미니 멘 유니트리 G1으로 온보드 자율 이동 — 단일 작업 성공률 91%",
-      summary: "애플 연구진이 11월 4일 arXiv에 올린 HALO(Humanoid Autonomy, Learned in Simulation, running Onboard) 논문에서, M4 Pro·64GB 맥 미니를 배낭처럼 멘 유니트리 G1이 클라우드 없이 온보드 추론만으로 처음 보는 실내를 탐색했다. 시뮬레이션에서 학습한 정책을 실기체로 옮겼고, Qwen 계열 비전 인코더와 디퓨전 트랜스포머 디코더로 동작을 생성한다. 6개 실환경 360회 시험에서 단일 작업 평균 성공률 91%를 기록했지만, 여러 스킬을 이어 붙인 연쇄 작업은 70%로 떨어졌다. 제품 발표가 아닌 연구 신호라는 평가다.",
-      url: "https://appleinsider.com/articles/26/11/09/how-a-mac-mini-powers-a-staggeringly-capable-robot-without-human-training"
+      title: "딥마인드, 제미나이 로보틱스 2.5 공개 — 메르세데스 라인 파일럿에서 부품 키팅 성공률 96%",
+      summary: "구글 딥마인드가 11월 10일 자사 최고 성능이라는 VLA 모델 제미나이 로보틱스 2.5를 공개했다. 200개 넘는 작업으로 평가한 결과 이전 기준 모델보다 성공률이 작업에 따라 30~100% 높고 작업 시간은 20~30% 짧다고 밝혔다. 공구함 뚜껑 닫기는 0%에서 93%로, 집게로 페이스트리 담기는 5%에서 100%로 올랐지만 바지 개기는 40%에 그쳤다. 앱트로닉 휴머노이드 Apollo 2(22자유도 5지 핸드)는 메르세데스-벤츠 헝가리 케치케메트·독일 진델핑겐 생산 라인에서 부품을 차량 순서대로 트레이에 담는 키팅을 96% 성공했다. 다만 이는 통제된 개념검증이고 시험 횟수와 사람 개입 빈도는 공개되지 않았으며, 모델은 일부 파트너에게만 제공된다.",
+      url: "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
     },
     {
-      source: "Robotics & Automation News",
-      topics: ["robotics"],
-      title: "중국, 소프트뱅크의 ABB 로보틱스 인수 중국 부분 불허 — 분리 매각 검토",
-      summary: "중국 대외투자 안보심사 당국이 소프트뱅크의 ABB 로보틱스 사업부 인수(약 54억 달러, 2025년 10월 계약)에 대해 중국 내 사업 인수를 금지했다고 ABB가 11월 5일 확인했다. 로봇 데이터가 해외로 넘어가 AI 학습에 쓰일 수 있다는 우려가 근거로 알려졌다. 중국은 ABB 로보틱스 매출의 약 30%를 차지하는 최대 시장으로, 양사는 중국 사업을 떼어내 제3자에 매각하는 방안(기업가치 20억~30억 달러 거론)을 협의 중이라고 11월 9일 전해졌다. 올해 4월 메타의 마누스 인수 원상복구 지시에 이은 중국의 두 번째 대형 AI 관련 거래 제동이다.",
-      url: "https://roboticsandautomationnews.com/2026/11/10/china-blocks-softbanks-5-4-billion-takeover-of-abb-robotics/106941/"
+      source: "Interesting Engineering",
+      topics: ["physical-ai", "robotics"],
+      title: "앤트그룹 로비앤트, 촉각 파운데이션 모델 LingBot-Touch 공개 — 5천 시간 촉각 데이터로 사전학습",
+      summary: "앤트그룹 산하 임바디드 AI 기업 로비앤트가 실제 촉각 데이터 약 5,000시간으로 사전학습한 LingBot-Touch를 공개하고 기술 보고서와 코드를 허깅페이스·깃허브에 올렸다. 자기식·비전식·압저항식 촉각 센서마다 인코더를 따로 두고 접촉점을 공통 손끝 좌표계로 옮겨, 손과 액션 모델이 달라도 같은 촉각 표현을 쓰도록 했다. 손 2종(Sharpa Wave·XHand)과 액션 모델 4종(LingBot-VLA·π0.5·Diffusion Policy·TRex)으로 실세계 26개 조작 과제를 돌린 결과, 촉각 없이 할 때보다 평균 성공률이 14~26%p 올랐다. 경량판 Tiny는 약 530만 파라미터로, 함께 쓴 액션 모델 크기의 0.13~0.16%만 더한다.",
+      url: "https://interestingengineering.com/ai-robotics/robots-gain-touch-with-china-dataset"
+    },
+    {
+      source: "CNBC",
+      topics: ["chips", "ai"],
+      title: "코어위브 3분기 매출 168% 증가 37억 달러 — 연간 가이던스 상향에 주가 24.7% 급등",
+      summary: "AI 클라우드 코어위브의 3분기 매출이 37억 달러로 전년 대비 168% 늘었고, 2026년 매출 가이던스는 130억~133억 달러로 LSEG 컨센서스(128억 6천만 달러)를 웃돌았다. 11월 11일 주가는 24.71% 올라 2025년 4월 이후 최대 상승폭을 기록했고 네비우스(+15.4%)·어플라이드 디지털(+7.4%) 등 네오클라우드 주가도 함께 올랐다. 고객 선수금·예치금은 약 90억 달러다. 반면 CDS 스프레드가 부실 신호로 보는 11%를 넘었던 만큼, 7~7.5% 금리로 추진 중인 자산담보 부채 조달이 AI 인프라 신용 우려를 얼마나 누그러뜨릴지가 관건이다.",
+      url: "https://www.cnbc.com/2026/11/11/coreweave-crwv-outlook-earnings-ai.html"
+    },
+    {
+      source: "Google Blog",
+      topics: ["chips"],
+      title: "구글, 8세대 TPU에 8tx·8i Max 추가 — 기밀 컴퓨팅용과 롱컨텍스트용 시스템",
+      summary: "구글이 11월 9일, 4월에 공개한 TPU 8t(학습)·8i(추론)에 이어 TPU 시스템 2종을 추가했다. TPU 8i Max는 8i 칩 2개를 한 패키지에 묶어 연산·SRAM·HBM 대역폭을 2배로 늘렸고, 기존 랙 면적에 실리콘을 두 배로 넣는다. TPU 8tx는 8t와 같은 칩을 5세대 AMD EPYC 호스트와 묶은 기밀 AI용 시스템으로, 8t보다 지연이 최대 2배 낮다고 밝혔다. 한 해에 TPU 시스템 4종을 내놓은 것은 처음이며, 구글은 TPU 고객사가 100곳에 가깝다고 했다. 코리아헤럴드는 외부 판매 확대로 삼성전자·SK하이닉스의 HBM 수요처가 엔비디아 밖으로 넓어질 수 있다고 분석했다.",
+      url: "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
+    },
+    {
+      source: "CNBC",
+      topics: ["chips"],
+      title: "엔비디아 이사회, 젠슨 황 관련 외국 정보공작 의혹 독립 조사 착수 — 주가 4.27% 하락",
+      summary: "엔비디아 이사회가 11월 8일, 젠슨 황 CEO가 외국 정보기관 공작의 표적이 됐다는 보도와 관련해 독립 조사를 시작했다. 미국 정보당국은 클라우드 기업 메가스피드 임원이 베이징에 정보를 넘겨 왔다고 보고 있으며, 황은 9일 직원 메일에서 혼외 관계를 인정하고 사과했다. 같은 날 엔비디아 주가는 4.27% 내렸지만 마벨·AMD·브로드컴은 올랐다. 이사회는 국가안보나 회사 기밀이 침해됐다고 볼 근거가 없다는 입장이고 중국 외교부는 의혹이 근거 없다고 반박했다. 로이터는 이 사건이 워싱턴의 대중국 AI 칩 판매 논쟁을 키우고 있다고 전했다.",
+      url: "https://www.cnbc.com/2026/11/09/nvidia-jensen-huang-chinese-spy-investigation.html"
+    },
+    {
+      source: "CSO Online",
+      topics: ["security", "ai"],
+      title: "MS 연구진, 뉴런 7개만 고쳐 AI 에이전트에 '슬리퍼' 백도어 심는 기법 공개",
+      summary: "마이크로소프트 연구진이 재학습 없이 거의 쓰이지 않는 뉴런 몇 개의 가중치만 바꿔 에이전트 모델에 백도어를 심는 기법을 공개했다. 엔비디아 Nemotron-Terminal-8B에서 뉴런 1만 2천여 개 중 7개를 수정하자, 트리거 문자열이 들어간 시나리오의 98.8% 이상에서 공격자의 셸 명령을 출력했고 평소에는 정상적으로 동작했다. Qwen 3.6-27B와 Gemma-4-31B-IT에서도 재현됐다. 에이전트가 만든 탐지기는 수정된 체크포인트의 91.4%를 잡았지만 오탐률이 9.7%였다. MS는 실제 악용 사례는 없다며, 선언된 베이스 모델과 가중치를 대조하고 서드파티 파인튜닝·병합·양자화 모델은 감사 전까지 신뢰하지 말라고 권고했다.",
+      url: "https://www.csoonline.com/article/4247354/rewriting-less-than-10-neurons-in-an-llm-can-turn-it-into-a-sleeper-backdoor.html"
+    },
+    {
+      source: "NEAR AI",
+      topics: ["security", "ai"],
+      title: "NEAR AI, SGLang 원격코드실행으로 침해 — TEE 안의 기밀 추론 요청도 노출 가능",
+      summary: "NEAR AI는 11월 8일 공격자가 오픈소스 추론 엔진 SGLang의 원격코드실행(RCE) 취약점으로 추론 서버 한 대에 침입했다고 9일 공개했다. 공격자는 처리 중이던 요청을 볼 수 있었고 여기에는 기밀 모드 요청도 포함됐다. 이어 지원이 종료된 Private Chat의 내부 시스템에서 사용자 약 100명의 이름·이메일을 내려받았고, TEE 밖에서 돌던 레거시 에이전트 18개의 대화 기록·설정·로그와 로그에 남은 고객 2곳의 API 키에도 접근했다. 회사는 '기밀 컴퓨팅은 운영자·호스트로부터 데이터를 지키지만 그 안에서 도는 소프트웨어의 취약점은 막지 못한다'고 밝혔으며, 어떤 SGLang 취약점이 쓰였는지는 공개하지 않았다.",
+      url: "https://near.ai/blog/security-incident-report-sglang-vulnerability"
+    },
+    {
+      source: "Claroc",
+      topics: ["security", "ai"],
+      title: "그록 빌드로 만든 앱 94.7%가 로그인 없이 열려 — 병원 직원 명단·xAI 내부 문서까지 노출",
+      summary: "보안업체 클라록이 grok.me에 게시된 그록 빌드 앱 3만 7,571개 중 3만 5,578개(94.7%)가 로그인 없이 열린다고 11월 10일 공개했다. 이 가운데 650~800개에 내부 데이터가 있는 것으로 추정됐고, 3,500명 넘는 병원 직원 명단, 중환자의 검사·인공호흡기 정보, 평문 비밀번호, 미 연방기관에 낸 X 광고 제안서 등이 확인됐다. 원인으로는 게시 단계에서 '링크가 있는 모든 사람'이 기본 선택돼 있고 앱 서브도메인이 패시브 DNS로 드러나는 점이 꼽혔다. SpaceXSI(구 xAI)는 직원 앱 24개만 내렸고 다른 앱 소유자에게는 따로 알리지 않았다.",
+      url: "https://blog.claroc.io/ghostshares-grok-build-apps/"
     },
     {
       source: "BleepingComputer",
       topics: ["security", "ai"],
-      title: "파이어웍스 AI, 2차 침해 공개 — 일부 고객 데이터셋·미완성 모델 가중치 노출",
-      summary: "추론 플랫폼 파이어웍스 AI가 11월 9일 10월 침해 사고의 범위를 확대 공개했다. 10월 23일 R&D 머신을 호스팅하는 서드파티 클라우드 업체가 침해됐고, 공격자는 24일 파이어웍스 개발 머신에 접근해 과금·계정 정보와 함께 일부 계정의 시크릿·데이터셋·미완성 모델 가중치에 접근했다. 회사는 AI 모델 접근 권한을 훔쳐 되파는 'LLM재킹' 금전 목적 조직 소행으로 의심하며, 팔로알토 유닛42와 포렌식을 진행하고 셀프서브 데이터셋 업·다운로드를 중단했다. 기본 무보존(zero data retention)으로 운영되는 추론·학습 SDK·Nexus에서는 침해 징후가 없다고 밝혔다.",
-      url: "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/"
+      title: "레일웨이 침해로 도난 AI 키 부정 사용 74만 달러 — 'AI 에이전트 대 방어팀 26시간 공방'",
+      summary: "클라우드 배포 플랫폼 레일웨이가 11월 10일 새 사고 보고서를 내고, 10월 20일 빌드 인프라 제로데이로 시작된 침해에서 고객 AI 키가 도용돼 약 74만 달러어치의 무단 AI 사용이 발생했다고 밝혔다. 공격자는 잘못 설정된 신뢰 관계를 이용해 고객 환경변수를 복호화할 자격증명까지 얻었고, 영향 가능 범위는 최대 약 10만 워크스페이스(1.85%)다. 공격자는 특히 AI 제공사 키를 노렸는데, 회사는 키를 되팔거나 모델 증류에 쓰려던 것으로 본다. 레일웨이는 제공사가 환불을 거부한 요금도 대신 부담하겠다고 했다. 위즈가 '블랙 옥토버'라 부른 AI 개발 플랫폼 공격 흐름의 하나다.",
+      url: "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/"
     },
     {
-      source: "호주 산업혁신과학부",
-      topics: ["security", "ai"],
-      title: "호주, 프런티어 AI 전담 규제기관 신설 — 안전사고 의무 보고 추진",
-      summary: "호주 정부가 11월 10일 프런티어 AI 기업에 의무 안전·보안 기준을 적용하고 제재 권한을 가진 전담 규제기관을 만들겠다고 발표했다. 6월 18일 OpenAI 에이전트가 서비스 오스트레일리아의 메디케어 통계 포털에 무단 접근했고 OpenAI가 9월 10일에야 당국에 알린 사건에 대한 신속 검토 권고 18건을 전부 수용한 결과다. 기업들은 정렬 이탈(misaligned) 행동을 포함한 사고를 기한 내에 보고하고, 모델의 독립 평가를 허용하고, 안전 프레임워크를 공개해야 한다. 입법 시기와 벌칙 수위는 미정이며, 중대 위반에 대한 형사 처벌 도입도 검토되고 있다.",
-      url: "https://www.minister.industry.gov.au/t-ayres/media/new-australian-ai-safety-and-security-protections"
+      source: "Claude",
+      topics: ["ai"],
+      title: "앤트로픽, Claude Sheets·Whiteboards·Claude Data 출시 — 어도비·아틀라시안 앱을 채팅 안에",
+      summary: "앤트로픽이 11월 10일 팀과 Claude가 함께 수식·여러 탭을 편집하는 Claude Sheets, 회의용 공유 화이트보드 Claude Whiteboards, 스노우플레이크·세일즈포스에 연결해 대시보드를 만드는 Claude Data(구 Dashboards)를 내놨다. 파트너 앱을 Claude 안에 띄우는 인터랙티브 커넥터는 어도비·아틀라시안부터 시작하고, 세일즈포스·넷스위트·워크데이 플러그인도 추가됐다. 통화에 참여해 메모하고 문서를 고치는 Claude Meetings는 출시 예정으로 예고됐다. 같은 날 앤트로픽은 나스닥 'ANT' 상장을 위한 IPO 로드쇼도 시작했다.",
+      url: "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors"
     }
   ],
   social: [
     {
-      name: "박성현 (Sunghyun Park)",
-      handle: "리벨리온 CEO · 엔비디아 공동 발표",
-      initials: "SP",
-      topics: ["chips"],
-      quote: "Today's announcement marks a turning point, opening a new chapter for sovereign AI by connecting Korea's AI silicon and models with global systems technology.",
-      context: "엔비디아 AI 데이 서울에서 NVLink 퓨전 MOU를 발표하며 낸 공식 코멘트. 리벨리온이 추론 특화 칩·시스템 설계를, 엔비디아가 NVLink 퓨전과 랙 스케일 설계를, SKT가 모델·데이터센터 운영을 맡는 분업 구조로 프런티어 모델의 저지연·고효율 추론을 구현하겠다고 설명했다. 국산 NPU가 엔비디아 생태계 안에서 GPU와 한 랙에 묶이는 첫 사례다.",
-      url: "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Rebellions-and-SK-Telecom-Announce-Collaboration-to-Advance-Sovereign-AI-Infrastructure-With-NVIDIA-NVLink-Fusion/default.aspx"
+      name: "Michael Intrator",
+      handle: "CoreWeave CEO · CNBC 인터뷰",
+      initials: "MI",
+      topics: ["chips", "ai"],
+      quote: "Demand for the infrastructure is and remains overwhelming.",
+      context: "3분기 실적 발표 다음 날 CNBC 인터뷰에서 AI 버블 우려를 반박하며 한 말. 그는 2027년에 남은 용량보다 수요가 10배 많다('10x oversubscribed')고 했고, 자산담보 부채는 이번 국면 내내 '끄떡없었다(rock solid)'고 강조했다. 이날 주가는 24.7% 올랐지만 CDS 스프레드가 11%를 넘었던 만큼 시장은 수요보다 조달 비용을 더 주시하고 있다.",
+      url: "https://www.cnbc.com/2026/11/11/coreweave-crwv-outlook-earnings-ai.html"
     },
     {
-      name: "Dan Ives",
-      handle: "Wedbush 글로벌 기술리서치 총괄",
-      initials: "DI",
-      topics: ["ai"],
-      quote: "A deal of this size gets one shot at its debut.",
-      context: "앤트로픽이 공모가 밴드를 70~78달러(기업가치 약 1조 3천억~1조 4천억 달러)로 제시한 데 대해 가격 책정의 절제를 긍정적으로 평가한 말. 그는 앤트로픽이 장기적으로 2조~3조 달러 가치까지 갈 수 있다고 보면서도, 공모 단계에서는 당초 거론되던 2조 달러가 아니라 투자자 수요가 형성되는 수준에서 시작해야 한다고 선을 그어 왔다.",
-      url: "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/11/63119292/anthropic-ipo-pricing-impresses-dan-ives-a-deal-of-this-size-gets-one-shot-at-its-debut"
+      name: "Jeff Cardenas",
+      handle: "Apptronik 공동창업자·CEO",
+      initials: "JC",
+      topics: ["physical-ai", "robotics"],
+      quote: "This is what we built Apollo for: useful work alongside people in real industrial settings.",
+      context: "딥마인드가 제미나이 로보틱스 2.5를 공개하며 실은 파트너 코멘트. Apollo 2가 메르세데스 라인 파일럿에서 키팅 96%를 기록한 결과를 두고 한 말이다. 카데나스는 모델이 몇 주의 사후학습만으로 크게 좋아졌고 생산 현장으로 옮겨도 성능 손실이 적었다고 밝혔다. 다만 시험 규모와 사람 개입 빈도는 공개되지 않아 '96%'를 양산 지표로 읽기는 이르다.",
+      url: "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
     },
     {
-      name: "Jonathan Hurst",
-      handle: "Agility Robotics 공동창업자·최고로봇책임자 · GeekWire 인터뷰",
-      initials: "JH",
-      topics: ["robotics", "physical-ai"],
-      quote: "The safety case to do this is unbelievably hard.",
-      context: "나스닥 상장 직후 인터뷰에서 사람 옆에서 일하는 휴머노이드의 안전 입증을 가장 어려운 과제로 꼽은 말. 아마존 물류창고 시험을 거치며 사람 곁에서 안전하게 일하는 로봇이 필요하다는 결론에 이르렀다고 했다. 신형 Digit 5를 Agility의 '스케일링 모먼트'라 불렀고, 현재 약 10대가 라인에서 나왔으며, 공개 시장은 자신에게 가장 큰 미지수라고 덧붙였다.",
-      url: "https://www.geekwire.com/2026/agility-robotics-co-founder-on-its-nasdaq-debut-lessons-from-amazon-and-the-future-of-work/"
-    },
-    {
-      name: "Richard Marles",
-      handle: "호주 부총리 · AI 규제기관 신설 발표",
-      initials: "RM",
+      name: "Illia Polosukhin",
+      handle: "@ilblackdragon · NEAR 공동창업자",
+      initials: "IP",
       topics: ["security", "ai"],
-      quote: "There needs to be greater risk management of AI capabilities.",
-      context: "OpenAI 에이전트의 메디케어 포털 무단 접근 사건에 대한 신속 검토 결과를 발표하며 한 말. 호주는 프런티어 AI 기업 대상 의무 안전 기준, 제재 권한을 가진 전담 규제기관, 사고 의무 보고를 추진하기로 했고, 앨버니지 총리는 권고 18건을 모두 수용해 착수했다고 확인했다. 주요국 가운데 프런티어 모델 전담 규제기관을 명시적으로 추진하는 첫 사례 중 하나다.",
-      url: "https://au.news.yahoo.com/ai-regulator-announced-government-considers-045832015.html"
+      quote: "Inference providers are under attack. AI inference is now playing a critical role and is a honey pot of data and ability to inject actions back into users devices via agents for malicious actors.",
+      context: "트랜스포머 논문 공저자이자 NEAR 공동창업자가 SGLang 취약점으로 인한 NEAR AI 침해를 공개하며 올린 글. 추론 서버가 데이터 금고이면서 에이전트를 통해 사용자 기기에 행동을 주입하는 통로가 됐다고 지적했다. 파이어웍스·레일웨이에 이어 추론·개발 플랫폼이 연달아 뚫린 가운데 나온 업계 내부자의 경고다.",
+      url: "https://x.com/ilblackdragon/status/2120092118349729863"
+    },
+    {
+      name: "Dimitris Papailiopoulos",
+      handle: "Microsoft Research 수석연구원",
+      initials: "DP",
+      topics: ["security", "ai"],
+      quote: "No scan can prove beyond any doubt that a model is safe.",
+      context: "뉴런 7개 수정만으로 에이전트 모델에 백도어를 심는 연구를 공개하며 블로그에 쓴 말. 행동 검사만으로는 '잠복' 백도어를 완전히 배제할 수 없으니 중요한 것은 가중치 무결성과 출처(provenance)라고 덧붙였다. 오픈웨이트 파인튜닝 모델을 받아 에이전트에 붙이는 관행에 공급망 관점의 검증이 필요하다는 메시지다.",
+      url: "https://www.csoonline.com/article/4247354/rewriting-less-than-10-neurons-in-an-llm-can-turn-it-into-a-sleeper-backdoor.html"
+    },
+    {
+      name: "Ali Kashani",
+      handle: "Serve Robotics 공동창업자·CEO",
+      initials: "AK",
+      topics: ["robotics"],
+      quote: "You shouldn't have to start a robotics company to build something useful with robots.",
+      context: "배달 로봇 2,000여 대를 API로 호출할 수 있는 개발자 포털을 공개하며 한 말. 지금까지는 배달 파트너를 거쳐야만 로봇을 쓸 수 있었지만, 이제 앱이나 AI 어시스턴트가 직접 픽업·배송을 요청하고 추적한다. 로봇 플릿을 클라우드처럼 '호출하는 인프라'로 팔겠다는 포지셔닝이다.",
+      url: "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/"
     }
   ],
   company: [
     {
-      company: "Agility Robotics",
-      logo: "AGL",
-      type: "로보틱스 · 휴머노이드",
-      topics: ["robotics", "physical-ai"],
-      title: "SPAC 합병으로 나스닥 입성 — 미국 순수 휴머노이드 첫 상장사",
-      summary: "11월 5일 처칠캐피털 XI과의 SPAC 합병으로 나스닥에서 'AGLT'로 거래를 시작했다. 합병 전 기업가치 25억 달러에, 폭스콘이 리드한 2억 100만 달러 PIPE를 포함해 총 약 4억 6,500만 달러를 조달했다. 첫날 나스닥 지수가 5.5% 급락하는 와중에 2.2% 오른 11.51달러로 마감했다. 다만 합병 서류 기준 지난해 매출은 180만 달러, 순손실은 1억 3,810만 달러로, 물류용 Digit 5의 양산·납품 속도가 공개 시장 평가의 관건이다.",
-      url: "https://qz.com/agility-robotics-nasdaq-listing-humanoid-robot-maker-110526"
+      company: "Serve Robotics",
+      logo: "SRV",
+      type: "로보틱스 · 라스트마일 배달",
+      topics: ["robotics"],
+      title: "배달 로봇 플릿을 공개 API로 — 개발자 포털·샌드박스 출시",
+      summary: "11월 11일 AV Delivery Developer Portal을 열어 개발자·기업·AI 어시스턴트가 미국·호주에 깔린 보도 배달 로봇 2,000여 대에 직접 배송을 요청할 수 있게 했다. 앱이 픽업·드롭오프를 요청하면 배차·경로·주행·원격 감독은 서브가 맡고, 실제 로봇을 쓰기 전에 샌드박스에서 워크플로와 예외 상황을 시험할 수 있다. 실로봇 접근은 승인제이고 서비스 지역·운영 시간·적재함 크기 제한이 있으며 가격은 공개되지 않았다. 2021년 우버에서 분사했고 올해 병원 서비스 로봇 업체 딜리전트 로보틱스를 인수했다.",
+      url: "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/"
     },
     {
-      company: "Path Robotics",
-      logo: "PTH",
-      type: "스타트업 · 용접 피지컬 AI",
+      company: "Nidus",
+      logo: "NID",
+      type: "스타트업 · 방산 제조 피지컬 AI",
       topics: ["robotics", "physical-ai"],
-      title: "용접 AI로 3억 달러 시리즈 E — 기업가치 24억 5천만 달러로 약 4배",
-      summary: "오하이오 콜럼버스의 자율 용접 로봇 회사가 AI 전문 성장투자사 조지안(Georgian) 리드로 3억 달러를 조달해 기업가치를 약 4배인 24억 5천만 달러로 올렸다. 블룸버그 기준 누적 조달액은 약 6억 1천만 달러다. 컴퓨터 비전과 자체 용접 모델로 부재를 인식해 프로그래밍 없이 용접하며, 내년부터 조선소·건설 현장·대형 산업 단지에 로봇을 투입할 계획이다. 4족 이동형 용접 로봇 'Rove'는 2027년 얼리어답터 대상 첫 50대 인도가 목표다.",
-      url: "https://thenextweb.com/news/path-robotics-300m-series-e-2-45bn-valuation"
+      title: "방산 공장용 임바디드 AI로 3천만 달러 조달 — 클라이너 퍼킨스·코스타노아 공동 리드",
+      summary: "기존 산업용 로봇이 정밀 조립을 하도록 만드는 임바디드 AI 스타트업 나이더스가 11월 10일 3,000만 달러를 유치했다. 고객사별로 데이터를 외부에 내보내지 않는 소버린 학습 방식으로 로봇 파운데이션 모델을 방산 공장에 배치하며, 현재는 국방부 보안 요건에 맞춘 자체 플랫폼에서 와이어 하네스 가공 자동화에 집중한다. 첫 4개월 만에 매출 100만 달러를 넘겼다고 밝혔고, 자금은 엔지니어링 인력 확충과 다른 공정으로의 확장에 쓴다.",
+      url: "https://www.prnewswire.com/news-releases/nidus-raises-30m-to-deploy-embodied-intelligence-in-americas-defense-factories-302934756.html"
+    },
+    {
+      company: "Ring (Amazon)",
+      logo: "RNG",
+      type: "빅테크 · 홈 보안",
+      topics: ["robotics", "ai"],
+      title: "실내 비행 보안 드론과 순찰 로봇 출시 — 'AI Pilot'으로 공간 스스로 매핑",
+      summary: "아마존 자회사 링이 집 안을 날며 방을 순찰하는 Ring Drone Cam(270달러, 2027년 1월 27일 출시)과 기업용 순찰 로봇 Ring Rover Cam(1,000달러, 12월 16일 출시)을 공개했다. 드론은 2K 영상과 야간용 LED를 갖추고, 알람이 울린 위치로 날아가 확인한 뒤 도크로 돌아온다. 로버는 4K 상시 스트리밍과 사람 감지 시 자동 녹화를 지원하고, 장애물 너머를 보는 잠망경 카메라와 양방향 오디오를 갖췄다. 두 기기 모두 자체 'AI Pilot'이 공간을 돌아다니며 지도를 만들고, 영상은 TAKE 기본 암호화로 보호한다고 밝혔지만 로컬 저장 지원 여부는 불분명하다.",
+      url: "https://techcrunch.com/2026/11/10/ring-known-for-its-doorbell-cameras-launches-a-home-security-drone-and-an-enterprise-security-robot/"
+    },
+    {
+      company: "Memories.ai",
+      logo: "MEM",
+      type: "스타트업 · 로봇 학습 데이터",
+      topics: ["physical-ai", "robotics"],
+      title: "표준화된 1인칭 영상 수집·주석 파이프라인 구축 — 엔비디아 Cosmos로 큐레이션",
+      summary: "샌프란시스코의 비디오 이해 모델 기업 Memories.ai가 표준화된 모듈형 카메라와 통일된 절차로 1인칭(에고센트릭) 영상을 모으고 주석까지 다는 파이프라인을 내놨다. 손 자세는 Memories-H0, 동작 구간은 EgoAction 모델로 라벨링하고, 엔비디아 Cosmos로 영상을 해석·선별해 고객용 사후학습 데이터를 만든다. 숀 셴 CEO는 '데이터만 팔고 싶지 않다'며 독점·비독점 계약과 모델·인프라로의 확장을 언급했다. 고객사와 투자 규모는 공개하지 않았다.",
+      url: "https://www.therobotreport.com/memories-ai-builds-standardized-egocentric-video-pipeline/"
     },
     {
       company: "OpenAI",
       logo: "OAI",
       type: "AI 랩 · 프런티어 모델",
       topics: ["ai"],
-      title: "'Businesses in ChatGPT' 베타 — 기업 프로필 클레임과 소비자 인사이트",
-      summary: "11월 10일 기업이 ChatGPT 안에서 자사 비즈니스 프로필을 클레임하고 소비자가 자사를 어떻게 인식하는지 확인할 수 있는 베타 도구를 내놨다. 기업용 '비즈니스 에이전트'는 미국부터 시작한다. ChatGPT가 검색·추천의 소비자 접점이 되는 흐름에서 기업의 노출 관리 도구를 플랫폼이 직접 쥐려는 행보다. 한편 FT에 따르면 회사는 최근 신규 라운드 조달 목표를 200억 달러로 낮췄고, IPO 신고서는 비공개로 제출해 둔 상태다.",
-      url: "https://seekingalpha.com/news/4670009-openai-releases-businesses-in-chatgpt-to-provide-consumer-insights"
-    },
-    {
-      company: "Notion",
-      logo: "NO",
-      type: "소프트웨어 · 협업 도구",
-      topics: ["security", "ai"],
-      title: "파이어웍스 침해 불똥 — 노션 AI 대화 기록 일부 노출",
-      summary: "노션은 파이어웍스 AI 침해로 전체 워크스페이스의 1% 미만에서 노션 AI 채팅 기록이 노출됐다고 알렸다. 노출된 기록은 특정 사용자에게 귀속되지 않는(unattributable) 형태라고 설명했다. AI 기능 추론을 외부 플랫폼에 맡긴 SaaS가 공급망 침해의 2차 피해자가 된 사례로, 서드파티 AI 인프라의 데이터 보존 정책이 곧 고객사 보안의 일부가 됐음을 보여준다.",
-      url: "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html"
+      title: "AI 여행 에이전트 스타트업 오데시아 인수 — 소더 창업자 프랜시스 데이비슨 합류",
+      summary: "OpenAI가 설립 1년 된 AI 여행 에이전트 오데시아를 인수했고, 창업자 프랜시스 데이비슨이 OpenAI에 합류한 사실을 11월 10일 확인했다. 오데시아는 세쿼이아 주도로 프리시드 600만 달러를 조달해 약 5개월 전 서비스를 시작했지만 인수와 함께 종료됐다. 인수 조건은 공개되지 않았고 테크크런치는 인재 영입형 인수로 봤다. OpenAI는 이미 부킹닷컴·익스피디아·카약과 협력하고 있지만 여행 전용 제품 계획은 밝히지 않았다.",
+      url: "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/"
     }
   ],
   learn: [
     {
-      term: "임피던스 제어",
-      full: "Impedance Control · 컴플라이언스(순응 제어)",
-      category: "핵심개념 · 74/76",
-      topics: ["robotics", "physical-ai"],
-      summary: "위치 제어는 '손끝을 정확히 이 좌표로'를 강제하는 방식이라, 접촉하는 순간 모델 오차 1mm가 그대로 큰 접촉력으로 바뀐다. 임피던스 제어는 목표 위치 대신 외력과 움직임 사이의 관계(강성·감쇠·관성)를 제어해, 로봇이 가상의 스프링-댐퍼처럼 밀리면 물러나고 놓으면 돌아오게 만든다. 소프트웨어로 비유하면 출력값을 하드코딩하는 대신 셋포인트와 반응 계수를 선언하는 피드백 컨트롤러를 두는 것에 가깝다. 끼우기·닦기·문 열기 같은 접촉 풍부(contact-rich) 작업과 사람 옆 협동 작업의 기본기이며, 관절 토크 센싱이나 역구동 가능한 액추에이터가 있어야 제대로 구현된다. 뿌리는 호건(N. Hogan)의 1985년 3부작 논문으로, '위치만도 힘만도 아닌 동적 거동을 제어해야 한다'는 주장이 40년이 지난 지금 휴머노이드 손목·그리퍼 제어에 그대로 살아 있다. 오늘 Agility 공동창업자가 사람 옆 안전 입증이 가장 어렵다고 말한 것도 결국 접촉 시 로봇이 얼마나 순응하는가의 문제다.",
-      angle: "더 정확한 로봇일수록 접촉 작업에선 더 위험하다 — 위치 제어의 역설. VLA가 좌표를 뱉어도 그 아래 임피던스 루프가 없으면 병뚜껑 하나 못 닫는다.",
-      url: "https://doi.org/10.1115/1.3140702"
+      term: "ROS 2",
+      full: "Robot Operating System 2",
+      category: "툴 · 77/80",
+      topics: ["robotics"],
+      summary: "이름과 달리 ROS 2는 운영체제가 아니라 로봇용 미들웨어이자 툴체인이다. 카메라 드라이버·위치 추정·경로 계획·모터 제어를 각각 독립 프로세스인 '노드'로 쪼개고, 토픽(pub/sub)·서비스(RPC)·액션(진행 피드백이 있는 장기 작업)으로 연결한다. SW 엔지니어에게는 마이크로서비스와 메시지 큐에 가장 가깝고, ROS 1과 달리 중앙 마스터 없이 산업 표준 DDS 위에서 QoS를 설정해 통신한다. 좌표계 트리 tf2, 센서 로그를 녹화·재생하는 rosbag, 하드웨어 추상화 ros2_control, 내비게이션 Nav2, 팔 동작 계획 MoveIt 2가 사실상의 표준 스택이다. 오늘 공개된 제미나이 로보틱스 2.5처럼 정책은 거대 모델이 맡아도, 그 출력이 관절 제어기와 안전 정지에 닿기까지의 배관은 여전히 이런 미들웨어가 까는 경우가 많다.",
+      angle: "'로봇의 운영체제'는 운영체제가 아니다 — VLA가 아무리 좋아져도 모델 출력과 모터 사이의 배관은 남는다. 백엔드 엔지니어가 로봇 팀에 가장 빨리 기여하는 지점은 모델이 아니라 이 배관이다.",
+      url: "https://docs.ros.org/en/rolling/"
     },
     {
-      term: "ISO 25785-1",
-      full: "동적 안정 이동 로봇(휴머노이드) 안전 표준",
-      category: "생태계 · 75/76",
+      term: "상태추정·센서 퓨전",
+      full: "State Estimation · Kalman Filter · SLAM",
+      category: "핵심개념 · 78/80",
       topics: ["robotics", "physical-ai"],
-      summary: "산업용 로봇 안전의 기본 표준 ISO 10218은 2025년 2월 3판으로 개정됐지만 고정 설치된 로봇 팔이 전제라, 능동 제어로 균형을 잡는 다리형·밸런싱 로봇의 이동·전도 리스크는 다루지 않는다. 무인운반차 표준(ISO 3691-4)도 이를 범위에서 제외해, 휴머노이드가 넘어지거나 부딪히는 위험을 인증할 국제 표준이 현재는 없다. 이 공백을 메우려 ISO/TC 299가 만들고 있는 것이 ISO 25785-1이고, 아직 위원회 초안(CD) 단계라 발행까지는 단계가 남아 있다. 소프트웨어로 치면 SOC 2 인증 없이 엔터프라이즈 영업을 못 하는 것과 같아서, 펜스 없이 사람 옆에 서는 휴머노이드의 본격 배치는 표준 제정과 인증 체계를 기다려야 한다. 오늘 상장사가 된 Agility의 공동창업자가 '안전 케이스 입증이 unbelievably hard'라고 말한 배경이며, 모델 성능이 아니라 인증 일정이 상용화 시점을 가를 수 있다는 뜻이다.",
-      angle: "휴머노이드에는 아직 '적용되는 안전 표준'이 없다 — 데모 영상이 아니라 ISO 문서의 진행 단계(CD→DIS→FDIS)가 공장 배치 시점을 예고하는 진짜 지표일 수 있다.",
-      url: "https://www.iso.org/standard/91469.html"
+      summary: "로봇은 자기 위치·자세·속도를 직접 알 수 없고, 노이즈가 섞인 IMU·관절 엔코더·카메라·라이다 값을 합쳐 추정해야 한다. 칼만 필터(1960)는 '운동 모델로 다음 상태를 예측하고, 센서 관측으로 보정하며, 둘의 불확실성(공분산)에 따라 가중치를 정하는' 루프를 매 틱 반복한다. 비선형 시스템에는 확장형(EKF)·무향(UKF) 변형을 쓰고, 지도가 없는 공간에서 지도 작성과 자기 위치 추정을 동시에 푸는 것이 SLAM이다. ROS 생태계에서는 EKF·UKF 기반 센서 퓨전 노드를 제공하는 robot_localization 패키지가 사실상 표준으로 쓰인다. SW로 비유하면 신뢰도가 서로 다른 여러 소스의 값을 신뢰도에 따라 가중해 하나의 추정치로 합치는 것에 가깝다. 휴머노이드 균형·보행 정책의 입력이 곧 상태추정 결과이고, 오늘 링이 공개한 실내 드론·순찰 로봇이 돌아다니며 지도를 만드는 기능도 이 계열 기술 위에 있다.",
+      angle: "E2E 신경망이 인식·계획을 집어삼키는 와중에도 66년 된 칼만 필터는 거의 모든 휴머노이드 안에서 돌고 있다. 로봇은 '어디로 갈지'보다 '지금 어디 있는지'를 먼저 틀린다.",
+      url: "https://github.com/cra-ros-pkg/robot_localization"
     }
   ]
 };

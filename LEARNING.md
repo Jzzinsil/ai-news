@@ -137,6 +137,15 @@
 | 79 | 실시간 액션 청킹 (Real-Time Chunking, RTC) | 학습기법 | 액션 청크를 실행하는 동안 다음 청크를 미리 추론하고, 이미 실행 중인 부분과 매끄럽게 이어 붙이는(inpainting) 기법. 추론 지연 때문에 청크 경계에서 로봇이 멈칫·튀는 문제를 해결 (Physical Intelligence, 2025) | #25 ACT·#27 플로매칭 뒤에 숨은 '추론 지연' 문제. 모델이 커질수록 느려지는 VLA를 실시간 로봇에 붙이는 엔지니어링 — LLM 스트리밍·스펙큘레이티브 디코딩과 대비하기 좋은 소재 | done |
 | 80 | 모션 리타게팅 (Human-to-Robot Retargeting) | 학습기법 | 사람 모션캡처·영상의 관절 궤적을 체형·자유도·관절 한계가 다른 로봇 몸으로 옮기는 변환. 손(#42)·전신(#29) 모두 해당하며, 에고센트릭 데이터(#39)를 로봇 학습에 쓰기 위한 필수 단계 | "사람 영상이 무한하다"는 서사의 숨은 비용. 사람과 로봇의 몸이 다르면 데이터가 그대로 쓰이지 않는다 — 임보디먼트 갭을 구체적으로 보여주는 콘텐츠 | done |
 
+### Phase 11 — 심화 확장 5 (81~84) · 2026-11-15 추가 (todo 소진으로 클라우드 루틴이 보충)
+
+| # | 용어/주제 | 분류 | 한 줄 정의 | 왜 중요한가(콘텐츠 앵글) | status |
+|---|---|---|---|---|---|
+| 81 | 온디바이스 VLA 추론 (양자화·LoRA·엣지 컴퓨트) | 하드웨어 | 수십억 파라미터 VLA를 클라우드가 아니라 로봇 몸 안의 엣지 컴퓨터(Jetson Thor 등)에서 돌리기 위한 양자화·저랭크 파인튜닝·경량화 기법 묶음. OpenVLA(7B)는 양자화 서빙으로 성공률 손실 없이 메모리를 줄일 수 있음을 보임 | "LLM은 클라우드에서 느려도 되지만 로봇은 네트워크가 끊겨도 움직여야 한다." 범용 LLM이 로봇을 직접 조종하는 흐름(#63) 속에서도 온보드 소형 모델이 남는 이유 — #19 Jetson Thor·#79 RTC와 세트 | done |
+| 82 | 파지 계획 (Grasp Planning) & Dex-Net | 핵심개념 | 물체의 깊이 영상·형상에서 '어디를 어떻게 잡을지'를 고르는 문제. 버클리 Dex-Net(2017~2019)은 합성 데이터 수백만 건으로 학습한 GQ-CNN으로 처음 보는 물체 파지를 빈 피킹 수준까지 끌어올린 고전 | VLA 이전 '시뮬 합성 데이터로 로봇 스킬 학습'의 원조 성공 사례. 비닐 포장·얇은 부품처럼 그리퍼가 실패하는 물체가 왜 여전히 공장 휴머노이드의 난제인지 설명하는 출발점 — #11 Dexterity·#5 데이터 병목과 연결 | done |
+| 83 | 도메인 랜덤화 (Domain Randomization) | 시뮬레이터 | 시뮬레이터의 질감·조명·마찰·질량·지연 등을 무작위로 바꿔 학습시켜, 현실을 '수많은 변형 중 하나'로 보이게 만드는 Sim-to-Real 기법(Tobin et al. 2017, OpenAI 루빅스 큐브 손) | #8·#44 Sim2Real의 가장 오래되고 널리 쓰이는 처방. "현실을 정확히 흉내 내는 대신 시뮬을 일부러 엉망으로 만든다"는 반직관 | todo |
+| 84 | RaaS (Robot-as-a-Service) 비즈니스 모델 | 생태계 | 로봇을 판매하지 않고 시간·작업량 단위 구독으로 제공하는 모델. 초기 비용을 낮추고 유지보수·소프트웨어 업데이트를 공급사가 책임지며, 인건비 대비 단가로 가격을 매김 | 휴머노이드 '인건비 패리티' 계산(대당 가격 vs 연간 인건비)이 RaaS 가격 정책으로 이어지는 구조 — #70 플릿 러닝과 결합하면 데이터까지 공급사에 쌓인다 | todo |
+
 > 미반영(주제 무관): sudoremove "Claude/GPT/Grok/Kimi Tier List", "Stripe의 OpenRouter 인수", "Ranking Big Tech by Their Contribution to AGI", "지난 10년 최고의 IT 제품 티어리스트(에어팟·비전프로·챗지피티·클로드코드)", "Reflecting on AGI in Honor of the GPT-4o Astra Launch", "Society After the AI Boom: How Will Jobs and Safety Change?", "YC Startups: What Has Changed in the AI Era?", "Why Anthropic and OpenAI Say We Should Slow Down AI Development", "Introduction to Video Creation | Tried Seedance and Wan", "Part 2", "part1", "People Challenging Themselves in San Francisco @EO House", "Fine-tunable Open-weights Model | Thinking Machines Inkling 2 Small" / engiuniverse "GPT-6 Astra, Can It Handle Everything from Circuit Design to PCB?" — 피지컬 AI 커리큘럼 범위 밖(일반 제품 티어리스트·AGI 노동 회고·AI 경제 시나리오/오남용·안전 보고서·YC 창업 통계/AI 네이티브 조직론·RSI/AI 안전 가속-감속 논쟁·영상 생성 모델 비교/페이퍼→영상 자동화·State of AI 리포트 리뷰·Opus 5.5 에이전트/하네스/안티디스틸레이션·SF 창업자 인터뷰·LLM 회로/PCB 설계 자동화·오픈웨이트 LLM 학습 레시피/파인튜닝 서비스).
 
 ## 소스 요약

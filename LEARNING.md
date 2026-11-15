@@ -143,8 +143,17 @@
 |---|---|---|---|---|---|
 | 81 | 온디바이스 VLA 추론 (양자화·LoRA·엣지 컴퓨트) | 하드웨어 | 수십억 파라미터 VLA를 클라우드가 아니라 로봇 몸 안의 엣지 컴퓨터(Jetson Thor 등)에서 돌리기 위한 양자화·저랭크 파인튜닝·경량화 기법 묶음. OpenVLA(7B)는 양자화 서빙으로 성공률 손실 없이 메모리를 줄일 수 있음을 보임 | "LLM은 클라우드에서 느려도 되지만 로봇은 네트워크가 끊겨도 움직여야 한다." 범용 LLM이 로봇을 직접 조종하는 흐름(#63) 속에서도 온보드 소형 모델이 남는 이유 — #19 Jetson Thor·#79 RTC와 세트 | done |
 | 82 | 파지 계획 (Grasp Planning) & Dex-Net | 핵심개념 | 물체의 깊이 영상·형상에서 '어디를 어떻게 잡을지'를 고르는 문제. 버클리 Dex-Net(2017~2019)은 합성 데이터 수백만 건으로 학습한 GQ-CNN으로 처음 보는 물체 파지를 빈 피킹 수준까지 끌어올린 고전 | VLA 이전 '시뮬 합성 데이터로 로봇 스킬 학습'의 원조 성공 사례. 비닐 포장·얇은 부품처럼 그리퍼가 실패하는 물체가 왜 여전히 공장 휴머노이드의 난제인지 설명하는 출발점 — #11 Dexterity·#5 데이터 병목과 연결 | done |
-| 83 | 도메인 랜덤화 (Domain Randomization) | 시뮬레이터 | 시뮬레이터의 질감·조명·마찰·질량·지연 등을 무작위로 바꿔 학습시켜, 현실을 '수많은 변형 중 하나'로 보이게 만드는 Sim-to-Real 기법(Tobin et al. 2017, OpenAI 루빅스 큐브 손) | #8·#44 Sim2Real의 가장 오래되고 널리 쓰이는 처방. "현실을 정확히 흉내 내는 대신 시뮬을 일부러 엉망으로 만든다"는 반직관 | todo |
-| 84 | RaaS (Robot-as-a-Service) 비즈니스 모델 | 생태계 | 로봇을 판매하지 않고 시간·작업량 단위 구독으로 제공하는 모델. 초기 비용을 낮추고 유지보수·소프트웨어 업데이트를 공급사가 책임지며, 인건비 대비 단가로 가격을 매김 | 휴머노이드 '인건비 패리티' 계산(대당 가격 vs 연간 인건비)이 RaaS 가격 정책으로 이어지는 구조 — #70 플릿 러닝과 결합하면 데이터까지 공급사에 쌓인다 | todo |
+| 83 | 도메인 랜덤화 (Domain Randomization) | 시뮬레이터 | 시뮬레이터의 질감·조명·마찰·질량·지연 등을 무작위로 바꿔 학습시켜, 현실을 '수많은 변형 중 하나'로 보이게 만드는 Sim-to-Real 기법(Tobin et al. 2017, OpenAI 루빅스 큐브 손) | #8·#44 Sim2Real의 가장 오래되고 널리 쓰이는 처방. "현실을 정확히 흉내 내는 대신 시뮬을 일부러 엉망으로 만든다"는 반직관 | done |
+| 84 | RaaS (Robot-as-a-Service) 비즈니스 모델 | 생태계 | 로봇을 판매하지 않고 시간·작업량 단위 구독으로 제공하는 모델. 초기 비용을 낮추고 유지보수·소프트웨어 업데이트를 공급사가 책임지며, 인건비 대비 단가로 가격을 매김 | 휴머노이드 '인건비 패리티' 계산(대당 가격 vs 연간 인건비)이 RaaS 가격 정책으로 이어지는 구조 — #70 플릿 러닝과 결합하면 데이터까지 공급사에 쌓인다 | done |
+
+### Phase 12 — 심화 확장 6 (85~88) · 2026-11-16 추가 (todo 소진으로 클라우드 루틴이 보충)
+
+| # | 용어/주제 | 분류 | 한 줄 정의 | 왜 중요한가(콘텐츠 앵글) | status |
+|---|---|---|---|---|---|
+| 85 | 로봇 사이버보안 (ROS 2·DDS·OT 보안) | 생태계 | ROS 2의 전송계층 DDS는 기본 설정에서 인증·암호화가 꺼진 채 배치되는 경우가 많고, 공장 로봇은 IT가 아니라 OT(운영기술) 보안 영역 — 네트워크에 연결된 휴머노이드는 '움직이는 엔드포인트'가 된다 | 탈취 키로 AI 에이전트를 원격 조종한 최근 사례들과 로봇을 잇는 소재. "해킹당한 챗봇은 데이터를 유출하지만 해킹당한 휴머노이드는 사람을 민다" — #75 안전 표준·#77 ROS 2와 세트 | todo |
+| 86 | 핸드-아이 캘리브레이션 & 카메라 내·외부 파라미터 | 핵심개념 | 카메라 좌표계와 로봇 좌표계를 정렬하는 고전 기하 문제(AX=XB)와 렌즈 왜곡·초점거리 보정. 캘리브레이션이 틀어지면 VLA가 아무리 좋아도 집기가 mm 단위로 어긋난다 | "모델 성능 뒤에 숨은 밀리미터의 기초공사" — E2E 시대에도 남는 고전 기법(#78 상태추정)의 짝이자, 현장 데모 실패 원인의 단골 | todo |
+| 87 | 온보드 전력 예산 & 열 설계 | 하드웨어 | 휴머노이드는 배터리 용량(#72)만이 아니라 컴퓨트·모터가 한 몸에서 나눠 쓰는 전력과 발열 한계로 설계가 갇힌다. Jetson Thor급 보드와 수십 개 액추에이터의 와트 배분이 곧 성능 상한 | "로봇의 진짜 컨텍스트 윈도우는 와트다" — 온디바이스 추론(#81)과 액추에이터 병목(#40)을 전력이라는 한 축으로 묶는 관점 | todo |
+| 88 | 로봇 조작 벤치마크 지형도 (LIBERO · RoboCasa · SimplerEnv) | 벤치마크 | 시뮬 기반 조작 벤치마크 3대장 — LIBERO(지식 전이·평생학습), RoboCasa(주방 일상 과제 대규모), SimplerEnv(실물 평가와의 상관을 노린 시뮬 평가). 논문 수치가 어느 벤치에서 나왔는지가 비교의 전제 | #45 평가 문제·#76 RoboColosseum의 시뮬 쪽 짝. "같은 90%라도 벤치가 다르면 다른 숫자" — 데모·논문 비평 콘텐츠의 도구상자 | todo |
 
 > 미반영(주제 무관): sudoremove "Claude/GPT/Grok/Kimi Tier List", "Stripe의 OpenRouter 인수", "Ranking Big Tech by Their Contribution to AGI", "지난 10년 최고의 IT 제품 티어리스트(에어팟·비전프로·챗지피티·클로드코드)", "Reflecting on AGI in Honor of the GPT-4o Astra Launch", "Society After the AI Boom: How Will Jobs and Safety Change?", "YC Startups: What Has Changed in the AI Era?", "Why Anthropic and OpenAI Say We Should Slow Down AI Development", "Introduction to Video Creation | Tried Seedance and Wan", "Part 2", "part1", "People Challenging Themselves in San Francisco @EO House", "Fine-tunable Open-weights Model | Thinking Machines Inkling 2 Small" / engiuniverse "GPT-6 Astra, Can It Handle Everything from Circuit Design to PCB?" — 피지컬 AI 커리큘럼 범위 밖(일반 제품 티어리스트·AGI 노동 회고·AI 경제 시나리오/오남용·안전 보고서·YC 창업 통계/AI 네이티브 조직론·RSI/AI 안전 가속-감속 논쟁·영상 생성 모델 비교/페이퍼→영상 자동화·State of AI 리포트 리뷰·Opus 5.5 에이전트/하네스/안티디스틸레이션·SF 창업자 인터뷰·LLM 회로/PCB 설계 자동화·오픈웨이트 LLM 학습 레시피/파인튜닝 서비스).
 

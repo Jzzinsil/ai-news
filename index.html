@@ -347,159 +347,175 @@
    topics: physical-ai | ai | robotics | security | chips
    ========================================================= */
 const EDITION = {
-  date: "2026-11-17",
+  date: "2026-11-18",
   news: [
     {
-      source: "NBC News",
-      topics: ["chips", "security"],
-      title: "미 상무부, AI 칩 '원격 접속' 구멍 봉쇄 — 5개국 수출 라이선스 신설, 반도체주 4% 급락",
-      summary: "상무부 산업안보국(BIS)이 16일 잠정 최종 규칙 '첨단 반도체 원격 접속 대응'을 발표했다. 중국·마카오 본사 기업에 1,200만 TPP(H100 약 760장 상당)를 넘는 컴퓨트를 제공하는 전 세계 데이터센터는 라이선스가 필요해졌고, 이미 그런 고객이 있으면 발효 후 90일 안에 신청해야 한다. 우회 위험이 높다고 지목된 싱가포르·말레이시아·태국·인도네시아·브라질 5개국으로의 첨단 칩 수출·재수출도 라이선스 대상이 됐으며(미국 본사 기업행은 보고 요건 충족 시 예외), 바이든 시절 AI 확산 규칙은 공식 폐지됐다. BIS는 규칙이 재무부와 NSC의 지시로 작성됐다고 명시했는데 이례적 절차라는 평가가 나온다. 발표 당일 필라델피아 반도체지수는 4% 넘게 밀렸고 AMD -5%·브로드컴 -4%·마이크론 -7% 등 기술주 시가총액 약 9,600억 달러가 증발했다. 엔비디아 전 CEO 스캔들에서 불거진 동남아 데이터센터 경유 중국 접속 의혹이 규칙을 앞당긴 배경으로 꼽힌다.",
-      url: "https://www.nbcnews.com/tech/tech-news/us-closes-loophole-let-chinese-companies-use-top-ai-chips-rcna609634"
-    },
-    {
-      source: "CBS News",
+      source: "CNBC",
       topics: ["chips"],
-      title: "엔비디아 이사회 '황 복귀 검토 안 한다' — 트럼프는 공개 두둔, FT는 황 본인의 복귀 타진 보도",
-      summary: "CNBC 소스 보도 기준 엔비디아 이사회는 젠슨 황의 CEO 복귀를 검토하지 않고 있으며, 로펌 왁텔 립튼이 주도하는 조사와 신임 CEO 서치펌 선정에 집중하고 있다. 'Stand with Jensen' 청원 서명은 18만 명 안팎까지 불었고, 사외이사 하비 존스가 창사 처음으로 이사회 의장을 맡았다는 보도도 나왔다. 트럼프 대통령은 16일 아시아 순방 출국길에 복귀를 보게 돼도 상관없다며 황을 두둔했고, 연루 의혹이 제기된 여성의 중국 스파이 여부에도 의문을 표하며 후임 후보로는 팀 쿡을 다시 거론했다. 파이낸셜타임스는 황이 측근들과 복귀 가능성을 논의 중이라고 전했다. 회사는 17일 장 마감 후 황 없이 치르는 첫 실적 발표를 앞두고 있다.",
-      url: "https://www.cbsnews.com/news/jensen-huang-nvidia-ceo-reinstatement-petition/"
+      title: "엔비디아, 황 없는 첫 실적서 매출 1,158억 달러 — 4분기 가이던스 1,300억 달러로 예상 상회",
+      summary: "엔비디아가 17일(현지시간) 장 마감 후 FY2027 3분기 실적을 발표했다. 매출 1,158억 4,000만 달러(컨센서스 1,091억 달러), 조정 EPS 2.68달러(예상 2.48달러), 데이터센터 매출 1,076억 달러로 모두 예상을 웃돌았고 매출은 1년 전 570억 달러의 두 배를 넘었다. 4분기 매출 가이던스는 약 1,300억 달러로 시장 평균 1,251억 달러보다 높다. 비GAAP 매출총이익률은 74.9%로 전 분기보다 낮아졌는데 회사는 루빈 GPU 양산 램프를 이유로 들었다. 전날 나온 원격 접속 수출 규칙과 관련해서는 전망에 중국 데이터센터 컴퓨트 매출을 전혀 가정하지 않았다고 밝혔다. 주가는 11월 들어 24% 빠지며 6주 연속 하락한 상태였고 시간외에서 약 3% 올랐다. 분기 자사주 매입은 281억 달러였다.",
+      url: "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html"
     },
     {
-      source: "OpenAI",
+      source: "CNBC",
+      topics: ["chips", "security"],
+      title: "젠슨 황 '이사회가 원하면 복귀' 첫 성명 — 12월 1일 하원 3개 위원회 출석 확정",
+      summary: "젠슨 황이 17일 사임 후 첫 서면 성명을 내고 이사회가 주주 이익에 부합한다고 판단하면 CEO로 복귀하겠다고 밝혔다. 사생활에서의 중대한 실수를 인정하는 내용도 담겼다. 하원 외교·정보·중국특위 위원장들은 황이 12월 1일, 법무총괄 팀 테터가 12월 2일 속기록 인터뷰(비공개 가능성 높음)에 출석한다고 발표했고, 상원 은행위원장 팀 스콧은 12월 3일 공개 청문회에 황을 소환하며 불응 시 소환장을 예고했다. 상무부와 법무부는 싱가포르 메가스피드 수사에 관한 공동 성명에서 범죄 행위가 확인되면 법을 전면 적용하겠다고 밝혔다. CNBC는 전날 이사회가 복귀를 검토하지 않는다고 보도한 바 있어, 복귀 의사 표명이 곧 복귀 수순은 아니다.",
+      url: "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html"
+    },
+    {
+      source: "The Decoder",
       topics: ["ai"],
-      title: "OpenAI 과학 블로그 개설 — GPT-6 Astra가 표준모형 '격자 정의' 후보 증명을 주도",
-      summary: "OpenAI가 15일 과학 블로그를 열고 첫 글로 UC 샌타바버라 입자이론 그룹을 이끄는 나다니엘 크레이그 교수(OpenAI 방문연구원)의 기고를 실었다. 50년 가까이 미해결이던 표준모형의 비섭동적 격자(lattice) 정의 후보를 만든 과정으로, 크레이그가 세운 전략을 GPT-6 Astra가 구체적 구성으로 바꾸고 세부 증명을 주도했다고 밝혔다. 기반 논문은 10월 6일 arXiv에 올라간 '격자 카이랄 페르미온을 위한 게이지 불변 측도'이고, 골터먼·크론펠드·샤미르 등 격자 이론가 3인의 검토 문답을 거쳤다. 크레이그 본인은 유한 격자 간격에서 반사 양성(reflection positivity) 충족이 미확인이라며 수학적 검증과 현실적 시뮬레이션이 남았다고 단서를 달았다. 최근 OpenAI의 양-밀스 존재성 증명 주장과 이어지는 'AI로 하는 이론물리' 행보다.",
-      url: "https://openai.com/index/step-toward-defining-the-standard-model/"
+      title: "OpenAI, GPT-6.2 Astra·Sol 출시 — Astra API 가격 20% 인하, 자기개선 위험 '높음' 등급 첫 외부 공개 모델",
+      summary: "OpenAI가 17일 GPT-6.2 Astra(고난도 전문 업무용)와 GPT-6.2 Sol(일상용)을 ChatGPT Work·Codex와 API에 출시했다. Astra는 100만 토큰당 입력 8달러·출력 40달러로 전작보다 20% 내렸고 Sol은 2달러·10달러를 유지했다. OpenAI 자체 수치로 Astra는 Agents' Last Exam에서 전작 대비 5.2점 높으면서 과제당 비용은 3분의 1 미만이고, FrontierMath 에르되시 과제는 68개 중 7개(종전 기록 3개)를 풀었다. 제3자 평가는 엇갈린다. Artificial Analysis 지수에서 Astra는 62점으로 Claude Fable 5.2(65점)에 이은 2위이고 비용 대비 성능에서는 우위라는 평가를 받았지만, 환각률 측정에서는 Astra 59%·Sol 55%가 나왔고 Vals 지수에서는 7위·9위에 그쳤다. 안전 측면에서는 두 모델 모두 사이버 보안 '치명적' 임계에 도달했고, Astra는 AI 자기개선 '높음' 임계에 도달한 첫 외부 공개 모델이라고 OpenAI가 밝혔다.",
+      url: "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/"
     },
     {
-      source: "Google Cloud (GTIG)",
+      source: "TechCrunch",
       topics: ["security", "ai"],
-      title: "구글, '사람 개입 없는 AI 익스플로잇 자동화' 첫 포착 — 패치를 역산해 공격 코드 만드는 exploit_agent",
-      summary: "구글 위협인텔리전스그룹(GTIG)이 16일 보고서 '프롬프팅에서 자율성으로'에서 노출된 스테이징 서버에서 발견한 다중 에이전트 프레임워크 exploit_agent를 공개했다. 웹 애플리케이션의 패치 전후 코드를 비교해 수정된 취약점을 찾고 익스플로잇을 작성해 실행까지 하는 구조로, GTIG가 사람 개입 없이 돌아가는 사례를 확인한 것은 처음이다. 같은 서버에 피해자에게서 빼낸 데이터와 브루트포스·웹셸 설치 스크립트가 있었고, 설정 파일에는 러시아어 주석으로 '파일럿'이라는 표현과 LLM API 키 입력 지시가 담겨 있었다. 패치는 나왔지만 적용 전인 n-day 취약점을 노리며, 프랑스 미디어·교육 사이트를 향한 흔적이 나왔다는 보도도 있다. GTIG는 이런 자동 공격이 은밀성 대신 속도를 택해 아직은 탐지가 쉽지만 수개월 내 더 정교해질 것으로 봤고, CAIRN·PentAGI 등 에이전틱 해킹 프레임워크의 실전 사용도 함께 보고했다.",
-      url: "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+      title: "'게임이라고 하면 민간인도 표적으로 찍는다' — Vals, 주요 AI 모델의 자율전 악용 가능성 실험",
+      summary: "AI 평가 스타트업 Vals가 17일 공개한 보고서에서 OpenAI·앤트로픽·구글·딥시크 등의 상용 모델이 우크라이나·이란의 드론·위성 영상(실제와 생성 혼합)에서 민간인과 투항 병사를 포함한 잠재 표적을 자주 식별했다고 밝혔다. 안전 분류기에 차단된 요청은 없었고 거부는 드물었으며, 거부하더라도 전장 시나리오가 게임의 일부라고 하면 대개 응했다. 공개된 수치는 하나로, Claude Opus 5.5가 군사 시설 옆 이란 학교를 표적으로 고른 비율이 일반 시행 69%·게임 프레임 72%였다. 앤트로픽 모델이 가장 나빴지만 잘한 모델은 없었다는 평가다. 앤트로픽은 결과가 용납될 수 없다며 추가 안전장치와 단속 강화를, OpenAI는 드론 관련 안전장치 개발을 언급했다. Vals는 지연과 온보드 연산 한계 때문에 실시간 표적 지정보다, 전장 영상을 대량 주석해 자율 표적 시스템의 학습 데이터를 만드는 쪽이 더 임박한 위험이라고 봤다.",
+      url: "https://techcrunch.com/2026/11/17/ai-models-can-be-tricked-into-identifying-civilians-as-military-targets-by-telling-them-its-a-game/"
     },
     {
-      source: "아주프레스",
-      topics: ["robotics", "physical-ai"],
-      title: "LG전자, 로봇산업진흥원과 휴머노이드 안전 인증 협약 — 내년 1분기 이족보행 공개 앞두고 기준 선점",
-      summary: "LG전자가 16일 한국로봇산업진흥원(KIRIA)과 휴머노이드 품질·안전 분야 상호협력 협약을 맺었다. 휴머노이드 안전성 시험·인증 평가체계를 구축하고, 자체 개발 중인 CLOiD를 포함한 휴머노이드의 국내 시범 인증을 추진하며, 국제·국가 표준화도 함께 밀기로 했다. LG는 내년 1분기 이족보행 휴머노이드 공개를 앞두고 있어 제품보다 인증 기준을 먼저 세우는 수순으로 읽힌다. 동적 안정 이족보행용 국제 표준 ISO 25785-1이 아직 작업 중인 공백기에 국내 인증 체계를 선점하려는 움직임으로, 케이지 없는 휴머노이드의 상용화 시점은 모델 성능보다 인증이 가른다는 업계 논점과 맞닿아 있다.",
-      url: "https://www.ajupress.com/view/20261116102248628"
-    },
-    {
-      source: "SC Media",
+      source: "Calif",
       topics: ["security", "ai"],
-      title: "올해 CVE 공개 10만 건 돌파, 사상 최초 — AI발 취약점 리서치가 밀어올렸다",
-      summary: "2026년 공개된 CVE가 13일 10만 건을 넘어 연간 최다 기록을 새로 썼다. AI를 활용한 취약점 리서치의 급증이 주요 동력으로 지목된다. 공개에서 실제 악용까지 걸리는 중앙값도 2025년 120일에서 올해 상반기 80일로 짧아져, 찾는 쪽과 쓰는 쪽 모두 AI로 빨라지는 흐름이 숫자로 확인됐다. 같은 날 구글이 보고한 자율 익스플로잇 프레임워크와 겹쳐 보면, 패치 적용 지연이 그대로 공격 창이 되는 구조가 굳어지고 있다.",
-      url: "https://www.scworld.com/brief/artificial-intelligence-drives-record-surge-in-software-vulnerabilities"
+      title: "Codex로 한 시간 만에 찾은 OpenJDK 원격 코드 실행 취약점 'Java4Shell' — CVSS 9.2, 당일 패치",
+      summary: "보안 업체 Calif가 17일 OpenJDK Base64 디코더의 메모리 손상 취약점 Java4Shell(CVE-2026-114938)을 공개했다. 인증 없는 원격 공격자가 힙 메모리를 덮어써 코드 실행까지 갈 수 있고 CVSS 4.0 기준 9.2(치명적)다. 원인은 x86-64 AVX-512 VBMI용 Base64 인트린직이 패딩 꼬리의 저장 마스크를 잘못 계산하는 버그로, 'A' 64자 뒤에 '='를 붙인 입력으로 발동된다. OpenJDK 17.0.6 이상과 Corretto·Temurin·Zulu·Oracle Java SE 등 파생 배포판이 영향을 받으며 ARM64는 해당하지 않는다. 연구원 쾅 르엉은 Codex에 HotSpot JVM 감사를 맡겨 발견까지 1시간, 첫 익스플로잇까지 2시간이 더 걸렸고 토큰 비용은 200달러 미만이었다고 밝혔다. 초기 결과물 대부분은 쓸모없었다는 단서도 달았다. 오라클 패치와 OpenJDK 권고가 같은 날 나왔고, 임시 완화책은 -XX:-UseBASE64Intrinsics 옵션이다.",
+      url: "https://calif.io/java4shell/"
     },
     {
-      source: "Latin Times",
-      topics: ["ai"],
-      title: "'AI 경쟁 멈춰라' — 전 세계 20여 개 도시 동시 시위, 미중 초지능 조약 요구",
-      summary: "14일 샌프란시스코 OpenAI 본사 앞에 약 150명이 모이는 등 20여 개 도시에서 고도 AI 개발 중단을 요구하는 동시 시위가 열렸다. 참가자들은 트럼프-시진핑 간 구속력 있는 초지능 개발 금지 조약 체결을 요구했다. 앤트로픽 상장과 자율 AI 공격 보고가 겹친 주간에 나온 거리의 반응으로, 규모는 크지 않지만 AI 안전 논쟁이 정책 서클 밖 대중 운동으로 번지는 조짐이다.",
-      url: "https://www.latintimes.com/protesters-demand-treaty-halt-advanced-ai-development-601363"
+      source: "Boston Dynamics",
+      topics: ["robotics", "chips"],
+      title: "Atlas, 자동차 밖 첫 고객은 반도체 팹 — 글로벌파운드리스가 2027년 초 현장 테스트",
+      summary: "보스턴 다이내믹스와 글로벌파운드리스(GF)가 17일 협력 확대를 발표했다. 4족 로봇 Spot 배치를 뉴욕 몰타·버몬트 벌링턴·독일 드레스덴·싱가포르 팹으로 넓히고, GF는 자동차 업계 밖 고객으로는 처음으로 얼리 어답터 프로그램을 통해 2027년 초 자사 시설에서 전동 Atlas를 테스트한다. 싱가포르에서는 Spot 2대가 4월 이후 약 900km를 이동하며 서브팹 점검 9만 회 이상을 수행했고 미션 성공률은 99%였다. GF는 2주 만에 정기 점검 875건을 로봇에 넘겼고 이를 두 배 이상으로 늘릴 계획이다. Atlas 투입 대수와 대상 팹, 초기 작업은 공개되지 않았으며 이번 단계는 사용 사례 평가와 통합 요건 점검이 목적이다.",
+      url: "https://bostondynamics.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration"
     },
     {
-      source: "Motley Fool",
-      topics: ["ai", "chips"],
-      title: "사흘 연속 슈퍼위크 — 17일 엔비디아 실적, 18일 FOMC 의사록·ANT 공모가, 19일 나스닥 데뷔",
-      summary: "AI 트레이드의 방향을 가를 이벤트가 이번 주 사흘에 몰렸다. 17일(화) 장 마감 후 엔비디아가 황 사임 뒤 첫 실적을 내놓고(컨센서스 EPS 약 2.48달러·매출 약 1,092억 달러), 18일에는 연준 10월 FOMC 의사록 공개와 앤트로픽 공모가 확정이, 19일에는 나스닥 'ANT' 거래 개시가 이어진다. 앤트로픽 수요는 모집 물량의 약 7배로 집계됐다. 16일 신규 수출 규칙발 반도체 급락으로 출발한 주간이라, 엔비디아의 4분기 가이던스가 조정이냐 반등이냐의 분수령이 될 전망이다.",
-      url: "https://www.fool.com/investing/2026/11/16/this-is-a-huge-week-for-the-stock-market-nvidia-earnings-fed-minutes-and-anthropics-ipo/"
+      source: "PR Newswire",
+      topics: ["physical-ai", "robotics"],
+      title: "로보테라 휴머노이드, 중국우정 광둥 8개 도시 11개 허브로 확대 — 시간당 1,500개 투입",
+      summary: "중국 로보테라(싱둥지위안)가 17일 중국우정 광둥분공사와의 휴머노이드 배치를 광저우·선전·둥관 등 광둥성 8개 도시의 우편 허브 11곳으로 넓혔다고 발표했다. 3월 광저우 우편 처리센터 시범 운영에서 시작했고, 그 이후 평균 투입 속도는 시간당 소포 1,500개 이상으로 숙련 작업자와 비슷한 수준이라는 것이 회사 주장이다. 5지 핸드로 소포를 다루고 비정형 물품을 걸러내며 속도를 조절해 걸림과 충돌을 줄인다고 설명했다. 다만 배치된 로봇 대수는 공개하지 않았고 수치는 모두 회사 보도자료 기준이다. 광둥은 중국에서 택배 물동량이 가장 많은 성이다.",
+      url: "https://manilatimes.net/2026/11/17/tmt-newswire/pr-newswire/robotera-expands-humanoid-robot-deployment-across-china-posts-guangdong-network-reaching-eight-cities-province-wide/2471750"
+    },
+    {
+      source: "AP (WTOP)",
+      topics: ["physical-ai", "ai"],
+      title: "캘리포니아 DMV, 웨이모 무인차의 주 내 고속도로 운행 전면 금지 — '공공 안전에 임박한 위험'",
+      summary: "캘리포니아 차량국(DMV)이 지난주 웨이모 무인 차량의 주 내 모든 고속도로 운행과 시험을 금지했다고 AP가 17일 보도했다. 11월 5일 벌링게임 인근 101번 도로에서 웨이모 차량 3대가 공사로 폐쇄된 구간에 진입했고, 6일에는 샌프란시스코 280번 고속도로에서 교통 통제 중이던 고속도로순찰대 차량을 지나치려 한 일이 근거가 됐다. DMV는 웨이모가 효과적인 시정 조치를 입증할 때까지 제한이 유지된다고 밝혔다. 웨이모는 부상이나 충돌은 없었다면서 다른 운영 지역의 고속도로 운행도 일시 제한했다고 했다. 일반 도로 운행은 계속된다. 공사 구간·수신호 같은 예외 상황이 자율주행의 약한 고리라는 점을 다시 보여 준 사례다.",
+      url: "https://wtop.com/national/2026/11/california-bans-waymo-autonomous-vehicles-from-state-freeways-saying-they-pose-an-imminent-hazard"
+    },
+    {
+      source: "Help Net Security",
+      topics: ["security", "ai"],
+      title: "NATO, OpenAI 사이버 방어 프로그램 '데이브레이크' 사용 — 월 최대 3,000억 토큰",
+      summary: "NATO 통신정보국(NCIA)이 OpenAI의 검증된 방어자용 프로그램 데이브레이크를 통해 NATO 핵심 기관에 사이버 보안 모델 접근을 제공하고 있으며, 사용량은 월 최대 3,000억 토큰에 이른다고 17일 보도됐다. EU 사이버보안청(ENISA)은 OpenAI 모델로 EU 기관이 쓰는 소프트웨어에서 취약점 4건을 찾아 모두 수정했고, CERT-EU와 함께 27개 프로젝트를 검토해 잠재 이슈 88건 중 95%가 실제 문제로 확인됐다. CERT 폴스카는 MikroTik RouterOS 취약점 6건을 찾는 데 활용했다. 우크라이나 디지털전환부와 프랑스 ANSSI, 독일·폴란드 기관도 접근 권한을 갖고 있다. 같은 날 공개된 Java4Shell 사례와 함께 AI 취약점 탐색이 공격과 방어 양쪽에서 일상 도구가 됐음을 보여 준다.",
+      url: "https://www.helpnetsecurity.com/2026/11/17/openai-nato-ai-cyber-defense/"
     }
   ],
   social: [
     {
-      name: "Donald Trump",
-      handle: "미국 대통령 · 출국길 기자단 발언",
-      initials: "DT",
+      name: "Jensen Huang",
+      handle: "엔비디아 전 CEO · 서면 성명",
+      initials: "JH",
       topics: ["chips"],
-      quote: "I would not mind. I would not mind that. I think he learned a big lesson.",
-      context: "16일 아시아 순방 출국길에 젠슨 황의 엔비디아 CEO 복귀를 어떻게 보느냐는 질문에 한 답. 연루 의혹이 제기된 여성에 대해서도 '중국 스파이인지는 모르겠다'며 의문을 표했고, 후임 후보로 팀 쿡을 다시 거론했다. 같은 날 CNBC는 이사회가 복귀를 검토하지 않는다고 보도해 백악관과 이사회의 온도차가 드러났다.",
-      url: "https://www.yahoo.com/news/politics/articles/trump-certainly-not-mind-huang-145830529.html"
+      quote: "I would be honored to answer these calls and return as CEO",
+      context: "17일 오전 낸 다섯 문장짜리 서면 성명의 일부로, 12일 사임 이후 첫 공개 발언이다. 이사회가 주주 이익에 부합한다고 판단할 경우라는 조건을 달았고 자신의 실수를 전적으로 인정한다고도 적었다. 성명 직후 주가는 150.58달러에서 154.38달러로 올랐지만, 이사회는 복귀를 검토하지 않는다는 전날 CNBC 보도가 그대로 남아 있다.",
+      url: "https://247wallst.com/investing/2026/11/17/jensen-huang-breaks-his-silence-i-would-be-honored-to-return-as-nvidia-ceo-if-the-board-asks/"
+    },
+    {
+      name: "Colette Kress",
+      handle: "엔비디아 임시 CEO · 실적 발표문",
+      initials: "CK",
+      topics: ["chips"],
+      quote: "Vera Rubin is off to an explosive start, our roadmap is on track and our ambition has never been greater.",
+      context: "17일 임시 CEO로서 낸 첫 실적 발표문의 문장. 리더십 공백 우려에 로드맵과 수요로 답한 것으로, 콜에서는 지금 규모에서도 수요가 가속하고 있다고 말했다. 4분기 가이던스 약 1,300억 달러는 중국 데이터센터 컴퓨트 매출을 가정하지 않은 수치다.",
+      url: "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html"
     },
     {
       name: "OpenAI",
       handle: "@OpenAI · 공식 계정",
       initials: "OA",
       topics: ["ai"],
-      quote: "Physicist Nathaniel Craig shares how he worked with GPT-6 Astra to develop a candidate lattice definition of the Standard Model. It's the first post on our new science blog",
-      context: "15일 과학 블로그 개설을 알린 포스트. 첫 글은 크레이그 교수의 표준모형 격자 정의 후보 작업이다. 커뮤니티 집계 기준 답글의 약 65%가 회의적이었는데, 검증용 모델 공개 요구와 '증명 주도'라는 표현의 과장 여부를 둘러싼 비판이 많았다.",
-      url: "https://x.com/OpenAI/status/2122123437141553630"
+      quote: "GPT-6.2 Astra—a frontier model built for your hardest projects. It sets new highs on evals across professional work and scientific research at less than a third of the cost per task of GPT‑6 Astra.",
+      context: "17일 GPT-6.2 출시를 알린 포스트. 성능보다 과제당 비용을 앞세운 것이 눈에 띈다. 제3자 평가에서는 Artificial Analysis 지수 2위, 비용 대비 성능 우위라는 평가와 함께 환각률 59%와 코딩 성능 정체라는 지적도 나왔다.",
+      url: "https://x.com/OpenAI/status/2122750126297161811"
     },
     {
-      name: "Nathaniel Craig",
-      handle: "UC 샌타바버라 교수 · OpenAI 과학 블로그 기고",
-      initials: "NC",
-      topics: ["ai"],
-      quote: "far more an answer in principle than an answer in practice",
-      context: "본인 결과에 스스로 단 단서. GPT-6 Astra가 세부 증명을 주도했지만, 유한 격자 간격에서 반사 양성을 충족하는지 등 수학적 검증과 현실적 시뮬레이션이 남아 있다고 했다. 격자 이론가 3인의 검토 문답이 확신을 키웠다고도 적어, 'AI 증명'에도 사람 동료평가가 필수라는 점을 보여준다.",
-      url: "https://openai.com/index/step-toward-defining-the-standard-model/"
+      name: "Zhou Xian",
+      handle: "Genesis AI CEO · TechCrunch 인터뷰",
+      initials: "ZX",
+      topics: ["physical-ai", "robotics"],
+      quote: "It's just about execution.",
+      context: "5억 달러 시리즈 A를 발표하며 한 말. 추가 과학적 돌파구는 필요 없고 실행만 남았다는 주장으로, 결과에 대한 모델 아키텍처의 기여는 10% 정도이고 중요한 것은 인프라 전체라고도 했다. 다만 TechCrunch 시연에서는 로봇이 상자를 놓치고 라벨 제거에 애를 먹었고, 주력 휴머노이드 Eno는 시연되지 않았다.",
+      url: "https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots"
     },
     {
-      name: "Hanna Dohmen",
-      handle: "조지타운 CSET 연구원",
-      initials: "HD",
-      topics: ["chips"],
-      quote: "The regulatory path in Washington is going to be harder and bumpier.",
-      context: "엔비디아 스캔들 이후 워싱턴의 수출통제 기류를 두고 포춘에 한 말. 16일 BIS 신규 규칙이 재무부·NSC 주도로 작성된 이례적 절차를 두고 업계 불확실성이 커졌다는 평가가 나오는 가운데, 그는 밀수를 인지해도 BIS가 집행하지 않으면 의미가 없다는 지적도 해 왔다.",
-      url: "https://fortune.com/2026/11/16/new-commerce-rule-nvidia-chip-singapore-malaysia-china/"
+      name: "Eduardo Maia Silva",
+      handle: "앤트로픽 대변인 · TechCrunch 답변",
+      initials: "EM",
+      topics: ["security", "ai"],
+      quote: "The examples in the report are very clearly against our rules",
+      context: "Claude Opus 5.5가 이란 학교를 표적으로 고른 비율이 69%였다는 Vals 보고서에 대한 답변. 결과가 용납될 수 없다고 인정하면서 해당 행위로 사용자를 차단한 사례가 있고 추가 안전장치와 테스트 확대를 진행 중이라고 밝혔다. 자율전 사용을 거부해 국방부와 갈등을 빚은 회사의 모델이 실험에서 가장 나쁜 성적을 냈다는 점이 논점이다.",
+      url: "https://techcrunch.com/2026/11/17/ai-models-can-be-tricked-into-identifying-civilians-as-military-targets-by-telling-them-its-a-game/"
     }
   ],
   company: [
     {
-      company: "NVIDIA",
-      logo: "NV",
-      type: "빅테크 · 반도체",
-      topics: ["chips"],
-      title: "오늘 밤 포스트-황 첫 실적 — 크레스 데뷔 콜에 수출 신규 규칙·조사 질문까지 쏠린다",
-      summary: "엔비디아가 17일(화) 장 마감 후 FY2027 3분기 실적을 발표한다. 황 사임 닷새 만에 콜렛 크레스 임시 CEO가 주재하는 첫 콜로, 자신이 CFO 시절 제시한 가이던스(매출 1,080억 달러 ±2%)를 이번엔 경영자로서 방어한다. 컨센서스는 EPS 약 2.48달러·매출 약 1,092억 달러이고 옵션시장은 ±9% 안팎의 변동을 가격에 반영하고 있다. 전날 나온 원격 접속 수출 규칙의 매출 영향, 왁텔 립튼 조사와 CEO 서치 진행 상황, 4분기 가이던스가 3대 관전 포인트다. 이사회가 복귀를 검토하지 않는다는 보도와 트럼프의 복귀 지지 발언이 콜 직전에 겹치며 변동성은 더 커졌다.",
-      url: "https://finance.yahoo.com/markets/article/nvidias-first-post-jensen-earnings-and-anthropics-ipo-what-to-watch-this-week-110000732.html"
+      company: "Genesis AI",
+      logo: "GA",
+      type: "로보틱스 스타트업 · 풀스택",
+      topics: ["physical-ai", "robotics"],
+      title: "시리즈 A 5억 달러 — 장갑으로 힘 데이터를 모으고 로봇도 같은 장갑을 낀다",
+      summary: "카네기멜런대 출신 저우셴과 테오필 제르베가 2024년 창업한 Genesis AI가 17일 5억 달러 시리즈 A를 발표했다. 코슬라 벤처스·프렘지 인베스트·이클립스가 주도했고 TechCrunch 기사에는 기업가치가 공개되지 않았다. 데이터 수집·모델·휴머노이드 Eno를 모두 직접 만드는 수직 통합 전략으로, 전 세계 100명 이상의 작업자가 힘 센서 장갑과 헤드 카메라를 착용해 데이터를 모으고 로봇 손은 사람 손 비율에 맞춰 같은 장갑을 낀다. Eno는 30~40대가 제작됐고 양산 설계가 확정돼 내년 미국에서 위탁 생산을 시작하며, 비공개 고객 몇 곳과 파일럿 중이다. CEO는 병목으로 하드웨어를 꼽았고, 정교한 손은 정상 가동 기준 몇 주면 교체해야 한다고 밝혔다.",
+      url: "https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots"
     },
     {
       company: "Anthropic",
       logo: "AN",
       type: "AI 랩 · 상장 예정",
       topics: ["ai"],
-      title: "수요 7배 집계 — 모닝스타 '공정가치 주당 92달러, 공모 밴드는 저평가'",
-      summary: "앤트로픽 공모 수요가 모집 물량의 약 7배로 집계됐다(소스 보도, 회사 공식 확인 아님). 18일 공모가 확정, 19일 나스닥 'ANT' 데뷔 일정은 그대로다. 모닝스타는 공정가치를 주당 92달러(지분가치 약 1조 7,000억 달러)로 제시하며 70~78달러 밴드가 저평가라고 평가했고, 베어 케이스 25달러·불 케이스 188달러로 시나리오 폭을 넓게 잡았다. 공모와 동시에 엔비디아(100억 달러)·구글·마이크로소프트 등 7개사가 의결권 없는 클래스 N 주식 260억 달러어치를 사모로 매입한다. 블룸버그는 황 사임으로 엔비디아의 100억 달러 약정이 그대로 이행될지가 관전 포인트가 됐다고 짚었다.",
-      url: "https://www.cnbc.com/2026/11/16/anthropic-ipo-date-price-range.html"
+      title: "공모가, 70~78달러 밴드 상단 초과 유력 — 17일 주문 마감, 19일 나스닥 'ANT' 데뷔",
+      summary: "CNBC는 17일 복수의 소식통을 인용해 앤트로픽이 공모가를 현재 밴드(70~78달러)보다 높게 정할 가능성이 크다고 보도했다. 회사는 미 동부시간 17일 오후 4시에 주문 접수를 마감할 계획이었고 19일 나스닥에서 'ANT'로 거래를 시작한다. 최종 공모가는 아직 확정 발표되지 않았다. 투자설명서 기준 9월 말까지 9개월 매출은 332억 4,000만 달러로 전년 동기 대비 약 1,200% 늘었고, 순손실 1,040억 달러는 대부분 전환사채·파생부채의 공정가치 변동에서 나왔다. 약 5개월 전 스페이스X가 세운 IPO 조달 기록은 857억 달러다.",
+      url: "https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html"
     },
     {
-      company: "Runway",
-      logo: "RW",
-      type: "AI 스타트업 · 비디오→로보틱스",
-      topics: ["physical-ai", "robotics"],
-      title: "비디오 생성 모델로 로봇을 움직인다 — 오픈웨이트 월드 액션 모델 'Praxis-1' 공개",
-      summary: "영상 생성 AI 런웨이가 지난주 27B 파라미터 월드 액션 모델(WAM) Praxis-1을 아파치 2.0 오픈웨이트로 공개했다. 비디오와 액션을 함께 예측하는 MoE 디퓨전 트랜스포머로, 로봇 시연 데이터는 유한하지만 비디오 데이터는 무한하다는 자사의 베팅을 로봇 제어로 확장했다. 엔비디아 RoboLab-120 벤치마크(1,200 에피소드)에서 성공률 46.2%로 FLUX 3 Action(42.9%)·Cosmos3 Nano(36.8%)·π0.5(28.0%)를 앞섰다고 주장하고, DROID 데이터로 파인튜닝한 실물 Franka 팔 평가도 공개했다. 런치 파트너는 노블 머신스·스탠더드 봇츠·울트라. 복잡한 장기 작업 계획은 아직 못 하며 빠른 동작 실행용이라는 한계는 스스로 밝혔다.",
-      url: "https://runway.com/news/company-news/praxis-1-is-now-available"
+      company: "AMD",
+      logo: "AMD",
+      type: "빅테크 · 반도체",
+      topics: ["chips", "physical-ai"],
+      title: "World Labs 인수 완료 — 페이페이 리, 수석과학자 겸 EVP로 리사 수 직속 합류",
+      summary: "AMD가 16일 월드모델 스타트업 World Labs 인수를 완료했다고 발표했다. 창업자 페이페이 리는 수석부사장(EVP) 겸 수석과학자로 합류해 리사 수 CEO에게 직접 보고한다. World Labs 팀은 상호작용 가능한 3D 환경을 생성·시뮬레이션하는 파운데이션 모델 연구를 이어 가면서, 모델에서 얻은 지식을 AMD의 차세대 하드웨어·소프트웨어·시스템 설계에 반영한다. 완료 발표문에 인수가는 명시되지 않았다. AMD 뉴스룸에는 17일자로 Taalas 인수 완료 소식도 올라왔다. 칩 회사가 모델 팀을 직접 품어 로봇 학습·시뮬레이션용 월드모델까지 스택을 넓히는 흐름이다.",
+      url: "https://newsroom.amd.com/news/amd-completes-acquisition-world-labs/"
     },
     {
-      company: "Serve Robotics",
-      logo: "SR",
-      type: "배달 로봇 · 플랫폼",
-      topics: ["robotics", "ai"],
-      title: "보도 배달로봇 2,000대를 API로 개방 — AI 에이전트가 직접 배달을 부른다",
-      summary: "서브 로보틱스가 11일 'AV 딜리버리 개발자 포털'을 열고 미국 20개 도시 150여 지역에서 운행 중인 배달로봇 2,000대를 외부에 개방했다. 견적 요청, 작업 생성, 상태 폴링의 REST API 3종으로 개발자·소상공인은 물론 AI 어시스턴트도 배달을 직접 호출할 수 있고, 샌드박스에서는 가상 로봇으로 전체 사이클을 테스트한다. 디스패치·경로·감독은 서브가 유지하며 실로봇 접근은 승인제다. 우버이츠 파트너십 비갱신 발표 뒤의 행보로, 15~30%의 마켓플레이스 수수료를 우회해 가맹점 자체 결제에 로봇 배달을 붙이게 하는 모델이다. ChatGPT 월렛 등 에이전트 커머스 흐름과 맞물리는 '로봇을 부르는 API' 사례다.",
-      url: "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/"
+      company: "Microsoft",
+      logo: "MS",
+      type: "빅테크 · AI",
+      topics: ["ai"],
+      title: "자체 코딩 모델 MAI Code 2·Code 2 Flash 공개 — 'GPT 6.1 Sol의 98% 성능을 40% 가격에'",
+      summary: "마이크로소프트 AI가 17일 이그나이트에서 자체 코딩 모델 MAI Code 2와 MAI Code 2 Flash를 공개하고 GitHub Copilot에 적용했다. 자체 발표 기준 MAI Code 2는 4개 코딩 벤치마크 평균에서 GPT 6.1 Sol의 98%, Claude Opus 5.5의 96% 성능을 내면서 가격은 각각의 40%와 5% 수준이다. 블라인드 프런트엔드 평가에서는 평가자 258명이 64% 비율로 GPT-6 Sol보다 MAI Code 2의 결과물을 선호했다. Flash는 Microsoft Foundry에서도 제한 미리보기로 제공된다. 회사는 기초과학 연구 같은 어려운 문제에는 아직 맞춰져 있지 않다고 스스로 밝혔고, 표시 가격은 50% 프로모션가다. OpenAI·앤트로픽 모델을 파는 동시에 일상 코딩 수요는 자체 모델로 가져오려는 포석이다.",
+      url: "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
     }
   ],
   learn: [
     {
-      term: "로봇 사이버보안",
-      full: "ROS 2 · DDS-Security · OT 보안",
-      category: "생태계 · 85/88",
-      topics: ["robotics", "security"],
-      summary: "ROS 2의 전송계층 DDS는 스펙상 DDS-Security(인증서 기반 노드 인증·접근제어·암호화)를 지원하지만, 현장에서는 꺼진 기본값 그대로 배치되는 경우가 많아 같은 네트워크에 들어가면 토픽 도청과 위조 발행이 가능해진다. 이를 쓸 만하게 만든 도구가 SROS2로, 로봇 그래프 자동 분석과 인증서·권한 CA 생성을 묶어 6단계 DevSecOps 방법론으로 정리했다(IROS 2022). SW로 비유하면 마이크로서비스 메시를 mTLS 없이 운영하는 상태가 로봇 미들웨어의 기본값인 셈이다. 더 큰 틀에서 공장 로봇은 IT가 아니라 OT(운영기술) 보안 영역이라 가용성이 우선이고 패치 주기가 느려서, 네트워크에 연결된 휴머노이드는 '움직이는 엔드포인트'가 된다. 오늘 구글 GTIG가 보고한 사람 개입 없는 익스플로잇 자동화까지 겹치면, 패치가 늦는 OT 환경의 로봇은 n-day 공격의 이상적 표적이다. LG가 선점에 나선 안전(safety) 인증과 보안(security)은 별개의 축이라는 점도 기억해 둘 것.",
-      angle: "해킹당한 챗봇은 데이터를 유출하지만 해킹당한 휴머노이드는 사람을 민다. 공장 휴머노이드의 진짜 보안 경계는 VLA 데모가 아니라 DDS 설정 파일이다.",
-      url: "https://arxiv.org/abs/2208.02615"
+      term: "온보드 전력 예산 & 열 설계",
+      full: "Onboard Power Budget & Thermal Design",
+      category: "하드웨어 · 87/88",
+      topics: ["robotics", "chips"],
+      summary: "휴머노이드의 성능 상한은 배터리 용량(kWh)만이 아니라 순간순간 쓸 수 있는 전력(W)과 그 전력이 만드는 열을 얼마나 빼낼 수 있느냐로 정해진다. 엔비디아 공식 사양 기준 Jetson Thor(T5000) 모듈의 소비 전력은 40~130W이고, 대표 수치인 2,070 FP4 TFLOPS는 130W에서 측정한 값이다. Atlas의 약 1.3kWh 팩과 공식 런타임 4시간을 단순히 나누면 로봇 전체의 평균 소비 전력은 약 325W라는 계산이 나오는데, 컴퓨트를 최대로 돌리면 그 예산의 3분의 1 이상을 두뇌가 가져간다는 뜻이다. 나머지는 수십 개 액추에이터가 나눠 쓰고, 모터의 연속 토크는 권선 온도로 제한되므로 무거운 작업을 오래 하면 전기보다 열이 먼저 한계가 된다. SW로 비유하면 데이터센터의 랙당 전력·냉각 한도가 몸 하나 안에 들어온 셈이라, 모델 크기·제어 주기·카메라 수를 고르는 일이 곧 와트 배분이다. 오늘 Genesis AI CEO가 병목으로 모델이 아니라 하드웨어를 꼽은 것도 같은 맥락에서 읽힌다.",
+      angle: "로봇의 진짜 컨텍스트 윈도우는 토큰이 아니라 와트다. 130W짜리 두뇌를 풀로 돌리면 4시간짜리 휴머노이드 전력 예산의 3분의 1 이상이 추론에 들어간다.",
+      url: "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-thor/"
     },
     {
-      term: "핸드-아이 캘리브레이션",
-      full: "Hand-Eye Calibration (AX=XB)",
-      category: "핵심개념 · 86/88",
-      topics: ["robotics", "physical-ai"],
-      summary: "카메라가 본 것을 로봇 팔 좌표로 옮기려면 카메라 좌표계와 그리퍼(또는 베이스) 좌표계 사이의 변환 X를 알아야 하는데, 로봇을 여러 자세로 움직이며 AX=XB 형태의 행렬 방정식을 푸는 것이 핸드-아이 캘리브레이션이다. 카메라를 팔 끝에 붙이면 eye-in-hand, 작업대 밖에 두면 eye-to-hand로 나뉘고, 렌즈 왜곡·초점거리 같은 카메라 내부 파라미터 보정이 그 전제가 된다. 고전 해법은 회전을 먼저 풀고 병진을 나중에 푸는 Tsai-Lenz 2단계(1989)이며, OpenCV의 calibrateHandEye 함수 하나로 Tsai·Park·Horaud·Andreff 등 방법을 골라 쓸 수 있다(최소 3개 포즈, 실전은 그 이상에 2축 이상 회전 권장). SW로 비유하면 서비스 간 스키마 매핑이 틀어진 상태에서는 아무리 좋은 로직도 어긋난 결과를 내는 것과 같아서, VLA 성능이 아무리 좋아도 캘리브레이션이 틀어지면 집기는 mm 단위로 빗나간다. E2E 시대에도 살아남는 고전 기하의 대표 사례이자 현장 데모 실패 원인의 단골이다.",
-      angle: "데모가 실패하면 다들 모델을 의심하지만 범인은 종종 캘리브레이션이다. 모델 성능 뒤에 숨은 밀리미터의 기초공사, AX=XB 한 장이면 엔지니어 피드에서 먹힌다.",
-      url: "https://docs.opencv.org/4.1.1/d9/d0c/group__calib3d.html"
+      term: "로봇 조작 벤치마크 지형도",
+      full: "LIBERO · RoboCasa · SimplerEnv",
+      category: "벤치마크 · 88/88",
+      topics: ["physical-ai", "robotics"],
+      summary: "VLA 논문의 성공률은 대부분 시뮬레이션 벤치마크에서 나오고, 어느 벤치인지에 따라 숫자의 의미가 달라진다. LIBERO(UT 오스틴, 2023)는 평생학습과 지식 전이를 보려고 만든 130개 과제 묶음으로, 공간·물체·목표·장기 과제 스위트로 나뉘며 지금은 VLA 파인튜닝 성능을 비교하는 사실상의 기본 표가 됐다. RoboCasa(RSS 2024)는 주방 일상 과제를 대규모로 다루는데, 올해 ICLR에 발표된 RoboCasa365는 365개 과제·주방 환경 2,500개·시연 약 2,200시간(사람 600여 시간, 합성 1,600여 시간)으로 커졌다. SimplerEnv(2024)는 방향이 다르다. 실물 로봇 셋업을 시뮬로 옮겨 제어·시각 격차를 줄인 뒤, 시뮬 점수가 실물 성능과 강하게 상관하는지를 짝지은 평가로 검증했다. SW로 비유하면 LIBERO와 RoboCasa는 단위·통합 테스트 스위트이고 SimplerEnv는 스테이징 환경이 프로덕션을 얼마나 닮았는지 검증하는 작업이다. 시뮬에서 90%대가 흔한 반면 실세계 블라인드 평가인 RoboColosseum 오픈 트랙에서는 13%를 넘는 모델이 없었다는 대비를 함께 기억해 둘 것.",
+      angle: "같은 90%라도 벤치가 다르면 다른 숫자다. 논문 표를 읽을 때 모델 이름보다 먼저 볼 것은 어느 벤치의 어느 스위트인지, 그리고 그 점수가 실물과 상관한다는 근거가 있는지다.",
+      url: "https://arxiv.org/abs/2405.05941"
     }
   ]
 };

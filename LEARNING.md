@@ -3,7 +3,8 @@
 **운영 규칙:** 하루 2개씩, **`status`가 `todo`인 항목을 표 위에서부터 순서대로** 소화한다(순서가 우선 — 건너뛰지 않는다). 커버한 항목은 status를 `done`으로 바꾼다. 각 항목은 "X/LinkedIn 콘텐츠 1편의 씨앗"이 되도록 콘텐츠 앵글을 함께 담았다.
 
 **채널 싱크 (자동화됨):** 이 커리큘럼의 원천인 두 유튜브 채널(@sudoremove, @engiuniverse)은 **매일 06:35 KST에 로컬 launchd 잡**(`channel-sync/sync.sh`)이 자동 확인한다 — 신규 영상 감지 → 자막(cc) 추출 → headless Claude가 증류해 이 파일의 Phase 6에 추가(무관하면 아래 미반영 블록에 기록) → 커밋·push. 자막 추출(yt-dlp)은 클라우드에서 불가능하므로 클라우드 루틴은 이 단계를 건너뛴다. 로그: `channel-sync/sync.log`. Mac이 꺼져 있던 날은 건너뛴다(다음 실행에서 따라잡음).
-- 마지막 싱크: 2026-11-19 (신규 1편 — engiuniverse 1. "RLWRLD는 로봇에게 무엇을 가르치고 있을까? | NVIDIA AI DAY SEOUL"을 신규 행 #89(사람 영상→로봇 학습 데이터 파이프라인)·#90(DexBench)으로 추가하고, #10 RLDX-1 정의에 아키텍처·벤치마크 수치를 보강. 미반영 없음)
+- 마지막 싱크: 2026-11-21 (신규 3편 — sudoremove "RAG는 벡터 DB? 4비트 미만은 쓰레기? 2026년 AI 개발 상식 OX"·"MIT Weight Space Programming 해설"은 주제 무관으로 미반영 블록에 기록. sudoremove "How Robot Researchers Embrace Astra (CoRL 2026)"는 자막이 없어 보류 — 제목상 #63·#76과 관련 가능성이 높으므로 자막이 생기면 다음 싱크에서 재검토)
+- 이전 싱크: 2026-11-19 (신규 1편 — engiuniverse 1. "RLWRLD는 로봇에게 무엇을 가르치고 있을까? | NVIDIA AI DAY SEOUL"을 신규 행 #89(사람 영상→로봇 학습 데이터 파이프라인)·#90(DexBench)으로 추가하고, #10 RLDX-1 정의에 아키텍처·벤치마크 수치를 보강. 미반영 없음)
 
 ## 백로그 (우선순위 순)
 
@@ -166,7 +167,7 @@
 | 93 | 휴머노이드 원가 구조 (BOM) | 하드웨어 | 액추에이터·감속기(하모닉 드라이브)·센서·컴퓨트·배터리가 각각 차지하는 원가 비중. 관절 액추에이터 묶음이 BOM의 절반 안팎이고 정교한 손이 가장 비싼 모듈로 꼽힘 | "만 대 양산이 기술보다 어려운 이유"를 숫자로 — Unitree 양산 발언·#46 휴머노이드 실패 요인·#11 손 문제와 연결 | todo |
 | 94 | 멀티 로봇 오케스트레이션 & 플릿 소프트웨어 | 툴 | 이기종 로봇 여러 대를 스케줄링·작업 할당·교통 정리·OTA 업데이트하는 상위 소프트웨어 계층(VDA 5050, Open-RMF 등 표준 포함) | 로봇 1대 데모와 100대 운영은 다른 문제 — RaaS(#84)·플릿 러닝(#70)의 기술적 토대이자 SW 엔지니어가 기여하기 좋은 영역 | todo |
 
-> 미반영(주제 무관): sudoremove "Claude/GPT/Grok/Kimi Tier List", "Stripe의 OpenRouter 인수", "Ranking Big Tech by Their Contribution to AGI", "지난 10년 최고의 IT 제품 티어리스트(에어팟·비전프로·챗지피티·클로드코드)", "Reflecting on AGI in Honor of the GPT-4o Astra Launch", "Society After the AI Boom: How Will Jobs and Safety Change?", "YC Startups: What Has Changed in the AI Era?", "Why Anthropic and OpenAI Say We Should Slow Down AI Development", "Introduction to Video Creation | Tried Seedance and Wan", "Part 2", "part1", "People Challenging Themselves in San Francisco @EO House", "Fine-tunable Open-weights Model | Thinking Machines Inkling 2 Small" / engiuniverse "GPT-6 Astra, Can It Handle Everything from Circuit Design to PCB?" — 피지컬 AI 커리큘럼 범위 밖(일반 제품 티어리스트·AGI 노동 회고·AI 경제 시나리오/오남용·안전 보고서·YC 창업 통계/AI 네이티브 조직론·RSI/AI 안전 가속-감속 논쟁·영상 생성 모델 비교/페이퍼→영상 자동화·State of AI 리포트 리뷰·Opus 5.5 에이전트/하네스/안티디스틸레이션·SF 창업자 인터뷰·LLM 회로/PCB 설계 자동화·오픈웨이트 LLM 학습 레시피/파인튜닝 서비스).
+> 미반영(주제 무관): sudoremove "Claude/GPT/Grok/Kimi Tier List", "Stripe의 OpenRouter 인수", "Ranking Big Tech by Their Contribution to AGI", "지난 10년 최고의 IT 제품 티어리스트(에어팟·비전프로·챗지피티·클로드코드)", "Reflecting on AGI in Honor of the GPT-4o Astra Launch", "Society After the AI Boom: How Will Jobs and Safety Change?", "YC Startups: What Has Changed in the AI Era?", "Why Anthropic and OpenAI Say We Should Slow Down AI Development", "Introduction to Video Creation | Tried Seedance and Wan", "Part 2", "part1", "People Challenging Themselves in San Francisco @EO House", "Fine-tunable Open-weights Model | Thinking Machines Inkling 2 Small", "RAG는 벡터 DB? 4비트 미만은 쓰레기? 2026년 AI 개발 상식 OX", "MIT Weight Space Programming 해설" / engiuniverse "GPT-6 Astra, Can It Handle Everything from Circuit Design to PCB?" — 피지컬 AI 커리큘럼 범위 밖(일반 제품 티어리스트·AGI 노동 회고·AI 경제 시나리오/오남용·안전 보고서·YC 창업 통계/AI 네이티브 조직론·RSI/AI 안전 가속-감속 논쟁·영상 생성 모델 비교/페이퍼→영상 자동화·State of AI 리포트 리뷰·Opus 5.5 에이전트/하네스/안티디스틸레이션·SF 창업자 인터뷰·LLM 회로/PCB 설계 자동화·오픈웨이트 LLM 학습 레시피/파인튜닝 서비스·RAG/LLM 양자화/멀티에이전트 개발 상식·LLM 가중치 직접 편집(웨이트 스페이스 프로그래밍)).
 
 ## 소스 요약
 

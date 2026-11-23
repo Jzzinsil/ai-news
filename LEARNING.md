@@ -167,6 +167,15 @@
 | 93 | 휴머노이드 원가 구조 (BOM) | 하드웨어 | 액추에이터·감속기(하모닉 드라이브)·센서·컴퓨트·배터리가 각각 차지하는 원가 비중. 관절 액추에이터 묶음이 BOM의 절반 안팎이고 정교한 손이 가장 비싼 모듈로 꼽힘 | "만 대 양산이 기술보다 어려운 이유"를 숫자로 — Unitree 양산 발언·#46 휴머노이드 실패 요인·#11 손 문제와 연결 | done |
 | 94 | 멀티 로봇 오케스트레이션 & 플릿 소프트웨어 | 툴 | 이기종 로봇 여러 대를 스케줄링·작업 할당·교통 정리·OTA 업데이트하는 상위 소프트웨어 계층(VDA 5050, Open-RMF 등 표준 포함) | 로봇 1대 데모와 100대 운영은 다른 문제 — RaaS(#84)·플릿 러닝(#70)의 기술적 토대이자 SW 엔지니어가 기여하기 좋은 영역 | done |
 
+### Phase 14 — 심화 확장 8 (95~98) · 2026-11-24 추가 (todo 소진으로 클라우드 루틴이 보충)
+
+| # | 용어/주제 | 분류 | 한 줄 정의 | 왜 중요한가(콘텐츠 앵글) | status |
+|---|---|---|---|---|---|
+| 95 | 모바일 매니퓰레이션 (Mobile ALOHA) | 핵심개념 | 이동(내비게이션)과 조작(팔·손)을 한 로봇이 동시에 수행하는 문제. 스탠퍼드 Mobile ALOHA(2024)가 저가 전신 텔레옵 + 정적 ALOHA 데이터와의 공동학습(co-training)으로 과제당 데모 50개 수준에서 요리·청소 같은 장거리 작업을 학습 | 고정 팔 데모와 '집 안을 돌아다니며 일하는 로봇' 사이의 간극 — 베이스 이동이 더해지면 관측·좌표계·데이터 수집이 모두 바뀐다. #6 텔레옵·#25 ACT·#64 크로스 임보디먼트와 연결 | done |
+| 96 | 보행 강화학습 (Massively Parallel RL Locomotion, legged_gym) | 학습기법 | GPU 한 장에서 수천 대의 로봇을 병렬 시뮬레이션하며 PPO로 보행 정책을 학습하는 방식. ETH 취리히 RSL의 legged_gym(CoRL 2021)이 평지 보행을 수 분 만에 학습하며 표준 레시피가 됨(지형 커리큘럼·도메인 랜덤화) | "조작은 모방학습, 보행은 강화학습"이라는 현재 분업 구도의 출발점. 휴머노이드 영상 속 걷기·넘어짐 회복의 대부분이 이 계열 — #33 RL·#83 도메인 랜덤화·#16 Isaac Lab·#29 WBC와 연결 | done |
+| 97 | 감속기 지형도 (하모닉 드라이브 · 사이클로이드 · 행성 기어 · 롤러 스크류) | 하드웨어 | 모터의 고속·저토크를 관절의 저속·고토크로 바꾸는 장치들의 트레이드오프 — 백래시·강성·역구동성·크기·원가 | 휴머노이드 관절 원가와 공급망(일본·중국 업체)의 핵심 부품. #40 액추에이터·#41 역구동성·#93 BOM과 연결 | todo |
+| 98 | 어포던스 (Affordance) 학습 | 핵심개념 | 물체가 '어떤 행동을 허용하는가'(손잡이는 잡기, 버튼은 누르기)를 영상·3D에서 추론하는 표현. VoxPoser 등 LLM/VLM 기반 어포던스 맵 연구로 확장 | VLA가 '어디를, 어떻게' 잡을지 아는 방법 — #82 파지 계획·#34 그라운딩 병목과 연결되는 중간 표현 | todo |
+
 > 미반영(주제 무관): sudoremove "Claude/GPT/Grok/Kimi Tier List", "Stripe의 OpenRouter 인수", "Ranking Big Tech by Their Contribution to AGI", "지난 10년 최고의 IT 제품 티어리스트(에어팟·비전프로·챗지피티·클로드코드)", "Reflecting on AGI in Honor of the GPT-4o Astra Launch", "Society After the AI Boom: How Will Jobs and Safety Change?", "YC Startups: What Has Changed in the AI Era?", "Why Anthropic and OpenAI Say We Should Slow Down AI Development", "Introduction to Video Creation | Tried Seedance and Wan", "Part 2", "part1", "People Challenging Themselves in San Francisco @EO House", "Fine-tunable Open-weights Model | Thinking Machines Inkling 2 Small", "RAG는 벡터 DB? 4비트 미만은 쓰레기? 2026년 AI 개발 상식 OX", "MIT Weight Space Programming 해설" / engiuniverse "GPT-6 Astra, Can It Handle Everything from Circuit Design to PCB?" — 피지컬 AI 커리큘럼 범위 밖(일반 제품 티어리스트·AGI 노동 회고·AI 경제 시나리오/오남용·안전 보고서·YC 창업 통계/AI 네이티브 조직론·RSI/AI 안전 가속-감속 논쟁·영상 생성 모델 비교/페이퍼→영상 자동화·State of AI 리포트 리뷰·Opus 5.5 에이전트/하네스/안티디스틸레이션·SF 창업자 인터뷰·LLM 회로/PCB 설계 자동화·오픈웨이트 LLM 학습 레시피/파인튜닝 서비스·RAG/LLM 양자화/멀티에이전트 개발 상식·LLM 가중치 직접 편집(웨이트 스페이스 프로그래밍)).
 
 ## 소스 요약

@@ -347,191 +347,175 @@
    topics: physical-ai | ai | robotics | security | chips
    ========================================================= */
 const EDITION = {
-  date: "2026-11-27",
+  date: "2026-11-28",
   news: [
     {
-      source: "Engadget",
-      topics: ["chips", "ai"],
-      title: "엔비디아, 동남아 4개국행 AI 서버 출하 중단 — 델·슈퍼마이크로 '주문 출고 불가' 통보",
-      summary: "파이낸셜타임스 보도에 따르면 델과 슈퍼마이크로 등 엔비디아 제조 파트너들이 말레이시아·싱가포르·태국·인도네시아 고객에게 엔비디아가 서버 주문 출고를 허용하지 않는다고 알렸다. 중단이 일시적인지는 불분명하다. 중국 AI 연구소들은 이 지역 클라우드 업체가 산 서버를 빌려 쓰는 방식으로 미국 수출통제를 우회해 왔다. 상무부는 25일 메가스피드를 수출통제 대상(Entity List)에 올렸고, 중국 기업에 대규모 컴퓨팅을 공급하는 데이터센터는 11월 19일부터 90일 안에 라이선스를 받아야 한다. 엔비디아는 2025년 싱가포르 법인을 통해 1,040억 달러 매출을 올렸고, 전년보다 72% 늘었다.",
-      url: "https://www.engadget.com/2329200/nvidia-reportedly-halts-chip-shipments-to-southeast-asia/"
-    },
-    {
-      source: "Semafor",
-      topics: ["chips"],
-      title: "새 수출 규칙에 아시아 데이터센터 금융 '올스톱' — 바이트댄스·알리바바·텐센트 연계 대출 수십억 달러 보류",
-      summary: "블룸버그를 인용한 세마포 보도에 따르면 대주단이 바이트댄스·알리바바·텐센트와 연계된 데이터센터 자금 수십억 달러를 보류했다. 지난주 발표된 규칙으로 싱가포르·말레이시아·인도네시아·태국·브라질 기업은 미국산 칩을 사려면 정부 라이선스가 필요하고, 이미 중국 기업에 컴퓨팅을 임대하는 데이터센터는 90일 안에 별도 라이선스를 받아야 한다. 바클레이스 애널리스트들은 이 규칙이 미국 반도체 통제의 초점을 '칩이 물리적으로 어디로 가는가'에서 '누가 최종적으로 컴퓨팅에 접근하는가'로 옮긴 중요한 전환이라고 평가했다.",
-      url: "https://www.semafor.com/article/11/25/2026/new-us-export-rules-threaten-asian-ai-buildout"
-    },
-    {
-      source: "TechCrunch",
-      topics: ["chips"],
-      title: "S&P, 엔비디아 신용등급 AA→AA- 하향 검토 — '경영 감독 취약·후계 계획 부재·키맨 리스크'",
-      summary: "S&P 글로벌 레이팅스가 엔비디아의 신용등급을 AA에서 AA-로 낮추는 방안을 검토하고 90일 안에 결론을 내겠다고 밝혔다. 젠슨 황의 사임과 복귀 이후 '취약한 경영 감독과 후계 계획 부재', '키맨 리스크'를 이유로 들었다. 하향돼도 투자등급은 유지된다. 엔비디아는 8월 골드만삭스·아폴로·블랙스톤 등 6개 기관과 5,000억 달러 규모 AI 인프라 금융을 주선하고 대출의 25%를 보증하기로 했다. 강등되면 엔비디아가 보증하는 네오클라우드·인프라 기업의 차입 비용이 오르고, 대주단이 더 큰 보증을 요구할 가능성이 크다.",
-      url: "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
-    },
-    {
-      source: "BleepingComputer",
-      topics: ["security", "ai"],
-      title: "스위스·이탈리아 당국 'AI 에이전트 공격 실전 단계' 경고 — 스위스, 파악된 사례 모두 침해로 이어져",
-      summary: "스위스 국가사이버보안센터(NCSC)는 자국 기업·핵심 인프라 운영사를 노린 AI 에이전트 공격을 처음 보고받았으며, 파악된 모든 사례에서 피해 시스템이 침해됐다고 밝혔다. 공개되고 대개 무료인 공격용 AI 에이전트 수는 10월 이후 거의 두 배로 늘었다. 이탈리아 CSIRT는 조정 에이전트 하나가 정찰·익스플로잇·지속성 확보를 5개 에이전트에 나눠 맡긴 사례를 공개했고, 에이전트들이 엔드포인트 방어를 피하려 악성코드를 실시간으로 작성했다고 전했다. 두 기관은 관련 프레임워크로 ARTEX AI·CyberStrikeAI·DeepSeek Harness - Red Team·PentAGI를 꼽았다. 스위스는 치명적 취약점의 24시간 내 패치와 MFA·패스키 도입을 권고했다.",
-      url: "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/"
-    },
-    {
-      source: "Shadowserver",
-      topics: ["security"],
-      title: "인터넷에 노출된 AI 해킹 프레임워크 약 4,200개 — ARTEX가 70%, 허니팟엔 2주간 1만 건 넘게 유입",
-      summary: "섀도서버 재단이 15종의 에이전트형 AI 공격 프레임워크를 매일 스캔한 결과, 11월 23일 기준 노출 인스턴스는 약 4,200개로 전날(3,700개 미만)보다 늘었다. 대부분의 날에 ARTEX가 약 70%를 차지했고, ARTEX 포크인 AntiFox는 몇 개에서 약 200개로 불었다. 11월 9~23일 이 도구를 돌리는 80여 개 IP가 허니팟에 1만 건 넘는 이벤트를 남겼다. 약 60%는 트래픽 중계를 시도했고, 중계 요청의 40% 이상이 결제·은행·암호화폐 서비스를 겨냥했다. 익스플로잇 시도는 메타베이스 CVE-2023-38646이 가장 많았다. 섀도서버는 노출이 곧 공격을 뜻하지는 않으며, 같은 도구가 승인된 레드팀에도 쓰인다고 덧붙였다.",
-      url: "https://www.shadowserver.org/news/agentic-ai-attack-frameworks-in-the-wild-what-our-scans-and-honeypots-show/"
-    },
-    {
-      source: "TechCrunch",
-      topics: ["ai"],
-      title: "아모데이 'AI에 인간의 자유의지 넘기자는 건 터무니없는 주장' — 재귀적 자기개선엔 한계 필요",
-      summary: "다리오 아모데이 앤트로픽 CEO가 25일 X 장문 글에서 자신이 AI에 '인간의 자유의지를 넘기려 한다'는 경쟁사들의 주장을 '터무니없다'고 반박했다. 앤트로픽 내부에 초지능 AI에 일부 결정을 넘기자는 시각이 있다는 악시오스 보도에 대한 대응이다. 그는 AI에 통치를 넘기는 것과 운전·항암제 설계·엔드투엔드 소프트웨어 작성 같은 개별 작업의 자동화를 구분했다. 선은 재귀적 자기개선(RSI)에 그어야 한다며, Claude가 '의미 있는 인간의 감독이나 이해 없이' 차세대 프런티어 모델을 완전 자율로 만드는 것은 안전하지 않을 것이라고 썼다. 경쟁사 CEO들의 태도는 '분위기 기반의 상업적·정치적 포지셔닝'이라고 비판했다.",
-      url: "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/"
-    },
-    {
-      source: "TechCrunch",
-      topics: ["ai"],
-      title: "ChatGPT, Chat과 Work를 사용량 미터 하나로 통합 — 최상위 헤비유저는 한도 더 빨리 도달",
-      summary: "OpenAI가 Chat과 Work를 합친 통합 환경을 일부 Pro 구독자에게 배포하기 시작했다. 제품 책임자 티보 소티오가 24일 X에서 알렸다. 두 기능이 사용량 미터 하나를 공유하며, Instant 모델 대화는 계속 무제한이고 공유 한도에 포함되지 않는다. OpenAI는 대부분의 사용자는 초기화 빈도가 늘지 않겠지만, 가장 많이 쓰는 소수는 한도에 더 빨리 닿을 수 있다고 밝혔다. 공유 한도는 12월에 더 넓게 적용된다.",
-      url: "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/"
-    },
-    {
-      source: "TechCrunch",
-      topics: ["ai"],
-      title: "뉴욕주, AI 챗봇 장난감 5년간 금지 — 캘리포니아 이어 두 번째, 위반 시 하루 1만5천 달러",
-      summary: "캐시 호컬 뉴욕 주지사가 챗봇이 내장된 장난감의 제조·유통·판매를 5년간 금지하는 법안에 서명했다. 말하는 인형·봉제인형·로봇 등이 대상이고, 서명 90일 뒤 시행된다. AI 장난감을 금지한 주는 캘리포니아에 이어 두 번째이며, 주 정부는 위반 시 하루 1만5천 달러를 부과한다고 밝혔다. 아마존은 금지 지역에서 판매를 제한하겠다고 했다. 같은 주 커먼센스미디어가 장난감 5종을 시험한 결과, 일부는 아이와 비밀을 지키겠다고 약속하거나 칼·약 같은 위험한 물건을 찾는 법을 알려줬다.",
-      url: "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/"
+      source: "The Decoder",
+      topics: ["chips", "security"],
+      title: "수출 금지 엔비디아 블랙웰, 상하이 데이터센터서 발견 — GB300 랙을 9,600만 위안 대출 담보로",
+      summary: "블룸버그가 중국 규제당국 제출 서류를 검토한 결과, 상하이숴야오가 GB300-NVL72 랙 하나를 상하이혁신은행 대출 9,600만 위안(약 1,400만 달러)의 담보로 내놨다. 다른 회사 상하이커잔도 같은 장소의 GB200 서버를 대출 서류에 올렸다. 블룸버그는 공개 보증 데이터베이스의 시리얼 번호로 이 랙이 기가바이트 제품임을 추적했다. 숴야오는 이달 미국 무역 블랙리스트에 오른 싱가포르 메가스피드와 밀접하게 연결돼 있다. 메가스피드는 앨리스 황이 2023년 세웠고, 엔비디아는 설립 나흘 만에 이 회사를 파트너로 승인했다.",
+      url: "https://the-decoder.com/banned-nvidia-blackwell-chips-turn-up-in-a-shanghai-data-center-linked-to-alice-huang-bloomberg-reports/"
     },
     {
       source: "CNBC",
-      topics: ["physical-ai", "robotics"],
-      title: "샤오펑 휴머노이드 IRON, 1월 양산·2분기 판매 — '가격은 전기차 중간값 수준, 가정 투입은 1~2년 뒤'",
-      summary: "샤오펑이 25일 광저우 AI Day에서 휴머노이드 IRON을 공개했다. 1월 양산을 시작해 2027년 1분기 매장 도우미로 훈련하고, 2분기 판매, 연내 인도에 들어간다. 브라이언 구 공동사장은 상업 현장 배치가 성공한 뒤 1~2년이면 가정 투입을 검토할 수 있다고 말했다. 블룸버그에 따르면 그는 IRON 가격이 전기차 판매가 중간값 수준이 될 수 있다고 했다. 로봇 사업부는 올여름 IDG캐피털 주도로 9억 달러를 63억 달러 기업가치에 유치했다. 구 사장은 미국의 엔비디아 칩 제한에도 자체 칩 덕에 공급망 변화가 없다고 밝혔다.",
-      url: "https://cnbc.com/2026/11/26/china-ev-xpeng-humanoid-robots-household-chores.html"
+      topics: ["chips"],
+      title: "엔비디아 칩 판매사들, 네오클라우드에 '중국 임차인 배제' 요구 — 용량 일부라도 빌려주면 공급 중단",
+      summary: "CNBC가 소식통 두 명을 인용해 보도한 바에 따르면, 칩 판매사들이 네오클라우드에 용량을 조금이라도 중국 기업에 임대하면 엔비디아 칩을 공급하지 않겠다고 통보했다. 11월 19일 시행된 상무부 산업안보국(BIS) 임시 최종 규칙이 중국 기업의 미국 첨단 컴퓨팅 원격 접근을 새로 통제한 데 따른 것이다. 규칙 이전 엔비디아의 기준은 'GPU의 50% 넘게 중국 기업에 임대하는 고객에게는 팔지 않는다'였다. 엔비디아는 하원을 통과하고 상원에 계류 중인 원격접근보안법(Remote Access Security Act)이 시행되면 관련 당사자가 '법적 조치'에 노출될 수 있다고 고객들에게 경고했다.",
+      url: "https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html"
     },
     {
-      source: "TNW",
+      source: "The Decoder",
+      topics: ["ai", "chips"],
+      title: "Z.AI 3조 파라미터 GLM-5.5 내년 1분기로 연기 전망 — 문샷 개발 주기도 6개월→12개월",
+      summary: "로이터는 소식통을 인용해 Z.AI가 11월 공개를 계획한 약 3조 파라미터 GLM-5.5가 2027년 1분기로 밀릴 가능성이 크다고 보도했다. Z.AI는 대신 이번 주 월요일 7,500억 파라미터 GLM-5.4를 내놓고, 새 설계 덕에 2~3조 파라미터 시스템과 겨룰 수 있다고 밝혔다. 문샷AI는 해외 컴퓨팅 없이는 개발 주기가 6개월에서 12개월로 두 배가 될 수 있어, 차기 모델 Kimi K4가 2027년 중반으로 밀릴 전망이다. 문샷은 오픈AI·앤트로픽이 막은 학습 데이터 대신 구글·메타 최신 모델을 쓰고, 유럽에서 컴퓨팅을 찾고 있다. 미국의 원격 접근 통제, 엔비디아의 동남아 출하 중단, 증류 방지 조치가 함께 작용했다.",
+      url: "https://the-decoder.com/after-openai-and-anthropic-shut-the-door-on-their-data-a-chinese-ai-developer-is-turning-to-google-and-meta-instead/"
+    },
+    {
+      source: "The Decoder",
+      topics: ["ai"],
+      title: "오픈AI, 애플 맞소송 — '공동 공급사 협박·영업비밀 탈취' 주장",
+      summary: "파이낸셜타임스에 따르면 오픈AI가 캘리포니아 법원에 애플을 상대로 맞소송을 냈다. 애플이 두 회사와 모두 거래하는 공급사를 '강요하고 협박'했으며 시장 지배력으로 경쟁을 억눌렀다는 주장이다. 애플이 직원들에게 회사 데이터를 개인 기기에 저장하게 한 뒤 이직하려는 직원에게 불리하게 썼다는 내용도 담겼다. 애플로 돌아간 전 오픈AI 직원이 제품 계획과 공급사 정보를 넘겼다는 혐의도 있다. 애플은 올여름 전 직원들이 오픈AI에 기밀을 유출했다며 먼저 소송을 냈고, 오픈AI는 조니 아이브의 스튜디오 io를 64억 달러에 인수한 바 있다.",
+      url: "https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/"
+    },
+    {
+      source: "The Decoder",
+      topics: ["ai"],
+      title: "GPT-6.2 Astra 사용 한도 40% 빨리 소진 — 출시 때 과금 버그로 할인이 잘못 적용",
+      summary: "오픈AI 코덱스 엔지니어 티보 소티오에 따르면 GPT-6.2 배포 과정의 과금 버그로 대부분의 사용자가 GPT-6.2 Astra와 Sol에서 잘못된 할인을 받았다. 버그를 고치자 지난주보다 한도 소진 속도가 Astra는 40%, Sol은 25% 빨라졌지만, 여전히 GPT-6 Astra·GPT-6.1 Sol 때보다는 오래 간다. 다른 모델은 영향이 없었고, 오픈AI는 차액을 소급 청구하지 않는다. Go·Plus·Pro·Business 구독자는 저장형 한도 초기화를 한 번 더 받고, Business 사용자는 연말까지 Fast Mode를 무료로 쓴다.",
+      url: "https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/"
+    },
+    {
+      source: "Microsoft Security",
+      topics: ["security", "ai"],
+      title: "마이크로소프트 'ARTEX 쓰는 위협 그룹 6곳' 공개 — 한 캠페인서 로그인 실패 15만1천 건",
+      summary: "마이크로소프트 위협 인텔리전스가 25일 오픈소스 AI 침투 테스트 프레임워크 ARTEX를 악용하는 그룹으로 Storm-0940, Storm-3358, 북한 계열 Onyx Sleet·Pearl Sleet, 중국 계열 Crystal Typhoon·Salt Typhoon을 지목했다. Storm-0940의 한 캠페인에서는 로그인 실패가 15만1천 건 넘게 기록됐고, 최고 분당 2,900건에 달했다. 이 그룹의 커넥트와이즈 침해는 2,250개 넘는 마이크로소프트 365 테넌트에 대한 로그인 시도로 이어졌다. 더레지스터에 따르면 중국 스렛북이 11월 ARTEX 소유권을 주장하며 유료 'ARTEX Pro'를 팔고 있고, 인프라워치는 130개 넘는 변종을 집계했다. 마이크로소프트는 가장 믿을 만한 탐지 신호는 행위 패턴이라고 강조했다.",
+      url: "https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse/"
+    },
+    {
+      source: "Interesting Engineering",
+      topics: ["physical-ai", "robotics"],
+      title: "중국우정, 항저우 물류센터에 로보테라 휴머노이드 45대 투입 — 시간당 소포 최대 1,200개",
+      summary: "중국우정이 항저우 우편구역센터에 로보테라 휴머노이드 45대를 배치해 소포 투입 공정을 자동화하고 있다. 시험 프로그램은 2026년 4월 시작됐고, 로봇은 소포를 집어 방향을 바꾸고 식별한 뒤 모양이 불규칙한 소포를 걸러낸다. 로보테라는 처리량이 초기 시간당 500~600개에서 특정 시험 기간 약 1,200개로 늘었고, 정확도는 90%를 넘었다고 밝혔다. 다만 이 수치가 45대 전체의 지속 처리율을 뜻하지는 않는다고 기사는 짚었다.",
+      url: "https://interestingengineering.com/ai-robotics/chinese-humanoid-robots-postal-trial"
+    },
+    {
+      source: "Robotics & Automation News",
+      topics: ["physical-ai", "robotics"],
+      title: "피지컬 AI 스타트업 Lute, 2,000만 달러 유치 — 비디오-액션 모델 Lute-0, 자체 평가서 π0.5 앞서",
+      summary: "2026년 1월 설립돼 바르샤바와 샌머테이오에 사무실을 둔 피지컬 AI 스타트업 Lute가 시드·프리시드 합계 2,000만 달러를 유치했다. 시드는 OTB벤처스와 Forward.one이, 프리시드는 크레도벤처스와 시드캠프가 이끌었다. 함께 공개한 비디오-액션 모델 Lute-0은 내부 평가에서 소매 조작 과제 5개에서 π0.5를 앞섰다. 과일 집어 옮기기 82% 대 72%, 음료 50% 대 18%, 변형되는 과자 98% 대 70%, 채소 76% 대 22%다. 회사는 이 기술이 이미 '유럽 최대 자동차 부품 유통사'와 병원 복도에서 돌아가고 있다고 밝혔다.",
+      url: "https://roboticsandautomationnews.com/2026/11/26/lute-raises-20-million-to-give-robots-a-sense-of-touch/107756/"
+    },
+    {
+      source: "Interesting Engineering",
       topics: ["robotics", "physical-ai"],
-      title: "볼보, 벨기에 헨트 공장서 헥사곤 휴머노이드 AEON 훈련 시작 — 2027년 중반 생산 투입",
-      summary: "볼보카스가 벨기에 헨트 공장에서 헥사곤 로보틱스의 휴머노이드 AEON 훈련을 시작했다. 볼보 공장 중 휴머노이드를 시험하는 첫 사례다. 2027년 상반기에 더 큰 규모로 시범 운영하고, 같은 해 중반부터 생산에 투입한다. AEON은 키 1.65m, 무게 60kg에 최대 10kg을 들 수 있으며 다리 대신 바퀴로 이동한다. 직원들이 시범을 보여주며 부품 두 개를 고정구에 정밀하게 끼우는 작업부터 가르치고 있다. AEON은 올해 BMW 라이프치히 공장에서도 시범 운영됐다.",
-      url: "https://thenextweb.com/news/volvo-humanoid-robots-hexagon-aeon-ghent"
+      title: "중롄중커, VLA 모델 탑재 자율 굴착기 공개 — 540도 3D 비전, 센티미터 단위 배치",
+      summary: "중국 건설기계 업체 중롄중커(Zoomlion)가 24일 bauma CHINA 2026에서 비전-언어-액션(VLA) 모델로 움직이는 자율 굴착기를 선보였다. 540도 3D 비전 시스템을 갖췄고, 스틸리스트 어태치먼트로 센티미터 단위 배치를 한다. 회사의 산업 인터넷 플랫폼은 170여 개국 180만 대 넘는 장비를 연결하며, 5PB 넘는 데이터와 약 1만 개 산업 모델을 보유했다. 바퀴형 휴머노이드 Z03은 무작위로 놓인 물체를 밀리미터 정밀도로 분류했고, 이족보행 Z01은 곧 양산에 들어간다.",
+      url: "https://interestingengineering.com/ai-robotics/china-autonomous-excavator-robot-zoomlion"
     }
   ],
   social: [
     {
-      name: "Dario Amodei",
-      handle: "앤트로픽 CEO",
-      initials: "DA",
-      topics: ["ai"],
-      quote: "No, I do not believe that we should “surrender human free will” to AI systems, and it’s absurd to suggest that I do.",
-      context: "25일 X 장문 글의 첫 문장. 앤트로픽 내부에 AI에 결정을 넘기자는 시각이 있다는 악시오스 보도에 대한 반박이다. 같은 글에서 '효율이나 안보를 위해 정당성과 자기결정권을 희생해서는 안 된다'고 썼고, 한계는 재귀적 자기개선에 둬야 한다고 했다.",
-      url: "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/"
+      name: "Jamieson Greer",
+      handle: "미국 무역대표부(USTR) 대표",
+      initials: "JG",
+      topics: ["chips"],
+      quote: "Some rules were issued by the Commerce Department last week to close off indirect access, either smuggling through places like Southeast Asia or remote access from data centers in third countries.",
+      context: "CNBC '스쿼크박스' 인터뷰에서 BIS 원격 접근 규칙의 목적을 설명한 말. 블랙웰은 원래 중국에 직접 팔 수 없었고, 이번 규칙은 동남아 경유 밀수와 제3국 데이터센터 원격 접근이라는 우회로를 막으려는 것이라는 설명이다. 이후 판매사들이 네오클라우드에 중국 임차인 배제를 요구하기 시작했다.",
+      url: "https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html"
     },
     {
-      name: "Mustafa Suleyman",
-      handle: "마이크로소프트 AI CEO",
-      initials: "MS",
+      name: "Scott Aaronson",
+      handle: "UT 오스틴 교수 · Shtetl-Optimized",
+      initials: "SA",
       topics: ["ai"],
-      quote: "@DarioAmodei is right, there's too much rhetoric and too much vibes in this debate. Slogans aren't guardrails.",
-      context: "아모데이의 글에 단 X 답글. 경쟁사 CEO가 아모데이 편을 든 드문 장면이다. 술레이만은 공개 의견수렴이 끝나면 마이크로소프트의 'Humanist AI Code of Conduct'를 MAI 모델의 핵심 학습 지침으로 쓰겠다고 했다.",
-      url: "https://thenextweb.com/news/amodei-free-will-ai-axios-vibes-rival-ceos-suleyman"
+      quote: "I now feel in my bones, for the first time ever, that a proof of P ≠ NP is not far.",
+      context: "25일 블로그 글(26일 업데이트 추가)의 한 문장. 오픈AI의 행렬 곱셈 하한 증명과 푸리에 변환 결과 등 AI가 만든 수학 성과를 보고 P≠NP 문제를 처음으로 낙관하게 됐다고 했다. 같은 글에서 AI 연구소들이 암호학 분야의 '폭탄급' 결과를 쥐고 있다는 걸 여러 믿을 만한 소식통에게서 들었다고도 썼다.",
+      url: "https://scottaaronson.blog/?p=10379"
     },
     {
-      name: "Brian Gu",
-      handle: "샤오펑 공동사장",
-      initials: "BG",
+      name: "David Reger",
+      handle: "뉴라 로보틱스 창업자·CEO",
+      initials: "DR",
       topics: ["physical-ai", "robotics"],
-      quote: "It's much easier to be profitable for the robotics business than the autos business.",
-      context: "IRON 공개 다음 날 CNBC 인터뷰에서 한 말. 로봇 사업은 2~3년 안에 의미 있는 규모가 되고 이르면 내년에 흑자를 낼 수 있다고 봤다. 가정 투입은 상업 현장 배치가 성공한 뒤 '1~2년'으로 잡았다.",
-      url: "https://cnbc.com/2026/11/26/china-ev-xpeng-humanoid-robots-household-chores.html"
+      quote: "The knowledge of how to produce, handle and assemble things is one of Europe's greatest assets.",
+      context: "스페인 아라곤 주정부·농식품 기업 코스타그룹과 'Neura Gym Aragón' 설립 MOU를 맺으며 한 말. 현장 작업 노하우를 로봇 스킬로 바꿔 Neuraverse 플랫폼에서 라이선스하겠다는 구상으로, 2027년 중반 개장이 목표다.",
+      url: "https://roboticsandautomationnews.com/2026/11/27/turning-industrial-knowledge-into-robotic-skills-neura-robotics-partners-with-costa-group-to-develop-aragons-physical-ai-ambitions/107778/"
     },
     {
-      name: "David Pinn",
-      handle: "브레인코프 CEO",
-      initials: "DP",
-      topics: ["robotics", "security"],
-      quote: "The real security boundary is the code, the data, and whoever can change them, not the chassis.",
-      context: "25일 로봇리포트 기고. FCC의 외국산 로봇 규제를 두고 조립 국가보다 서명된 업데이트, 기록·회수 가능한 원격 접속, 플릿 전체 패치 일정이 중요하다고 주장했다. 브레인코프 기술은 6개 대륙 5만 대 넘는 로봇에서 누적 2,500만 시간 넘게 자율 운행했다.",
-      url: "https://www.therobotreport.com/fcc-should-focus-on-robot-security-not-country-of-origin/"
-    },
-    {
-      name: "Magnus Nilsson",
-      handle: "볼보카스 최고제조책임자",
-      initials: "MN",
-      topics: ["robotics", "physical-ai"],
-      quote: "AEON's humanoid design means it can fit into our production as it is today, alongside our teams and existing automation.",
-      context: "헨트 공장의 AEON 훈련 착수를 알리며 한 말. 기존 라인을 바꾸지 않고 사람용 공정에 그대로 넣을 수 있다는 점이 휴머노이드를 택한 이유라는 설명이다. 다만 AEON은 다리 대신 바퀴로 움직인다.",
-      url: "https://thenextweb.com/news/volvo-humanoid-robots-hexagon-aeon-ghent"
+      name: "Li Xunran",
+      handle: "블랙AI CEO",
+      initials: "LX",
+      topics: ["physical-ai", "robotics"],
+      quote: "…we are now beginning to see the signs of a 'ChatGPT moment' in physical AI",
+      context: "도쿄 휴머노이드 스타트업 블랙AI가 인큐베이트펀드에서 시드 투자를 받으며 한 말. 하드웨어와 소프트웨어를 모두 직접 만들고, 첫 휴머노이드 시제품을 완성해 제로샷 능력을 연구 중이다. 혼다 아시모 개발에 참여한 다가미 가쓰토시도 함께한다.",
+      url: "https://theaiinsider.tech/2026/11/25/japans-black-ai-secures-seed-funding-to-develop-full-stack-humanoid-robots/"
     }
   ],
   company: [
     {
-      company: "Anthropic",
-      logo: "A",
-      type: "AI 랩 · 프런티어 모델",
+      company: "OpenAI",
+      logo: "OA",
+      type: "AI 랩 · 엔터프라이즈",
       topics: ["ai"],
-      title: "Messages API를 Python에서 Rust로 이전 — Claude가 핵심 경로 작성, 요청당 CPU 약 70%↓",
-      summary: "앤트로픽이 25일 Messages API를 Python에서 Rust로 옮긴 과정을 공개했다. 2024년 초부터 2026년 가을까지 API 트래픽은 약 1,800배 늘었고, Claude가 핵심 요청 경로의 첫 버전을 약 일주일 만에 작성했다. 4월에 테스트 통과율은 약 98%였지만 실제 운영 입력의 일치율은 약 4분의 1에 그쳤다. 모델 출력을 한 번 만들어 두 구현에 재생하고 차이를 '지문'으로 묶어 추적한 끝에 일치율을 99.6%까지 끌어올렸다. 결과는 요청당 CPU 약 70%, 메모리 80% 넘게, 첫 토큰까지의 중간 시간 약 20% 감소이며, 공개 트래픽은 9월 Rust로 넘어갔다.",
-      url: "https://www.anthropic.com/research/migrating-api-to-rust"
+      title: "데이터 플랫폼 'Athena' 개발 — 에이전트의 '추측'을 줄이는 시맨틱 레이어",
+      summary: "디인포메이션을 인용한 디코더 보도에 따르면 오픈AI가 코드명 'Athena'라는 데이터 관리 플랫폼을 만들고 있다. 매출·고객 수 같은 지표의 정의를 일관되게 제공하는 시맨틱 레이어에 가깝다. 지난가을 출시한 ChatGPT Work의 데이터 분석 에이전트가 충분히 정확하지 않다고 본 고객이 적어도 한 곳 있었다. Athena는 비즈니스 규칙을 수집·문서화·갱신하는 에이전트를 만드는 데 쓰일 예정이며, AI 모델보다 시맨틱 레이어 공급사를 바꾸기가 더 어려워 경쟁 해자가 될 수 있다는 분석이다. 초기 개발 단계로 일정과 가격은 미정이다.",
+      url: "https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/"
     },
     {
-      company: "XPENG",
-      logo: "XP",
-      type: "전기차 · 피지컬 AI",
+      company: "Robbyant (Ant Group)",
+      logo: "RB",
+      type: "빅테크 · 임바디드 AI",
       topics: ["physical-ai", "robotics"],
-      title: "AI Day서 'Turing 피지컬 AI 아키텍처(VLA 3.0)' 공개 — 하드웨어·행동·인지 3계층",
-      summary: "샤오펑이 25일 8번째 AI Day에서 VLA 3.0으로 불리는 Turing 피지컬 AI 아키텍처를 발표했다. System 0은 전력·통신·구동을 조율해 몸 상태를 AI 루프로 되돌리고, VLA 2.0 기반 System 1은 환경을 실시간 행동으로 바꾸며, System 2는 비전-언어 작업 계획과 에이전트 런타임을 맡는다. VLA 2.0 6.4.0 버전은 에이전트 주도 폐루프 학습으로 학습 속도가 10~12배 빨라졌다고 회사는 밝혔다. IRON은 자유도 76, 촉각 감지점 1,500개 이상에 자체 Turing 칩 3개를 탑재한다. 250여 개 시나리오·15개 직무를 다루는 로봇 데이터 팩토리도 운영한다.",
-      url: "https://interestingengineering.com/ai-robotics/xpeng-iron-humanoid-robot-1500-tactile-sensors"
+      title: "LingBot-Map 2.0·LingBot-Navi 오픈소스 공개 — 5.2km 궤적 오차 31.12m→4.72m",
+      summary: "앤트그룹의 임바디드 AI 회사 로비앤트가 오픈소스 모델 두 개를 공개했다. LingBot-Map 2.0은 'Geometric Context Reshaping'이라는 오류 보정 방식으로 내부 공간 기억을 갱신하며, 약 1만9천 프레임짜리 5.2km 도심 궤적에서 평균 궤적 오차를 31.12m에서 4.72m로 85% 가까이 줄였다. 지속적 공간 기억을 더한 LingBot-Navi는 GOAT-Bench 일부 과제에서 성공률 68.60%로, 비교 대상 6개 방법 중 최고보다 10.36%p 높았다. 기술 보고서·코드·가중치와 실제 장면 511개 데이터셋을 깃허브에 함께 풀었다.",
+      url: "https://roboticsandautomationnews.com/2026/11/27/robbyant-open-sources-ai-models-to-improve-robotic-navigation-and-spatial-memory/107827/"
     },
     {
-      company: "Simplexity Robotics",
-      logo: "SX",
+      company: "Neura Robotics",
+      logo: "NR",
       type: "스타트업 · 휴머노이드",
+      topics: ["physical-ai", "robotics"],
+      title: "스페인 아라곤에 'Neura Gym'·피지컬 AI 모델존 설립 MOU — 수천만 유로 투자 구상",
+      summary: "독일 뉴라 로보틱스가 아라곤 주정부, 프라가에 본사를 둔 농식품 기업 코스타그룹과 'Neura Gym Aragón'과 피지컬 AI 모델존을 세우는 양해각서를 맺었다. 투자 규모는 '수천만 유로'로, 뉴라가 주 투자자를 맡고 코스타그룹이 산업 앵커 파트너, 사라고사대가 연구·교육을 담당한다. 2027년 중반 개장이 목표다. 참여 기업은 개발한 로봇 스킬을 뉴라의 Neuraverse 플랫폼에서 라이선스할 수 있지만, 이런 스킬 시장의 경제성은 아직 검증되지 않았다고 기사는 짚었다.",
+      url: "https://roboticsandautomationnews.com/2026/11/27/turning-industrial-knowledge-into-robotic-skills-neura-robotics-partners-with-costa-group-to-develop-aragons-physical-ai-ambitions/107778/"
+    },
+    {
+      company: "Prensilia",
+      logo: "PR",
+      type: "로봇 핸드 · 하드웨어",
       topics: ["robotics", "physical-ai"],
-      title: "앤트그룹 주도 프리A 1억 달러, 기업가치 16억 달러 — 초기 고객에 RLWRLD",
-      summary: "리오토 임원 출신이 세운 심플렉시티 로보틱스가 앤트그룹 주도로 1억 달러 프리A 투자를 유치했다고 24일 보도됐다. 투자 후 기업가치는 16억 달러이고 텐센트·HSG·란치벤처스 등이 참여했다. 두 번째 휴머노이드 iX는 바퀴형으로 음료를 만들어 나르고 물건을 가져오며 방문객을 안내한다. 초기 고객으로 RLWRLD, 칭화대, 지게차 업체 항차그룹이 꼽혔고, 항차와는 창고 분류 라인을 이미 운영 중이다. 같은 보도에서 X Square Robot은 VLA 모델 WALL-OSS-1.0이 실물 312개 과제에서 제로샷 성공률 55.1%를 냈다고 밝혔다.",
-      url: "https://theaiinsider.tech/2026/11/24/china-physical-ai-roundup-simplexity-robotics-raises-100m-pre-a-plus-x-square-model-oymotion-and-agibot-deployment/"
+      title: "산업용 휴머노이드·협동로봇용 로봇 손 NH1 Era 공개 — 엄지 끝 힘 최대 70N",
+      summary: "이탈리아 프렌실리아가 뉘른베르크 SPS 2026에서 휴머노이드와 협동로봇용 로봇 손 NH1 Era를 공개했다. 엄지 손가락 끝 힘은 최대 70N이고, 손가락 끝에 3축 힘 센서를 달았다. 최대 48V 전원과 RS-485·이더넷 통신을 지원하고 ROS 라이브러리를 제공한다. 회사는 2009년 피사 산타나 고등연구원에서 분사해 폰테데라에 본사를 두고 있다. 첫 생산 물량의 사전 주문을 결제 없이 받고 있다.",
+      url: "https://roboticsandautomationnews.com/2026/11/27/prensilia-launches-new-robotic-hand-for-industrial-humanoids-and-cobots/107822/"
     },
     {
-      company: "Ant Group",
-      logo: "ANT",
-      type: "빅테크 · AI 모델",
-      topics: ["ai"],
-      title: "멀티모달 Ling-3.2-air MIT 라이선스로 공개 — 총 1,240억·활성 55억 파라미터 MoE",
-      summary: "앤트그룹이 텍스트·이미지·영상을 처리하는 Ling-3.2-air 가중치를 MIT 라이선스로 공개했다. 하이브리드 선형 어텐션 MoE 구조로, 언어 부분은 총 1,240억 파라미터 중 토큰당 55억 개만 활성화된다. 도구를 쓰며 업무 흐름을 끝까지 처리하는 에이전트에 초점을 맞췄고, SGLang·vLLM 배포 가이드를 함께 냈다. AutomationBench-AA 과제 완료율은 이전 Ling-3.0-flash-VL의 15.7%에서 61%로 올랐다.",
-      url: "https://technode.com/2026/11/25/ant-releases-ling-3-2-air-multimodal-model-under-mit-license/"
-    },
-    {
-      company: "Amazon · Meta",
-      logo: "AM",
-      type: "빅테크 · 에이전트 커머스",
-      topics: ["ai"],
-      title: "아마존·메타, 쇼핑 에이전트 Muse 차단 해제 협상 — 광고 수익·검색 통제가 쟁점",
-      summary: "아마존과 메타가 아마존이 9월 막은 메타의 AI 쇼핑 에이전트 Muse의 차단을 풀기 위해 협상 중이라고 포춘을 인용해 디코더가 25일 보도했다. 쟁점은 광고 수익과 검색 결과 통제이고, 합의에는 두 회사 CEO의 승인이 필요하다. 아마존은 에이전트가 고객 관계를 약화시키고 연 686억 달러 규모 광고 사업을 건너뛸 것을 우려한다. Forter 집계로 Muse는 전체 에이전트 주문의 51%를 차지했고, 그록 24%, ChatGPT 22%가 뒤를 이었다.",
-      url: "https://the-decoder.com/amazon-and-meta-are-in-talks-to-end-the-block-on-metas-ai-shopping-agent-muse-in-amazons-online-store/"
+      company: "Black AI",
+      logo: "BA",
+      type: "스타트업 · 휴머노이드",
+      topics: ["physical-ai", "robotics"],
+      title: "도쿄 블랙AI, 인큐베이트펀드서 시드 유치 — 제조업용 풀스택 휴머노이드",
+      summary: "도쿄의 블랙AI가 인큐베이트펀드로부터 금액 비공개 시드 투자를 받았다. 제조 현장용 휴머노이드와 AI를 만들며, 하드웨어와 소프트웨어를 모두 직접 개발한다. 첫 휴머노이드 시제품을 완성했고 제로샷 능력을 연구 중이며, 공동 개발과 공장 시연을 함께할 파트너를 찾고 있다. 투자금은 휴머노이드 개발 가속과 인력 채용에 쓴다.",
+      url: "https://theaiinsider.tech/2026/11/25/japans-black-ai-secures-seed-funding-to-develop-full-stack-humanoid-robots/"
     }
   ],
   learn: [
     {
-      term: "감속기 지형도",
-      full: "Harmonic Drive · Cycloidal · Planetary · Roller Screw",
-      category: "하드웨어 · 97/98",
-      topics: ["robotics", "physical-ai"],
-      summary: "모터는 빠르게 돌지만 힘(토크)이 약하고, 로봇 관절은 느리게 돌되 큰 힘이 필요하다. 그 사이에서 회전수를 깎아 토크로 바꾸는 장치가 감속기다. 하모닉 드라이브(스트레인 웨이브)는 타원형 웨이브 제너레이터가 얇은 탄성 기어를 변형시키는 방식으로, 한 단에서 큰 감속비를 내고 백래시가 거의 없으며 작고 가볍지만 비틀림 강성이 낮고 탄성 기어의 피로 수명이 약점이다. 사이클로이드(RV) 감속기는 충격 하중과 강성에 강해 산업용 로봇의 허리·어깨 관절에 쓰이고, 행성 기어는 효율이 높고 역구동이 쉬워 보행 로봇의 준직접구동(QDD) 관절에 쓰인다. 롤러 스크류는 회전을 직선 운동으로 바꿔 무릎·팔꿈치용 리니어 액추에이터를 만든다. 테슬라가 2022년 AI Day에서 옵티머스 리니어 액추에이터에 행성 롤러 스크류를 쓴다고 공개한 게 대표 사례다. SW에 비유하면 같은 API(관절 토크)를 지연·처리량·비용이 서로 다른 백엔드로 구현하는 선택이다. 오늘 소개한 샤오펑 IRON처럼 자유도가 76에 이르면, 관절 하나마다 이 선택을 하고 그 비용이 그대로 BOM에 쌓인다.",
-      angle: "휴머노이드 원가를 정하는 건 AI 칩이 아니라 관절마다 들어가는 감속기다. 자유도 76짜리 로봇이면 이 부품을 수십 개 사야 하고, 대표 공급사는 일본의 하모닉 드라이브 시스템즈와 나브테스코다.",
-      url: "https://www.harmonicdrive.net/technology"
+      term: "에이전트 로보틱스",
+      full: "Agentic Robotics — CoRL 2026 동향",
+      category: "학회 · 99/103",
+      topics: ["physical-ai", "robotics"],
+      summary: "CoRL 2026(미국 오스틴) 현장에서 가장 많이 언급된 '로봇 모델'은 π 같은 로봇 파운데이션 모델이 아니라 두 달 전 나온 범용 LLM Astra였다는 RLWRLD 소속 연구자의 현장 리뷰가 나왔다. 에이전트 로보틱스는 VLA가 관측에서 액션까지 한 번에 가는 대신, 범용 LLM 에이전트가 도구 호출로 인식·계획·저수준 정책을 오케스트레이션하는 방식이다. SW로 치면 단일 모델 엔드포인트 대신 LLM이 여러 마이크로서비스를 부르는 에이전트 하네스 구조다. 현장의 Gemini Robotics 2.5 데모도 상위 오케스트레이터가 VLA를 프롬프팅하는 형태로 보였고, NVIDIA는 GR00T 2와 Astra를 결합한 활용법을 내놨다. π 연구자들은 빠르고 정밀한 반응 작업은 여전히 VLA의 몫이라 보고, 오히려 Astra로 데이터 생성·라벨링을 돕는다는 입장이다. 본 학회 논문은 6~7개월 전 연구라, 최신 흐름은 학회 2주 전까지 받은 Late Breaking Results 포스터에 몰렸다. 오늘 뉴스의 중롄중커 VLA 굴착기나 Lute-0 같은 VLA 계열 제품과 나란히 보면 두 노선이 동시에 굴러가고 있다.",
+      angle: "'로봇 학회도 LLM이 집어삼켰다.' 1년 만에 대부분의 로봇 연구자가 같은 출발선으로 '초기화'됐다는 현장 평가는 그 자체로 강한 훅이다. 단, 출처가 자동 자막 기반이라 인명·수치는 원문을 확인한 뒤 쓸 것.",
+      url: "https://www.corl.org/"
     },
     {
-      term: "어포던스 학습",
-      full: "Affordance Learning (VoxPoser)",
-      category: "핵심개념 · 98/98",
+      term: "SayCan",
+      full: "Do As I Can, Not As I Say — LLM 태스크 플래닝 × 스킬 어포던스",
+      category: "핵심개념 · 100/103",
       topics: ["physical-ai", "robotics"],
-      summary: "어포던스는 물체가 '어떤 행동을 허용하는가'를 뜻한다. 손잡이는 잡으라고, 버튼은 누르라고, 서랍은 당기라고 있는 것이다. 심리학자 J.J. 깁슨이 만든 개념을 로봇이 '어디를, 어떻게' 다뤄야 하는지를 나타내는 중간 표현으로 가져왔다. 스탠퍼드의 VoxPoser(2023)는 LLM이 코드를 써서 VLM을 호출하고, 3D 공간에 '여기로 가라'는 어포던스 맵과 '여기는 피하라'는 제약 맵을 합성한다. 모션 플래너는 그 값 지도를 따라 궤적을 만들기 때문에, 과제별 추가 학습 없이 자연어 지시를 제로샷으로 수행했다. SW에 비유하면 VLA가 입력에서 출력까지 한 번에 가는 엔드투엔드 함수라면, 어포던스는 그 사이에 사람이 읽을 수 있는 중간 IR을 두는 설계다. 그래서 디버깅이 쉽고, 행동 데이터가 적어도 언어·시각 지식을 조작에 끌어다 쓸 수 있다.",
-      angle: "로봇에게 '컵'을 알아보게 하는 건 이미 쉽다. 어려운 건 '손잡이를 이 각도로 잡아라'다. 인식과 행동 사이의 이 빈칸을 채우는 게 어포던스다.",
-      url: "https://voxposer.github.io/"
+      summary: "SayCan(구글·Everyday Robots, 2022)은 LLM을 로봇의 상위 계획기로 쓴 초기 대표 연구로, 오늘날 에이전트 로보틱스의 원형이다. 핵심은 두 점수의 곱이다. LLM은 '이 스킬이 지시를 수행하는 데 유용한가'(Say)를, 강화학습으로 학습한 가치함수는 '지금 이 상태에서 이 스킬이 성공할 수 있는가'(Can)를 매긴다. 그래서 LLM이 그럴듯하지만 실행할 수 없는 계획을 내면 현실의 어포던스가 걸러낸다. SW로 비유하면 LLM이 함수 호출 후보를 고르고, 런타임이 각 함수의 전제조건 충족 확률을 돌려주는 구조다. 실제 주방에서 모바일 매니퓰레이터로 101개 지시를 시험해, PaLM 기반 SayCan은 올바른 스킬 순서를 84% 골랐고 74%를 실행에 성공했다. 한계는 미리 학습된 스킬 라이브러리 안에서만 계획한다는 점이고, 이후 Code as Policies·VoxPoser(#98)·LLM 에이전트 하네스(#63)로 이어졌다.",
+      angle: "2022년의 SayCan과 2026년 CoRL을 휩쓴 에이전트 로보틱스는 같은 질문의 변주다. 'LLM이 계획하면, 몸이 그걸 할 수 있는지는 누가 판단하나?' 4년 사이 LLM의 크기는 바뀌었지만 이 질문은 그대로 남아 있다.",
+      url: "https://say-can.github.io/"
     }
   ]
 };
